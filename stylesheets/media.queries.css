@@ -1,0 +1,289 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Scrolio
+	Author: Two2Twelve Themes
+	Author URI: http://themes.two2twelve.com
+	Version: 1.0
+	
+	Stylesheet: Media Queries
+	
+	1.	Global (body, page sructure, common classes)
+	2.	Header & Navigation
+	3.	Logo & Slider
+	4.  About
+	5.  cases
+	6.  Services
+	7.  Testimonials
+	8.  Contact
+	
+-----------------------------------------------------------------------------------*/
+/* For iPhones and Mobile */
+@media only screen and (max-width:750px) { 
+	/* 1. Global */
+	div#page_wrapper {
+		width: 310px;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	.container {
+		width: auto;
+		margin: 0 auto;
+	}
+	section#pages div.page {
+		margin-bottom: 35px;
+	}
+	section#pages div.page div.content {
+		padding-top: 12px;
+	}
+	header nav ul{ display: none !important; }
+	header .select-menu   { display: block; }
+	section#pages div.page div.heading {
+		text-align: center;
+	}	
+	section#pages div.page div.heading h2 {
+		float: none;
+		margin-bottom: 5px;
+	}
+	section#pages div.page div.heading span {
+			float: none;
+			font-size: 14px;
+		}
+	/* 2. Header and Navigation */
+	header div.container {
+		padding: 0 5px 0;
+	}
+	header div.container nav select.select-menu {
+		background: #f5f5f5;
+		font-family: "Helvetica";
+	}
+	/* 3. Logo and Slider */
+	section#intro {
+		padding-top: 85px;
+		margin-bottom: 18px;
+	}
+	section#intro div.logo {
+		text-align: center;
+		margin-bottom: 22px;
+	}
+	section#intro div.logo h1 {
+		font-size: 36px;
+	}
+	section#intro div.logo span.tagline {
+		font-size: 14px;
+	}
+	section#intro div.logo img {
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+	.flexslider .slides li .description {
+		width: 120px;
+		top: 15px;
+	}
+	.flexslider .slides li .description.right_align { right: 5px; }
+	.flexslider .slides li .description.left_align { left: 10px; }
+		.flexslider .slides li .description h2 {
+			font-size: 10px;
+			margin-bottom: 5px;
+		}
+		.flexslider .slides li .description p {
+			font-size: 6px;
+			line-height: 8px;
+			margin-bottom: 5px;
+		}
+		.flexslider .slides li .description .button { font-size: 6px; padding: 2px 4px; }
+		.flex-direction-nav .prev,
+		.flex-direction-nav .next { display: none; }
+	/* 4. About */
+	div#about {
+		width: 100%;
+	}
+	div#about div.content div.bio {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	div#about div.content div.bio p {
+		margin-bottom: 5px;
+	}
+	div#about div.content div.bio img {
+		width: 140px;
+		height: 159px;
+		margin: 0 9px 0 0;
+	}
+	div#about div.content div.skills {
+		float: none;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	div.tweets #twitter_stream { margin-left: 50px; }
+	div.tweets span.icon { font-size: 35px; }
+	div.tweets ul li .tweet_text { font-size: 13px; }
+	/* 5. cases */
+	div#cases div.content ul.filter_list {
+		margin-bottom: 15px;
+	}
+	div#cases div.content ul.filter_list li {
+		margin-right: 0px;	
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	div#cases div.content ul.filter_items {
+		width: 320px;
+		text-align: center;
+	}
+	div#cases div.content ul.filter_items li {
+		width: 148px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+	div#cases div.content ul.filter_items li a {
+		height: 107px;
+	}
+	div#cases div.content ul.filter_items li img {
+		width: 100%;
+	}
+	ul.filter_items li a .hover {
+	 top: 1px;
+	left: 1px;
+	}
+	ul.filter_items li a .hover span.icon {
+		margin-top: 25px;
+	}
+	/* 6. Services */
+	div#services div.one_third {
+		width: 97%;
+		margin: 0 0 15px 2px;
+	}
+	/* 7. Testimonials */
+	div#testimonials ul.testimonials {
+		margin-bottom: 10px;
+	}
+	div#testimonials ul.testimonials li {
+		margin: 0 19px 12px 10px;
+	}
+	div#testimonials ul.testimonials li:last-child {
+		margin-right: 20px;
+	}
+	div#testimonials div.content div.testimonial {
+		width: 98%;
+	}
+	/* 8. Contact */
+	div#contact div#contact_form {
+		width: 91%;
+	}
+	div#contact div#map {
+		float: left;
+		width: 98%;
+		margin-top: 20px;
+	}
+	.social {
+		padding: 0 5px 0;
+	}
+}
+/* For iPads and Tablets */
+@media screen and (min-width:751px) and (max-width:970px) { 
+
+	/* 1. Global */
+	div#page_wrapper {
+		width: 730px;
+		margin: 0 auto;
+	}
+	.container {
+		width: auto;
+		margin: 0 auto;
+	}
+	section#pages .page {
+		margin-bottom: 80px;
+	}
+	section#pages .page .heading {
+		padding-bottom: 5px;
+	}
+	/* 2. Header and Navigation */
+	header div.container {
+		padding: 0 30px 0;
+	}
+	
+	/* 3. Logo and Slider */
+	section#intro {
+	margin: 0px auto 60px auto;
+	padding-top: 90px;
+	}
+	section#intro .logo {
+		margin-bottom: 30px;
+	}
+	section#intro .logo h1 {
+		font-size: 60px;
+	}
+	section#intro .logo h1 span.tagline {
+		font-size: 16px;
+	}
+	div.right_align[style] {
+		width: 295px !important;
+	}
+	.flexslider .slides li .description { top: 25px; width: 300px; }
+	.flexslider .slides li .description.right_align { right: 20px; }
+	.flexslider .slides li .description.left_align { left: 20px; }
+	/* 4. About */
+	div.bio {
+		width: 450px;
+	}
+	div.bio img {
+		margin-right: 10px;
+		width: 180px;
+		height: 205px;
+	}
+	div.bio p {
+		margin-bottom: 8px;
+	}
+	div.skills {
+		width: 260px;
+	}
+	/* 5. cases */
+	div#cases ul.filter_list {
+		margin-bottom: 15px;
+	}
+	section#pages div#cases div.content {
+		padding-top: 15px;
+	}
+	ul.filter_items {
+		width: 768px;
+	}
+	ul.filter_items li {
+		width: 180px;
+		margin: 0 12px 12px 0;
+	}
+	ul.filter_items li a {
+		height: 130px;
+	}
+	ul.filter_items li img {
+		width: 100%;
+	}
+	ul.filter_items li a .hover {
+	 top: 1px;
+	left: 1px;
+	}
+	ul.filter_items li a .hover span.icon {
+		margin-top: 35px;
+	}
+	/* 6. Services */
+	div#services div.one_third {
+		width: 32%;
+		margin-right: 1.5%;
+		margin-bottom: 12px
+	}
+	/* 7. Testimonials */
+	ul.testimonials li {
+		margin-right: 10px;
+	}
+	/* 8. Contact */
+	div#contact_form {
+		width: 315px;
+	}
+	div#map {
+		width: 360px;
+	}
+	.social {
+		padding: 0 5px 0;
+	}
+	
+}
