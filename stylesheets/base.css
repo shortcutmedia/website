@@ -1243,3 +1243,41 @@ a 																		 { color: #5a9fcd; }
 a:hover																 { color: #5a9fcd; }
 /* Back to top hover */
 #toTop:hover 													 { color: #5a9fcd; }
+
+/*--------------------------------------------
+19. Fancy list
+---------------------------------------------*/
+ol.flist {
+  color: #999999;
+  list-style-type: none;
+  margin-top:10px;
+}
+ 
+ol.flist li {
+  position: relative;
+  font: bold italic 45px Helvetica, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+ 
+ol.flist li p {
+  font: 18px Helvetica, sans-serif;
+  padding-left: 60px;
+  color: #444444;
+}
+ 
+ol.flist span {
+  position: absolute;
+}
+
+div.small_list {
+	background:#ffffff;
+	font: 15px Helvetica, sans-serif;
+	padding:20px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+div.small_list li {
+	padding-left:5px;
+	margin-left:35px;
+}	
