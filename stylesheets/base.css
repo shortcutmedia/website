@@ -1255,12 +1255,12 @@ ol.flist {
  
 ol.flist li {
   position: relative;
-  font: bold italic 45px Helvetica, Verdana, sans-serif;
+  font: bold italic 45px 'Helvetica Neue', helvetica, sans-serif;
   margin-bottom: 20px;
 }
  
 ol.flist li p {
-  font: 18px Helvetica, sans-serif;
+  font: 16px 'Helvetica Neue', helvetica, sans-serif;
   padding-left: 60px;
   color: #444444;
 }
@@ -1271,7 +1271,7 @@ ol.flist span {
 
 div.small_list {
 	background:#ffffff;
-	font: 15px Helvetica, sans-serif;
+	font: 16px 'Helvetica Neue', helvetica, sans-serif;
 	padding:20px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
@@ -1281,3 +1281,39 @@ div.small_list li {
 	padding-left:5px;
 	margin-left:35px;
 }	
+
+ol.regular_ordered_list {
+	color: #444444;
+	list-style-type: none;
+	margin-top:10px;
+}
+ 
+ol.regular_ordered_list li {
+	position: relative;
+	font: bold 16px 'Helvetica Neue', helvetica, sans-serif;
+	margin-bottom: 10px;
+}
+ 
+ol.regular_ordered_list li p {
+	font: 16px 'Helvetica Neue', helvetica, sans-serif;
+	padding-left: 30px;
+	color: #444444;
+}
+ 
+ol.regular_ordered_list span {
+	position: absolute;
+	padding-top:5px;
+}
+
+ul.regular_unordered_list {
+	color: #444444;
+	list-style: circle;
+	margin-top:10px;
+	font: 16px 'Helvetica Neue', helvetica, sans-serif;
+	list-style-position: outside;
+}
+
+ul.regular_unordered_list li {
+	margin-left:30px;
+	margin-bottom: 10px;	
+}
