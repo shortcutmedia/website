@@ -126,6 +126,8 @@ $(document).ready(function() {
            }
            //go to destination
            $('html,body').animate({scrollTop:dest}, 1000);
+           // close menu if necessary
+           if($('.nav-collapse').hasClass('in')) { $('.btn-navbar').click(); }
        });  
        
      $('.contact-btn').click(function(event){
