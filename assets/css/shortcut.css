@@ -260,10 +260,10 @@ img.border {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 280px 0 50px;
+  padding: 200px 0 50px;
   margin: 0 0 50px;
-  max-height: 850px;
-  min-height: 500px;
+  max-height: 930px;
+  min-height: 580px;
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
