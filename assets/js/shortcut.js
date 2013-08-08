@@ -1,8 +1,8 @@
 $(document).ready(function() {  
 
 	/** Filter Lib **/
-	
-		
+
+
     $('ul#filter a').click(function() {  
     	
     	 $(this).css('outline','none');  
@@ -186,5 +186,3 @@ $(document).ready(function() {
      
  	 
 });
-
-
