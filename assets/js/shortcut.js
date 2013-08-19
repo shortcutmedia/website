@@ -114,6 +114,7 @@ $(document).ready(function() {
    
   
    $('.navbar li a').click(function(event){
+	if ($(this).attr("href")[0] == "#"){
            event.preventDefault();
            //calculate destination place
             $('.navbar li a').parent().removeClass("active");
@@ -128,6 +129,7 @@ $(document).ready(function() {
            $('html,body').animate({scrollTop:dest}, 1000);
            // close menu if necessary
            if($('.nav-collapse').hasClass('in')) { $('.btn-navbar').click(); }
+		}
        });  
        
      $('.contact-btn').click(function(event){
