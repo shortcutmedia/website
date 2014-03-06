@@ -186,5 +186,90 @@ $(document).ready(function() {
        $('#inline-video div.modal-body #vidholder').html('&nbsp;');  
      });
      
- 	 
+
 });
+
+
+(function() {
+  var ready;
+
+  window.Application || (window.Application = {});
+
+  Application.uploader = {
+    upload_uuid: null,
+    s4: function() {
+      return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    },
+    guid: function() {
+      return this.s4() + this.s4() + '-' + this.s4() + '-' + this.s4() + '-' + this.s4() + '-' + this.s4() + this.s4() + this.s4();
+    },
+    initialize: function(el) {
+      this.el = el;
+      $(this.el).fileupload({
+        add: this.add,
+        progress: this.progress,
+        done: this.done,
+        fail: this.fail
+      });
+      this.upload_uuid = this.guid();
+      return this.remaining = 0;
+    },
+    add: function(e, data) {
+      var file, type_regex, types;
+      types = $(Application.uploader.el).data('types');
+      type_regex = RegExp("(\\.|\\/)(" + types + ")$", "i");
+      file = data.files[0];
+      if (type_regex.test(file.type) || type_regex.test(file.name)) {
+        Application.uploader.remaining += 1;
+        data.context = $(tmpl("template-upload", file).trim());
+        $('#upload-button').hide();
+        $('#progress-area').html(data.context);
+        return data.submit();
+      } else {
+        return alert("" + file.name + " is not a pdf, jpeg, or png image file");
+      }
+    },
+    progress: function(e, data) {
+      var progress;
+      if (data.context) {
+        progress = parseInt(data.loaded / data.total * 100, 10);
+        return data.context.find('.bar').css('width', progress + '%');
+      }
+    },
+    done: function(e, data) {
+      var content, domain, el, file, path, to;
+      data.context.find('.meter').css('width', '0%');
+      data.context.find('p').text('generating...');
+      el = Application.uploader.el;
+      file = data.files[0];
+      domain = $(el).attr('action');
+      path = $("" + el + " input[name=key]").val().replace('${filename}', file.name);
+      to = $(el).data('post');
+      content = {};
+      content[$(el).data('as')] = domain + path;
+      
+      $('#upload_details').html('<iframe src ="http://shortcutmedia.desk.com/customer/emails/new?email[body]='+ domain + path +'&email[subject]=sales-channel-upload" width="350" height="450" border="0" scrolling="no" background="none" seamless="seamless"></iframe>');
+
+      $('#upload-area').remove()
+
+
+      return content['upload[specification_type'] = $(el).data('specification-type');
+    },
+    fail: function(e, data) {
+      alert("" + data.files[0].name + " failed to upload.");
+
+      $('#upload-button').show();
+      console.log("Upload failed:");
+      return console.log(data);
+    }
+  };
+
+  ready = function() {
+    return Application.uploader.initialize('#fileupload');
+  };
+
+  $(document).ready(ready);
+
+}).call(this);
+
+

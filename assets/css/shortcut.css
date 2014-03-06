@@ -309,6 +309,13 @@ img.border {
 .teaser#item1 p {
   color: #383838;
 }
+.sales-channel{
+  margin-top: 90px;
+}
+.sales-channel-meta iframe {
+  border: 0 !important;
+}
+
 /* carousel */
 .carousel {
   position: relative;
