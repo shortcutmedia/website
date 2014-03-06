@@ -316,6 +316,10 @@ img.border {
   border: 0 !important;
 }
 
+#upload-button input[type=file]{
+  line-height: inherit !important;
+}
+
 /* carousel */
 .carousel {
   position: relative;
