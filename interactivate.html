@@ -91,14 +91,14 @@
 		<div class="row" id="upload-area">
 			<div class="span3" id="upload-button">
 
-         <form accept-charset="UTF-8" action="https://web-channel.s3.amazonaws.com/" data-as="upload[direct_upload_url]" data-post="http://localhost:3000/uploads" data-types="jpeg|jpg|png|pdf" enctype="multipart/form-data" id="fileupload" method="post" novalidate="novalidate">
+         <form accept-charset="UTF-8" action="https://web-channel.s3.amazonaws.com/" data-as="upload[direct_upload_url]" data-post="http://localhost:3000/uploads" data-types="jpeg|jpg|png|pdf|gif" enctype="multipart/form-data" id="fileupload" method="post" novalidate="novalidate">
           <div style="margin:0;padding:0;display:inline">
             <input name="utf8" type="hidden" value="✓">
           </div>
-          <input id="key" name="key" type="hidden" value="uploads/e810b3d2ca166afc2371734eded7a5a8/${filename}">
+          <input id="key" name="key" type="hidden" value="uploads/${uuid}/${filename}">
           <input id="acl" name="acl" type="hidden" value="public-read">
-          <input id="policy" name="policy" type="hidden" value="eyJleHBpcmF0aW9uIjoiMjAxNC0wMy0wM1QxOTowMzoxNi4zNTdaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLHsiYnVja2V0Ijoid2ViLWNoYW5uZWwifSx7ImFjbCI6InB1YmxpYy1yZWFkIn1dfQ==">
-          <input id="signature" name="signature" type="hidden" value="5Ub2ISZr33IurlgrU1w4R63JbRk=">
+          <input id="policy" name="policy" type="hidden" value="eyJleHBpcmF0aW9uIjoiMjAxNC0wMy0wN1QxOTozMToxOS42OTJaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLHsiYnVja2V0Ijoid2ViLWNoYW5uZWwifSx7ImFjbCI6InB1YmxpYy1yZWFkIn1dfQ==">
+          <input id="signature" name="signature" type="hidden" value="q3tQKQgnp2q4LHAJDVl6p3s8Fn4=">
           <input id="AWSAccessKeyId" name="AWSAccessKeyId" type="hidden" value="AKIAIEUP4DZ6TDWDXMAA">
           <input id="file" multiple="multiple" name="file" type="file">
         </form>

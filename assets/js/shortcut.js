@@ -212,6 +212,8 @@ $(document).ready(function() {
         fail: this.fail
       });
       this.upload_uuid = this.guid();
+      input_el = $("" + el + " input[name=key]")
+      input_el.val(input_el.val().replace('${uuid}', this.guid()));
       return this.remaining = 0;
     },
     add: function(e, data) {
