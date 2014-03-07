@@ -58,7 +58,9 @@ $(document).ready(function() {
       
       }
       
-      showMaps($('.tab-pane').eq(0));
+      if ($('.tab-pane').length) {
+        showMaps($('.tab-pane').eq(0));
+      }
       
       $('#contactTab a').click(function (e) {
         e.preventDefault();
