@@ -267,7 +267,9 @@ $(document).ready(function() {
   };
 
   ready = function() {
-    return Application.uploader.initialize('#fileupload');
+    if ($('#fileupload').length) {
+      Application.uploader.initialize('#fileupload');
+    }
   };
 
   $(document).ready(ready);
