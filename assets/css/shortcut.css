@@ -316,6 +316,26 @@ img.border {
   border: 0 !important;
 }
 
+.sales-channel input[type=text] {
+  padding: 0 4px;
+  height: 28px;
+  margin: 0;
+}
+.sales-channel input + .help-block {
+  margin-top: 0;
+}
+.form-wizard-buttons {
+  padding-top: 10px;
+}
+
+.sales-channel legend {
+  display: none;
+}
+
+.sales-channel form.form-wizard .steps {
+  margin-bottom: 20px;
+}
+
 #upload-button input[type=file]{
   line-height: inherit !important;
 }
@@ -987,4 +1007,19 @@ footer .social.twitter {
   #overview .span3 a {
     height: 119px;
   }
+}
+
+#preview{
+  width: 312px;
+  height: 164px;
+  background-position:center;
+  background-clip: border-box;
+  background-position: center;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+#preview.textonly{
+  height: 0px;
 }

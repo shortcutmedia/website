@@ -12,6 +12,7 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/shortcut.css" rel="stylesheet">
+    <link href="assets/css/formToWizard.css "rel="stylesheet">
     <link href="https://d218iqt4mo6adh.cloudfront.net/assets/widget_embed_191.css" media="screen" rel="stylesheet" type="text/css" />
     
 
@@ -82,32 +83,102 @@
 	<div class="container sales-channel" id="sales-channel">
 		<div class="row">
 			<div class="span12">
-				<h2>Start with Free Trial!</h2>
+				<h2>Create your Shortcut!</h2>
 				<hr />
-        <p>Upload something...</p>
 			</div>
 		</div>
 
-		<div class="row" id="upload-area">
-			<div class="span3" id="upload-button">
 
-         <form accept-charset="UTF-8" action="https://web-channel.s3.amazonaws.com/" data-as="upload[direct_upload_url]" data-post="http://localhost:3000/uploads" data-types="jpeg|jpg|png|pdf|gif" enctype="multipart/form-data" id="fileupload" method="post" novalidate="novalidate">
+		<div class="row" id="upload-area">
+			<div class="span8">
+
+         <!--<form accept-charset="UTF-8" action="https://web-channel.s3.amazonaws.com/" data-as="upload[direct_upload_url]" data-post="http://localhost:3000/uploads" data-types="jpeg|jpg|png|pdf|gif" enctype="multipart/form-data" id="fileupload" method="post" novalidate="novalidate" class="form-horizontal">-->
+         <form accept-charset="UTF-8" action="javascript:" data-types="jpeg|jpg|png|pdf|gif" enctype="multipart/form-data" id="fileupload" method="post" novalidate="novalidate" class="form-horizontal">
           <div style="margin:0;padding:0;display:inline">
             <input name="utf8" type="hidden" value="✓">
           </div>
-          <input id="key" name="key" type="hidden" value="uploads/${uuid}/${filename}">
-          <input id="acl" name="acl" type="hidden" value="public-read">
-          <input id="policy" name="policy" type="hidden" value="eyJleHBpcmF0aW9uIjoiMjAxNC0wMy0wN1QxOTozMToxOS42OTJaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLHsiYnVja2V0Ijoid2ViLWNoYW5uZWwifSx7ImFjbCI6InB1YmxpYy1yZWFkIn1dfQ==">
-          <input id="signature" name="signature" type="hidden" value="q3tQKQgnp2q4LHAJDVl6p3s8Fn4=">
-          <input id="AWSAccessKeyId" name="AWSAccessKeyId" type="hidden" value="AKIAIEUP4DZ6TDWDXMAA">
-          <input id="file" multiple="multiple" name="file" type="file">
+          <fieldset>
+            <legend>Upload image</legend>
+
+            <input id="key" name="key" type="hidden" value="uploads/${uuid}/${filename}">
+            <input id="acl" name="acl" type="hidden" value="public-read">
+            <input id="policy" name="policy" type="hidden" value="eyJleHBpcmF0aW9uIjoiMjAyMi0wMy0xOFQwNzoyMjo1OS43MTBaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLHsiYnVja2V0Ijoid2ViLWNoYW5uZWwifSx7ImFjbCI6InB1YmxpYy1yZWFkIn1dfQ==">
+            <input id="signature" name="signature" type="hidden" value="4x7dye5BYQG3xTgPqT9eV/cGEu8=">
+            <input id="AWSAccessKeyId" name="AWSAccessKeyId" type="hidden" value="AKIAIEUP4DZ6TDWDXMAA">
+
+
+            <input id="upload_url" name="upload_url" type="hidden" value="">
+
+
+            <div class="control-group">
+              <label class="control-label" for="link_title">Link Title *</label>
+              <div class="controls">
+                <input type="text" placeholder="" name="link_title" id="link_title" class="input-xlarge" required />
+                <span class="help-block">Enter a title for the URL. Will be displayed in the Shortcut history.</span>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="file">Your image *</label>
+              <div class="controls">
+                <div id="upload-button">
+                  <input id="file" multiple="multiple" name="file" type="file" required>
+                  <span class="help-block">Please upload your image.</span>
+                </div>
+                <div id='progress-area'></div>
+                <div id='preview'></div>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="url">Connect image to *</label>
+              <div class="controls">
+                <input type="url" placeholder="" name="url" id="url" class="input-xlarge form-control" required />
+                <span class="help-block">What is the URL the image should be connected with?</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your information</legend>
+
+            <div class="control-group">
+              <label class="control-label" for="fullname">Your full name *</label>
+              <div class="controls">
+                <input type="text" name="fullname" id="fullname" class="input-xlarge" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="company">Company name</label>
+              <div class="controls">
+                <input type="text" name="company" id="company" class="input-xlarge" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="email">Email *</label>
+              <div class="controls">
+                <input type="text" name="email" id="email" class="input-xlarge" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="homepage">Homepage</label>
+              <div class="controls">
+                <input type="text" name="homepage" id="homepage" class="input-xlarge" />
+              </div>
+            </div>
+          </fieldset>
+
+           <fieldset>
+            <legend>Confirmation</legend>
+
+            <p>Thank you!</p>
+          </fieldset>
+
         </form>
 
       </div>
 
       <div class="span4">
 
-        <div id='progress-area'></div>
 
         <script id="template-upload" type="text/x-tmpl">
           <div class="upload">
@@ -163,8 +234,8 @@
     <script src="assets/js/tmpl.js"></script>
     <!--If you already have fancybox on the page this script tag should be omitted-->
     <script src="https://d218iqt4mo6adh.cloudfront.net/assets/widget_embed_libraries_191.js" type="text/javascript"></script>
-
-   	<script src="assets/js/shortcut.js" type="text/javascript"></script>
+    <script src="assets/js/formToWizard.js" type="text/javascript" ></script>
+    <script src="assets/js/shortcut.js" type="text/javascript"></script>
   </body>
 </html>
 

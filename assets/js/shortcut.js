@@ -208,10 +208,12 @@ $(document).ready(function() {
     initialize: function(el) {
       this.el = el;
       $(this.el).fileupload({
+        url: 'https://web-channel.s3.amazonaws.com/',
         add: this.add,
         progress: this.progress,
         done: this.done,
-        fail: this.fail
+        fail: this.fail,
+        submit: this.submit
       });
       this.upload_uuid = this.guid();
       input_el = $("" + el + " input[name=key]")
@@ -227,10 +229,30 @@ $(document).ready(function() {
         Application.uploader.remaining += 1;
         data.context = $(tmpl("template-upload", file).trim());
         $('#upload-button').hide();
-        $('#progress-area').html(data.context);
+        $('#progress-area').show().html(data.context);
         return data.submit();
       } else {
         return alert("" + file.name + " is not a pdf, jpeg, or png image file");
+      }
+    },
+
+    submit: function (e, data) {
+      console.log('submit.........');
+
+      var el = $('#fileupload');
+
+      var key = el.find("input[name=key]").val();
+      var awsAccessKey = el.find("input[name=AWSAccessKeyId]").val();
+      var policy = el.find("input[name=policy]").val();
+      var signature = el.find("input[name=signature]").val();
+
+      // Overwrite the form data 
+      data.formData = {
+        key: key,
+        acl: 'public-read',
+        policy: policy,
+        signature: signature,
+        AWSAccessKeyId: awsAccessKey
       }
     },
     progress: function(e, data) {
@@ -246,23 +268,32 @@ $(document).ready(function() {
       data.context.find('p').text('generating...');
       el = Application.uploader.el;
       file = data.files[0];
-      domain = $(el).attr('action');
+      domain = data.url;
       path = $("" + el + " input[name=key]").val().replace('${filename}', file.name);
-      to = $(el).data('post');
-      content = {};
-      content[$(el).data('as')] = domain + path;
-      
-      $('#upload_details').html('<iframe src ="http://shortcutmedia.desk.com/customer/emails/new?email[body]='+ domain + path +'&email[subject]=sales-channel-upload" width="350" height="450" border="0" scrolling="no" background="none" seamless="seamless"></iframe>');
+      imageUrl = domain + path; 
+      console.log(file);
 
-      $('#upload-area').remove()
+      $("" + el + " input[name=upload_url]").val(imageUrl);
+      $('#upload-button').hide();
+      $('#upload-button input').remove()
+      $('#progress-area').hide();
+      img_mime = 'image/'
+      if (file.type.substring(0,img_mime.length) === img_mime) {
+        $('#preview').css('background-image', 'url(' + imageUrl + ')');
+      } else {
+        $('#preview').append('<p>' + file.name + '</p>');
+        $('#preview').addClass('textonly');
+      }
 
+      $('#preview').show();
 
-      return content['upload[specification_type'] = $(el).data('specification-type');
+      return true
     },
     fail: function(e, data) {
       alert("" + data.files[0].name + " failed to upload.");
 
       $('#upload-button').show();
+      $('#progress-area').hide();
       console.log("Upload failed:");
       return console.log(data);
     }
@@ -271,11 +302,41 @@ $(document).ready(function() {
   ready = function() {
     if ($('#fileupload').length) {
       Application.uploader.initialize('#fileupload');
+      $("#fileupload").formToWizard();
+
+     	$("#fileupload").submit(function() {
+
+        var this_form = $(this);
+        $.ajax({
+          type: 'post',
+          data: this_form.serialize(),
+          url: 'send_upload_request.php',
+          success: function(res) {
+            if(res == "true") {
+              //this_form.fadeOut("fast");
+                $(".success").fadeIn("fast");
+                $(".validation").fadeOut("fast");
+            } else {
+              $(".validation").fadeIn("fast");
+              this_form.find(".text").removeClass("error");
+              $.each(res.split(","), function() {
+                this_form.find("#"+this).addClass("error");
+              });
+            }
+          }
+        });
+       });
+ 
+      $('.form-wizard-button.last').on('click', function () {
+        $('#fileupload').submit();
+      });
     }
   };
 
   $(document).ready(ready);
 
 }).call(this);
+
+
 
 
