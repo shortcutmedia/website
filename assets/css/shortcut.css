@@ -436,31 +436,31 @@ a.dl.windows {
 }
 #features .feat.feat01 {
   background-repeat: no-repeat;
-  background-image: url('../img/feat01.jpg');
+  background-image: url('../img/feat01.png');
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   #features .feat.feat01 {
-    background-image: url('../img/feat01@2x.jpg');
+    background-image: url('../img/feat01@2x.png');
     background-size: 90px 90px;
   }
 }
 #features .feat.feat02 {
   background-repeat: no-repeat;
-  background-image: url('../img/feat02.jpg');
+  background-image: url('../img/feat02.png');
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   #features .feat.feat02 {
-    background-image: url('../img/feat02@2x.jpg');
+    background-image: url('../img/feat02@2x.png');
     background-size: 90px 90px;
   }
 }
 #features .feat.feat03 {
   background-repeat: no-repeat;
-  background-image: url('../img/feat03.jpg');
+  background-image: url('../img/feat03.png');
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   #features .feat.feat03 {
-    background-image: url('../img/feat03@2x.jpg');
+    background-image: url('../img/feat03@2x.png');
     background-size: 90px 90px;
   }
 }
