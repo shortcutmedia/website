@@ -241,18 +241,22 @@ $(document).ready(function() {
 
       var el = $('#fileupload');
 
+      var utf8 = el.find("input[name=utf8]").val();
       var key = el.find("input[name=key]").val();
       var awsAccessKey = el.find("input[name=AWSAccessKeyId]").val();
       var policy = el.find("input[name=policy]").val();
       var signature = el.find("input[name=signature]").val();
+      var success_stat = el.find("input[name=success_action_status]").val();
 
       // Overwrite the form data 
       data.formData = {
+        utf8: utf8,
         key: key,
         acl: 'public-read',
         policy: policy,
         signature: signature,
-        AWSAccessKeyId: awsAccessKey
+        AWSAccessKeyId: awsAccessKey,
+        success_action_status: success_stat
       }
     },
     progress: function(e, data) {
@@ -263,21 +267,24 @@ $(document).ready(function() {
       }
     },
     done: function(e, data) {
-      var content, domain, el, file, path, to;
+      var content, domain, el, file, path, to, imageUrl;
       data.context.find('.meter').css('width', '0%');
       data.context.find('p').text('generating...');
       el = Application.uploader.el;
       file = data.files[0];
       domain = data.url;
-      path = $("" + el + " input[name=key]").val().replace('${filename}', file.name);
-      imageUrl = domain + path; 
-      console.log(file);
-
+      if (data.result) {
+        imageUrl = $('Location', data.result).text();
+      } else {
+        path = $("" + el + " input[name=key]").val().replace('${filename}', file.name);
+        imageUrl = domain + path; 
+      }
       $("" + el + " input[name=upload_url]").val(imageUrl);
       $('#upload-button').hide();
       $('#upload-button input').remove()
       $('#progress-area').hide();
       img_mime = 'image/'
+      console.log(imageUrl);
       if (file.type.substring(0,img_mime.length) === img_mime) {
         $('#preview').css('background-image', 'url(' + imageUrl + ')');
       } else {
