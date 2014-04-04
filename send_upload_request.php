@@ -30,7 +30,7 @@
 		$headers =  'From: Shortcut Media <info@shortcutmedia.com>'. "\r\n" .
 					'X-Mailer: PHP/' . phpversion();
 		$email_subject = "Website Upload Form: $upload_url";
-    $message="Uploaded asset: $upload_url \n\nLink title: $link_title \n\nLink URL: $url\n\nFullname: $fullname\n\nCompany: $company\n\nEmail: $email \n\nHomepage: @homepage\n\n";
+    $message="Uploaded asset: $upload_url \n\nLink title: $link_title \n\nLink URL: $url\n\nFullname: $fullname\n\nCompany: $company\n\nEmail: $email \n\nHomepage: $homepage\n\n";
 	
 		mail($to, $email_subject, $message, $headers);
 		echo "true";
