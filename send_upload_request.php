@@ -1,7 +1,7 @@
 <?php
 
 	// Replace this with your own email address
-	$to="support@shortcutmedia.com";
+	$to="sales@shortcutmedia.com";
 
 	// Extract form contents
 	$upload_url = $_POST['upload_url'];
