@@ -1,0 +1,9 @@
+@import "normalize";
+@import "main"; // HTML5 boilerplate
+
+$page-background: rgb(240,233,215);
+
+body {
+  background-color: $page-background;
+}
+
