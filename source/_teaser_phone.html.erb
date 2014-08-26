@@ -1,0 +1,30 @@
+<%# Teaser Phone                                                         %>
+<%#                                                                      %>
+<%# Chrome is styled in CSS. Play button is drawn with svg. There is a   %>
+<%# image backround fallback for non-svg browsers.                       %>
+<%#                                                                      %>
+<%# Credit: svg was taken from http://www.freepik.com/free-icons         %>
+<%#                                                                      %>
+<%# Remarks on SVG fallback:                                             %>
+<%#                                                                      %>
+<%# SVG has a fairly good browser support but is not supported by IE8.   %>
+<%# Unfortunately there is no ideal fallback solution with inline SVG.   %>
+<%# I wanted the svg to be inline instead of referencing an external     %>
+<%# svg file in an img tag or via css background in order to prevent     %>
+<%# the download of an additional file. But referencing the fallback     %>
+<%# png image file directly in HTML with <foreignObject> like            %>
+<%# descirbed in [2] would trigger a download. The fallback image is     %>
+<%# now applyed by a background image but it dependes on Modernizer      %>
+<%# and therefore on JS.                                                 %>
+<%#                                                                      %>
+<%# Resources:                                                           %>
+<%# [1] http://zurb.com/university/lessons/3                             %>
+<%# [2] http://davidensinger.com/2013/04/inline-svg-with-png-fallback/.  %>
+<%# [3] http://callmenick.com/2014/04/02/svg-fallback-with-png/          %>
+<%# [4] http://css-tricks.com/svg-fallbacks/                             %>
+
+<div id="teaser-phone">
+  <a href="#"><%= partial 'img/play-button.svg' %></a>
+  <span class="button"></span>
+</div>
+

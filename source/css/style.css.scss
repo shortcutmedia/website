@@ -1,0 +1,502 @@
+@import "normalize";
+@import "base"; // HTML5 boilerplate
+@import "grid";
+
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+
+$color-eggshell: rgb(231,190,139); /* #E7BE8B */
+$color-pale-gold: rgb(233,199,133); /* #E9C785 */
+
+$color-peachpuff: rgb(229,195,156); /* #E5C39C */
+$color-lightsalmon: rgb(226,129,102); /* #E28166 */
+
+$color-carrot-orange: rgb(239,146,37);
+$color-deep-carrot-orange: rgb(232,111,44);
+
+
+$page-background-color: rgb(232,218,175);
+$dark-font-color: rgb(95,35,26);
+$dark-font-color-hovered: rgb(136,50,37);
+$shortcut-color: rgb(243,109,42);
+$shortcut-color-light: rgb(241,147,0);
+$shortcut-font-color: rgb(234,108,29);
+$shortcut-font-color-hovered: rgb(196,86,18);
+$border-radius: 8px 8px;
+
+$normal-font: 400;
+$light-font: 300;
+
+
+$customers-image-margin: 1%;
+
+@import "teaser_phone";
+
+body {
+  background-color: $page-background-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: $normal-font;
+  font-weight: $light-font;
+}
+
+.inset{
+  background-color: $shortcut-color-light; 
+
+}
+
+/*h1,h2,h3,h4 { font-weight: $light-font; }*/
+
+nav {
+  h2 {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    margin:0;
+  }
+
+  a{ 
+    /*text-decoration: none;*/
+    color: $dark-font-color;
+    &:hover{ color: $dark-font-color-hovered; }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  } 
+  
+  li{ 
+    display: inline-block; 
+    margin: 0;
+  }
+
+}
+
+#teaser{
+  h1 {
+    font-weight: $light-font;
+    color: $dark-font-color;
+    text-align: right;
+  }
+  b {
+    font-weight: $light-font;
+    color: $shortcut-font-color;
+  }
+}
+
+b, em { font-style: normal; font-weight: normal; }
+
+#signup-clip{
+  background-color: white;
+  padding: 5% 10%;
+  @include border-bottom-left-radius($border-radius);
+  @include border-bottom-right-radius($border-radius);
+
+  p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: grey;
+    margin: 0;
+  }
+
+  a { text-decoration: none; }
+  b {
+    a{
+      color: $shortcut-font-color;
+      &:hover{ color: $shortcut-font-color-hovered; }
+    }
+  }
+  em { 
+    a{ 
+      color: $dark-font-color; 
+      &:hover{ color: $dark-font-color-hovered; }
+    }
+  }
+  hr { margin: 0; }
+
+}
+
+.info-box {
+  display: none;
+
+  background-color: $color-eggshell; 
+  @include border-radius($border-radius);
+
+  color: white;
+
+  h2 {
+    font-weight: $light-font;
+  }
+  p {
+    font-weight: $light-font;
+  }
+
+  .info-box-picture {
+    width: 37.5%;
+
+    float:left;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+
+    img {
+      margin: 0 auto;
+      padding: 5%;
+      display: block;
+      max-width: 60%;
+    }
+  }
+
+  .info-box-desc{
+    background-color: $color-deep-carrot-orange;
+    @include border-radius($border-radius);
+    height: inherit;
+    width: 62.5%;
+    float:left;
+  }
+}
+
+.info-box-background-image {
+
+  background-color: $color-eggshell; 
+  @include border-radius($border-radius);
+
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 37.5% - 7.5%;
+  background-position: 3.75% center;
+
+  &.left {
+    background-position: 100% - 3.75% center;
+
+    .info-box-desc{
+      margin-right: 37.5%; 
+      margin-left:0;
+    }
+  }
+
+  &.top {
+
+    /*$box-content-padding: 5%;*/
+    $box-content-padding: ((100% - 37.5%) / 100) * 5;
+    /*3.125%;*/
+
+    .info-box-desc{
+      margin: 0;
+      width: 100%;
+      .box-content{ padding: $box-content-padding; }
+
+      h2{
+        margin: 0;
+        a{
+          font-size: 1rem;
+          float:right;
+        }
+      }
+    }
+
+    .picture-box {
+      $image-margin: 1%;
+      padding: ($box-content-padding - $image-margin);
+
+      img{
+        float:left;
+        margin: $image-margin;
+        width: (100% / 3) - ( 2 * $image-margin);
+      }
+    }
+  }
+
+
+
+  &.color1 {
+    background-color: $color-eggshell; 
+    .info-box-desc{
+      background-color: $color-deep-carrot-orange;
+      a{ color: $color-deep-carrot-orange; }
+    }
+  }
+
+  &.color2 {
+    background-color: $color-pale-gold;
+    .info-box-desc{
+      background-color: $color-carrot-orange; 
+      a{ color: $color-carrot-orange; }
+    }
+  }
+
+  &.color3 {
+    background-color: $color-peachpuff; 
+    .info-box-desc{
+      background-color: $color-lightsalmon;
+      a{ color: $color-lightsalmon; }
+    }
+  }
+
+  &#create-shortcut { background-image: url('../img/info_graphic_create_shortcut.png'); }
+
+  &#engagement-enabler { background-image: url('../img/info_graphic_engagement.png'); }
+
+  &#one-solution { background-image: url('../img/info_graphic_one_solution.png'); }
+
+  &#purchaising-decisions { background-image: url('../img/info_graphic_purchaising_decisions.png'); }
+
+  &#measure { background-image: url('../img/info_graphic_measure.png'); }
+
+
+
+
+  
+  /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/logo.gif', sizingMethod='scale');*/
+
+/*-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(*/
+/*src='images/logo.gif',*/
+/*sizingMethod='scale')";*/
+
+  h2 {
+    margin-top: 0;
+    font-weight: $light-font;
+  }
+  p {
+    font-weight: $light-font;
+  }
+  em {
+    /*font-weight: bold;*/
+    font-weight: $normal-font;
+    font-style: normal;
+  }
+
+  .info-box-desc{
+    background-color: $color-deep-carrot-orange;
+    @include border-radius($border-radius);
+    height: 100%;
+    margin-left: 37.5%; 
+  }
+
+  .box-content{
+    padding: 5%;
+  }
+}
+
+a.button{
+  background-color: white;
+  text-decoration: none;
+  @include border-radius($border-radius);
+  padding: 6px 12px;
+  font-weight: $normal-font;
+  @include transition(all .2s);
+  &:hover {
+    background-color: whitesmoke;
+  }
+}
+
+a.img-button {
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 150px;
+  height: 57px;
+
+  /* hide the text by pushing it out */
+  /* see http://ran.ge/2012/04/03/css-trick-turning-a-background-image-into-a-clickable-link-take-2/ */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+#demo-button {
+  height: 0;
+  .rounded-batch {
+    $diameter: 172px;
+    background-color: white;
+    @include border-radius(50%);
+    text-align: center;
+    /*display: block;*/
+    /* FIXME: vertical align won't work in IE 7/8 */
+    display: table-cell;
+    vertical-align: middle;
+    width: $diameter;
+    height: $diameter;
+    font-size: 1.4rem;
+    text-decoration: none;
+    position: relative;
+    top: -($diameter / 2);
+    color: $shortcut-font-color;
+    &:hover{
+      background-color: whitesmoke;
+      color: $shortcut-font-color-hovered;
+    }
+
+  }
+}
+
+
+.phone-image-portrait{
+    background-image: url('../img/video_screen1.png');
+    /*background-size: contain;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*width: 160%;*/
+    /*width: 200%;*/
+    width: 100%;
+    height: 0;
+    padding-top: 76.94117647%;
+}
+
+.engage-image {
+  max-width: 380px;
+
+}
+
+.download-instruction {
+  padding-top: 15%;
+  a {
+    background-size: 100px auto;
+    text-decoration: none;
+    /*background-position: 3.75% center;*/
+  }
+
+  .app-store{ 
+    background-image: url('../img/button_app_store.png');
+    &:hover{ background-image: url('../img/button_app_store-hovered.png'); }
+  }
+
+  .play-store{ 
+    background-image: url('../img/button_play_store.png');
+    &:hover{ background-image: url('../img/button_play_store-hovered.png'); }
+  }
+
+  .windows-store{ 
+    background-image: url('../img/button_windows_store.png');
+    &:hover{ background-image: url('../img/button_windows_store-hovered.png'); }
+  }
+}
+
+.footer {
+
+  padding: 1% 0;
+
+  li{
+    width: 24.4%;
+    text-align: center;
+    a{
+      color: white; 
+      &:hover {
+        color: whitesmoke;
+      }
+    }
+  }
+
+  small {
+    display: block;
+    width: 100%;
+    margin-top: 1.5%;
+    text-align: center;
+    font-size: 70%;
+    color: $dark-font-color;
+  }
+}
+
+
+/*
+Responsive 996px grid system ~ Style CSS.
+Copyright 2013, Josh Cope
+*/
+
+/* =============================================================================
+   Site Styles
+   ========================================================================== */
+
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Wide screen monitors wider than 996px */
+@media only screen and (min-width: 996px) {
+  .info-box-background-image {
+    background-size: 34.5% - 7.5%;
+    &.top {
+      .picture-box {
+        img{
+          width: (100% / 4) - ( 2 * $customers-image-margin);
+        }
+      }
+    }
+  }
+
+}
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+  .info-box-background-image {
+    background-position: center 3.75% !important;
+
+    .info-box-desc {
+      margin: 37.5% 0 0 0; 
+      width: 100%;
+    }
+
+    &.top {
+      $box-content-padding: 5%;
+      .info-box-desc{
+        .box-content{ padding: $box-content-padding; }
+      }
+      .picture-box {
+        $image-margin: 1%;
+        padding: ($box-content-padding - $image-margin);
+      }
+    }
+  }
+
+  .footer {
+    li{
+      width: 49.4%;
+    }
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+  .info-box-background-image {
+    &.top {
+     .picture-box {
+        img{
+          width: (100% / 2) - ( 2 * $customers-image-margin);
+        }
+      }
+    }
+  }
+
+
+  .footer {
+    li{
+      width: 100%;
+    }
+  }
+
+}
+
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }
+*/

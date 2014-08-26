@@ -1,6 +1,282 @@
 ---
-title: HTML5 Boilerplate Middleman
+title: Shortcut – Interactive Print
 ---
 
-<!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
+<%#<header>%>
+  <%#<%= partial "main_navi" %>
+<%#</header>%>
+
+<%#<article>%>
+  <%#<p>Hello world! This is HTML5 Boilerplate.</p>%>
+<%#</article>%>
+
+
+<div class="container clearfix">
+
+  <div class="grid_2" >
+    <a href="#">
+      <%= image_tag "logo_shortcut_name_rgb.png", name: "Shortcut logo" %>
+    </a>
+  </div>
+
+  <div class="grid_7" >
+    <nav>
+    <ul>
+      <li><h2><a href="#">For Magazines</a></h2></li>
+      <li><h2><a href="#">For Newspapers</a></h2></li>
+      <li><h2><a href="#">For Brands</a></h2></li>
+    </ul>
+    </nav>
+  </div>
+
+  <div class="grid_3" >
+    <%= partial "signup_clip" %>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="grid_6" >
+    <%= image_tag "shortcut_engage_graphic.png", alt: "Shortcut Engage", class: "engage-image" %>
+  </div>
+
+  <div class="grid_1">&nbsp;</div>
+
+  <div id="teaser" class="grid_5" >
+    <h1>Engage Your Audience with <b>Shortcut Interactive Print</b></h1>
+  </div>
+
+</div>
+
+
+<div class="inset">
+  <div class="container clearfix">
+
+    <div class="grid_8" >
+
+      <div id="demo-button">
+        <a href="#" class="rounded-batch">Open <em>demo button</em> here</a>
+      </div>
+        
+
+      <div class="download-instruction">
+        <%= image_tag "instructions.png", alt: "Download instructions" %>
+
+        <nav>
+        <ul>
+          <li>
+            <a href="http://itunes.apple.com/app/id364110253?mt=8" 
+              target="_blank" 
+              class="img-button app-store">Available on the Apple App Store</a>
+          </li>
+          <li>
+            <a href="https://play.google.com/store/apps/details?id=com.aqris.kooaba.paperboy" 
+              target="_blank" 
+              class="img-button play-store">Get it on Google Play</a>
+          </li>
+          <li>
+            <a href="http://www.windowsphone.com/s?appid=12f84623-7d1d-4d5a-82bb-72df700236c9" 
+              target="_blank" 
+              class="img-button windows-store">Windows Market Place</a>
+          </li>
+        </ul>
+      </nav>
+
+      </div>
+    </div>
+
+    <div class="grid_4 " >
+      <%= partial 'teaser_phone' %>
+    </div>
+  </div>
+</div>
+
+<div class="container clearfix">
+  <div class="grid_1">&nbsp;</div>
+
+  <div class="grid_10">
+    <div class="info-box clearfix">
+
+      <div class="info-box-picture">
+        <%= image_tag "create_shortcut_info_graphic.png", name: "Create Your own Shortcut info graphic" %>
+      </div>
+
+      <div class="info-box-desc">
+        <h2>Create Your own Shortcuts</h2>
+        <p>
+          Welcome to Shortcut &dash; a place where print becomes clickable. 
+          <em>No Augmented Reality</em>, <em>No gimmicks</em>, <em>no upfront set-up costs</em>,
+          just one simple Shortcut to all your content.
+        </p>
+        <p>
+          <a href="#" class="button">try it now</a>
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+  <%#<div class="grid_4 info-box-picture">%>
+    <%#<%= image_tag "create_shortcut_info_graphic.png", name: "Create Your own Shortcut info graphic" %>
+  <%#</div>%>
+  <%#<div class="grid_6 info-box-desc">%>
+    <%#<h2>Create Your own Shortcuts</h2>%>
+    <%#<p>%>
+      <%#Welcome to Shortcut &dash; a place where print becomes clickable. %>
+      <%#<em>No Augmented Reality</em>, <em>No gimmicks</em>, <em>no upfront set-up costs</em>,%>
+      <%#just one simple Shortcut to all your content.%>
+    <%#</p>%>
+    <%#<p>%>
+      <%#<a href="#" class="button">try it now</a>%>
+    <%#</p>%>
+  <%#</div>%>
+
+  <div class="grid_1">&nbsp;</div>
+</div> 
+
+<div class="container clearfix">
+
+  <%#<div class="grid_1">&nbsp;</div>%>
+
+  <%#<div class="grid_10">%>
+    <%#<div id="create-shortcut" class="info-box-background-image clearfix">%>
+
+      <%#<div class="info-box-desc">%>
+        <%#<div class="box-content">%>
+          <%#<h2>Create Your own Shortcuts</h2>%>
+          <%#<p>%>
+            <%#Welcome to Shortcut &dash; a place where print becomes clickable. %>
+            <%#<em>No Augmented Reality</em>, <em>No gimmicks</em>, <em>no upfront set-up costs</em>,%>
+            <%#just one simple Shortcut to all your content.%>
+          <%#</p>%>
+          <%#<p>%>
+            <%#<a href="#" class="button">try it now</a>%>
+          <%#</p>%>
+        <%#</div>%>
+      <%#</div>%>
+
+
+    <%#</div>%>
+  <%#</div>%>
+  <%#<div class="grid_1">&nbsp;</div>%>
+
+
+
+  <% info_box('create-shortcut', class: 'color1 right') do %>
+    <h2>Create Your own Shortcuts</h2>
+    <p>
+      Welcome to Shortcut &dash; a place where print becomes clickable. 
+      <em>No Augmented Reality</em>, <em>No gimmicks</em>, <em>no upfront set-up costs</em>,
+      just one simple Shortcut to all your content.
+    </p>
+    <p><a href="#" class="button">try it now</a></p>
+  <% end %>
+
+  <div class="clear"></div> <br>
+
+  <% info_box('engagement-enabler', class: 'color2 left') do %>
+    <h2>The Easy-to use Engagement Enabler</h2>
+    <p>
+      Whether you are a publisher, editor, brand owner or retailer, 
+      Shortcut is the most cost-efficient engagement platform for
+      Interactive Print. Shortcut is designed to make life easier for you. 
+      No upfront set-up costs but fast and easy-to-use solution.
+      just one simple Shortcut to all your content.
+    </p>
+    <p><a href="#" class="button">Watch Video!</a></p>
+  <% end %>
+
+  <div class="clear"></div> <br>
+
+  <% info_box('one-solution', class: 'color3 right') do %>
+    <h2>One Solution – multiple businesses</h2>
+    <p>
+      Shortcut provides benefits across all sectors whether its 
+      publisher, retail, fashion, education, travel, and much more.
+      Try a demo today and see how easy your Shortcut can be created.
+    </p>
+    <p><a href="#" class="button">Try Demo!</a></p>
+  <% end %>
+
+  <div class="clear"></div> <br>
+
+  <% info_box('purchaising-decisions', class: 'color1 left') do %>
+    <h2>The Solution to your customers' purchaising decitions</h2>
+    <p>
+      Shortcut offers brand owners and publishers the ability to offer
+      shopping direct from the printed page. Imagine that fashion
+      spread <em>detailing the latest trends and buys – your readers
+      become your customers within seconds</em>.
+    </p>
+    <p><a href="#" class="button">Try it now!</a></p>
+   <% end %>
+
+  <div class="clear"></div> <br>
+
+  <% info_box('measure', class: 'color2 right') do %>
+    <h2>Measure the results achieved</h2>
+    <p>
+      All Shortcuts are fully measurable with Shortcut Manager.
+    </p>
+    <p><a href="#" class="button">Try it now!</a></p>
+  <% end %>
+
+  <div class="clear"></div> <br>
+
+  <%#<% info_box('shortcut-use', class: 'color3 top') do %>
+    <%#<h2>Shortcut is used world wide</h2>%>
+    <%#<p><a href="#" class="button">Join Us!</a></p>%>
+  <%#<% end %>
+
+  <div class="grid_1">&nbsp;</div>
+
+  <div class="grid_10">
+    <div id="shortcut-use" class="info-box-background-image clearfix color3 top">
+
+      <div class="info-box-desc clearfix">
+        <div class="box-content">
+          <h2>Shortcut is used world wide <a href="#" class="button">Join Us!</a></h2>
+        </div>
+      </div>
+
+      <div class="picture-box clearfix">
+
+        <% %w[ 
+        l_apg.jpg l_bmw.jpg l_bonnier.jpg 
+        l_burda.jpg l_iwc.jpg l_mitsubishi.jpg 
+        l_nzz.jpg l_ringier.jpg l_sanoma.jpg 
+        l_springer.jpg l_tamedia.jpg l_wired.jpg
+        ].each do |customer| %>
+          <%= image_tag customer %>
+        <% end %>
+     </div>
+
+    </div>
+  </div>
+  <div class="grid_1">&nbsp;</div>
+
+  <div class="clear"></div> <br>
+
+</div>
+
+<div class="inset">
+  <div class="container clearfix footer">
+
+    <div class="grid_1">&nbsp;</div>
+    <div class="grid_10" >
+      <nav>
+      <ul>
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      </nav>
+      <small>Shortcut Media AG &copy <%= Date.today.year %>. All Rights Reserved.</small>
+    </div>
+
+    <div class="grid_1">&nbsp;</div>
+  </div>
+</div>
+
+
+
