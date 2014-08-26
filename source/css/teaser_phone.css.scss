@@ -1,8 +1,13 @@
+$teaser-phone-width: 186px;
+$teaser-phone-height: 280px;
+$button-width: 28px;
+$button-height: 28px;
+
 #teaser-phone {
   position: relative;
   margin-top: -50%;
-  width: 186px;
-  height: 282px;
+  width: $teaser-phone-width;
+  height: $teaser-phone-height;
   background-color: $page-background-color;
   border-style: solid;
   border-color: rgb(69,5,5);
@@ -34,15 +39,14 @@
     display: block;
     margin: 0 auto;
     margin-top: 14px;
-    width: 28px;
-    height: 28px;
+    width: $button-width;
+    height: $button-height;
     background-color: $color-carrot-orange;
     @include border-radius(50%);
   }
-
-  
 }
 
+/* Fallback for svg play button */
 .no-svg #teaser-phone {
 /*.svg #teaser-phone {*/
   a{ 
@@ -52,3 +56,57 @@
   }
 }
 
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+  #teaser-phone {
+    $phone-scale: 0.8;
+    width: ($teaser-phone-width * $phone-scale);
+    height: ($teaser-phone-height * $phone-scale);
+    border-width: (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale) (18px * $phone-scale);
+    .button{
+      width: $button-width * $phone-scale;
+      height: $button-height * $phone-scale;
+      /*margin: -40% 0 0 -16%;*/
+    }
+   }
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+  #teaser-phone {
+    $phone-scale: 0.8;
+    position: static;
+    margin-top: 0;
+    width: ($teaser-phone-height * $phone-scale);
+    height: ($teaser-phone-width * $phone-scale);
+    border-width: (18px * $phone-scale) (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale);
+    a{
+      svg{
+        margin-top: 18%;
+      }
+    }
+
+    .button{
+      width: $button-width * $phone-scale;
+      height: $button-height * $phone-scale;
+      margin: -40% 0 0 -16%;
+    }
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) { }
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+  #teaser-phone {
+    $phone-scale: 0.5;
+    width: ($teaser-phone-height * $phone-scale);
+    height: ($teaser-phone-width * $phone-scale);
+    border-width: (18px * $phone-scale) (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale);
+    .button{
+      width: $button-width * $phone-scale;
+      height: $button-height * $phone-scale;
+    }
+  }
+}
