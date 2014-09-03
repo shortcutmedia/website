@@ -1,0 +1,54 @@
+<header class="grid-whole clearfix">
+  <div class="logo grid-2 m-grid-3 s-grid-half">
+    <div id="logo">
+      <a href="#">
+        <figure><%= partial 'img/shortcut_logo_rgb_small_shutter.svg' %></figure>
+      </a>
+    </div>
+    <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip-mobile'} %>
+  </div>
+
+  <nav class="grid-8 m-grid-6 s-grid-half">
+    <ul class="even-navi-4 ">
+      <li class="padder alpha">&nbsp;</li>
+      <li><h2><a href="#">For Magazines</a></h2></li>
+      <li><h2><a href="#">For Newspapers</a></h2></li>
+      <li><h2><a href="#">For Brands</a></h2></li>
+      <li class="padder omega">&nbsp;</li>
+
+      <span></span><%# required for IE7/8 %>
+    </ul>
+  </nav>
+
+  <div class="grid-2 m-grid-3">
+    <div class="signup-clip-container">
+      <div class="sharing-links" >
+        <a href="">
+          <figure> 
+            <%= partial 'img/button_share_facebook.svg' %>
+          </figure>
+        </a>
+        <a href="">
+          <figure> 
+            <%= partial 'img/button_share_twitter.svg' %>
+          </figure>
+        </a>
+        <a href="">
+          <figure> 
+            <%= partial 'img/button_linkedin.svg' %>
+          </figure>
+        </a>
+        <a href="">
+          <figure> 
+            <%= partial 'img/button_youtube.svg' %>
+          </figure>
+        </a>
+      </div>
+
+      <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip'} %>
+    </div>
+  </div>
+</header>
+
+
+

@@ -4,15 +4,17 @@ $button-width: 28px;
 $button-height: 28px;
 
 #teaser-phone {
+  $phone-scale: 1.2;
   position: relative;
   margin-top: -50%;
-  width: $teaser-phone-width;
-  height: $teaser-phone-height;
+  width: ($teaser-phone-width * $phone-scale);
+  height: ($teaser-phone-height * $phone-scale);
   background-color: $page-background-color;
   border-style: solid;
   border-color: rgb(69,5,5);
-  border-width: 40px 18px 66px 18px;
+  border-width: (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale) (18px * $phone-scale);
   @include border-radius(19px);
+  margin-left: auto;
 
   a{
     display:block;
@@ -39,8 +41,8 @@ $button-height: 28px;
     display: block;
     margin: 0 auto;
     margin-top: 14px;
-    width: $button-width;
-    height: $button-height;
+    width: $button-width * $phone-scale;
+    height: $button-height * $phone-scale;
     background-color: $color-carrot-orange;
     @include border-radius(50%);
   }
@@ -59,7 +61,7 @@ $button-height: 28px;
 /* Tablet Portrait size to Base 996px */
 @media only screen and (min-width: 768px) and (max-width: 995px) {
   #teaser-phone {
-    $phone-scale: 0.8;
+    $phone-scale: 1.0;
     width: ($teaser-phone-width * $phone-scale);
     height: ($teaser-phone-height * $phone-scale);
     border-width: (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale) (18px * $phone-scale);
@@ -74,12 +76,15 @@ $button-height: 28px;
 /* All Mobile Sizes */
 @media only screen and (max-width: 767px) {
   #teaser-phone {
-    $phone-scale: 0.8;
+    $phone-scale: 0.7;
     position: static;
     margin-top: 0;
     width: ($teaser-phone-height * $phone-scale);
     height: ($teaser-phone-width * $phone-scale);
     border-width: (18px * $phone-scale) (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale);
+    margin-left: auto;
+    margin-right: auto;
+
     a{
       svg{
         margin-top: 18%;
@@ -104,6 +109,9 @@ $button-height: 28px;
     width: ($teaser-phone-height * $phone-scale);
     height: ($teaser-phone-width * $phone-scale);
     border-width: (18px * $phone-scale) (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale);
+    margin-left: auto;
+    margin-right: auto;
+
     .button{
       width: $button-width * $phone-scale;
       height: $button-height * $phone-scale;

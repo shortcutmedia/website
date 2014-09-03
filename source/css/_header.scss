@@ -1,0 +1,188 @@
+@import "_signup_clip";
+
+header {
+  $top-distance: 0.5em;
+  #signup-clip{ display: block; }
+  #signup-clip-mobile{ display: none; }
+
+  .logo { 
+    padding-top: $top-distance; 
+    /*width: 100%;*/
+    /*max-width: 134px;*/
+  }
+  nav {
+    padding-top: $top-distance;
+    overflow: hidden;
+    /*padding-left: 0.25rem;*/
+    h2 { 
+      margin: 0;
+      @include font-size(18);
+      line-height: 1.6;
+      white-space: nowrap;
+    }
+
+    a{ 
+      color: $dark-font-color;
+      &:hover{ color: $dark-font-color-hovered; }
+    }
+
+    ul{
+      text-align: justify;
+      font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
+      &:after {
+        content: '';
+        width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+        display: inline-block;
+      }
+      &.debug {
+        border: 1px dotted black;
+        li { background: green; }
+      }
+    }
+    li{
+      display: inline-block; 
+      padding-top: 3px;
+    }
+    .padder { 
+      width: 0px; /* invisible */ 
+      &:first-child{ margin-left: -30px; }
+    }
+  }
+
+}
+
+#logo {
+  figure {
+    max-width: 132px;
+    line-height: 0;
+  }
+
+  a{ 
+    display: block;
+    &:hover {
+      svg path{ fill: $dark-font-color-hovered !important; }
+    }
+  }
+
+  /* Make logo align with nav links even when logo starts to*/
+  /* shrink. It doesn't matter that the height is smaller than*/
+  /* the actual image.*/
+  display: table-cell;
+  height: 30px;
+  vertical-align: bottom;
+}
+
+.sharing-links {
+  top: 2px;
+  right: -1.75em;
+  line-height: 1;
+  position:absolute;;
+  height: 0;
+
+  a{display: block;}
+
+  svg { width: 24px; }
+}
+
+
+
+/* Wide screen monitors wider than 996px */
+@media only screen and (min-width: 996px) {
+  header {
+    nav{
+      h2 { 
+        @include font-size(20);
+      }
+    }
+  }
+  #logo {
+    figure {
+      max-width: 144px;
+      line-height: 0;
+    }
+  }
+}
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+  header {
+    nav{
+      .padder { 
+        &.alpha { margin-left:-0.3rem; }
+        &.omega { margin-right: -0.3rem; }
+      }
+    }
+  }
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+  header {
+    nav{
+      ul{
+        text-align: left;
+        padding-left: 0; 
+      }
+      li{ margin-right: 0.875rem; }
+      .padder{ display: none; }
+    }
+  }
+}
+
+/* arbitrary size only for main navigation */
+@media only screen and (max-width: 606px) {
+  header {
+    nav{ 
+      ul{ padding-left: 0.5rem; }
+    }
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+
+  header {
+    $divider-padding: 2%;
+    $top-distance: 0;
+    background-color: white;
+    @include border-bottom-left-radius($border-radius);
+    @include border-bottom-right-radius($border-radius);
+    padding: 8px; padding: 0.5rem;
+    padding-bottom: 4px; padding-bottom: 0.25rem;
+
+    #signup-clip{ display: none; }
+    #signup-clip-mobile{ 
+      display: block; 
+      padding: 0.5em 0; 
+    }
+
+    nav { 
+      padding-left: $divider-padding; padding-top: $top-distance;
+      ul { padding-left: 0; }
+    }
+
+    .logo {
+      position: relative;
+      padding-top: $top-distance;
+      padding-right: $divider-padding;
+
+      &:after { /* divider line */
+        content:'';
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right:0;
+        border-right: 1px solid $page-background-color;
+      }
+    }
+
+    .sharing-links{ display: none; }
+  }
+}
+
+

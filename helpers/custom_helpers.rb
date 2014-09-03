@@ -1,18 +1,27 @@
 module CustomHelpers
 
-  def info_box(id, options={}, &block)
+  def info_box(options={}, &block)
 
     inner_html = capture_html(&block)
 
-    html_class = %w[info-box-background-image clearfix]
+    html_class = %w[grid-whole info-box-2]
       .concat([*options[:class]])
       .join(' ')
 
     concat_content(
-      div(class: 'grid_10 prefix_1 suffix_1') do
-        div(id: id, class: html_class) do
-          div(class: 'info-box-desc') do
-            div(inner_html, class: 'box-content')
+
+      content_tag(:section, class: 'grid-whole info-box-wrapper') do
+        div(class: 'l-grid-10 l-offset-1 m-grid-10 m-offset-1 s-grid-whole') do
+          div(class: html_class) do
+            [
+              content_tag(:aside, class: "grid-all s-grid-whole") do
+                content_tag(:figure) do
+                  partial(options[:image_url])
+                end
+              end,
+              content_tag(:article, inner_html, class: 'grid-all s-grid-whole invisible-hight-helper'),
+              content_tag(:article, inner_html, class: 's-grid-whole visible')
+            ].join
           end
         end
       end

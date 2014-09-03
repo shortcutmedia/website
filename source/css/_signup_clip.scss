@@ -1,0 +1,30 @@
+.signup-clip{
+  background-color: white;
+  padding: 5% 10%;
+  margin-right: 0.5em;
+  @include border-bottom-left-radius($border-radius);
+  @include border-bottom-right-radius($border-radius);
+
+  p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: grey;
+    margin: 0;
+    text-align: center;
+  }
+
+  a { text-decoration: none; }
+  b {
+    a{
+      color: $shortcut-font-color;
+      &:hover{ color: $shortcut-font-color-hovered; }
+    }
+  }
+  em { 
+    a{ 
+      color: $dark-font-color; 
+      &:hover{ color: $dark-font-color-hovered; }
+    }
+  }
+}
+
