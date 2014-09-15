@@ -24,7 +24,11 @@
 <%# [4] http://css-tricks.com/svg-fallbacks/                             %>
 
 <div id="teaser-phone">
-  <a href="#"><%= partial 'img/play-button.svg' %></a>
+  <a href="#">
+    <!--[if gte IE 9]>\<!-->
+    <%= partial 'img/play-button.svg' %>
+    <!--<![endif]-->
+  </a>
   <span class="button"></span>
 </div>
 

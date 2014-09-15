@@ -1,0 +1,144 @@
+---
+title: For Newspapers - Shortcut
+---
+<div class="page-wrap clearfix">
+
+  <%= partial "header" %> 
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-whole padded top-section welcome-section">
+        <div class="grid-half s-grid-whole" >
+          <h1><b>Perfect Match</b> for Newspapers</h1>
+          <p>
+            You’re producing high quality journalism every day 
+            in print but the story continues. Combine your digital 
+            journalism to traditional long-hand editorial. 
+            Add your video footage and combine your channels. 
+          </p>
+          <p>
+            The possibilities are endless.
+          </p>
+        </div>
+        <div class="grid-half s-grid-whole" >
+          <%= figure 'main_graphic_newspapers', class: 'fluid' %> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%#<section class="grid-whole padded top-section">%>
+    <%#<div class="grid-half s-grid-whole" >%>
+    <%#</div>%>
+    <%#<div id="teaser" class="grid-half s-grid-whole" >%>
+      <%#<figure> %>
+        <%#<%= partial 'img/shortcut_engage_graphic.svg' %>
+      <%#</figure>%>
+    <%#</div>%>
+  <%#</section>%>
+
+</div>
+
+<div class="page-wrap clearfix info-boxes">
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third color-scheme-2 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_how_shortcut_works' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>Designed for Newspapers</h2>
+              <p>
+                Shortcut is designed to fit in to your existing daily 
+                editorial process. It is easy and fast to use and doesn’t 
+                require changes in existing work flows.
+              </p>
+              <ul>
+                <li>Automatic upload and activation of all pages</li>
+                <li>Automatic PDF upload via FTP</li>
+                <li>Digital content can be linked already previous day</li>
+              </ul>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'half info-left color-scheme-1 box-padded chevron') do %>
+          <aside class="center">
+            <p><a href="#" class="button">Start your 30 days<br> free trial now!</a></p>
+            <p>or <a href="#">contact us</a> for more information.</p>
+          </aside>
+          <article class="centered">
+            <div>
+              <p>Monthly license fee based on circulation.</p>
+              <h1>Starting at 249€/Month</h1>
+              <ul>
+                <li>Full Access to Shortcut Manager</li>
+                <li>Upload unlimited pages</li>
+                <li>Valuable analytics</li>
+                <li>Unlimited reader requests</li>
+                <li>Online customer support</li>
+              </ul>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'color-scheme-3 box-padded') do %>
+          <article>
+            <h2 class="title-only-info-box">Shortcut is used by <a href="#" class="button">Join Us!</a></h2>
+          </article>
+          <aside>
+            <div class="picture-box clearfix">
+              <% %w[ 
+                l_helsingin_sanomat.jpg l_kurier.jpg l_aamulehti.jpg
+                l_turun_sanomat.jpg l_karkimedia.jpg l_nzzas.jpg
+              ].each do |customer| %>
+                <%= image_tag customer %>
+              <% end %>
+            </div>
+          </aside>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+
+  <%#<section class="grid-whole info-box-wrapper clearfix">%>
+    <%#<div class="grid-10 offset-1 s-grid-whole">%>
+      <%#<div class="grid-whole info-box-2 info-box-color3 image-bottom">%>
+        <%#<article class="grid-whole">%>
+          <%#<h2>Shortcut is used by <a href="#" class="button">Join Us!</a></h2>%>
+        <%#</article>%>
+        <%#<div class="picture-box padded clearfix">%>
+
+          <%#<% %w[ %>
+            <%#l_helsingin_sanomat.jpg l_kurier.jpg l_aamulehti.jpg%>
+            <%#l_turun_sanomat.jpg l_karkimedia.jpg l_nzzas.jpg%>
+          <%#].each do |customer| %>
+            <%#<%= image_tag customer %>
+          <%#<% end %>
+        <%#</div>%>
+      <%#</div>%>
+    <%#</div>%>
+  <%#</section>%>
+
+
+
+<%= partial 'footer' %>

@@ -1,0 +1,155 @@
+---
+title: For Magazines - Shortcut
+---
+<div class="page-wrap clearfix">
+
+  <%= partial "header" %> 
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-whole padded top-section welcome-section">
+        <div class="grid-half s-grid-whole" >
+          <h1><b>Don’t waste your great content</b> &mdash; engage your readers</h1>
+          <p>
+            You’re creating lots of content to support your great feature 
+            articles. Create a Shortcut to your online platforms and begin 
+            to engage via sign-ups, competitions or how-to-videos. 
+            Perhaps you have a recipe and want to show step-by-step how it’s 
+            made. 
+          </p>
+          <p>
+            Do it your way. Do it with Shortcut!
+          </p>
+        </div>
+        <div class="grid-half s-grid-whole" >
+          <%= figure 'main_graphic_magazines', class: 'fluid' %> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="page-wrap magazine-page clearfix info-boxes">
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'color-scheme-2 box-padded cooking-magazine') do %>
+          <aside>
+            <div class="grid-half m-grid-whole s-grid-whole padded">
+              <h3>Case example:</h3>
+              <h1>Cooking magazine</h2>
+              <ul class="image-bullet">
+                <li class="bullet-fav">
+                  The easiest way to collect recipes from print for a later 
+                  use. Time to say goodbye to scissors!
+                </li>
+                <li class="bullet-social">
+                  Share your favorite dishes with friends and recommend them
+                </li>
+                <li class="bullet-play">
+                  Watch “how to” videos and other digital content
+                <li class="bullet-shopping">
+                  Use the service as a shopping list and make the shopping 
+                  effortles!
+                </li>
+              </ul>
+            </div>
+            <div class="grid-half m-grid-whole s-grid-whole padded">
+              <%= image_tag 'betty_bossi_cover.png' %>
+            </div>
+          </aside>
+          <article>
+            <div class="grid-half m-grid-whole s-grid-whole padding">
+              <%= image_tag 'betty_bossi_cover2.png' %>
+            </div>
+            <div class="grid-half m-grid-whole s-grid-whole padding">
+              <h2>Betty Bossi</h2>
+              <p>
+                More than 20 000 monthly users using Shortcut to save 
+                repices, use service as a shopping list and find related 
+                videos and other digital content.
+              </p>
+              <p><a href="#" class="button">Watch Video!</a></p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'half info-left color-scheme-1 box-padded chevron') do %>
+          <aside class="center">
+            <p><a href="#" class="button">Start your 30 days<br> free trial now!</a></p>
+            <p>or <a href="#">contact us</a> for more information.</p>
+          </aside>
+          <article class="centered">
+            <div>
+              <p>Monthly license fee based on circulation.</p>
+              <h1>Starting at 249€/Month</h1>
+              <ul>
+                <li>Full Access to Shortcut Manager</li>
+                <li>Upload unlimited pages</li>
+                <li>Valuable analytics</li>
+                <li>Unlimited reader requests</li>
+                <li>Online customer support</li>
+              </ul>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'color-scheme-3 box-padded') do %>
+          <article>
+            <h2 class="title-only-info-box">Shortcut is used by <a href="#" class="button">Join Us!</a></h2>
+          </article>
+          <aside>
+            <div class="picture-box clearfix">
+              <% %w[ 
+                l_helsingin_sanomat.jpg l_kurier.jpg l_aamulehti.jpg
+                l_turun_sanomat.jpg l_karkimedia.jpg l_nzzas.jpg
+              ].each do |customer| %>
+                <%= image_tag customer %>
+              <% end %>
+            </div>
+          </aside>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+
+  <%#<section class="grid-whole info-box-wrapper clearfix">%>
+    <%#<div class="grid-10 offset-1 s-grid-whole">%>
+      <%#<div class="grid-whole info-box-2 info-box-color3 image-bottom">%>
+        <%#<article class="grid-whole">%>
+          <%#<h2>Shortcut is used by <a href="#" class="button">Join Us!</a></h2>%>
+        <%#</article>%>
+        <%#<div class="picture-box padded clearfix">%>
+
+          <%#<% %w[ %>
+            <%#l_helsingin_sanomat.jpg l_kurier.jpg l_aamulehti.jpg%>
+            <%#l_turun_sanomat.jpg l_karkimedia.jpg l_nzzas.jpg%>
+          <%#].each do |customer| %>
+            <%#<%= image_tag customer %>
+          <%#<% end %>
+        <%#</div>%>
+      <%#</div>%>
+    <%#</div>%>
+  <%#</section>%>
+
+
+
+<%= partial 'footer' %>

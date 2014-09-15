@@ -36,11 +36,25 @@
 
         <%# Polyfill IE with mediaqueries %>
         <!--[if lt IE 9]>
-          <%#<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>%>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
         <![endif]-->
 
     </head>
-    <body>
+
+    <!--[if lt IE 8 ]>
+    <body class="ie-not-supported">
+    <![endif]-->
+    <!--[if IE 8]>
+    <body class="ie-8">
+    <![endif]-->
+    <!--[if IE 9]>
+    <body class="ie-9">
+    <![endif]-->
+    <!--[if !IE]> -->
+    <body class="modern-browser"><%# According to the conditional comment this is not IE 5-9 %>
+    <!-- <![endif]-->
+
+
         <!--[if lt IE 8]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->

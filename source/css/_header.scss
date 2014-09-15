@@ -23,7 +23,11 @@ header {
 
     a{ 
       color: $dark-font-color;
-      &:hover{ color: $dark-font-color-hovered; }
+      text-decoration: none;
+      &:hover{ 
+        color: $dark-font-color-hovered; 
+        text-decoration: underline;
+      }
     }
 
     ul{
@@ -34,14 +38,17 @@ header {
         width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
         display: inline-block;
       }
-      &.debug {
-        border: 1px dotted black;
-        li { background: green; }
-      }
+
+      /* nav items are evenly distirbuted to use the whole available with, but
+       * after a certain width the distance between the items becomes to large.
+       * Therefore the max-width. 
+       */
+      max-width: 510px; max-width: (510px / 16px) + rem;
     }
     li{
       display: inline-block; 
       padding-top: 3px;
+      @if $debug { box-shadow: 0 0 2px red inset };
     }
     .padder { 
       width: 0px; /* invisible */ 
@@ -70,6 +77,7 @@ header {
   display: table-cell;
   height: 30px;
   vertical-align: bottom;
+  /*svg{ height: 32px; }*/
 }
 
 .sharing-links {
@@ -79,12 +87,72 @@ header {
   position:absolute;;
   height: 0;
 
-  a{display: block;}
+  a{ 
+    display: block;
+    &:hover {
+      svg .background {
+        * { 
+          fill: $dark-font-color-hovered !important; 
+        }
+      }
+    }
+  }
 
-  svg { width: 24px; }
+  figure svg { width: 24px; }
 }
 
 
+@mixin ie-svg-hacks {
+  /* fix containing element height bug */
+  #shortcut_logo_rgb_small_shutter svg { max-width: 144px; max-height: 35px; } 
+  #button_share_facebook,
+  #button_share_twitter,
+  #button_linkedin,
+  #button_youtube {
+    svg { max-width: 24px; max-height: 24px; } 
+  }
+}
+
+
+/*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  */
+@include apply-to-ie10_and_higher {
+  /* IE10+ specific styles go here */  
+  @include ie-svg-hacks;
+  header nav .padder.alpha { margin-left: 0px !important; }
+}
+
+@include apply-to-ie9-only {
+  @include ie-svg-hacks;
+  header nav .padder.alpha { margin-left: 0px !important; }
+}
+@include apply-to-ie8-only {
+  header {
+    nav{ 
+      h2 {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+
+.no-svg {
+  @include def_info_graphic('shortcut_logo_rgb_small_shutter', 132px, 32px);
+  @include def_info_graphic('button_share_facebook', 24px, 24px);
+  @include def_info_graphic('button_share_twitter', 24px, 24px);
+  @include def_info_graphic('button_linkedin', 24px, 24px);
+  @include def_info_graphic('button_youtube', 24px, 24px);
+
+  a:hover{
+    @include def_info_graphic('button_share_facebook', 24px, 24px, '_hovered');
+    @include def_info_graphic('button_share_twitter', 24px, 24px, '_hovered');
+    @include def_info_graphic('button_linkedin', 24px, 24px, '_hovered');
+    @include def_info_graphic('button_youtube', 24px, 24px, '_hovered');
+  }
+
+  figure { margin-bottom: 2px; }
+
+}
 
 /* Wide screen monitors wider than 996px */
 @media only screen and (min-width: 996px) {

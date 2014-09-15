@@ -2,39 +2,29 @@
 title: Shortcut – Interactive Print
 ---
 
-<%#<header>%>
-  <%#<%= partial "main_navi" %>
-<%#</header>%>
-
-<%#<article>%>
-  <%#<p>Hello world! This is HTML5 Boilerplate.</p>%>
-<%#</article>%>
-
-<%#= partial 'container_justify_test' %>
-
 <div class="page-wrap clearfix">
 
   <%#= partial 'legacy_headers' %>
   <%#= partial 'legacy_reference_header' %>
   <%= partial "header" %> 
 
-  <section class="grid-whole padded welcome-section">
-    <div class="grid-half s-grid-whole" >
-      <figure> 
-        <%= partial 'img/shortcut_engage_graphic.svg' %>
-      </figure>
-    </div>
-    <div id="teaser" class="grid-half s-grid-whole" >
-      <h1>Engage Your Audience with <b>Shortcut Interactive Print</b></h1>
+  <section>
+    <div class="clearfix">
+      <div class="grid-whole padded top-section welcome-section">
+        <div class="grid-half s-grid-whole" >
+          <%= figure 'shortcut_engage_graphic', class: 'fluid' %> 
+        </div>
+        <div id="teaser" class="grid-half s-grid-whole" >
+          <h1>Engage Your Audience with <b>Shortcut Interactive Print</b></h1>
+        </div>
+      </div>
     </div>
   </section>
-
 </div>
 
-<div class="inset">
-  <div class="page-wrap clearfix">
-
-    <section class="grid-whole padded">
+<div class="page-wrap clearfix inset">
+  <section>
+    <div class="clearfix">
 
       <div class="grid-8 m-grid-whole s-grid-whole" >
         <div id="demo-button">
@@ -46,196 +36,172 @@ title: Shortcut – Interactive Print
               <%= image_tag "instructions.png", alt: "Download instructions" %>
             </div>
 
-
             <div class="center">
               <a href="http://itunes.apple.com/app/id364110253?mt=8" target="_blank">
-                <figure>
-                  <%= partial 'img/button_app_store.svg' %>
-                </figure>
+                <%= figure 'button_app_store' %> 
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.aqris.kooaba.paperboy" target="_blank">
-                <figure>
-                  <%= partial 'img/button_play_store.svg' %>
-                </figure>
+                <%= figure 'button_play_store' %> 
               </a>
               <a href="http://www.windowsphone.com/s?appid=12f84623-7d1d-4d5a-82bb-72df700236c9" target="_blank">
-                <figure>
-                  <%= partial 'img/button_windows_store.svg' %>
-                </figure>
+                <%= figure 'button_windows_store' %> 
               </a>
             </div>
+
           </div>
+        </div>
+      </div>
+
+      <div class="grid-4 m-grid-whole s-grid-whole">
+        <%= partial 'teaser_phone' %>
       </div>
     </div>
-
-    <div class="grid-4 m-grid-whole s-grid-whole">
-      <%= partial 'teaser_phone' %>
-    </div>
   </section>
-
-  </div>
 </div>
 
 
-<div class="page-wrap clearfix">
 
-  <% info_box(image_url: 'img/info_graphic_how_shortcut_works.svg', class: 'info-box-color1') do %>
-    <h2>This is how Shortcut works!</h2>
-    <p>
-      Shortcut makes your print clickable and interactive. 
-      <em>No gimmicks</em>. Just simple and easy-to-use 
-      Shortcut to all your content!
-    </p>
-    <p><a href="#" class="button">Try it now!</a></p>
-  <% end %>
+<div class="page-wrap clearfix info-boxes">
 
-  <% info_box(image_url: 'img/info_graphic_engagement.svg', class: 'info-box-color2 image-right') do %>
-    <h2>The Easy-to-use Engagement Enabler</h2>
-    <p>
-      Whether you’re a publisher, editor, brand owner, 
-      or retailer, Shortcut is the most-cost efficient 
-      engagement platform for Interactive Print. 
-      Shortcut is designed to make life easier for you.
-    </p>
-    <p><a href="#" class="button">Watch Video!</a></p>
-  <% end %>
-
-  <% info_box(image_url: 'img/info_graphic_one_solution.svg', class: 'info-box-color3') do %>
-    <h2>One solution - multiple businesses</h2>
-    <p>
-      Shortcut provides benefits across all sectors whether 
-      its publisher, retail, fashion, education, travel 
-      and much more.
-    </p>
-    <p><a href="#" class="button">Watch Video!</a></p>
-  <% end %>
-
-  <% info_box(image_url: 'img/info_graphic_purchaising_decisions.svg', class: 'info-box-color1 image-right') do %>
-    <h2>The Shortcut to your customers’ purchasing decisions</h2>
-    <p>
-      Shortcut offers brand owners and publishers the ability to 
-      offer shopping direct from the printed page. Imagine that 
-      fashion spread detailing the latest trends and buys – your 
-      readers become your customers within seconds.
-    </p>
-    <p><a href="#" class="button">Try it now!</a></p>
-  <% end %>
-
-  <% info_box(image_url: 'img/info_graphic_measure.svg', class: 'info-box-color2') do %>
-    <h2>Measure the results achieved</h2>
-    <p>
-      All Shortcuts are fully measurable with Shortcut Manager.
-    </p>
-    <p><a href="#" class="button">Try it now!</a></p>
-  <% end %>
-
-
-
-
-  <%#<div class="grid_10 prefix_1 suffix_1">%>
-    <%#<div id="shortcut-use" class="info-box-background-image clearfix color3 top">%>
-
-      <%#<div class="info-box-desc clearfix">%>
-        <%#<div class="box-content">%>
-          <%#<h2>Shortcut is used world wide <a href="#" class="button">Join Us!</a></h2>%>
-        <%#</div>%>
-      <%#</div>%>
-
-      <%#<div class="picture-box clearfix">%>
-
-        <%#<% %w[ %>
-        <%#l_apg.jpg l_bmw.jpg l_bonnier.jpg %>
-        <%#l_burda.jpg l_iwc.jpg l_mitsubishi.jpg %>
-        <%#l_nzz.jpg l_ringier.jpg l_sanoma.jpg %>
-        <%#l_springer.jpg l_tamedia.jpg l_wired.jpg%>
-        <%#].each do |customer| %>
-          <%#<%= image_tag customer %>
-        <%#<% end %>
-     <%#</div>%>
-
-    <%#</div>%>
-  <%#</div>%>
-
-
-
-
-
-  <%#<section class="grid-whole ">%>
-    <%#<div class="l-grid-10 l-offset-1 m-grid-10 m-offset-1 s-grid-whole">%>
-
-      <%#<div class="grid-whole info-box-2 info-box-color3 image-buttom">%>
-
-        <%#<article class="grid-whole invisible-hight-helper">%>
-          <%#<h2>Shortcut is used world wide <a href="#" class="button">Join Us!</a></h2>%>
-        <%#</article>%>
- 
-        <%#<aside class="image-grid clearfix">%>
-          <%#<% %w[ %>
-            <%#l_apg.jpg l_bmw.jpg l_bonnier.jpg %>
-            <%#l_burda.jpg l_iwc.jpg l_mitsubishi.jpg %>
-            <%#l_nzz.jpg l_ringier.jpg l_sanoma.jpg %>
-
-          <%#].each do |customer| %>
-            <%#[><div class="grid-third"><]%>
-              <%#<%= image_tag customer %>
-            <%#[></div><]%>
-          <%#<% end %>
-        <%#</aside>%>
-
-      <%#</div>%>
-    <%#</div>%>
-  <%#</section>%>
-
-
-  <section class="grid-whole info-box-wrapper clearfix">
-    <div class="grid-10 offset-1 s-grid-whole">
-      <div class="grid-whole info-box-2 info-box-color3 image-bottom">
-        <article class="grid-whole">
-          <h2>Shortcut is used world wide <a href="#" class="button">Join Us!</a></h2>
-        </article>
-        <div class="picture-box padded clearfix">
-
-          <% %w[ 
-            l_apg.jpg l_bmw.jpg l_bonnier.jpg 
-            l_burda.jpg l_iwc.jpg l_mitsubishi.jpg 
-            l_nzz.jpg l_ringier.jpg l_sanoma.jpg 
-            l_springer.jpg l_tamedia.jpg l_wired.jpg
-          ].each do |customer| %>
-            <%= image_tag customer %>
-          <% end %>
-        </div>
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third color-scheme-1 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_how_shortcut_works' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>This is how Shortcut works!</h2>
+              <p>
+                Shortcut makes your print clickable and interactive. 
+                <em>No gimmicks</em>. Just simple and easy-to-use 
+                Shortcut to all your content!
+              </p>
+              <p><a href="#" class="button">Try it now!</a></p>
+            </div>
+          </article>
+        <%- end %>
       </div>
     </div>
   </section>
 
-  <%#<section class="grid-whole info-box-wrapper">%>
-  <%#<div class="grid-10 s-grid-whole offset-1">%>
-    <%#<div id="shortcut-use" class="info-box-background-image clearfix color3 top">%>
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third info-left color-scheme-2 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_engagement' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>The Easy-to-use Engagement Enabler</h2>
+              <p>
+                Whether you’re a publisher, editor, brand owner, 
+                or retailer, Shortcut is the most-cost efficient 
+                engagement platform for Interactive Print. 
+                Shortcut is designed to make life easier for you.
+              </p>
+              <p><a href="#" class="button">Watch Video!</a></p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
 
-      <%#<div class="info-box-desc clearfix">%>
-        <%#<div class="box-content">%>
-          <%#<h2>Shortcut is used world wide <a href="#" class="button">Join Us!</a></h2>%>
-        <%#</div>%>
-      <%#</div>%>
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third color-scheme-3 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_one_solution' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>One solution - multiple businesses</h2>
+              <p>
+                Shortcut provides benefits across all sectors whether 
+                its publisher, retail, fashion, education, travel 
+                and much more.
+              </p>
+              <p><a href="#" class="button">Watch Video!</a></p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
 
-      <%#<div class="picture-box clearfix">%>
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third info-left color-scheme-1 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_purchaising_decisions' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>The Shortcut to your customers’ purchasing decisions</h2>
+              <p>
+                Shortcut offers brand owners and publishers the ability to 
+                offer shopping direct from the printed page. Imagine that 
+                fashion spread detailing the latest trends and buys – your 
+                readers become your customers within seconds.
+              </p>
+              <p><a href="#" class="button">Try it now!</a></p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
 
-        <%#<% %w[ %>
-        <%#l_apg.jpg l_bmw.jpg l_bonnier.jpg %>
-        <%#l_burda.jpg l_iwc.jpg l_mitsubishi.jpg %>
-        <%#l_nzz.jpg l_ringier.jpg l_sanoma.jpg %>
-        <%#l_springer.jpg l_tamedia.jpg l_wired.jpg%>
-        <%#].each do |customer| %>
-          <%#<%= image_tag customer %>
-        <%#<% end %>
-     <%#</div>%>
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third color-scheme-2 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_measure' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>Measure the results achieved</h2>
+              <p>
+                All Shortcuts are fully measurable with Shortcut Manager.
+              </p>
+              <p><a href="#" class="button">Try it now!</a></p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
 
-    <%#</div>%>
-  <%#</div>%>
-<%#</section>%>
-
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'color-scheme-3 box-padded') do %>
+          <article>
+            <h2 class="title-only-info-box">Shortcut is used world wide <a href="#" class="button">Join Us!</a></h2>
+          </article>
+          <aside>
+            <div class="picture-box clearfix">
+              <% %w[ 
+                l_apg.jpg l_bmw.jpg l_bonnier.jpg 
+                l_burda.jpg l_iwc.jpg l_mitsubishi.jpg 
+                l_nzz.jpg l_ringier.jpg l_sanoma.jpg 
+                l_springer.jpg l_tamedia.jpg l_wired.jpg
+              ].each do |customer| %>
+                <%= image_tag customer %>
+              <% end %>
+            </div>
+          </aside>
+        <%- end %>
+      </div>
+    </div>
+  </section>
 
 </div>
 
 <%= partial 'footer' %>
-

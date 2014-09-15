@@ -6,6 +6,8 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
 
+$debug: true;
+
 $color-eggshell: rgb(231,190,139); /* #E7BE8B */
 $color-pale-gold: rgb(233,199,133); /* #E9C785 */
 
@@ -46,6 +48,8 @@ body {
 
 .inset{
   background-color: $shortcut-color-light; 
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
 
   &:before {
     content: '';
@@ -97,18 +101,80 @@ nav { /* header and footer */
   }
 }
 
+
 figure {
   svg{
     width: 100%;
     height: 100%;
-    viewBox: 0 0 400 390 !important;
     /*.shadow{ display: none; }*/
   }
 }
 
 
+.svg{
+  figure {
+    &.fluid {
+
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      @if $debug { box-shadow: 0 0 2px #26967C inset };
+      position: relative;
+      padding-bottom: 100%; /* yes !! ; ) */ 
+
+      svg {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      &#shortcut_logo_rgb_small_shutter{ padding-bottom: (100% / 143.99 * 34.55); }
+      &#shortcut_engage_graphic{ padding-bottom: (100% / 436.94 * 396.14); }
+      &#main_grapic_newspapers{ padding-bottom: (100% / 367 * 425); }
+      &#main_grapic_magazines{ padding-bottom: (100% / 546 * 377); }
+      &#info_graphic_how_shortcut_works{ padding-bottom: (100% / 238 * 235); }
+    }
+
+  }
+
+}
+
+
+.image-bullet {
+  /*&ul {*/
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+  /*}*/
+ 
+  &ul, li {
+    /*background-image: url(sqpurple.gif);*/
+    background-size: 53px;
+    background-repeat: no-repeat;
+    /*background-position: 0px 5px; */
+    background-position: 0px 0px; 
+    /*padding-left: 14px; */
+    padding-left: 68px; 
+
+  }
+  li{
+    margin-bottom: 8px;
+    margin-bottom: 0.5em;
+    min-height: 53px;
+  }
+  .bullet-fav { background-image: url(../img/bullet-fav.svg); }
+  .bullet-social { background-image: url(../img/bullet-social.svg); }
+  .bullet-play { background-image: url(../img/bullet-play.svg); }
+  .bullet-shopping { background-image: url(../img/bullet-shopping.svg); }
+
+}
+
 /*svg{*/
-  /*display:none;*/
+  /*display:none !important;*/
 /*}*/
 
 
@@ -125,22 +191,56 @@ figure {
       height: 32px;
     }
   }
+
+  @include def_info_graphic('info_graphic_how_shortcut_works', 176px, 175px);
+  @include def_info_graphic('info_graphic_engagement', 176px, 188px);
+  @include def_info_graphic('info_graphic_one_solution', 176px, 171px);
+  @include def_info_graphic('info_graphic_purchaising_decisions', 176px, 176px);
+  @include def_info_graphic('info_graphic_measure', 176px, 178px);
+  @include def_info_graphic('shortcut_engage_graphic', 364px, 330px);
+  @include def_info_graphic('main_graphic_newspapers', 300px, 347px);
+
+  figure {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 5% auto;
+  }
 }
 
 #teaser{
   margin-top: 10%;
   h1 {
-    font-weight: $light-font;
-    color: $dark-font-color;
+    /*font-weight: $light-font;*/
+    /*color: $dark-font-color;*/
     text-align: right;
+  }
+  /*b {*/
+    /*font-weight: $light-font;*/
+    /*color: $shortcut-font-color;*/
+  /*}*/
+}
+
+
+.top-section {
+  color: $dark-font-color;
+  h1 {
+    font-weight: $light-font;
   }
   b {
     font-weight: $light-font;
     color: $shortcut-font-color;
   }
+  figure { margin-top: 1rem; }
+
+  
 }
 
+
 b, em { font-style: normal; font-weight: normal; }
+
+ul{ padding-left: 20px; }
 
 
 .welcome-section {
@@ -154,9 +254,10 @@ b, em { font-style: normal; font-weight: normal; }
 
 
 a.button{
+  display: inline-block;
   background-color: white;
   text-decoration: none;
-  @include border-radius($border-radius);
+  @include border-radius-pie($border-radius);
   padding: 6px 12px;
   font-weight: $normal-font;
   @include transition(all .2s);
@@ -183,7 +284,7 @@ a.img-button {
   .rounded-batch {
     $diameter: 172px;
     background-color: white;
-    @include border-radius(50%);
+    @include border-radius-pie(50%);
     text-align: center;
     /*display: block;*/
     /* FIXME: vertical align won't work in IE 7/8 */
@@ -253,6 +354,8 @@ a.img-button {
       display: inline-block;
       /*margin: 0 0.25rem;*/
       margin: 0 0.8%;
+      /*max-width: 116px;*/
+      max-height: 43px;
     }
   }
 
@@ -284,6 +387,17 @@ a.img-button {
   /*}*/
 }
 
+img {
+  max-width: 100%;
+}
+
+section {
+  h1 {
+    font-weight: $light-font;
+    color: white;
+  }
+}
+
 footer {
 
   padding: 1% 0;
@@ -309,6 +423,36 @@ footer {
     color: $dark-font-color;
   }
 }
+
+
+.title-only-info-box{
+  margin: 0;
+  a{
+    float: right;
+    @include font-size(16);
+  }
+  
+}
+
+
+/* Site specific adjustments */
+.magazine-page {
+  .cooking-magazine {
+    aside {
+      img{ 
+        max-width: 80%; 
+        /* All Mobile Sizes */
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+    article{
+      img{ max-width: 50%; }
+    }
+  }
+}
+
 
 
 /*
@@ -350,6 +494,36 @@ Copyright 2013, Josh Cope
   }
 
 }
+
+.info-boxes {
+  section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.picture-box {
+  $box-content-padding: ((100% - 37.5%) / 100) * 5;
+
+  img {
+    float:left;
+    margin: $customers-image-margin;
+    width: (100% / 3) - ( 2 * $customers-image-margin);
+
+    /* Wide screen monitors wider than 996px */
+    @media only screen and (min-width: 996px) {
+      width: (100% / 4) - ( 2 * $customers-image-margin);
+    }
+
+    /* Mobile Portrait Size to Mobile Landscape Size */
+    @media only screen and (max-width: 479px) {
+      width: (100% / 2) - ( 2 * $customers-image-margin);
+    }
+  }
+}
+
+
+
 /* Tablet Portrait size to Base 996px */
 @media only screen and (min-width: 768px) and (max-width: 995px) {}
 

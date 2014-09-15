@@ -2,8 +2,7 @@
   background-color: white;
   padding: 5% 10%;
   margin-right: 0.5em;
-  @include border-bottom-left-radius($border-radius);
-  @include border-bottom-right-radius($border-radius);
+  @include border-radius-pie(0px 0px $border-radius);
 
   p {
     font-size: 18px;

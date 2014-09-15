@@ -2,3 +2,66 @@
   font-size: $sizeInPixel + px;
   font-size: ($sizeInPixel / 16) + rem;
 }
+
+@mixin display-flex {
+  display: -webkit-box; /* old syntax, only used by older webkit browsers */
+  display: -ms-flexbox; /* 2012 syntax, only used by IE 10 */
+  display: -webkit-flex;
+  display: flex; /* latest syntax */ 
+}
+
+@mixin flex-order($num) {
+  -webkit-box-ordinal-group: $num; /* old syntax, only used by older webkit browsers */
+  -ms-flex-order: $num; /* 2012 syntax, only used by IE 10 */
+  -webkit-order: $num;
+  order: $num; /* latest syntax */
+}
+
+@mixin flex-align-self($value) {
+  -ms-flex-item-align: $value; /* 2012 syntax, only used by IE 10 */
+  -webkit-align-self: $value;
+  align-self: $value; /* latest syntax */
+}
+
+@mixin border-radius-pie($border-radius) {
+  @include border-radius($border-radius);
+  behavior: url(js/vendor/PIE.htc); /* IE6-9 rounded corners */
+}
+
+@mixin apply-to-ie8-only {
+  .ie-8 {
+    @content;
+  }
+}
+
+
+@mixin apply-to-ie9-only {
+  .ie-9 {
+    @content;
+  }
+}
+
+@mixin apply-to-ie10_and_higher {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+    /* IE10+ specific styles go here */  
+    @content;
+  }
+}
+ 
+
+/* Replace svg images with png background images for IE8
+ * Let's assume IE8 runs on non-retina displays therefore
+ * we use low resolution images as fallback.
+ */
+@mixin def_info_graphic($id, $width, $height, $suffix: '') {
+  ##{$id} {
+    background-image: url('../img/#{$id}#{$suffix}.png');
+    width: $width;
+    height: $height;
+    /* IE 9 and before */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/#{$id}#{$suffix}.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/#{$id}#{$suffix}.png', sizingMethod='scale')";
+  }
+} 
+
+
