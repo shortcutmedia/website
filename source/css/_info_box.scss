@@ -136,24 +136,50 @@
 
 .modern-browser {
   .info-box-3.chevron {
-    position: relative;
-
-    &:before {
-      $chevron-width: 40px;
-      content:'';
-      border-top: $chevron-width solid transparent;
-      border-bottom: $chevron-width solid transparent;
-      border-left: $chevron-width solid $color-deep-carrot-orange;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-top: -$chevron-width;
-      margin-left: -4px;
+    article {
+      position: relative;
+      &:before {
+        $chevron-width: 40px;
+        content:'';
+        border-top: $chevron-width solid transparent;
+        border-bottom: $chevron-width solid transparent;
+        border-left: $chevron-width solid $color-deep-carrot-orange;
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        margin-top: -$chevron-width;
+        width: 0;
+        height: 0;
+      }
     }
   }
 
   @media only screen and (max-width: 767px) {
-    .info-box-3.chevron:before{ display: none; }
+    $chevron-width: 40px;
+    .info-box-3.chevron:before{ 
+      display: none;
+    }
+
+    .info-box-3.chevron {
+      article {
+        position: relative;
+
+        &:before{ 
+          border-right: $chevron-width solid transparent;
+          border-left: $chevron-width solid transparent;
+          border-top: $chevron-width solid $color-deep-carrot-orange;
+          border-bottom: 0;
+          top: auto;
+          left: 50%;
+          bottom: -$chevron-width;
+          margin-left: -$chevron-width;
+        }
+      }
+      aside {
+        margin-top: $chevron-width;
+      }
+    }
+
   }
 }
 
