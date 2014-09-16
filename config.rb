@@ -70,3 +70,18 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+# Deployment configuration
+activate :deploy do |deploy|
+  deploy.build_before = true
+
+  deploy.method = :ftp
+
+  deploy_config = YAML.load(File.read 'deploy.yml') rescue nil
+  if deploy_config.kind_of? Hash
+    deploy.host     = deploy_config['host']
+    deploy.path     = deploy_config['path']
+    deploy.user     = deploy_config['user']
+    deploy.password = deploy_config['password']
+  end
+end
