@@ -10,37 +10,37 @@
         <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip-mobile'} %>
       </div>
 
-      <nav class="grid-7 m-grid-6 s-grid-half">
-        <ul class="even-navi-4 ">
-          <li class="padder alpha">&nbsp;</li>
-          <li><h2><%= link_to 'For Magazines', '/magazines.html' %></h2></li>
-          <li><h2><%= link_to 'For Newspapers', '/newspapers.html' %></h2></li>
-          <li><h2><%= link_to 'For Brands', '/brands.html' %></h2></li>
-          <li class="padder omega">&nbsp;</li>
-
-          <span></span><%# required for IE7/8 %>
-        </ul>
-      </nav>
-
-      <div class="grid-3">
+      <div class="grid-10 m-grid-9 s-grid-half nav-container">
         <div class="signup-clip-container">
           <div class="sharing-links" >
             <a href="">
-              <%= figure 'button_share_facebook' %> 
+              <%= figure 'button_share_facebook' %>
             </a>
             <a href="">
-              <%= figure 'button_share_twitter' %> 
+              <%= figure 'button_share_twitter' %>
             </a>
             <a href="">
-              <%= figure 'button_linkedin' %> 
+              <%= figure 'button_linkedin' %>
             </a>
             <a href="">
-              <%= figure 'button_youtube' %> 
+              <%= figure 'button_youtube' %>
             </a>
           </div>
-
           <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip'} %>
         </div>
+
+        <nav>
+          <ul class="even-navi-4 ">
+            <li class="padder alpha">&nbsp;</li>
+            <li><h2><%= link_to 'For Magazines', '/magazines.html' %></h2></li>
+            <li><h2><%= link_to 'For Newspapers', '/newspapers.html' %></h2></li>
+            <li><h2><%= link_to 'For Brands', '/brands.html' %></h2></li>
+            <li class="padder omega">&nbsp;</li>
+
+            <span></span><%# required for IE7/8 %>
+          </ul>
+        </nav>
+
       </div>
     </div>
   </div>

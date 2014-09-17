@@ -6,10 +6,22 @@
   #signup-clip{ display: block; }
   #signup-clip-mobile{ display: none; }
 
-  .logo { padding-top: $top-distance; }
+  .logo { 
+    padding-top: $top-distance;
+    position: absolute;
+  }
+
+  .nav-container {
+    @media only screen and (min-width: 480px) and (max-width: 995px) {
+      width: 100%;
+      padding-left: 142px;
+    }
+  }
 
   nav {
+    @include debug-border(magenta);
     padding-top: $top-distance;
+    margin-right: 134px;
     overflow: hidden;
     h2 { 
       margin: 0;
@@ -77,28 +89,41 @@
     }
   }
 
+  @include media-widescreen {
+    .logo { 
+      /* because the font-size is increased the logo has to be re-aligned */
+      margin-top: 2px;
+      position: relative; 
+    }
+   }
+
   @include media-portrait-to-landscape-mobile-size {
     $divider-padding: 2%;
     background-color: white;
     $top-distance: 0;
-    @include border-bottom-left-radius($border-radius);
-    @include border-bottom-right-radius($border-radius);
+
+    @include border-radius-pie(0px 0px $border-radius);
     padding: 8px; padding: 0.5rem;
     padding-bottom: 4px; padding-bottom: 0.25rem;
-    margin-bottom: 1em;
-    margin-bottom: 16px;
+    margin-bottom: 16px; margin-bottom: 1rem;
 
     #signup-clip{ display: none; }
     #signup-clip-mobile{ 
       display: block; 
-      padding: 0.5em 0; 
+      padding: 8px;
+      margin-right: 8px;
     }
 
+
     nav { 
-      padding-left: $divider-padding; padding-top: $top-distance;
+      margin-right: 0;
+      padding-top: $top-distance;
       ul { padding-left: 0; }
     }
 
+    .nav-container { 
+      padding-left: $divider-padding; 
+    }
     .logo {
       position: relative;
       padding-top: $top-distance;

@@ -1,12 +1,11 @@
 .signup-clip{
   background-color: white;
-  padding: 5% 10%;
-  margin-right: 0.5em;
+  max-width: 131px;
+  padding: 6px 12px;
   @include border-radius-pie(0px 0px $border-radius);
 
   p {
-    font-size: 18px;
-    font-size: 1.125rem;
+    @include font-size(18);
     color: grey;
     margin: 0;
     text-align: center;
@@ -26,9 +25,9 @@
     }
   }
 
-  @include media-normal-screen {
-   float:right; 
-    max-width: 7.3em;
+  float:right; 
+  @include media-portrait-to-landscape-mobile-size {
+    float: none;
   }
 }
 
