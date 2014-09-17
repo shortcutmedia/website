@@ -1,7 +1,6 @@
 //= require vendor/jquery-1.8.0.min
 //= require vendor/jquery-placeholder.js
-//
-
+//= require signup
 
 // Avoid `console` errors in browsers that lack a console.
 if (!(window.console && console.log)) {

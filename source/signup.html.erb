@@ -1,0 +1,37 @@
+---
+title: Free Trial - Shortcut
+---
+<div class="page-wrap clearfix">
+
+  <%= partial "header" %>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-whole padded top-section welcome-section">
+        <div class="grid-half s-grid-whole" >
+          <h1>Start your free trial now</h1>
+          <form class="signup" method="POST" action="http://manager.shortcutmedia.com/users">
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_email">Email:</label></div>
+              <div class="grid-two-thirds padded"><input type="text" name="user[email]" value="" id="user_email"/></div>
+            </div>
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_password">Password:</label></div>
+              <div class="grid-two-thirds padded"><input type="password" name="user[password]" value="" id="user_password"/></div>
+            </div>
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_password_confirmation">Confirm password:</label></div>
+              <div class="grid-two-thirds padded"><input type="password" name="user[password_confirmation]" value="" id="user_password_confirmation"/></div>
+            </div>
+            <div class="grid-whole right">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<%= partial 'footer' %>
