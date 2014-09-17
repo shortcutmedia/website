@@ -10,19 +10,19 @@
         <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip-mobile'} %>
       </div>
 
-      <nav class="grid-8 m-grid-6 s-grid-half">
+      <nav class="grid-7 m-grid-6 s-grid-half">
         <ul class="even-navi-4 ">
           <li class="padder alpha">&nbsp;</li>
-          <li><h2><a href="/magazines.html">For Magazines</a></h2></li>
-          <li><h2><a href="/newspapers.html">For Newspapers</a></h2></li>
-          <li><h2><a href="#">For Brands</a></h2></li>
+          <li><h2><%= link_to 'For Magazines', '/magazines.html' %></h2></li>
+          <li><h2><%= link_to 'For Newspapers', '/newspapers.html' %></h2></li>
+          <li><h2><%= link_to 'For Brands', '/brands.html' %></h2></li>
           <li class="padder omega">&nbsp;</li>
 
           <span></span><%# required for IE7/8 %>
         </ul>
       </nav>
 
-      <div class="grid-2 m-grid-3">
+      <div class="grid-3">
         <div class="signup-clip-container">
           <div class="sharing-links" >
             <a href="">

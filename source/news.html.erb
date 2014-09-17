@@ -1,0 +1,30 @@
+---
+title: News - Shortcut
+---
+
+<div class="page-wrap clearfix">
+  <%= partial "header" %> 
+</div>
+
+<div class="page-wrap clearfix info-boxes">
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <h1>News</h1>
+        <% info_box_flex(class: 'third color-scheme-1 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_how_shortcut_works' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>Coming soon...</h2>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%= partial 'footer' %>

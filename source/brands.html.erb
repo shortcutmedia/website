@@ -1,0 +1,90 @@
+---
+title: For Brands
+---
+<div class="page-wrap clearfix">
+
+  <%= partial "header" %> 
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-whole padded top-section">
+        <div class="grid-half s-grid-whole" >
+          <header><h3><%= current_page.data.title  %></h3></header>
+          <h1>Increase Revenue and <b>Brand Loyality</b></h1>
+          <p>
+            You love connecting with your customers. You want them 
+            to spend time with your brand and purchase your products. 
+            Increase your revenue and customer loyalty by offering 
+            Shortcuts to exclusive content such as videos and offers. 
+          </p>
+          <p>
+            Enable your customers to engage with you, make purchasing 
+            decisions or buy right there via your mobile responsive 
+            ecommerce platforms.
+          </p>
+        </div>
+        <div class="grid-half s-grid-whole" >
+          <%= figure 'main_graphic_brands', class: 'fluid' %> 
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page-wrap clearfix info-boxes">
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third color-scheme-2 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_how_shortcut_works' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>One solution - multiple businesses</h2>
+              <p>
+                Shortcut provides benefits across all sectors whether 
+                it is publisher, retail, fashion, education, travel 
+                and much more. Try a demo today and see how easy your 
+                Shortcut can be created.
+              </p>
+              <p><a href="#" class="button">Try Demo!</a></p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'half info-left color-scheme-1 box-padded chevron') do %>
+          <article class="centered">
+            <div>
+              <h2>
+                Flexible pricing model based on circulation, 
+                print volume, campaign length and type
+              </h2>
+              <ul>
+                <li>Full Access to Shortcut Manager</li>
+                <li>Valuable analytics</li>
+                <li>Unlimited reader requests</li>
+                <li>Online customer support</li>
+              </ul>
+            </div>
+          </article>
+          <aside class="center">
+            <p><a href="#" class="button">Start your 30 days<br> free trial now!</a></p>
+            <p>or <a href="#">contact us</a> for more information.</p>
+          </aside>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <%= partial 'used_worldwide' %>
+</div>
+
+<%= partial 'footer' %>

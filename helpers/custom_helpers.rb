@@ -1,5 +1,10 @@
 module CustomHelpers
 
+  def current_page_title
+    title = current_page.data.title
+    "#{title} · Shortcut " if title
+  end
+
   def info_box_flex(options={}, &block)
     captured_html = capture_html(&block)
 

@@ -1,0 +1,75 @@
+---
+title: Support - Shortcut
+---
+
+<div class="page-wrap clearfix">
+  <%= partial "header" %> 
+</div>
+
+<div class="page-wrap clearfix info-boxes">
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <h1>News</h1>
+        <% info_box_flex(class: 'third color-scheme-2 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_customer_care' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>Customer Care</h2>
+              <p>For customer care please contact</p>
+              <p>
+                <a href="mailto:support@shortcutmedia.com">support@shortcutmedia.com</a>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third info-left color-scheme-1 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_communication' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>Communications guideline</h2>
+              <p><a>This document</a> describes how to communicate Shortcut to your customers</p>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'third color-scheme-3 box-padded') do %>
+          <aside>
+            <%= figure 'info_graphic_graphical_asset' %> 
+          </aside>
+          <article class="centered">
+            <div>
+              <h2>Shortcut graphical assets</h2>
+              <ul>
+                <li><a>Shortcut logos</a></li>
+            a   <li><a>Call to action icons</a></li>
+              </ul>
+            </div>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+
+
+</div>
+
+<%= partial 'footer' %>

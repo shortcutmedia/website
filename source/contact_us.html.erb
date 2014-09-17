@@ -17,28 +17,110 @@ title: Contact Us - Shortcut
             <% form_tag '/don-tknow-yet', class: 'contact-form', method: 'post' do %>
               <% field_set_tag do %>
                 <p>
-                  <%= label_tag :name %>
-                  <%= text_field_tag :name %>
+                  <%= text_field_tag :name, placeholder: 'Your Name*' %>
                 </p>
                 <p>
-                  <%= label_tag :email %>
-                  <%= email_field_tag :email %>
+                  <%= email_field_tag :email, placeholder: 'Your Email*' %>
                 </p>
                 <p>
-                  <%= label_tag :subject %>
-                  <%= text_field_tag :subject %>
+                  <%= text_field_tag :subject, placeholder: 'Subject' %>
                 </p>
                 <p>
-                  <%= label_tag :message %>
-                  <%= text_area_tag :message %>
+                  <%= text_area_tag :message, placeholder: 'Message' %>
                 </p>
               <% end %>
               <% field_set_tag(:class => 'buttons') do %>
-                <%= submit_tag "Send" %>
+                <%= submit_tag "Send!" %>
               <% end %>
             <% end %>
 
           </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1">
+        <% info_box_flex(class: 'color-scheme-3 box-padded') do %>
+          <article>
+            <h2>Newsletter</h2>
+            <p>We will keep you up to date with latest news and cases.</p>
+            <% form_tag 'http://shortcutmedia.us5.list-manage.com/subscribe/post?u=740414b556da9e032d9a2d94a&amp;id=fe60f61975', class: 'newsletter-form', method: 'post', target: '_blank' do %>
+              <% field_set_tag do %>
+                <p>
+                  <%= email_field_tag 'EMAIL', placeholder: 'Subscribe with your Email' %>
+                  <%= submit_tag "Go!" %>
+                </p>
+                <small>
+                  We don't spam, and you can unsubscribe any time.
+                </small>
+              <% end %>
+            <% end %>
+          </article>
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <h1> How to find us?</h1>
+        <% info_box_flex(class: 'half color-scheme-2 box-padded') do %>
+          <article class="centered">
+            <div>
+              <h2>Helsinki</h2>
+              <p>
+                Shortcut Media Oy <br>
+                Kirkkokatu 1A <br>
+                Helsinki <br>
+                Finland
+              </p>
+              <p>
+                <a href="mailto:info@shortcutmedia.com">info@shortcutmedia.com</a>
+              </p>
+              <p>
+                <a href="tel:+358 50 571 7551">+358 50 571 7551</a>
+              </p>
+            </div>
+          </article>
+          <aside>
+            <div class="google-maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d508114.7499501181!2d24.98293!3d60.167105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bd008a258d7%3A0x5e1518a6a8254e2b!2sKirkkokatu+1%2C+00170+Helsinki%2C+Finland!5e0!3m2!1sen!2sus!4v1410790032865" width="400" height="300" frameborder="0" style="border:0"></iframe>
+            </div>
+          </aside>
+
+        <%- end %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="clearfix">
+      <div class="grid-10 offset-1 s-grid-whole">
+        <% info_box_flex(class: 'half info-left color-scheme-1 box-padded') do %>
+          <article class="centered">
+            <div>
+              <h2>Zürich</h2>
+              <p>
+                Shortcut Media AG <br>
+                Zollstrasse 62<br>
+                8005 Zürich <br>
+                Switzerland
+              </p>
+              <p>
+                <a href="mailto:info@shortcutmedia.com">info@shortcutmedia.com</a>
+              </p>
+            </div>
+          </article>
+          <aside>
+            <div class="google-maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21612.73398739094!2d8.53285!3d47.380886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0e1f469895%3A0xcfbd033cbec1b2ba!2sZollstrasse+62%2C+8005+Z%C3%BCrich%2C+Switzerland!5e0!3m2!1sen!2sus!4v1410791173175" width="400" height="300" frameborder="0" style="border:0"></iframe>
+            </div>
+          </aside>
+
         <%- end %>
       </div>
     </div>

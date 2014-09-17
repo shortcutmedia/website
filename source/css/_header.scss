@@ -1,19 +1,16 @@
 @import "_signup_clip";
 
-header {
+.page-wrap > header{
   $top-distance: 0.5em;
+
   #signup-clip{ display: block; }
   #signup-clip-mobile{ display: none; }
 
-  .logo { 
-    padding-top: $top-distance; 
-    /*width: 100%;*/
-    /*max-width: 134px;*/
-  }
+  .logo { padding-top: $top-distance; }
+
   nav {
     padding-top: $top-distance;
     overflow: hidden;
-    /*padding-left: 0.25rem;*/
     h2 { 
       margin: 0;
       @include font-size(18);
@@ -48,20 +45,87 @@ header {
     li{
       display: inline-block; 
       padding-top: 3px;
-      @if $debug { box-shadow: 0 0 2px red inset };
+      @include debug-border(red);
     }
     .padder { 
       width: 0px; /* invisible */ 
       &:first-child{ margin-left: -30px; }
     }
+
+    @include media-widescreen {
+      h2 { @include font-size(20); }
+    }
+
+    @include media-tablet-size {
+      .padder { 
+        &.alpha { margin-left:-0.3rem; }
+        &.omega { margin-right: -0.3rem; }
+      }
+    }
+
+    @include media-mobile-size {
+      ul{
+        text-align: left;
+        padding-left: 0; 
+      }
+      li{ margin-right: 0.875rem; }
+      .padder{ display: none; }
+    }
+
+    @media only screen and (max-width: 606px) { /* arbitrary size only for main navigation */
+      ul{ padding-left: 0.5rem; }
+    }
   }
 
+  @include media-portrait-to-landscape-mobile-size {
+    $divider-padding: 2%;
+    background-color: white;
+    $top-distance: 0;
+    @include border-bottom-left-radius($border-radius);
+    @include border-bottom-right-radius($border-radius);
+    padding: 8px; padding: 0.5rem;
+    padding-bottom: 4px; padding-bottom: 0.25rem;
+    margin-bottom: 1em;
+    margin-bottom: 16px;
+
+    #signup-clip{ display: none; }
+    #signup-clip-mobile{ 
+      display: block; 
+      padding: 0.5em 0; 
+    }
+
+    nav { 
+      padding-left: $divider-padding; padding-top: $top-distance;
+      ul { padding-left: 0; }
+    }
+
+    .logo {
+      position: relative;
+      padding-top: $top-distance;
+      padding-right: $divider-padding;
+
+      &:after { /* divider line */
+        content:'';
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right:0;
+        border-right: 1px solid $page-background-color;
+      }
+    }
+    .sharing-links{ display: none; }
+  }
 }
 
 #logo {
   figure {
     max-width: 132px;
     line-height: 0;
+
+    @mixin media-widescreen {
+      max-width: 144px;
+      line-height: 0;
+    }
   }
 
   a{ 
@@ -114,27 +178,23 @@ header {
 }
 
 
-/*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  */
 @include apply-to-ie10_and_higher {
   /* IE10+ specific styles go here */  
   @include ie-svg-hacks;
-  header nav .padder.alpha { margin-left: 0px !important; }
+  .page-wrap > header nav .padder.alpha { margin-left: 0px !important; }
 }
 
 @include apply-to-ie9-only {
   @include ie-svg-hacks;
-  header nav .padder.alpha { margin-left: 0px !important; }
+  .page-wrap > header nav .padder.alpha { margin-left: 0px !important; }
 }
 @include apply-to-ie8-only {
-  header {
+  .page-wrap > header {
     nav{ 
-      h2 {
-        margin-top: 8px;
-      }
+      h2 { margin-top: 8px; }
     }
   }
 }
-
 
 .no-svg {
   @include def_info_graphic('shortcut_logo_rgb_small_shutter', 132px, 32px);
@@ -151,106 +211,6 @@ header {
   }
 
   figure { margin-bottom: 2px; }
-
-}
-
-/* Wide screen monitors wider than 996px */
-@media only screen and (min-width: 996px) {
-  header {
-    nav{
-      h2 { 
-        @include font-size(20);
-      }
-    }
-  }
-  #logo {
-    figure {
-      max-width: 144px;
-      line-height: 0;
-    }
-  }
-}
-
-/* Tablet Portrait size to Base 996px */
-@media only screen and (min-width: 768px) and (max-width: 995px) {
-  header {
-    nav{
-      .padder { 
-        &.alpha { margin-left:-0.3rem; }
-        &.omega { margin-right: -0.3rem; }
-      }
-    }
-  }
-}
-
-/* All Mobile Sizes */
-@media only screen and (max-width: 767px) {
-  header {
-    nav{
-      ul{
-        text-align: left;
-        padding-left: 0; 
-      }
-      li{ margin-right: 0.875rem; }
-      .padder{ display: none; }
-    }
-  }
-}
-
-/* arbitrary size only for main navigation */
-@media only screen and (max-width: 606px) {
-  header {
-    nav{ 
-      ul{ padding-left: 0.5rem; }
-    }
-  }
-}
-
-/* Mobile Landscape Size to Tablet Portrait */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-}
-
-/* Mobile Portrait Size to Mobile Landscape Size */
-@media only screen and (max-width: 479px) {
-
-  header {
-    $divider-padding: 2%;
-    $top-distance: 0;
-    background-color: white;
-    @include border-bottom-left-radius($border-radius);
-    @include border-bottom-right-radius($border-radius);
-    padding: 8px; padding: 0.5rem;
-    padding-bottom: 4px; padding-bottom: 0.25rem;
-
-    #signup-clip{ display: none; }
-    #signup-clip-mobile{ 
-      display: block; 
-      padding: 0.5em 0; 
-    }
-
-    nav { 
-      padding-left: $divider-padding; padding-top: $top-distance;
-      ul { padding-left: 0; }
-    }
-
-    .logo {
-      position: relative;
-      padding-top: $top-distance;
-      padding-right: $divider-padding;
-
-      &:after { /* divider line */
-        content:'';
-        position: absolute;
-        top: 10%;
-        bottom: 10%;
-        right:0;
-        border-right: 1px solid $page-background-color;
-      }
-    }
-
-    .sharing-links{ display: none; }
-  }
 }
 
 

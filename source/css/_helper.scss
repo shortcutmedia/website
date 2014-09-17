@@ -47,7 +47,12 @@
     @content;
   }
 }
- 
+
+
+@mixin debug-border($color: 'red') {
+  @if $debug { box-shadow: 0 0 2px $color inset };
+}
+
 
 /* Replace svg images with png background images for IE8
  * Let's assume IE8 runs on non-retina displays therefore

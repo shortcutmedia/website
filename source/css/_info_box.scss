@@ -3,7 +3,7 @@
     background-color: $aside-color; 
     article{
       background-color: $article-color;
-      a{ color: $article-color; }
+      a.button{ color: $article-color; }
     }
     aside{
       a{ color: $aside-color; }
@@ -29,8 +29,7 @@
   article, aside {
     float: left;
     width: 100%;
-
-    @if $debug { box-shadow: 0 0 2px blue inset };
+    @include debug-border(blue);
   }
 
   &.box-padded {
@@ -48,7 +47,7 @@
   }
 
   /* Styling */
-  h1, h2, p, ul {
+  h1, h2, p, ul, a, small {
     color: white;
     font-weight: $light-font;
   }

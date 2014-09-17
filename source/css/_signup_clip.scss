@@ -25,5 +25,10 @@
       &:hover{ color: $dark-font-color-hovered; }
     }
   }
+
+  @include media-normal-screen {
+   float:right; 
+    max-width: 7.3em;
+  }
 }
 

@@ -1,7 +1,8 @@
 @import "normalize";
 @import "base"; // HTML5 boilerplate
 @import "grid";
-@import "_helper";
+@import "helper";
+@import "media_helper";
 
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
@@ -25,13 +26,18 @@ $shortcut-color: rgb(243,109,42);
 $shortcut-color-light: rgb(241,147,0);
 $shortcut-font-color: rgb(234,108,29);
 $shortcut-font-color-hovered: rgb(196,86,18);
+$focus-color: $dark-font-color;
+/*$border-radius: 16px 16px;*/
 $border-radius: 8px 8px;
 
+$font-family: 'Roboto', sans-serif;
 $normal-font: 400;
 $light-font: 300;
 
 
 $customers-image-margin: 1%;
+
+$main-info-graphics-with-shadow: true;
 
 @import "teaser_phone";
 @import "header";
@@ -39,7 +45,7 @@ $customers-image-margin: 1%;
 
 body {
   background-color: $page-background-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family;
   /*font-weight: $normal-font;*/
   font-weight: $light-font;
 }
@@ -118,7 +124,7 @@ figure {
       display: inline-block;
       width: 100%;
       vertical-align: middle;
-      @if $debug { box-shadow: 0 0 2px #26967C inset };
+      @include debug-border(#26967C);
       position: relative;
       padding-bottom: 100%; /* yes !! ; ) */ 
 
@@ -135,6 +141,7 @@ figure {
       &#shortcut_engage_graphic{ padding-bottom: (100% / 436.94 * 396.14); }
       &#main_grapic_newspapers{ padding-bottom: (100% / 367 * 425); }
       &#main_grapic_magazines{ padding-bottom: (100% / 546 * 377); }
+      &#main_grapic_brands{ padding-bottom: (100% / 486 * 458); }
       &#info_graphic_how_shortcut_works{ padding-bottom: (100% / 238 * 235); }
     }
 
@@ -225,16 +232,43 @@ figure {
 
 .top-section {
   color: $dark-font-color;
+  $header-font-size: 19px;
+  $h1-margin-top: 5px;
+
+  @if $main-info-graphics-with-shadow {
+    /*
+     * Shadow of info graphics make already for a visual right padding and 
+     * therefore let's remove the corresponding padding.
+     */
+    padding-right: 0; 
+  }
+
+  header {
+    h3{ 
+      margin: -10px 0 0 0 ;
+      @include font-size($header-font-size);
+    }
+
+  }
+
   h1 {
     font-weight: $light-font;
+    margin-top: $h1-margin-top;
+    b {
+      font-weight: $light-font;
+      color: $shortcut-font-color;
+    }
   }
-  b {
-    font-weight: $light-font;
-    color: $shortcut-font-color;
-  }
-  figure { margin-top: 1rem; }
+  figure { margin-top: $header-font-size + $h1-margin-top; }
 
-  
+  &>div {
+    padding-left: 10px;
+    &:first-child {
+      padding-left: 0;
+      padding-right: 10px;
+      
+    }
+  }
 }
 
 
@@ -392,9 +426,11 @@ img {
 }
 
 section {
+  @include debug-border(brown);
+
   h1 {
     font-weight: $light-font;
-    color: white;
+    /*color: white;*/
   }
 }
 
@@ -435,6 +471,42 @@ footer {
 }
 
 
+input[type="text"], input[type="email"], textarea {
+  width: 97%;
+  @include border-radius-pie($border-radius);
+  border: none;
+  padding: 6px 8px;
+
+  &:focus{
+    outline: none;
+    box-shadow: 0 0 3px $focus-color;
+  }
+
+  @media only screen and (max-width: 767px) { /* All Mobile Sizes */
+    width: 95%;
+  }
+
+}
+
+input[type="submit"] {
+  background-color: white;
+  border: none;
+  font-family: $font-family;
+  @include border-radius-pie($border-radius);
+  padding: 4px 16px ;
+}
+
+input, textarea {
+  &:focus{
+    outline: none;
+    box-shadow: 0 0 3px $focus-color;
+  }
+}
+
+textarea {
+  height: 100px;
+}
+
 /* Site specific adjustments */
 .magazine-page {
   .cooking-magazine {
@@ -453,6 +525,36 @@ footer {
   }
 }
 
+
+/* Contact Us */
+.google-maps {
+  position: relative;
+  padding-bottom: 85%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  @media only screen and (max-width: 767px) { /* All Mobile Sizes */
+
+    padding-bottom: 65%; // This is the aspect ratio
+  }
+   
+
+}
+
+.newsletter-form {
+  input[type="email"] {
+    width: 80%;
+    /*display: inline-block;*/
+  }
+
+}
 
 
 /*
