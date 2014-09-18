@@ -5,12 +5,10 @@ module CustomHelpers
     "#{title} · Shortcut " if title
   end
 
-  def info_box_flex(options={}, &block)
+  def info_box(options={}, &block)
     captured_html = capture_html(&block)
 
-    css_class = %w[info-box-3 flexbox]
-      .concat([*options[:class]])
-      .join(' ')
+    css_class = %w[info-box].concat([*options[:class]]).join(' ')
 
     concat_content(
       div(class: css_class) do

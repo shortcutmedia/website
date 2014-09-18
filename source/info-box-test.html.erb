@@ -3,8 +3,8 @@ title: For Newspapers - Shortcut
 ---
 
 <style>
-.info-box-3.no-padding article, .info-box-3.no-padding aside {
-  padding: 0;
+.info-box.no-padding article, .info-box.no-padding article,{
+  article, aside { padding: 2% 3%; }
 }
 
 
@@ -16,7 +16,7 @@ title: For Newspapers - Shortcut
     <div class="clearfix">
 
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 color-scheme-1 no-padding"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box color-scheme-1"> <!-- may not contain .clearfix -->
 
           <div class="clearfix">
             <aside>
@@ -37,7 +37,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 color-scheme-1 no-padding">
+        <div class="gird-whole info-box color-scheme-1">
           <div class="clearfix">
             <article>
               <p>Info box full width Article first without padding</p>
@@ -58,7 +58,7 @@ title: For Newspapers - Shortcut
     <div class="clearfix">
 
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 color-scheme-1"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box color-scheme-1 box-padded"> <!-- may not contain .clearfix -->
 
           <div class="clearfix">
             <aside>
@@ -80,7 +80,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 color-scheme-1">
+        <div class="gird-whole info-box color-scheme-1 box-padded">
           <div class="clearfix">
             <article>
               <p>Info box full width Article first with padding</p>
@@ -100,7 +100,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 half color-scheme-1 no-padding"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box half color-scheme-1"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <p>Aside</p>
@@ -119,7 +119,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 half info-left color-scheme-1 no-padding"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box half info-left color-scheme-1"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <p>Aside</p>
@@ -138,7 +138,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 half color-scheme-1"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box half color-scheme-1 box-padded"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <p>Aside</p>
@@ -158,7 +158,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 third color-scheme-1"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box third color-scheme-1"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <p>Aside</p>
@@ -177,7 +177,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 third info-left color-scheme-1"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box third info-left color-scheme-1"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <p>Aside</p>
@@ -196,7 +196,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 third color-scheme-1"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box third color-scheme-1 box-padded"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <p>Aside</p>
@@ -215,7 +215,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 flexbox third info-left color-scheme-2">
+        <div class="gird-whole info-box flexbox third info-left color-scheme-2">
           
           <div class="clearfix">
             <div class="inner-wrapper">
@@ -248,7 +248,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 flexbox third info-left color-scheme-2">
+        <div class="gird-whole info-box flexbox third info-left color-scheme-2">
           <div class="clearfix">
             <div class="inner-wrapper">
               <aside>
@@ -273,7 +273,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <% info_box_flex(class: 'third info-left color-scheme-2') do %>
+        <% info_box(class: 'third info-left color-scheme-2') do %>
           <aside>
             <figure id="info_graphic_how_shortcut_works"> 
               <%= partial 'img/info_graphic_how_shortcut_works.svg' %>
@@ -297,7 +297,7 @@ title: For Newspapers - Shortcut
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <div class="gird-whole info-box-3 third info-left color-scheme-1 box-padded"> <!-- may not contain .clearfix -->
+        <div class="gird-whole info-box third info-left color-scheme-1 box-padded"> <!-- may not contain .clearfix -->
           <div class="clearfix">
             <aside>
               <figure> 
