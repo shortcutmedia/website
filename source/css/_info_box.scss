@@ -134,16 +134,10 @@
         height: 0;
       }
     }
-  }
 
-  @media only screen and (max-width: 767px) {
-    $chevron-width: 40px;
-    .info-box-3.chevron:before{ 
-      display: none;
-    }
-
-    .info-box-3.chevron {
-      article {
+    @include media-mobile-size {
+      $chevron-width: 40px;
+       article {
         position: relative;
 
         &:before{ 
@@ -160,8 +154,11 @@
       aside {
         margin-top: $chevron-width;
       }
-    }
 
+      &:before {
+        display: none;
+      }
+    }
   }
 }
 
