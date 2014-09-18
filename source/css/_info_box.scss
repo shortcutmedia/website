@@ -20,7 +20,6 @@
 }
 
 .info-box-3 {
-  $box-padding: 3%;
   @include border-radius-pie($border-radius);
   article { 
     @include border-radius-pie($border-radius); 
@@ -29,21 +28,8 @@
   article, aside {
     float: left;
     width: 100%;
+    @include box-sizing(border-box);
     @include debug-border(blue);
-  }
-
-  &.box-padded {
-    article, aside { 
-      padding: ($box-padding - 1%) $box-padding;
-      width: 100% - (2 * $box-padding); 
-    }
-  }
-
-  h2, p, ul {
-    /*margin-left: 16px;*/
-    /*margin-left: 1rem;*/
-    /*margin-right: 16px;*/
-    /*margin-right: 1rem;*/
   }
 
   /* Styling */
@@ -63,7 +49,6 @@
   }
 
   figure { 
-    /*padding: 10% 15% 5% 15%;*/
     margin: 0 auto; /* center image */
     max-width: 176px;
     svg{ 
@@ -73,54 +58,18 @@
 
   /* All non-Mobile Sizes */
   @media only screen and (min-width: 768px) {
-
-    &.half, &.third {
-      article, aside { padding: $box-padding; }
-    }
-
     &.half {
       article, aside{ width: 50%;}
-      &.box-padded{
-        article, aside{ width: 50% - (2 * $box-padding); }
-      }
     }
 
     &.third {
       $article-width: 62.5%;
       article{ width: $article-width; }
       aside{ width: 100% - $article-width; }
-
-      &.box-padded {
-        article{ width: $article-width - (2 * $box-padding); }
-        aside { width: 100% - $article-width - (2 * $box-padding); }
-      }
     }
 
     &.info-left {
       aside { float: right; }
-    }
-
-    &.flexbox.third, &.flexbox.half {
-      .inner-wrapper {
-        @include display-flex;
-      }
-      article {
-        @include flex-order(2);
-        &.centered {
-          /* works only with newer browsers */
-          display: flex;
-          align-items: center; 
-        }
-      }
-      aside {
-        @include flex-order(1);
-        @include flex-align-self(center);
-      }
-
-      &.info-left {
-        aside { @include flex-order(2); }
-        article { @include flex-order(1); }
-      }
     }
   }
 
@@ -130,6 +79,40 @@
   aside { 
     a{ color: $dark-font-color-hovered !important; }
     h1, h2, h3, p, ul, li{ color: $dark-font-color; }
+  }
+}
+
+
+/* use flexbox if browser supports it */
+.flexbox {
+  .info-box-3 {
+
+    /* All non-Mobile Sizes */
+    @media only screen and (min-width: 768px) {
+   
+      &.third, &.half {
+        .inner-wrapper {
+          @include display-flex;
+        }
+        article {
+          @include flex-order(2);
+          &.centered {
+            /* works only with newer browsers */
+            display: flex;
+            align-items: center; 
+          }
+        }
+        aside {
+          @include flex-order(1);
+          @include flex-align-self(center);
+        }
+
+        &.info-left {
+          aside { @include flex-order(2); }
+          article { @include flex-order(1); }
+        }
+      }
+    }
   }
 }
 
