@@ -83,10 +83,6 @@
       li{ margin-right: 0.875rem; }
       .padder{ display: none; }
     }
-
-    @media only screen and (max-width: 606px) { /* arbitrary size only for main navigation */
-      ul{ padding-left: 0.5rem; }
-    }
   }
 
   @include media-widescreen {
