@@ -569,38 +569,6 @@ Copyright 2013, Josh Cope
 /* =============================================================================
    Site Styles
    ========================================================================== */
-
-/* =============================================================================
-   Page Styles
-   ========================================================================== */
-
-/* =============================================================================
-   Media Queries
-   ========================================================================== */
-
-/* Wide screen monitors wider than 996px */
-@media only screen and (min-width: 996px) {
-  .info-box-2 {
-    .picture-box {
-      img{
-        width: (100% / 4) - ( 2 * $customers-image-margin);
-      }
-    }
-  }
-
-  .info-box-background-image {
-    background-size: 34.5% - 7.5%;
-    &.top {
-      .picture-box {
-        img{
-          width: (100% / 4) - ( 2 * $customers-image-margin);
-        }
-      }
-    }
-  }
-
-}
-
 .info-boxes {
   section {
     margin-top: 1em;
@@ -628,8 +596,17 @@ Copyright 2013, Josh Cope
   }
 }
 
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
 
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
 
+/* Wide screen monitors wider than 996px */
+@media only screen and (min-width: 996px) { }
+ 
 /* Tablet Portrait size to Base 996px */
 @media only screen and (min-width: 768px) and (max-width: 995px) {}
 
@@ -643,27 +620,6 @@ Copyright 2013, Josh Cope
     .rounded-batch{ 
       width: 142px; height: 142px; 
       @include font-size(20);
-    }
-  }
- 
-
-  .info-box-background-image {
-    background-position: center 3.75% !important;
-
-    .info-box-desc {
-      margin: 37.5% 0 0 0; 
-      width: 100%;
-    }
-
-    &.top {
-      $box-content-padding: 3%;
-      .info-box-desc{
-        .box-content{ padding: $box-content-padding; }
-      }
-      .picture-box {
-        $image-margin: 1%;
-        padding: ($box-content-padding - $image-margin);
-      }
     }
   }
 
@@ -695,25 +651,6 @@ Copyright 2013, Josh Cope
       &:last-child { margin-right: 0; }
     }
   }
-
-  .info-box-2 {
-    .picture-box {
-      img{
-        width: (100% / 2) - ( 2 * $customers-image-margin);
-      }
-    }
-  }
-
-  .info-box-background-image {
-    &.top {
-     .picture-box {
-        img{
-          width: (100% / 2) - ( 2 * $customers-image-margin);
-        }
-      }
-    }
-  }
-
 
   .footer {
     li{
