@@ -233,11 +233,24 @@ figure {
   /*}*/
 }
 
+$section-header-font-size: 19px;
+
+section > header {
+  @include debug-border(yellow);
+
+  h3{ 
+    margin: 0;
+    @extend .padded-left;
+    @include font-size($section-header-font-size);
+    color: $dark-font-color;
+  }
+
+  &+div .padded { padding-top: 0; }
+}
 
 .top-section {
-  color: $dark-font-color;
-  $header-font-size: 19px;
   $h1-margin-top: 5px;
+  color: $dark-font-color;
 
   @if $main-info-graphics-with-shadow {
     /*
@@ -245,14 +258,7 @@ figure {
      * therefore let's remove the corresponding padding.
      */
     padding-right: 0; 
-  }
-
-  header {
-    h3{ 
-      margin: -10px 0 0 0 ;
-      @include font-size($header-font-size);
-    }
-
+    padding-bottom: 0;
   }
 
   h1 {
@@ -263,15 +269,32 @@ figure {
       color: $shortcut-font-color;
     }
   }
-  figure { margin-top: $header-font-size + $h1-margin-top; }
+  /*figure { margin-top: $section-header-font-size + $h1-margin-top; }*/
+  figure { margin-top: $h1-margin-top; }
 
-  &>div {
-    padding-left: 10px;
-    &:first-child {
-      padding-left: 0;
-      padding-right: 10px;
-      
+  @media only screen and (min-width: 480px) {
+    &>div {
+      padding-left: 10px;
+      &:first-child {
+        padding-left: 0;
+        padding-right: 10px;
+      }
     }
+
+    &.flip-order {
+      &>div {
+        padding-right: 10px;
+        padding-left: 0px;
+        &:first-child {
+          padding-left: 10px;
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+
+  &.flip-order {
+    div:first-child { float: right; }
   }
 }
 
@@ -569,6 +592,12 @@ Copyright 2013, Josh Cope
 /* =============================================================================
    Site Styles
    ========================================================================== */
+
+.page-wrap > header {
+  /*margin-bottom: 16px; margin-bottom: 1em;*/
+}
+
+
 .info-boxes {
   section {
     margin-top: 1em;

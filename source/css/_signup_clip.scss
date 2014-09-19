@@ -11,7 +11,10 @@
     text-align: center;
   }
 
-  a { text-decoration: none; }
+  a { 
+    text-decoration: none; 
+    &:hover { text-decoration: underline; }
+  }
   b {
     a{
       color: $shortcut-font-color;

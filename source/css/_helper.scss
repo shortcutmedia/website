@@ -1,6 +1,31 @@
-@mixin font-size($sizeInPixel: 16) {
-  font-size: $sizeInPixel + px;
-  font-size: ($sizeInPixel / 16) + rem;
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function px-to-rem($size, $base:16) {
+  @return (strip-units($size) / $base) + rem;
+}
+
+@function rem-to-px($size, $base:16) {
+  @return (strip-units($size) * $base) + px;
+}
+
+@mixin font-size($size) {
+  $size_unit: to-lower-case(unit($size));
+  @if $size_unit == 'px' {
+    font-size: $size;
+    font-size: px-to-rem($size);
+  }
+
+  @if $size_unit == 'rem' {
+    font-size: rem-to-px($size);
+    font-size: $size;
+  } 
+
+  @if unitless($size) {
+    font-size: $size + px;
+    font-size: px-to-rem($size);
+  }
 }
 
 @mixin display-flex {

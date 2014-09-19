@@ -6,10 +6,13 @@ title: For Brands
   <%= partial "header" %> 
 
   <section>
+    <header><h3><%= current_page.data.title  %></h3></header>
     <div class="clearfix">
-      <div class="grid-whole padded top-section">
+      <div class="grid-whole padded top-section flip-order">
         <div class="grid-half s-grid-whole" >
-          <header><h3><%= current_page.data.title  %></h3></header>
+          <%= figure 'main_graphic_brands', class: 'fluid' %> 
+        </div>
+        <div class="grid-half s-grid-whole" >
           <h1>Increase Revenue and <b>Brand Loyality</b></h1>
           <p>
             You love connecting with your customers. You want them 
@@ -22,9 +25,6 @@ title: For Brands
             decisions or buy right there via your mobile responsive 
             ecommerce platforms.
           </p>
-        </div>
-        <div class="grid-half s-grid-whole" >
-          <%= figure 'main_graphic_brands', class: 'fluid' %> 
         </div>
       </div>
     </div>

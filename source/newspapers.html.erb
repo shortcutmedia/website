@@ -6,10 +6,13 @@ title: For Newspapers
   <%= partial "header" %> 
 
   <section>
+    <header><h3><%= current_page.data.title  %></h3></header>
     <div class="clearfix">
-      <div class="grid-whole padded top-section">
+      <div class="grid-whole padded top-section flip-order">
         <div class="grid-half s-grid-whole" >
-          <header><h3><%= current_page.data.title  %></h3></header>
+          <%= figure 'main_graphic_newspapers', class: 'fluid' %> 
+        </div>
+        <div class="grid-half s-grid-whole" >
           <h1><b>Perfect Match</b> for Newspapers</h1>
           <p>
             You’re producing high quality journalism every day 
@@ -21,23 +24,9 @@ title: For Newspapers
             The possibilities are endless.
           </p>
         </div>
-        <div class="grid-half s-grid-whole" >
-          <%= figure 'main_graphic_newspapers', class: 'fluid' %> 
-        </div>
       </div>
     </div>
   </section>
-
-  <%#<section class="grid-whole padded top-section">%>
-    <%#<div class="grid-half s-grid-whole" >%>
-    <%#</div>%>
-    <%#<div id="teaser" class="grid-half s-grid-whole" >%>
-      <%#<figure> %>
-        <%#<%= partial 'img/shortcut_engage_graphic.svg' %>
-      <%#</figure>%>
-    <%#</div>%>
-  <%#</section>%>
-
 </div>
 
 <div class="page-wrap clearfix info-boxes">
@@ -72,7 +61,7 @@ title: For Newspapers
   <section>
     <div class="clearfix">
       <div class="grid-10 offset-1 s-grid-whole">
-        <% info_box(class: 'half info-left color-scheme-1') do %>
+        <% info_box(class: 'half info-left color-scheme-1 chevron') do %>
           <article class="centered">
             <div>
               <p>Monthly license fee based on circulation.</p>
