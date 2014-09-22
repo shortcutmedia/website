@@ -47,7 +47,6 @@ $main-info-graphics-with-shadow: true;
 body {
   background-color: $page-background-color;
   font-family: $font-family;
-  /*font-weight: $normal-font;*/
   font-weight: $light-font;
 }
 
@@ -110,7 +109,9 @@ nav { /* header and footer */
 
 
 figure {
+  @include debug-border(darkgrey);
   svg{
+    @include debug-border(grey);
     width: 100%;
     height: 100%;
     /*.shadow{ display: none; }*/
@@ -140,12 +141,33 @@ figure {
 
       &#shortcut_logo_rgb_small_shutter{ padding-bottom: (100% / 143.99 * 34.55); }
       &#shortcut_engage_graphic{ padding-bottom: (100% / 436.94 * 396.14); }
-      &#main_grapic_newspapers{ padding-bottom: (100% / 367 * 425); }
-      &#main_grapic_magazines{ padding-bottom: (100% / 546 * 377); }
-      &#main_grapic_brands{ padding-bottom: (100% / 486 * 458); }
+      &#main_graphic_newspapers{ padding-bottom: (100% / 367 * 395); }
+      &#main_graphic_magazines{ padding-bottom: (100% / 546 * 377); }
+      &#main_graphic_brands{ padding-bottom: (100% / 486 * 458); 
+      }
       &#info_graphic_how_shortcut_works{ padding-bottom: (100% / 238 * 235); }
-    }
 
+      @media only screen and (min-width: 820px) {
+        &#main_graphic_brands{ 
+          max-width: 352px;
+          padding-bottom: (352px); 
+          float: right;
+        }
+
+        &#main_graphic_newspapers{
+          max-width: 327px;
+          padding-bottom: (352px); 
+          float: right;
+        }
+      }
+
+      @media only screen and (min-width: 900px) {
+        &#shortcut_engage_graphic {
+          max-width: 393px;
+          padding-bottom: (356px); 
+        }
+      }
+    }
   }
 
 }
@@ -243,6 +265,7 @@ section > header {
     @extend .padded-left;
     @include font-size($section-header-font-size);
     color: $dark-font-color;
+    font-weight: $light-font;
   }
 
   &+div .padded { padding-top: 0; }
@@ -305,8 +328,7 @@ ul{ padding-left: 20px; }
 
 
 .welcome-section {
-  margin-bottom: 40px;
-
+  margin-bottom: 60px;
 }
 
 .signup-clip-container {
@@ -341,9 +363,12 @@ a.img-button {
 }
 
 #demo-button {
+  $diameter: 172px;
   height: 0;
+  position: relative;
+  top: -($diameter / 2);
+
   .rounded-batch {
-    $diameter: 172px;
     background-color: white;
     @include border-radius-pie(50%);
     text-align: center;
@@ -355,8 +380,6 @@ a.img-button {
     height: $diameter;
     font-size: 1.4rem;
     text-decoration: none;
-    position: relative;
-    top: -($diameter / 2);
     color: $shortcut-font-color;
     &:hover{
       background-color: whitesmoke;
@@ -388,7 +411,7 @@ a.img-button {
   padding-top: 15%;
   img {
     width: 100%;
-    max-width: 544px;
+    max-width: 450px;
 
   }
   a {
@@ -646,8 +669,11 @@ Copyright 2013, Josh Cope
   }
 
   #demo-button {
+    $diameter: 142px;
+    top: -($diameter / 2);
+
     .rounded-batch{ 
-      width: 142px; height: 142px; 
+      width: $diameter; height: $diameter;
       @include font-size(20);
     }
   }
@@ -668,11 +694,20 @@ Copyright 2013, Josh Cope
 @media only screen and (max-width: 479px) {
   #teaser {
     h1 {
-      margin-top: -20px;
       text-align: center;
     }
-
   }
+
+  #demo-button {
+    $diameter: 122px;
+    top: -($diameter / 2);
+
+    .rounded-batch{ 
+      width: $diameter; height: $diameter;
+      @include font-size(18);
+    }
+  }
+
 
   .download-instruction {
     .stores figure{

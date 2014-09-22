@@ -4,9 +4,10 @@ $button-width: 28px;
 $button-height: 28px;
 
 #teaser-phone {
-  $phone-scale: 1.2;
+  $phone-scale: 1.1;
   position: relative;
   margin-top: -50%;
+  margin-top: -(($teaser-phone-height * $phone-scale) / 2);
   width: ($teaser-phone-width * $phone-scale);
   height: ($teaser-phone-height * $phone-scale);
   background-color: $page-background-color;
