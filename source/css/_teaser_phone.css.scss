@@ -16,6 +16,8 @@ $button-height: 28px;
   border-width: (40px * $phone-scale) (18px * $phone-scale) (66px * $phone-scale) (18px * $phone-scale);
   @include border-radius(19px);
   margin-left: auto;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
 
   a{
     display:block;

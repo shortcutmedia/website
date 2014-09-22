@@ -1,5 +1,5 @@
 ---
-title: News - Shortcut
+title: News
 ---
 
 <div class="page-wrap clearfix">
@@ -9,9 +9,9 @@ title: News - Shortcut
 <div class="page-wrap clearfix info-boxes">
 
   <section>
+    <header><h3><%= current_page.data.title  %></h3></header>
     <div class="clearfix">
       <div class="grid-10 offset-1 s-grid-whole">
-        <h1>News</h1>
         <% info_box(class: 'third color-scheme-1') do %>
           <aside>
             <%= figure 'info_graphic_how_shortcut_works' %> 

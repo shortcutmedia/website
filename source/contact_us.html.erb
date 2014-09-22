@@ -1,5 +1,5 @@
 ---
-title: Contact Us - Shortcut
+title: Contact Us
 ---
 
 <div class="page-wrap clearfix">
@@ -9,9 +9,9 @@ title: Contact Us - Shortcut
 <div class="page-wrap clearfix info-boxes">
 
   <section>
+    <header><h3><%= current_page.data.title  %></h3></header>
     <div class="clearfix">
       <div class="grid-10 offset-1">
-        <h1>Contact Us</h1>
         <% info_box(class: 'color-scheme-2') do %>
           <article>
             <% form_tag '/don-tknow-yet', class: 'contact-form', method: 'post' do %>
