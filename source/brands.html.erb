@@ -49,7 +49,7 @@ title: For Brands
                 and much more. Try a demo today and see how easy your 
                 Shortcut can be created.
               </p>
-              <p><a href="#" class="button">Try Demo!</a></p>
+              <p><a href="signup.html#AdCampaign" class="button">Try Demo!</a></p>
             </div>
           </article>
         <%- end %>
@@ -76,15 +76,15 @@ title: For Brands
             </div>
           </article>
           <aside class="center">
-            <p><a href="#" class="button">Start your 30 days<br> free trial now!</a></p>
-            <p>or <a href="#">contact us</a> for more information.</p>
+            <p><a href="signup.html#AdCampaign" class="button">Start your 30 days<br> free trial now!</a></p>
+            <p>or <a href="contact_us.html">contact us</a> for more information.</p>
           </aside>
         <%- end %>
       </div>
     </div>
   </section>
 
-  <%= partial 'used_worldwide' %>
+  <%= partial 'used_worldwide', locals: {favorite_medium_type: 'AdCampaign'} %>
 </div>
 
 <%= partial 'footer' %>

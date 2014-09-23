@@ -58,6 +58,14 @@
     }
   }
 
+  // Selects the medium type specified in the anchor part of the current url as the medium type the new user is interested
+  // in if possible.
+  function initMediumTypeFromAnchor() {
+    var mediumType = window.location.hash.substring(1);
+    $('select[name="user[favorite_medium_type]"]').val(mediumType);
+  }
+
   $(document).ready(initCORSSignupFormHandler);
+  $(document).ready(initMediumTypeFromAnchor);
 
 })();
