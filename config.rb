@@ -53,6 +53,8 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+set :relative_links, true
+
 # Build-specific configuration
 configure :build do
   # Minify css on build
