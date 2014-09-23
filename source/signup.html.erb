@@ -13,49 +13,45 @@ title: Free Trial - Shortcut
           <form class="signup" method="POST" action="<%= manager_host %>/users">
 
             <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_company_name">Company name:</label></div>
-              <div class="grid-two-thirds padded"><input type="text" name="user[company_name]" value="" id="user_company_name"/></div>
+              <div class="grid-third right padded"><%= label_tag :user_company_name, caption: 'Company name:' %></div>
+              <div class="grid-two-thirds padded"><%= text_field_tag 'user[company_name]', id: :user_company_name %></div>
             </div>
             <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_organization_type">Organization type:</label></div>
-              <div class="grid-two-thirds padded"><select id="user_organization_type" name="user[organization_type]">
-                <option value="">Choose…</option>
-                <option value="Magazine Publisher">Magazine Publisher</option>
-                <option value="Newspaper Publisher">Newspaper Publisher</option>
-                <option value="Brand Owner">Brand Owner</option>
-                <option value="Content Marketing Agency">Content Marketing Agency</option>
-                <option value="Retail">Retail</option>
-                <option value="Education">Education</option>
-                <option value="Public Sector">Public Sector</option>
-                <option value="Other">Other</option>
-              </select></div>
-            </div>
-
-            <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_favorite_medium_type">Interested in creating Shortcuts for:</label></div>
-              <div class="grid-two-thirds padded"><select id="user_favorite_medium_type" name="user[favorite_medium_type]">
-                <option value="">Choose…</option>
-                <option value="Magazine">Magazines</option>
-                <option value="Newspaper">Newspapers</option>
-                <option value="AdCampaign">Advertisements</option>
-              </select></div>
-            </div>
-
-            <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_name">Name:</label></div>
-              <div class="grid-two-thirds padded"><input type="text" name="user[name]" value="" id="user_name"/></div>
+              <div class="grid-third right padded"><%= label_tag :user_organization_type, caption: 'Organization type:' %></div>
+              <% organization_type_options = [['Choose…', ''],
+                                              ['Magazine Publisher']*2,
+                                              ['Newspaper Publisher']*2,
+                                              ['Brand Owner']*2,
+                                              ['Content Marketing Agency']*2,
+                                              ['Retail']*2,
+                                              ['Education']*2,
+                                              ['Public Sector']*2,
+                                              ['Other']*2] %>
+              <div class="grid-two-thirds padded"><%= select_tag 'user[organization_type]', id: :user_organization_type, options: organization_type_options %></div>
             </div>
             <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_email">Email:</label></div>
-              <div class="grid-two-thirds padded"><input type="text" name="user[email]" value="" id="user_email"/></div>
+              <div class="grid-third right padded"><%= label_tag :user_favorite_medium_type, caption: 'Wants Shortcuts for:' %></div>
+              <% medium_type_options = [['Choose…',        ''],
+                                        ['Magazines',      'Magazine'],
+                                        ['Newspapers',     'Newspaper',],
+                                        ['Advertisements', 'AdCampaign']] %>
+              <div class="grid-two-thirds padded"><%= select_tag 'user[favorite_medium_type]', id: :user_favorite_medium_type, options: medium_type_options %></div>
             </div>
             <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_password">Password:</label></div>
-              <div class="grid-two-thirds padded"><input type="password" name="user[password]" value="" id="user_password"/></div>
+              <div class="grid-third right padded"><%= label_tag :user_name, caption: 'Name:' %></div>
+              <div class="grid-two-thirds padded"><%= text_field_tag 'user[name]', id: :user_name %></div>
             </div>
             <div class="grid-whole equalize">
-              <div class="grid-third right padded"><label for="user_password_confirmation">Confirm password:</label></div>
-              <div class="grid-two-thirds padded"><input type="password" name="user[password_confirmation]" value="" id="user_password_confirmation"/></div>
+              <div class="grid-third right padded"><%= label_tag :user_email, caption: 'Email:' %></div>
+              <div class="grid-two-thirds padded"><%= text_field_tag 'user[email]', id: :user_email %></div>
+            </div>
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><%= label_tag :user_password, caption: 'Password:' %></div>
+              <div class="grid-two-thirds padded"><%= password_field_tag 'user[password]', id: :user_password %></div>
+            </div>
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><%= label_tag :user_password_confirmation, caption: 'Confirm password:' %></div>
+              <div class="grid-two-thirds padded"><%= password_field_tag 'user[password_confirmation]', id: :user_password_confirmation %></div>
             </div>
             <div class="grid-whole right">
               <button type="submit">Sign up</button>
