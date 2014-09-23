@@ -1,0 +1,33 @@
+.modal--centered {
+
+  .dismiss-button { display: none; }
+  @media only screen and (min-width: 480px) {
+    .modal-inner {
+      top: 50% !important;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      overflow: visible !important;
+
+      .dismiss-button {
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        top: -26px;
+        right: 0;
+        background: white;
+        padding: 2px 8px;
+        font-size: 1.2em;
+        text-decoration: none;
+        text-indent: 0;
+        @include border-radius(2px);
+      }
+    }
+
+    .modal-close:after {
+      display: none !important;
+    }
+  }
+}
+

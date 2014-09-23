@@ -40,9 +40,16 @@ $customers-image-margin: 1%;
 
 $main-info-graphics-with-shadow: true;
 
+// CSS Modal http://drublic.github.io/css-modal/
+@import 'vendor/modal-config';
+@import 'vendor/modal-core';
+@import 'vendor/modal-theme';
+
+
 @import "teaser_phone";
 @import "header";
 @import "info_box";
+@import "modal";
 
 body {
   background-color: $page-background-color;
@@ -495,7 +502,7 @@ section {
 }
 
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea {
   width: 97%;
   @include border-radius-pie($border-radius);
   border: none;

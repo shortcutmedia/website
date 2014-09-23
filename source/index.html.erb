@@ -100,7 +100,7 @@
                 engagement platform for Interactive Print. 
                 Shortcut is designed to make life easier for you.
               </p>
-              <p><a href="#" class="button">Watch Video!</a></p>
+              <p><a href="#modal-manager-intro-video" class="button">Watch Video!</a></p>
             </div>
           </article>
         <%- end %>
@@ -123,7 +123,7 @@
                 its publisher, retail, fashion, education, travel 
                 and much more.
               </p>
-              <p><a href="#" class="button">Watch Video!</a></p>
+              <p><a href="#modal-manager-intro-video" class="button">Watch Video!</a></p>
             </div>
           </article>
         <%- end %>
@@ -178,5 +178,8 @@
 
   <%= partial 'used_worldwide' %>
 </div>
+
+<%= partial 'modal_youtube_video', locals: { id: 'teaser-video', src: '//www.youtube.com/embed/RPpV_dELuBw?enablejsapi=1' } %>
+<%= partial 'modal_youtube_video', locals: { id: 'manager-intro-video', src: '//www.youtube.com/embed/fm4CoT_xH1Y?enablejsapi=1' } %>
 
 <%= partial 'footer' %>
