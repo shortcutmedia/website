@@ -19,3 +19,7 @@
 
 # Ignore deployment config
 /deploy.yml
+
+# Ignore ruby config
+/.rvmrc
+/.ruby-version
