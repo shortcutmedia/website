@@ -11,6 +11,40 @@ title: Free Trial - Shortcut
         <div class="grid-half s-grid-whole" >
           <h1>Start your free trial now</h1>
           <form class="signup" method="POST" action="http://manager.shortcutmedia.com/users">
+
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_company_name">Company name:</label></div>
+              <div class="grid-two-thirds padded"><input type="text" name="user[company_name]" value="" id="user_company_name"/></div>
+            </div>
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_organization_type">Organization type:</label></div>
+              <div class="grid-two-thirds padded"><select id="user_organization_type" name="user[organization_type]">
+                <option value="">Choose…</option>
+                <option value="Magazine Publisher">Magazine Publisher</option>
+                <option value="Newspaper Publisher">Newspaper Publisher</option>
+                <option value="Brand Owner">Brand Owner</option>
+                <option value="Content Marketing Agency">Content Marketing Agency</option>
+                <option value="Retail">Retail</option>
+                <option value="Education">Education</option>
+                <option value="Public Sector">Public Sector</option>
+                <option value="Other">Other</option>
+              </select></div>
+            </div>
+
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_favorite_medium_type">Interested in creating Shortcuts for:</label></div>
+              <div class="grid-two-thirds padded"><select id="user_favorite_medium_type" name="user[favorite_medium_type]">
+                <option value="">Choose…</option>
+                <option value="Magazine">Magazines</option>
+                <option value="Newspaper">Newspapers</option>
+                <option value="AdCampaign">Advertisements</option>
+              </select></div>
+            </div>
+
+            <div class="grid-whole equalize">
+              <div class="grid-third right padded"><label for="user_name">Name:</label></div>
+              <div class="grid-two-thirds padded"><input type="text" name="user[name]" value="" id="user_name"/></div>
+            </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><label for="user_email">Email:</label></div>
               <div class="grid-two-thirds padded"><input type="text" name="user[email]" value="" id="user_email"/></div>
