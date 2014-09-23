@@ -1,12 +1,14 @@
 (function() {
 
+  managerHost = '<%= manager_host %>';
+
   // submits the signup form by doing a CORS request to the manager's signup API
   function submitSignupFormwithCORS(form) {
     removeAllErrorsFromForm(form);
 
     $.ajax({
       type: 'POST',
-      url:  'http://manager.shortcutmedia.com/api/users',
+      url:  (managerHost+'/api/users'),
       data: $(form).serializeArray(),
       success: function(data, textStatus, xhr) {
         signInUser(data);
@@ -23,7 +25,7 @@
   }
 
   function signInUser(userData) {
-    window.location.href = 'http://manager.shortcutmedia.com/?user_email='+userData['email']+'&user_token='+userData['authentication_token'];
+    window.location.href = managerHost+'/?user_email='+userData['email']+'&user_token='+userData['authentication_token'];
   }
 
   function removeAllErrorsFromForm(form) {

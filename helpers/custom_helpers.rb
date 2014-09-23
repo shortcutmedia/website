@@ -55,4 +55,8 @@ module CustomHelpers
   def div(content = nil, options = nil, &block)
     content_tag(:div, content, options, &block)
   end
+
+  def manager_host
+    ENV['MANAGER_HOST'] || 'http://manager.shortcutmedia.com'
+  end
 end
