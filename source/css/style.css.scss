@@ -498,12 +498,13 @@ section {
     float: right;
     @include font-size(16);
   }
-  
+
 }
 
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
   width: 97%;
+  height: 1.1em;
   @include border-radius-pie($border-radius);
   border: none;
   padding: 6px 8px;
@@ -519,7 +520,20 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 }
 
-input[type="submit"] {
+select {
+  width: 101%;
+  height: 1.5em;
+  @include border-radius-pie($border-radius);
+  border: none;
+  padding: 6px 8px;
+
+  &:focus{
+    outline: none;
+    box-shadow: 0 0 3px $focus-color;
+  }
+}
+
+input[type="submit"], button[type="submit"] {
   background-color: white;
   border: none;
   font-family: $font-family;
