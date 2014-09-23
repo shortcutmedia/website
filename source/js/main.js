@@ -2,7 +2,7 @@
 //= require vendor/jquery.validate.min
 //= require vendor/jquery-placeholder.js
 //= require vendor/modal
-//
+//= require vendor/modal-resize
 //= require signup
 
 // Avoid `console` errors in browsers that lack a console.

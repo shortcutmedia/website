@@ -21,8 +21,10 @@ module CustomHelpers
 
   def modal_view(options={}, &block)
 
-    default_opts = {tabindex: '-1', role: 'dialog', 'aria-hidden' => 'true',
-                    class: 'modal--show modal--centered'}
+    default_opts = {
+      tabindex: '-1', role: 'dialog', 'aria-hidden' => 'true',
+      class: 'modal--show modal--centered', 'data-cssmodal-resize' => 'true'
+    }
     options.reverse_merge! default_opts
 
     captured_html = capture_html(&block)
