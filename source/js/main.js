@@ -1,6 +1,8 @@
 //= require vendor/jquery-1.8.0.min
+//= require vendor/jquery.validate.min
 //= require vendor/jquery-placeholder.js
 //= require vendor/modal
+//
 //= require signup
 
 // Avoid `console` errors in browsers that lack a console.
@@ -51,3 +53,22 @@ $(function(){
   $(document).on('cssmodal:show', modalShow);
   $(document).on('cssmodal:hide', modalHide);
 });
+
+// jquery-validate initialization
+(function(){
+
+  $.validator.setDefaults({
+    errorElement: 'small'
+  });
+
+  function initValidations() {
+    // enable validation for all forms that do not explicitly specify "novalidate".
+    // each form must be initialized separately ($('form').validate() does
+    // not work/enables validation only for the first form)...
+    $('form:not([novalidate])').each(function() {
+      $(this).validate();
+    });
+  }
+  $(document).ready(initValidations);
+  $(document).ajaxComplete(initValidations);
+})();

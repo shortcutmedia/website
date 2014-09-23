@@ -14,7 +14,7 @@ title: Free Trial - Shortcut
 
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_company_name, caption: 'Company name:' %></div>
-              <div class="grid-two-thirds padded"><%= text_field_tag 'user[company_name]', id: :user_company_name %></div>
+              <div class="grid-two-thirds padded"><%= text_field_tag 'user[company_name]', id: :user_company_name, required: true, autofocus: true %></div>
             </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_organization_type, caption: 'Organization type:' %></div>
@@ -27,7 +27,7 @@ title: Free Trial - Shortcut
                                               ['Education']*2,
                                               ['Public Sector']*2,
                                               ['Other']*2] %>
-              <div class="grid-two-thirds padded"><%= select_tag 'user[organization_type]', id: :user_organization_type, options: organization_type_options %></div>
+              <div class="grid-two-thirds padded"><%= select_tag 'user[organization_type]', id: :user_organization_type, options: organization_type_options, required: true %></div>
             </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_favorite_medium_type, caption: 'Wants Shortcuts for:' %></div>
@@ -35,23 +35,23 @@ title: Free Trial - Shortcut
                                         ['Magazines',      'Magazine'],
                                         ['Newspapers',     'Newspaper',],
                                         ['Advertisements', 'AdCampaign']] %>
-              <div class="grid-two-thirds padded"><%= select_tag 'user[favorite_medium_type]', id: :user_favorite_medium_type, options: medium_type_options %></div>
+              <div class="grid-two-thirds padded"><%= select_tag 'user[favorite_medium_type]', id: :user_favorite_medium_type, options: medium_type_options, required: true %></div>
             </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_name, caption: 'Name:' %></div>
-              <div class="grid-two-thirds padded"><%= text_field_tag 'user[name]', id: :user_name %></div>
+              <div class="grid-two-thirds padded"><%= text_field_tag 'user[name]', id: :user_name, required: true %></div>
             </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_email, caption: 'Email:' %></div>
-              <div class="grid-two-thirds padded"><%= text_field_tag 'user[email]', id: :user_email %></div>
+              <div class="grid-two-thirds padded"><%= email_field_tag 'user[email]', id: :user_email, required: true %></div>
             </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_password, caption: 'Password:' %></div>
-              <div class="grid-two-thirds padded"><%= password_field_tag 'user[password]', id: :user_password %></div>
+              <div class="grid-two-thirds padded"><%= password_field_tag 'user[password]', id: :user_password, required: true, 'data-rule-minlength' => 6, autocomplete: 'off' %></div>
             </div>
             <div class="grid-whole equalize">
               <div class="grid-third right padded"><%= label_tag :user_password_confirmation, caption: 'Confirm password:' %></div>
-              <div class="grid-two-thirds padded"><%= password_field_tag 'user[password_confirmation]', id: :user_password_confirmation %></div>
+              <div class="grid-two-thirds padded"><%= password_field_tag 'user[password_confirmation]', id: :user_password_confirmation, required: true, 'data-rule-equalto' => "#user_password", autocomplete: 'off' %></div>
             </div>
             <div class="grid-whole right">
               <button type="submit">Sign up</button>

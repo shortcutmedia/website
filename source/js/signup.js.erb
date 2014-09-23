@@ -53,7 +53,7 @@
     if ($.support.cors) {
       $('form.signup').not('.signup-handler-registered').addClass('signup-handler-registered').submit(function(e) {
         e.preventDefault();
-        submitSignupFormwithCORS($(this));
+        if ($(this).valid()) submitSignupFormwithCORS($(this));
       });
     }
   }
