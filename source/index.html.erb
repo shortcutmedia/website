@@ -30,17 +30,19 @@
           <div class="download-instruction">
             <div class="grid-whole stores">
               <div class="center">
-                <%= image_tag "instructions.png", alt: "Download instructions" %>
+                <a href="#modal-download-instruction">
+                  <%= image_tag "instructions.png", alt: "Download instructions" %>
+                </a>
               </div>
 
               <div class="center">
-                <a href="http://itunes.apple.com/app/id364110253?mt=8" target="_blank">
+                <a href="//itunes.apple.com/app/id364110253?mt=8" target="_blank">
                   <%= figure 'button_app_store' %> 
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.aqris.kooaba.paperboy" target="_blank">
+                <a href="//play.google.com/store/apps/details?id=com.aqris.kooaba.paperboy" target="_blank">
                   <%= figure 'button_play_store' %> 
                 </a>
-                <a href="http://www.windowsphone.com/s?appid=12f84623-7d1d-4d5a-82bb-72df700236c9" target="_blank">
+                <a href="//www.windowsphone.com/s?appid=12f84623-7d1d-4d5a-82bb-72df700236c9" target="_blank">
                   <%= figure 'button_windows_store' %> 
                 </a>
               </div>
@@ -179,7 +181,16 @@
   <%= partial 'used_worldwide' %>
 </div>
 
-<%= partial 'modal_youtube_video', locals: { id: 'teaser-video', src: '//www.youtube.com/embed/RPpV_dELuBw?enablejsapi=1' } %>
-<%= partial 'modal_youtube_video', locals: { id: 'manager-intro-video', src: '//www.youtube.com/embed/fm4CoT_xH1Y?enablejsapi=1' } %>
+<% modal_view id: 'modal-download-instruction' do %>
+  <%= image_tag "shortcut_demo_picture.png", alt: "Shortcut Demo Picture" %>
+<%- end %>
+
+<% modal_view id: 'modal-teaser-video' do %>
+  <iframe id="teaser-video" class="yt-api" width="610" height="343" src="//www.youtube.com/embed/RPpV_dELuBw?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+<%- end %>
+
+<% modal_view id: 'modal-manager-intro-video' do %>
+  <iframe id="manager-intro-video" class="yt-api" width="610" height="343" src="//www.youtube.com/embed/fm4CoT_xH1Y?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+<%- end %>
 
 <%= partial 'footer' %>

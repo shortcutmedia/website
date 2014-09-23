@@ -19,6 +19,25 @@ module CustomHelpers
     )
   end
 
+  def modal_view(options={}, &block)
+
+    default_opts = {tabindex: '-1', role: 'dialog', 'aria-hidden' => 'true',
+                    class: 'modal--show modal--centered'}
+    options.reverse_merge! default_opts
+
+    captured_html = capture_html(&block)
+
+    concat_content(
+      content_tag(:section, options) do
+        div(class: 'modal-inner') do
+          div(captured_html, class: 'modal-content')+
+          link_to('×', '#!', class: 'dismiss-button')
+        end +
+        link_to('×', '#!', class: 'modal-close', title: 'Close this modal', 'data-close' => 'Close', 'data-dismiss' => 'modal')
+      end
+    )
+  end
+
   def figure id, opt={}
     # The IE conditional comment is needed because of IE8. Although
     # IE8 is supposed to ignore the svg tag it somehow messes up the

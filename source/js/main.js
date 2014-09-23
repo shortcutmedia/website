@@ -18,7 +18,7 @@ if (!(window.console && console.log)) {
 
 var youtubePlayers = {};
 function onYouTubeIframeAPIReady() {
-  $('.modal-youtube-video iframe').each( function() {
+  $('.yt-api').each( function() {
     youtubePlayers[this.id] = new YT.Player(this.id);
   });
 }
