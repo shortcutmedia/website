@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+  <%# No conditional statments here!!! Otherwise X-UA-Compatible directive       %>
+  <%# to prevent IE to render in compatability mode is ignored. HTML5Boilerplate %>
+  <%# got that wrong in the past. See http://goo.gl/XbKtbF                       %>
+
+    <head>
+        <meta charset="utf-8">
+        <%# No conditional statments before this meta tag. See http://goo.gl/XbKtb %>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= current_page_title || 'Shortcut · Easy to use Interactive Print Solution' %></title>
+        <meta name="description" content="Easy to use Interactive Print Solution">
+        <meta name="viewport" content="initial-scale=1">
+
+        <%= partial 'favicon' %>
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <%= stylesheet_link_tag "style" %>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+
+    <body>
+      <%= yield %>
+
+      <%= partial 'ga' %>
+    </body>
+</html>

@@ -15,22 +15,7 @@
         <meta name="description" content="Easy to use Interactive Print Solution">
         <meta name="viewport" content="initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
-        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196">
-        <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
-        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-        <meta name="msapplication-TileColor" content="#2b5797">
-        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <%= partial 'favicon' %>
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
         <%= stylesheet_link_tag "style" %>
@@ -67,14 +52,8 @@
 
         <%= javascript_include_tag "main" %>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <%= partial 'ga' %>
         <script>
-
-            var _gaq=[['_setAccount','UA-33611350-2'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-
             // This code loads the IFrame Player API code asynchronously.
             var tag = document.createElement('script');
             tag.src = "https://www.youtube.com/iframe_api";
