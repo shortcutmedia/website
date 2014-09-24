@@ -186,19 +186,21 @@
 		element.style.width = 'auto';
 		elementContent.style.maxHeight = 'none';
 
-		containerDimentions = getDimentions(elementContent);
+		if (CSSModal.activeElement.querySelector('img')) {
+			containerDimentions = getDimentions(elementContent);
 
-		offsetWidth = containerDimentions.margin.left + containerDimentions.margin.right + containerDimentions.padding.left + containerDimentions.padding.right;
-		offsetHeight = containerDimentions.margin.top + containerDimentions.margin.bottom + containerDimentions.padding.top + containerDimentions.padding.bottom;
+			offsetWidth = containerDimentions.margin.left + containerDimentions.margin.right + containerDimentions.padding.left + containerDimentions.padding.right;
+			offsetHeight = containerDimentions.margin.top + containerDimentions.margin.bottom + containerDimentions.padding.top + containerDimentions.padding.bottom;
 
-		if (containerDimentions.width > global.innerWidth) {
-			CSSModal.activeElement.querySelector('img').style.maxWidth = (global.innerWidth - offsetWidth - margin) + 'px';
-			CSSModal.activeElement.querySelector('img').style.maxHeight = '100%';
-		}
+			if (containerDimentions.width > global.innerWidth) {
+				CSSModal.activeElement.querySelector('img').style.maxWidth = (global.innerWidth - offsetWidth - margin) + 'px';
+				CSSModal.activeElement.querySelector('img').style.maxHeight = '100%';
+			}
 
-		if (containerDimentions.height > global.innerHeight) {
-			CSSModal.activeElement.querySelector('img').style.maxWidth = '100%';
-			CSSModal.activeElement.querySelector('img').style.maxHeight = (global.innerHeight - offsetHeight - margin) + 'px';
+			if (containerDimentions.height > global.innerHeight) {
+				CSSModal.activeElement.querySelector('img').style.maxWidth = '100%';
+				CSSModal.activeElement.querySelector('img').style.maxHeight = (global.innerHeight - offsetHeight - margin) + 'px';
+			}
 		}
 	};
 
@@ -213,8 +215,15 @@
 		if (modalInner.style) {
 			modalInner.style.top = '0';
 			modalInner.style.left = '0';
-			modalImage.style.maxWidth = '100%';
-			modalImage.style.maxHeight = '100%';
+
+			/* 
+			 * Introducing a conditional in order to get resizing to work with
+			 * youtube videos. See https://github.com/drublic/css-modal/issues/152.
+			 */
+			if (modalImage) {
+				modalImage.style.maxWidth = '100%';
+				modalImage.style.maxHeight = '100%';
+			}
 		}
 	};
 
@@ -262,12 +271,6 @@
 		element.style.left = (offset.left - margin) + 'px';
 		element.style.marginLeft = margin + 'px';
 		element.style.marginRight = margin + 'px';
-
-		// Close button
-		_injectStyles('[data-cssmodal-resize] .modal-close:after {' +
-			'top: ' + (offset.top - 25) + 'px !important;' +
-			'margin-right: -' + elementWidth / 2 + 'px !important;' +
-		'}', element.id);
 	};
 
 	var _scale = function () {
