@@ -186,11 +186,11 @@
 <%- end %>
 
 <% modal_view id: 'modal-teaser-video' do %>
-  <iframe id="teaser-video" class="yt-api" width="610" height="343" src="//www.youtube.com/embed/RPpV_dELuBw?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+  <%= youtube_player id: 'teaser-video', src: '//www.youtube.com/embed/RPpV_dELuBw' %>
 <%- end %>
 
 <% modal_view id: 'modal-manager-intro-video' do %>
-  <iframe id="manager-intro-video" class="yt-api" width="610" height="343" src="//www.youtube.com/embed/fm4CoT_xH1Y?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+  <%= youtube_player id: 'manager-intro-video', src: '//www.youtube.com/embed/fm4CoT_xH1Y' %>
 <%- end %>
 
 <%= partial 'footer' %>

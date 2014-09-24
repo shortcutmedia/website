@@ -40,6 +40,21 @@ module CustomHelpers
     )
   end
 
+  def youtube_player options={}
+    default_opts = {
+      class: 'yt-api', width: '610', height: '343',
+      frameborder: '0', allowfullscreen: true
+    }
+    options.reverse_merge! default_opts
+
+    src = URI.parse options[:src]
+    src.query = [src.query, 'enablejsapi=1', 'rel=0'].compact.join('&')
+    src.scheme = nil # make sure scheme is not set
+    options[:src] = src
+
+    content_tag(:iframe, ' ', options)
+  end
+
   def figure id, opt={}
     # The IE conditional comment is needed because of IE8. Although
     # IE8 is supposed to ignore the svg tag it somehow messes up the

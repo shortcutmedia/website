@@ -131,7 +131,7 @@ title: For Magazines
 </div>
 
 <% modal_view id: 'modal-betty-bossi-video' do %>
-  <iframe id="betty-bossi-video" class="yt-api" width="610" height="343" src="//www.youtube.com/embed/seII8ncHs70?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+  <%= youtube_player id: 'betty-bossi-video', src: '//www.youtube.com/embed/seII8ncHs70' %>
 <%- end %>
 
 <%= partial 'footer' %>
