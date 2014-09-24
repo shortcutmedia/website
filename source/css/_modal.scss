@@ -1,11 +1,21 @@
 .modal--show .modal-inner {
   -webkit-transition: none !important;
   transition: none !important;
+
+  @media only screen and (max-width: $modal-small-breakpoint) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: 0 !important;
+  }
 }
 .modal--centered {
 
-  .dismiss-button { display: none; }
-  @media only screen and (min-width: 480px) {
+  .modal-close { color: $dark-font-color; }
+  .dismiss-button { 
+    display: none; 
+    color: black;
+  }
+  @media only screen and (min-width: ($modal-small-breakpoint + 1px) ) {
     .modal-inner {
       top: 50% !important;
       -webkit-transform: translateY(-50%);
