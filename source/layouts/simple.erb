@@ -23,8 +23,26 @@
     </head>
 
     <body>
+
+      <div class="page-wrap clearfix">
+        <div class="grid-10 offset-1">
+          <div id="logo">
+            <a href="/"><%= figure 'shortcut_logo_rgb_small_shutter' %></a>
+          </div>
+        </div>
+      </div>
+
       <%= yield %>
 
       <%= partial 'ga' %>
+
+      <footer>
+        <div class="page-wrap clearfix">
+          <div class="grid-whole padded">
+           <small>Shortcut Media AG &copy <%= Date.today.year %>. All Rights Reserved.</small>
+          </div>
+        </div>
+      </footer>
+
     </body>
 </html>
