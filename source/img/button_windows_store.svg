@@ -1,6 +1,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="41px" viewBox="0 0 124 41">
 <g>
-	<path fill="#460200" d="M124,35.5c0,3.1-2.7,5.5-6.1,5.5H6.1C2.7,41,0,38.5,0,35.5V5.5C0,2.5,2.7,0,6.1,0h111.9
+	<path class="background" fill="#460200" d="M124,35.5c0,3.1-2.7,5.5-6.1,5.5H6.1C2.7,41,0,38.5,0,35.5V5.5C0,2.5,2.7,0,6.1,0h111.9
 		c3.3,0,6.1,2.5,6.1,5.5V35.5z"/>
 	<g>
 		<g>
