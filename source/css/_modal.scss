@@ -1,3 +1,7 @@
+.modal--show .modal-inner {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
 .modal--centered {
 
   .dismiss-button { display: none; }
