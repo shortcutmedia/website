@@ -25,20 +25,26 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
+var retryPlayVideo;
 $(function(){
-  var modalShow = function(e) {
-    var el = $(e.originalEvent.detail.modal);
-    player = youtubePlayers[ el.find('iframe').attr('id') ];
-    if (player) {
+  var modalShow = function() {
+    var el = $(CSSModal.activeElement);
+    var player = youtubePlayers[ el.find('iframe').attr('id') ];
+    if (player && 'playVideo' in player) {
       player.playVideo();
     }
+    else {
+      retryPlayVideo = setTimeout(modalShow, 1000);
+    }
   }
-  var modalHide = function(e) {
-    el = $(e.originalEvent.detail.modal);
-    player = youtubePlayers[ el.find('iframe').attr('id') ];
-    if (player) {
+  var modalHide = function() {
+    var el = $(CSSModal.activeElement);
+    var player = youtubePlayers[ el.find('iframe').attr('id') ];
+    if (player && 'stopVideo' in player) {
       player.stopVideo();
     }
+
+    clearTimeout(retryPlayVideo);
   }
 
   var ready = function(){
