@@ -110,27 +110,7 @@ title: For Magazines
     </div>
   </section>
 
-  <section>
-    <div class="clearfix">
-      <div class="grid-10 offset-1 s-grid-whole">
-        <% info_box(class: 'color-scheme-3') do %>
-          <article>
-            <h2 class="title-only-info-box">Shortcut is used by <a href="signup.html#Magazine" class="button">Join Us!</a></h2>
-          </article>
-          <aside>
-            <div class="picture-box clearfix">
-              <% %w[
-                l_helsingin_sanomat.jpg l_kurier.jpg l_aamulehti.jpg
-                l_turun_sanomat.jpg l_karkimedia.jpg l_nzzas.jpg
-              ].each do |customer| %>
-                <%= image_tag customer %>
-              <% end %>
-            </div>
-          </aside>
-        <%- end %>
-      </div>
-    </div>
-  </section>
+  <%= partial 'used_worldwide', locals: {favorite_medium_type: 'AdCampaign'} %>
 
 </div>
 
