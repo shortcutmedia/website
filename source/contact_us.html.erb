@@ -14,23 +14,25 @@ title: Contact Us
       <div class="grid-10 offset-1">
         <% info_box(class: 'color-scheme-2') do %>
           <article>
-            <% form_tag '/don-tknow-yet', class: 'contact-form', method: 'post' do %>
+            <% form_tag 'javascript:void', class: 'contact-form', method: 'post' do %>
               <% field_set_tag do %>
                 <p>
-                  <%= text_field_tag :name, placeholder: 'Your Name*' %>
+                  <%= text_field_tag :name, placeholder: 'Your Name*', id: 'contact-form_name', required: true %>
                 </p>
                 <p>
-                  <%= email_field_tag :email, placeholder: 'Your Email*' %>
+                  <%= email_field_tag :email, placeholder: 'Your Email*', id: 'contact-form_email',required: true %>
                 </p>
                 <p>
-                  <%= text_field_tag :subject, placeholder: 'Subject' %>
+                  <%= text_field_tag :subject, placeholder: 'Subject', id: 'contact-form_subject'%>
                 </p>
                 <p>
-                  <%= text_area_tag :message, placeholder: 'Message' %>
+                  <%= text_area_tag :message, placeholder: 'Message', id: 'contact-form_message'%>
                 </p>
               <% end %>
               <% field_set_tag(:class => 'buttons') do %>
                 <%= submit_tag "Send!" %>
+                <p class="success" style="display:none;">Thanks! We'll get back to you shortly.</p>
+                <p class="validation error" style="display:none;">Something went wrong. Please have a closer look.</p>
               <% end %>
             <% end %>
 
@@ -50,7 +52,7 @@ title: Contact Us
             <% form_tag 'http://shortcutmedia.us5.list-manage.com/subscribe/post?u=740414b556da9e032d9a2d94a&amp;id=fe60f61975', class: 'newsletter-form', method: 'post', target: '_blank' do %>
               <% field_set_tag do %>
                 <p>
-                  <%= email_field_tag 'EMAIL', placeholder: 'Subscribe with your Email' %>
+                  <%= email_field_tag 'EMAIL', placeholder: 'Subscribe with your Email', required: true %>
                   <%= submit_tag "Go!" %>
                 </p>
                 <small>
@@ -125,7 +127,6 @@ title: Contact Us
       </div>
     </div>
   </section>
-
-
+</div>
 
 <%= partial 'footer' %>

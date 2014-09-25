@@ -3,7 +3,7 @@
     background-color: $aside-color;
     article{
       background-color: $article-color;
-      a.button{ color: $article-color; }
+      a.button, input[type="submit"]{ color: $article-color; }
     }
     aside{
       a{ color: $aside-color; }

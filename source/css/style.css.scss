@@ -351,7 +351,14 @@ a.button{
   padding: 6px 12px;
   font-weight: $normal-font;
   @include transition(all .2s);
-  &:hover {
+}
+
+a.button, input[type="submit"] {
+  &:disabled {
+    font-style: italic;
+    color: lightgray !important;
+  }
+  &:not(:disabled):hover {
     background-color: whitesmoke;
   }
 }
@@ -368,6 +375,7 @@ a.img-button {
   text-indent: 100%;
   white-space: nowrap;
 }
+
 
 #demo-button {
   $diameter: 172px;
@@ -596,10 +604,19 @@ textarea {
 
     padding-bottom: 65%; // This is the aspect ratio
   }
-   
-
 }
 
+.contact-form {
+  .success, .validation {
+    display: inline-block;
+    margin: 4px 0 8px 0;
+    @include font-size(20px);
+    line-height: 18px;
+  }
+  .validation {
+    margin-left: 4px;
+  }
+}
 .newsletter-form {
   input[type="email"] {
     width: 80%;
@@ -608,6 +625,12 @@ textarea {
 
 }
 
+form {
+  .error { 
+    color: crimson;
+    &:before { content: " \26A0"; }
+  }
+}
 
 /*
 Responsive 996px grid system ~ Style CSS.

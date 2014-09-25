@@ -4,6 +4,7 @@
 //= require vendor/modal
 //= require vendor/modal-resize
 //= require signup
+//= require contact_us
 
 // Avoid `console` errors in browsers that lack a console.
 if (!(window.console && console.log)) {
