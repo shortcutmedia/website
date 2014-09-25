@@ -1,9 +1,9 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="265px" height="192.1px" viewBox="0 0 265 192.1">
 <linearGradient id="info_graphic_communication_SVGID_1_" gradientUnits="userSpaceOnUse" x1="77.9639" y1="43.9824" x2="152.9068" y2="127.215">
-	<stop  offset="1.000000e-02" style="stop-color:#E7DAAC"/>
+	<stop  offset="0.01" style="stop-color:#E7DAAC"/>
 	<stop  offset="0.99" style="stop-color:#FFFFFF"/>
 </linearGradient>
-<polygon fill="url(#info_graphic_communication_SVGID_1_)" points="185,7.1 265,87.1 264,192.1 70,192.1 0,122.1 "/>
+<polygon opacity="0.149" fill="url(#info_graphic_communication_SVGID_1_)" points="185,7.1 265,87.1 264,192.1 70,192.1 0,122.1 "/>
 <g>
 	
 		<path fill="#FFFFFF" stroke="#EA6F1D" stroke-width="8.0022" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
