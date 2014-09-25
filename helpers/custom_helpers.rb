@@ -64,7 +64,7 @@ module CustomHelpers
     #
     content_tag(:figure, id: id, class: opt[:class]) do
       "\<!--[if gte IE 9]>\<!-->" +
-      partial("img/#{id}.svg") +
+      partial("img/inline_svgs/#{id}.svg") +
       "<!--<![endif]-->"
     end
   end

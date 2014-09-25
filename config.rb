@@ -70,7 +70,7 @@ configure :build do
   activate :relative_assets
 
   # svg's are inlined in the html pages
-  ignore 'img/*.svg'
+  ignore 'img/inline_svgs/*.svg'
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
