@@ -10,22 +10,33 @@
   @return (strip-units($size) * $base) + px;
 }
 
-@mixin font-size($size) {
+@mixin px_and_rem_directive($size, $css-directive) {
   $size_unit: to-lower-case(unit($size));
   @if $size_unit == 'px' {
-    font-size: $size;
-    font-size: px-to-rem($size);
+    #{$css-directive}: $size;
+    #{$css-directive}: px-to-rem($size);
   }
-
   @if $size_unit == 'rem' {
-    font-size: rem-to-px($size);
-    font-size: $size;
+    #{$css-directive}: rem-to-px($size);
+    #{$css-directive}: $size;
   } 
 
   @if unitless($size) {
-    font-size: $size + px;
-    font-size: px-to-rem($size);
+    #{$css-directive}: $size + px;
+    #{$css-directive}: px-to-rem($size);
   }
+
+}
+@mixin font-size($size) {
+  @include px_and_rem_directive($size, 'font-size');
+}
+
+@mixin margin-top($size) {
+  @include px_and_rem_directive($size, 'margin-top');
+}
+
+@mixin margin-bottom($size) {
+  @include px_and_rem_directive($size, 'margin-bottom');
 }
 
 @mixin display-flex {

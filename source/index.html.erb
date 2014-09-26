@@ -6,7 +6,7 @@
 
   <section>
     <div class="clearfix">
-      <div class="grid-whole padded top-section welcome-section">
+      <div class="top-section welcome-section padded">
         <div class="grid-half s-grid-whole" >
           <%= figure 'shortcut_engage_graphic', class: 'fluid' %> 
         </div>
@@ -23,36 +23,38 @@
     <section>
       <div class="clearfix">
 
-        <div class="grid-8 m-grid-whole s-grid-whole" >
-          <div id="demo-button">
-            <a href="#modal-download-instruction" class="rounded-batch" onclick="_gaq.push(['_trackPageview' ,'/scan-demo-flyer'])">
-              Open <em>demo button</em> here
-            </a>
-          </div>
-          <div class="download-instruction">
-            <div class="grid-whole stores">
-              <div class="center">
-                <%= image_tag "instructions.png", alt: "Download instructions" %>
-              </div>
+        <div class="download-instruction-section padded">
+          <div class="grid-8 m-grid-whole s-grid-whole" >
+            <div id="demo-button">
+              <a href="#modal-download-instruction" class="rounded-batch" onclick="_gaq.push(['_trackPageview' ,'/scan-demo-flyer'])">
+                Open <em>demo picture</em> here
+              </a>
+            </div>
+            <div class="download-instruction">
+              <div class="grid-whole stores">
+                <div class="center">
+                  <%= image_tag "instructions.png", alt: "Download instructions" %>
+                </div>
 
-              <div class="center">
-                <a href="//itunes.apple.com/app/id364110253?mt=8" target="_blank">
-                  <%= figure 'button_app_store' %> 
-                </a>
-                <a href="//play.google.com/store/apps/details?id=com.aqris.kooaba.paperboy" target="_blank">
-                  <%= figure 'button_play_store' %> 
-                </a>
-                <a href="//www.windowsphone.com/s?appid=12f84623-7d1d-4d5a-82bb-72df700236c9" target="_blank">
-                  <%= figure 'button_windows_store' %> 
-                </a>
-              </div>
+                <div class="center">
+                  <a href="//itunes.apple.com/app/id364110253?mt=8" target="_blank">
+                    <%= figure 'button_app_store' %> 
+                  </a>
+                  <a href="//play.google.com/store/apps/details?id=com.aqris.kooaba.paperboy" target="_blank">
+                    <%= figure 'button_play_store' %> 
+                  </a>
+                  <a href="//www.windowsphone.com/s?appid=12f84623-7d1d-4d5a-82bb-72df700236c9" target="_blank">
+                    <%= figure 'button_windows_store' %> 
+                  </a>
+                </div>
 
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="grid-4 m-grid-whole s-grid-whole">
-          <%= partial 'teaser_phone' %>
+          <div class="grid-4 m-grid-whole s-grid-whole">
+            <%= partial 'teaser_phone' %>
+          </div>
         </div>
       </div>
     </section>
@@ -72,10 +74,10 @@
           </aside>
           <article class="centered">
             <div>
-              <h2>This is how Shortcut works!</h2>
+              <h2>Interactive Print Made Easy</h2>
               <p>
-                Shortcut makes your print clickable and interactive. 
-                <em>No gimmicks</em>. Just simple and easy-to-use 
+                Shortcut makes your print <em>clickable</em> and <em>interactive</em>. 
+                No gimmicks. Just simple and easy-to-use 
                 Shortcut to all your content!
               </p>
               <p><a href="signup.html" class="button">Try it now!</a></p>
@@ -91,16 +93,16 @@
       <div class="grid-10 offset-1 s-grid-whole">
         <% info_box(class: 'third info-left color-scheme-2') do %>
           <aside>
-            <%= figure 'info_graphic_engagement' %> 
+            <%= figure 'info_graphic_save_time' %> 
           </aside>
           <article class="centered">
             <div>
-              <h2>The Easy-to-use Engagement Enabler</h2>
+              <h2>Save Time and Money</h2>
               <p>
-                Whether you’re a publisher, editor, brand owner, 
-                or retailer, Shortcut is the most-cost efficient 
-                engagement platform for Interactive Print. 
-                Shortcut is designed to make life easier for you.
+                Whether you are a publisher, editor, brand owner 
+                or retailer, Shortcut is the most cost-efficient 
+                engagement platform for interactive print. 
+                No upfront set-up costs but fast and easy-to-use solution.
               </p>
               <p><a href="#modal-manager-intro-video" class="button" onclick="_gaq.push(['_trackPageview' ,'/manager-intro-video'])">Watch Video!</a></p>
             </div>
@@ -122,8 +124,9 @@
               <h2>One solution - multiple businesses</h2>
               <p>
                 Shortcut provides benefits across all sectors whether 
-                its publisher, retail, fashion, education, travel 
-                and much more.
+                it is publisher, retail, fashion, education, travel and 
+                much more. <a href="signup.html">Try a demo today</a> 
+                and see how easy your Shortcut can be created.  
               </p>
               <p><a href="#modal-manager-intro-video" class="button" onclick="_gaq.push(['_trackPageview' ,'/manager-intro-video'])">Watch Video!</a></p>
             </div>
