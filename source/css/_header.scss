@@ -1,5 +1,227 @@
 @import "_signup_clip";
 
+.page-wrap > header.white-header{
+  background-color: white;
+  padding: 6px 12px;
+  font-size: 0.1px;
+  @include border-radius-pie(0px 0px $border-radius);
+  position: relative; /* because .sharing-links is absolute positioned */
+
+  @media only screen and (min-width: 641px) {
+    nav {
+      /* equally spaced divs: http://stackoverflow.com/a/6880421 */
+      text-align: justify;
+      >div {
+        vertical-align: bottom;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        @include font-size(1rem);
+        &:not(b) { @include debug-border(salmon); }
+      }
+
+      &:after {
+       /* ensures there are at least 2 lines of text, so justification works */
+        content: '';
+        width: 100%;
+        display: inline-block;
+      }
+
+      .divider:after {
+        content: '';
+        border-left: 1px solid $page-background-color;
+        border-right: 1px solid $page-background-color;
+        @include border-radius-pie(1px 1px 1px 1px);
+
+        width: 0;
+        padding-top: 4px;
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+  nav {
+    h2 { font-weight: normal; }
+
+    p { margin: 0; }
+
+    .logo-block, .small-nav {
+      box-sizing: border-box;
+    }
+
+    .small-nav{ 
+      display: none;
+    }
+
+    .signup-clip2 {
+      &.small {
+        display: none; 
+        max-width: 134px;
+        padding: 4px 0;
+
+        p { line-height: 1.4; }
+      }
+      &.wide {
+        p { 
+          display: inline-block; 
+          line-height: 1.6;
+        }
+      }
+    }
+
+
+    @media only screen and (max-width: 796px) {
+      .logo-block {
+        position: relative;
+        padding-right: 20px;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 10%;
+          bottom: 10%;
+          right: 0;
+          border-right: 1px solid $page-background-color;
+        }
+      }
+
+      >div {
+        vertical-align: middle;
+      }
+
+      .signup-clip2 {
+        &.small{ display: block; }
+        &.wide{ display: none; }
+      }
+
+      .divider {
+        &.alpha{ display: none; }
+        &:after{ border: none; }
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      text-align: start;
+
+      .logo-block { 
+        width: 49.9%; /* strangly FF wraps the div.small-nav if 50% */
+        display: inline-block; 
+      }
+      .divider, .wide-nav{ display: none; }
+      .small-nav{ 
+        display: inline-block; 
+        text-align: start; 
+        padding-left: 2%;
+      }
+    }
+    @include debug-border(red);
+  }
+
+  .sharing-links {
+    right: -30px;
+  }
+
+  @media only screen and (max-width: 640px) and (min-width: $portrait-to-landscape-mobile-breakpoint) {
+    margin-right: 2%;
+  }
+
+
+
+  .signup-clip2 {
+    p {
+      @include font-size(18px);
+      color: grey;
+      margin: 0;
+      text-align: center;
+      b {
+        a{
+          color: $shortcut-font-color;
+          &:hover{ color: $shortcut-font-color-hovered; }
+        }
+      }
+      em { 
+        a{ 
+          color: $dark-font-color; 
+          &:hover{ color: $dark-font-color-hovered; }
+        }
+      }
+
+    }
+
+
+  }
+
+  // reset
+  nav {
+    padding-top: 0;
+    margin-right: 0;
+    overflow: visible;
+  }
+}
+
+
+#spacer-container {
+  border: 2px dashed #444;
+
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+  /*line-height:0;*/
+
+  /* just for demo */
+
+  .box1, .box2, .box3, .box4 {
+      font-size: 1rem;
+      border: 1px dashed red;
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      zoom: 1
+  }
+
+  .stretch {
+      width: 100%;
+      display: inline-block;
+      font-size: 0;
+      line-height: 0
+  }
+
+  .box1, .box3 {
+      background: #ccc
+  }
+  .box2, .box4 {
+      background: #0ff
+  }
+}
+
+#space-container2{
+  border: 2px dashed #444;
+
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+
+
+
+  div {
+    border: 1px dashed red;
+    font-size: 12px;
+    /*line-height: 16px;*/
+    display: inline-block;
+    *display: inline;
+    vertical-align: top;
+    zoom: 1
+  }
+  &:after {
+    content: '';
+    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+    display: inline-block;
+  }
+}
+
+
 .page-wrap > header{
   $top-distance: 0.5em;
 

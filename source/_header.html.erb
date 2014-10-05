@@ -1,47 +1,56 @@
-<header>
+<header class="white-header">
   <div class="clearfix">
     <div class="header-section">
-      <div class="logo grid-2 m-grid-3 s-grid-half">
-        <div id="logo">
-          <a href="/">
-            <%= figure 'shortcut_logo_rgb_small_shutter' %>
-          </a>
-        </div>
-        <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip-mobile'} %>
-      </div>
-
-      <div class="grid-10 m-grid-9 s-grid-half nav-container">
-        <div class="signup-clip-container">
-          <div class="sharing-links" >
-            <a href="https://www.facebook.com/shortcutapp">
-              <%= figure 'button_share_facebook' %>
-            </a>
-            <a href="https://twitter.com/ShortcutMedia">
-              <%= figure 'button_share_twitter' %>
-            </a>
-            <a href="https://www.linkedin.com/company/shortcut-media-ag">
-              <%= figure 'button_linkedin' %>
-            </a>
-            <a href="https://www.youtube.com/user/shortcutmediamovies">
-              <%= figure 'button_youtube' %>
-            </a>
+      <nav>
+        <div class="logo-block">
+          <div id="logo">
+            <a href="/"><%= figure 'shortcut_logo_rgb_small_shutter' %></a>
           </div>
-          <%= partial "signup_clip", locals: {signup_clip_id: 'signup-clip'} %>
+          <div class="signup-clip2 small">
+            <p>
+              <b><a href="signup.html">Start free trial</a></b>
+            </p>
+            <p>
+              or <em><a href="<%= manager_host %>/users/sign_in">Sign In</a></em>
+            </p>
+          </div>
+        </div>
+        <div class='small-nav'>
+          <div><h2><%= link_to 'For Magazines', 'magazines.html' %></h2></div>
+          <div><h2><%= link_to 'For Newspapers', 'newspapers.html' %></h2></div>
+          <div><h2><%= link_to 'For Brands', 'brands.html' %></h2></div>
         </div>
 
-        <nav>
-          <ul class="even-navi-4 ">
-            <li class="padder alpha">&nbsp;</li>
-            <li><h2><%= link_to 'For Magazines', 'magazines.html' %></h2></li>
-            <li><h2><%= link_to 'For Newspapers', 'newspapers.html' %></h2></li>
-            <li><h2><%= link_to 'For Brands', 'brands.html' %></h2></li>
-            <li class="padder omega">&nbsp;</li>
-
-            <span></span><%# required for IE7/8 %>
-          </ul>
-        </nav>
-
-      </div>
+        <div class='divider alpha'></div>
+        <div class='wide-nav'><h2><%= link_to 'For Magazines', 'magazines.html' %></h2></div>
+        <div class='wide-nav'><h2><%= link_to 'For Newspapers', 'newspapers.html' %></h2></div>
+        <div class='wide-nav'><h2><%= link_to 'For Brands', 'brands.html' %></h2></div>
+        <div class='divider omega'></div>
+        <%#<div class="wide-screen-signup">%>
+        <div class="signup-clip2 wide">
+          <p>
+            <b><a href="signup.html">Start free trial</a></b>
+          </p>
+          <p>
+            or <em><a href="<%= manager_host %>/users/sign_in">Sign In</a></em>
+          </p>
+        </div>
+        <%#</div>%>
+      </nav>
+    </div>
+    <div class="sharing-links" >
+      <a href="https://www.facebook.com/shortcutapp">
+        <%= figure 'button_share_facebook' %>
+      </a>
+      <a href="https://twitter.com/ShortcutMedia">
+        <%= figure 'button_share_twitter' %>
+      </a>
+      <a href="https://www.linkedin.com/company/shortcut-media-ag">
+        <%= figure 'button_linkedin' %>
+      </a>
+      <a href="https://www.youtube.com/user/shortcutmediamovies">
+        <%= figure 'button_youtube' %>
+      </a>
     </div>
   </div>
 </header>
