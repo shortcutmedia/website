@@ -1,4 +1,4 @@
-<header class="white-header">
+<header>
   <div class="clearfix">
     <div class="header-section">
       <nav>
@@ -6,36 +6,16 @@
           <div id="logo">
             <a href="/"><%= figure 'shortcut_logo_rgb_small_shutter' %></a>
           </div>
-          <div class="signup-clip2 small">
-            <p>
-              <b><a href="signup.html">Start free trial</a></b>
-            </p>
-            <p>
-              or <em><a href="<%= manager_host %>/users/sign_in">Sign In</a></em>
-            </p>
-          </div>
+          <%= partial 'signup_clip', locals: { html_class: 'small'} %>
         </div>
         <div class='small-nav'>
-          <div><h2><%= link_to 'For Magazines', 'magazines.html' %></h2></div>
-          <div><h2><%= link_to 'For Newspapers', 'newspapers.html' %></h2></div>
-          <div><h2><%= link_to 'For Brands', 'brands.html' %></h2></div>
+          <%= partial 'navi_items', locals: { html_class: ''} %>
         </div>
 
         <div class='divider alpha'></div>
-        <div class='wide-nav'><h2><%= link_to 'For Magazines', 'magazines.html' %></h2></div>
-        <div class='wide-nav'><h2><%= link_to 'For Newspapers', 'newspapers.html' %></h2></div>
-        <div class='wide-nav'><h2><%= link_to 'For Brands', 'brands.html' %></h2></div>
+        <%= partial 'navi_items', locals: { html_class: 'wide-nav'} %>
         <div class='divider omega'></div>
-        <%#<div class="wide-screen-signup">%>
-        <div class="signup-clip2 wide">
-          <p>
-            <b><a href="signup.html">Start free trial</a></b>
-          </p>
-          <p>
-            or <em><a href="<%= manager_host %>/users/sign_in">Sign In</a></em>
-          </p>
-        </div>
-        <%#</div>%>
+        <%= partial 'signup_clip', locals: { html_class: 'wide'} %>
       </nav>
     </div>
     <div class="sharing-links" >

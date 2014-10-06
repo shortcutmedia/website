@@ -1,14 +1,71 @@
-@import "_signup_clip";
-
-.page-wrap > header.white-header{
+.page-wrap > header {
   background-color: white;
   padding: 6px 12px;
-  font-size: 0.1px;
+  font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
   @include border-radius-pie(0px 0px $border-radius);
   position: relative; /* because .sharing-links is absolute positioned */
 
-  @media only screen and (min-width: 641px) {
-    nav {
+  h2 { 
+    margin: 0;
+    font-weight: normal; 
+    @include font-size(18px);
+    line-height: 1.6;
+    white-space: nowrap;
+    @include media-widescreen {
+      @include font-size(20px);
+      line-height: 1.5;
+    }
+  }
+
+  a{ 
+    color: $dark-font-color;
+    text-decoration: none;
+    &:hover{ 
+      color: $dark-font-color-hovered; 
+      text-decoration: underline;
+    }
+  }
+
+  .signup-clip {
+    p {
+      @include font-size(18px);
+      color: grey;
+      margin: 0;
+      text-align: center;
+      b {
+        a{
+          color: $shortcut-font-color;
+          &:hover{ color: $shortcut-font-color-hovered; }
+        }
+      }
+    }
+    &.small {
+      display: none; 
+      max-width: 134px;
+      padding: 4px 0;
+
+      p { line-height: 1.4; }
+    }
+    &.wide {
+      p { 
+        display: inline-block; 
+        line-height: 1.6;
+      }
+    }
+  }
+
+  nav {
+    @include debug-border(magenta);
+
+    .logo-block, .small-nav {
+      box-sizing: border-box;
+    }
+
+    .small-nav{ 
+      display: none;
+    }
+
+    @media only screen and (min-width: 641px) {
       /* equally spaced divs: http://stackoverflow.com/a/6880421 */
       text-align: justify;
       >div {
@@ -38,37 +95,6 @@
         margin-bottom: 1px;
       }
     }
-  }
-
-  nav {
-    h2 { font-weight: normal; }
-
-    p { margin: 0; }
-
-    .logo-block, .small-nav {
-      box-sizing: border-box;
-    }
-
-    .small-nav{ 
-      display: none;
-    }
-
-    .signup-clip2 {
-      &.small {
-        display: none; 
-        max-width: 134px;
-        padding: 4px 0;
-
-        p { line-height: 1.4; }
-      }
-      &.wide {
-        p { 
-          display: inline-block; 
-          line-height: 1.6;
-        }
-      }
-    }
-
 
     @media only screen and (max-width: 796px) {
       .logo-block {
@@ -88,7 +114,7 @@
         vertical-align: middle;
       }
 
-      .signup-clip2 {
+      .signup-clip {
         &.small{ display: block; }
         &.wide{ display: none; }
       }
@@ -112,250 +138,18 @@
         display: inline-block; 
         text-align: start; 
         padding-left: 2%;
+        width: 49.9%; /* strangly FF wraps the div.small-nav if 50% */
       }
     }
     @include debug-border(red);
-  }
-
-  .sharing-links {
-    right: -30px;
   }
 
   @media only screen and (max-width: 640px) and (min-width: $portrait-to-landscape-mobile-breakpoint) {
     margin-right: 2%;
   }
 
-
-
-  .signup-clip2 {
-    p {
-      @include font-size(18px);
-      color: grey;
-      margin: 0;
-      text-align: center;
-      b {
-        a{
-          color: $shortcut-font-color;
-          &:hover{ color: $shortcut-font-color-hovered; }
-        }
-      }
-      em { 
-        a{ 
-          color: $dark-font-color; 
-          &:hover{ color: $dark-font-color-hovered; }
-        }
-      }
-
-    }
-
-
-  }
-
-  // reset
-  nav {
-    padding-top: 0;
-    margin-right: 0;
-    overflow: visible;
-  }
-}
-
-
-#spacer-container {
-  border: 2px dashed #444;
-
-  text-align: justify;
-  -ms-text-justify: distribute-all-lines;
-  text-justify: distribute-all-lines;
-  font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
-  /*line-height:0;*/
-
-  /* just for demo */
-
-  .box1, .box2, .box3, .box4 {
-      font-size: 1rem;
-      border: 1px dashed red;
-      vertical-align: top;
-      display: inline-block;
-      *display: inline;
-      zoom: 1
-  }
-
-  .stretch {
-      width: 100%;
-      display: inline-block;
-      font-size: 0;
-      line-height: 0
-  }
-
-  .box1, .box3 {
-      background: #ccc
-  }
-  .box2, .box4 {
-      background: #0ff
-  }
-}
-
-#space-container2{
-  border: 2px dashed #444;
-
-  text-align: justify;
-  -ms-text-justify: distribute-all-lines;
-  text-justify: distribute-all-lines;
-  font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
-
-
-
-  div {
-    border: 1px dashed red;
-    font-size: 12px;
-    /*line-height: 16px;*/
-    display: inline-block;
-    *display: inline;
-    vertical-align: top;
-    zoom: 1
-  }
-  &:after {
-    content: '';
-    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-    display: inline-block;
-  }
-}
-
-
-.page-wrap > header{
-  $top-distance: 0.5em;
-
-  #signup-clip{ display: block; }
-  #signup-clip-mobile{ display: none; }
-
-  .logo { 
-    padding-top: $top-distance;
-    position: absolute;
-  }
-
-  .nav-container {
-    @media only screen and (min-width: 480px) and (max-width: 995px) {
-      width: 100%;
-      padding-left: 142px;
-    }
-  }
-
-  nav {
-    @include debug-border(magenta);
-    padding-top: $top-distance;
-    margin-right: 134px;
-    overflow: hidden;
-    h2 { 
-      margin: 0;
-      @include font-size(18);
-      line-height: 1.6;
-      white-space: nowrap;
-    }
-
-    a{ 
-      color: $dark-font-color;
-      text-decoration: none;
-      &:hover{ 
-        color: $dark-font-color-hovered; 
-        text-decoration: underline;
-      }
-    }
-
-    ul{
-      text-align: justify;
-      font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-      &:after {
-        content: '';
-        width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-        display: inline-block;
-      }
-
-      /* nav items are evenly distirbuted to use the whole available with, but
-       * after a certain width the distance between the items becomes to large.
-       * Therefore the max-width. 
-       */
-      max-width: 510px; max-width: (510px / 16px) + rem;
-    }
-    li{
-      display: inline-block; 
-      padding-top: 3px;
-      @include debug-border(red);
-    }
-    .padder { 
-      width: 0px; /* invisible */ 
-      &:first-child{ margin-left: -30px; }
-    }
-
-    @include media-widescreen {
-      h2 { @include font-size(20); }
-    }
-
-    @include media-tablet-size {
-      .padder { 
-        &.alpha { margin-left:-0.3rem; }
-        &.omega { margin-right: -0.3rem; }
-      }
-    }
-
-    @include media-mobile-size {
-      ul{
-        text-align: left;
-        padding-left: 0; 
-      }
-      li{ margin-right: 0.875rem; }
-      .padder{ display: none; }
-    }
-  }
-
-  @include media-widescreen {
-    .logo { 
-      /* because the font-size is increased the logo has to be re-aligned */
-      margin-top: 2px;
-      position: relative; 
-    }
-   }
-
   @include media-portrait-to-landscape-mobile-size {
-    $divider-padding: 2%;
-    background-color: white;
-    $top-distance: 0;
-
-    @include border-radius-pie(0px 0px $border-radius);
-    padding: 8px; padding: 0.5rem;
-    padding-bottom: 4px; padding-bottom: 0.25rem;
     margin-bottom: 16px; margin-bottom: 1rem;
-
-    #signup-clip{ display: none; }
-    #signup-clip-mobile{ 
-      display: block; 
-      padding: 8px;
-      margin-right: 8px;
-    }
-
-
-    nav { 
-      margin-right: 0;
-      padding-top: $top-distance;
-      ul { padding-left: 0; }
-    }
-
-    .nav-container { 
-      padding-left: $divider-padding; 
-    }
-    .logo {
-      position: relative;
-      padding-top: $top-distance;
-      padding-right: $divider-padding;
-
-      &:after { /* divider line */
-        content:'';
-        position: absolute;
-        top: 10%;
-        bottom: 10%;
-        right:0;
-        border-right: 1px solid $page-background-color;
-      }
-    }
     .sharing-links{ display: none; }
   }
 }
@@ -389,7 +183,7 @@
 
 .sharing-links {
   top: 2px;
-  right: -1.75em;
+  right: -30px;
   line-height: 1;
   position:absolute;;
   height: 0;
@@ -424,17 +218,21 @@
 @include apply-to-ie10_and_higher {
   /* IE10+ specific styles go here */  
   @include ie-svg-hacks;
-  .page-wrap > header nav .padder.alpha { margin-left: 0px !important; }
 }
 
 @include apply-to-ie9-only {
   @include ie-svg-hacks;
-  .page-wrap > header nav .padder.alpha { margin-left: 0px !important; }
 }
 @include apply-to-ie8-only {
   .page-wrap > header {
-    nav{ 
-      h2 { margin-top: 8px; }
+    nav > div {
+      vertical-align: middle;
+    }
+    .wide-nav, .signup-clip.wide {
+      margin-top: 2px;
+    }
+    .divider {
+      margin-top: 6px;
     }
   }
 }
