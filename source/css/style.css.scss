@@ -655,10 +655,15 @@ Copyright 2013, Josh Cope
   }
 
   section > header {
-    margin-left: ( 100% / 12 );
+    /*margin-left: ( 100% / 12 );*/
     margin-top: -16px;
     margin-top: -1em;
     h3{ margin-bottom: 16px; margin-bottom: 1em; }
+  }
+
+  .info-box-container {
+    /*@extend .grid-10, .offset-1, .s-grid-whole;*/
+    @extend .grid-whole;
   }
 }
 
