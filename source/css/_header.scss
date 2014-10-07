@@ -1,5 +1,6 @@
 .page-wrap > header {
   background-color: white;
+  margin-bottom: 36px;
   padding: 6px 12px;
   font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
   @include border-radius-pie(0px 0px $border-radius);

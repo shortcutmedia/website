@@ -431,11 +431,9 @@ a.img-button {
 }
 
 .download-instruction {
-  padding-top: 15%;
+  padding-top: 16%;
   img {
     width: 100%;
-    max-width: 450px;
-
   }
   a {
     background-size: 100px auto;
@@ -464,6 +462,27 @@ a.img-button {
       max-width: 116px;
       /*max-height: 43px;*/
     }
+  }
+
+  .store-buttons {
+    margin-top: 6%;
+  }
+
+
+  @include media-mobile-size {
+    padding-top: 14%;
+    img {
+      max-width: 540px;
+    }
+
+    .store-buttons {
+      margin-top: 2%;
+      margin-bottom: 4%;
+    }
+  }
+
+  @include media-portrait-to-landscape-mobile-size {
+    padding-top: 18%;
   }
 
   /*.app-store{ */
