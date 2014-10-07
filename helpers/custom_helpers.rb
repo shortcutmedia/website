@@ -49,7 +49,6 @@ module CustomHelpers
 
     src = URI.parse options[:src]
     src.query = [src.query, 'enablejsapi=1', 'rel=0'].compact.join('&')
-    src.scheme = nil # make sure scheme is not set
     options[:src] = src
 
     content_tag(:iframe, ' ', options)
