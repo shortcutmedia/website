@@ -728,6 +728,30 @@ footer {
   }
 }
 
+
+/* keep footer at bottom */
+$footer-height: 76px;
+html, body {
+  height: 100%;
+}
+
+#holder{
+  min-height: 100%;
+  position:relative;
+}
+
+#body{
+  padding-bottom: $footer-height;
+}
+
+footer{
+  height: $footer-height;
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+}
+
 /* =============================================================================
    Page Styles
    ========================================================================== */
