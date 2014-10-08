@@ -61,7 +61,10 @@ body {
   font-weight: $light-font;
 }
 
-.ie-8-only{ display: none; }
+.ie-8-only, .ie-9-only{ display: none; }
+@include apply-to-ie8-only { .ie-8-only{ display: block; } }
+@include apply-to-ie9-only { .ie-9-only{ display: block; } }
+
 
 .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 5%; }
 

@@ -103,10 +103,7 @@ form {
   }
 }
 
-
-@include apply-to-ie8-only {
-  .ie-8-only{ display: block; }
-
+%legacy-ie-forms {
   form {
     label {
       display: block;
@@ -121,6 +118,14 @@ form {
       padding-left: 0;
     }
   }
+}
+
+@include apply-to-ie8-only {
+  @extend %legacy-ie-forms;
+}
+
+@include apply-to-ie9-only {
+  @extend %legacy-ie-forms;
 }
 
 .newsletter-form {

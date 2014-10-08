@@ -52,7 +52,7 @@ title: Contact Us
             <% form_tag 'http://shortcutmedia.us5.list-manage.com/subscribe/post?u=740414b556da9e032d9a2d94a&amp;id=fe60f61975', class: 'newsletter-form', method: 'post', target: '_blank' do %>
               <% field_set_tag do %>
                 <p>
-                  <%= label_tag :EMAIL, caption: 'Subscribe with your email ', class: 'wide ie-8-only' %>
+                  <%= label_tag :EMAIL, caption: 'Subscribe with your email ', class: 'wide ie-8-only ie-9-only' %>
                   <%= email_field_tag 'EMAIL', placeholder: 'Subscribe with your Email', required: true, class: 'keep-placeholder' %>
                   <%= submit_tag "Go!" %>
                 </p>
