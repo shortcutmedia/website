@@ -1,0 +1,132 @@
+@mixin adjust-label-with($label-width, $label-space:2%) {
+  label {
+    width: $label-width;
+    margin-right: $label-space;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    width: 100% - $label-width - $label-space - 4%;
+  }
+
+  .buttons, small.error {
+    margin-left: $label-width + $label-space;
+    padding-left: 4px;
+  }
+}
+
+@mixin input-placeholder {
+  &::-webkit-input-placeholder{
+    @content;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.contact-form {
+  @include adjust-label-with(24%);
+}
+
+form {
+  @include adjust-label-with(30%); /* to have a default */
+
+  label {
+    display: inline-block;
+    text-align: right;
+    @include font-size(20px);
+
+    &.wide {
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    height: 29px;
+
+    @include box-sizing(border-box);
+
+    &:not(.keep-placeholder) {
+      @include input-placeholder {
+        color: white; /* hide the placeholder text */
+      }
+    }
+  }
+
+  textarea {
+    height: 138px;
+  }
+
+  select.empty {
+    color: $placeholder-color;
+  }
+
+  small.error {
+    display: inline;
+    color: white;
+  }
+
+  .success, .validation {
+    display: inline-block;
+    margin: 4px 0 8px 0;
+    @include font-size(20px);
+    line-height: 18px;
+  }
+  .validation {
+    margin-left: 4px;
+  }
+
+  .error { 
+    color: crimson;
+    &:before { content: " \26A0"; }
+  }
+
+  @include media-phablet-size {
+    label { display: none; }
+
+    input[type="text"], input[type="email"], input[type="password"], textarea, select {
+      width: 100% !important;
+      @include input-placeholder {
+        color: $placeholder-color !important;
+      }
+    }
+    .buttons, small.error {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+}
+
+
+@include apply-to-ie8-only {
+  .ie-8-only{ display: block; }
+
+  form {
+    label {
+      display: block;
+      width: auto;
+      text-align: left;
+    }
+    input[type="text"], input[type="email"], input[type="password"], textarea, select {
+      width: 100%;
+    }
+    .buttons, small.error {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.newsletter-form {
+  input[type="email"] {
+    width: 80% !important;
+    vertical-align: top;
+  }
+}
+

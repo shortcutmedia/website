@@ -28,6 +28,8 @@ $shortcut-color-light: rgb(241,147,0);
 $shortcut-font-color: rgb(234,108,29);
 $shortcut-font-color-hovered: rgb(196,86,18);
 $focus-color: $dark-font-color;
+$placeholder-color: #A9A9A9;
+
 /*$border-radius: 16px 16px;*/
 $border-radius: 8px 8px;
 
@@ -50,6 +52,7 @@ $main-info-graphics-with-shadow: true;
 @import "teaser_phone";
 @import "header";
 @import "info_box";
+@import "form";
 @import "modal";
 
 body {
@@ -57,6 +60,8 @@ body {
   font-family: $font-family;
   font-weight: $light-font;
 }
+
+.ie-8-only{ display: none; }
 
 .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 5%; }
 
@@ -556,6 +561,9 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 }
 
+
+
+
 select {
   width: 101%;
   height: 1.5em;
@@ -627,31 +635,6 @@ textarea {
   }
 }
 
-.contact-form {
-  .success, .validation {
-    display: inline-block;
-    margin: 4px 0 8px 0;
-    @include font-size(20px);
-    line-height: 18px;
-  }
-  .validation {
-    margin-left: 4px;
-  }
-}
-.newsletter-form {
-  input[type="email"] {
-    width: 80%;
-    /*display: inline-block;*/
-  }
-
-}
-
-form {
-  .error { 
-    color: crimson;
-    &:before { content: " \26A0"; }
-  }
-}
 
 /*
 Responsive 996px grid system ~ Style CSS.
@@ -741,7 +724,7 @@ html, body {
 }
 
 #body{
-  padding-bottom: $footer-height;
+  padding-bottom: $footer-height + 16px;
 }
 
 footer{

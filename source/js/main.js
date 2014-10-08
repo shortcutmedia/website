@@ -1,6 +1,5 @@
 //= require vendor/jquery-1.8.0.min
 //= require vendor/jquery.validate.min
-//= require vendor/jquery-placeholder.js
 //= require vendor/modal
 //= require vendor/modal-resize
 //= require signup
@@ -47,15 +46,6 @@ $(function(){
 
     clearTimeout(retryPlayVideo);
   }
-
-  var ready = function(){
-    // apply jquery placeholder which is a polyfill for IE8/9.
-    $('input, textarea').placeholder();
-  }
-
-  $(document).ready(ready);
-  $(document).on('page:load', ready);
-  $(document).ajaxComplete(ready);
 
   $(document).on('cssmodal:show', modalShow);
   $(document).on('cssmodal:hide', modalHide);

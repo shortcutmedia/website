@@ -65,7 +65,16 @@
     $('select[name="user[favorite_medium_type]"]').val(mediumType);
   }
 
+
+  function initPlaceholderForSelectElement() {
+    $(".signup-form select").change(function () {
+      if($(this).val() == "") $(this).addClass("empty");
+      else $(this).removeClass("empty")
+    });
+  }
+
   $(document).ready(initCORSSignupFormHandler);
   $(document).ready(initMediumTypeFromAnchor);
+  $(document).ready(initPlaceholderForSelectElement);
 
 })();
