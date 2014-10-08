@@ -33,6 +33,10 @@
             $(".validation").fadeOut("fast");
             thisForm[0].reset();
           } else {
+            submitBtn
+              .removeProp('disabled')
+              .prop('value', savedButtonValue);
+ 
             $(".validation").fadeIn("fast");
             thisForm.find(".text").removeClass("error");
             $.each(res.split(","), function() {
