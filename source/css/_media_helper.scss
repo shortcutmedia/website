@@ -1,3 +1,5 @@
+$mobile-size-breakpoint: 767px; 
+$phablet-size-breakpoint: 639px; 
 $portrait-to-landscape-mobile-breakpoint: 479px; 
 
 @mixin media-widescreen {
@@ -23,7 +25,13 @@ $portrait-to-landscape-mobile-breakpoint: 479px;
 
 @mixin media-mobile-size {
   /* All Mobile Sizes */
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: $mobile-size-breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-phablet-size {
+  @media only screen and (max-width: $phablet-size-breakpoint) {
     @content;
   }
 }

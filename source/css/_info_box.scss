@@ -1,3 +1,5 @@
+$info-box-breakpoint: $phablet-size-breakpoint;
+
 @mixin def-color-scheme($id, $aside-color, $article-color, $gradient-stop-color) {
    &.color-scheme-#{$id} {
     background-color: $aside-color;
@@ -16,6 +18,18 @@
         }
       }
     }
+  }
+}
+
+@mixin wide-info-box {
+  @media only screen and (min-width: ($info-box-breakpoint + 1px) ) {
+    @content;
+  }
+}
+
+@mixin narrow-info-box {
+  @media only screen and (max-width: $info-box-breakpoint) {
+    @content;
   }
 }
 
@@ -61,8 +75,7 @@
     }
   }
 
-  /* All non-Mobile Sizes */
-  @media only screen and (min-width: 768px) {
+  @include wide-info-box {
     &.half {
       article, aside{ width: 50%;}
     }
@@ -92,9 +105,7 @@
 .flexbox {
   .info-box {
 
-    /* All non-Mobile Sizes */
-    @media only screen and (min-width: 768px) {
-
+    @include wide-info-box {
       &.third, &.half {
         .inner-wrapper {
           @include display-flex;
@@ -140,7 +151,7 @@
       }
     }
 
-    @include media-mobile-size {
+    @include narrow-info-box {
       $chevron-width: 40px;
        article {
         position: relative;
