@@ -1,7 +1,7 @@
 .page-wrap > header {
   background-color: white;
   margin-bottom: 36px;
-  padding: 6px 12px;
+  padding: 18px 12px;
   font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
   @include border-radius-pie(0px 0px $border-radius);
   position: relative; /* because .sharing-links is absolute positioned */
@@ -65,8 +65,10 @@
     .small-nav{ 
       display: none;
     }
+  }
 
-    @media only screen and (min-width: 641px) {
+  @media only screen and (min-width: 641px) {
+    nav{
       /* equally spaced divs: http://stackoverflow.com/a/6880421 */
       text-align: justify;
       >div {
@@ -92,12 +94,15 @@
         @include border-radius-pie(1px 1px 1px 1px);
 
         width: 0;
-        padding-top: 4px;
-        margin-bottom: 1px;
+        padding: 8px 0 4px; /* divider length */
       }
     }
+  }
 
-    @media only screen and (max-width: 796px) {
+  @media only screen and (max-width: 796px) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    nav{
       .logo-block {
         position: relative;
         padding-right: 20px;
@@ -126,8 +131,10 @@
       }
 
     }
+  }
 
-    @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 640px) {
+    nav{
       text-align: start;
 
       .logo-block { 
@@ -142,8 +149,9 @@
         width: 49.9%; /* strangly FF wraps the div.small-nav if 50% */
       }
     }
-    @include debug-border(red);
   }
+
+  @include debug-border(red);
 
   @media only screen and (max-width: 640px) and (min-width: $portrait-to-landscape-mobile-breakpoint) {
     margin-right: 2%;
