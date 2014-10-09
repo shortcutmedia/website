@@ -44,7 +44,6 @@
     console.log(errorText);
   }
 
-
   // Installs a submit handler that connects the signup form to the manager signup API via CORS if CORS is available.
   //
   // If CORS is not available, the signup form is submitted to the normal manager signup action which takes over the
@@ -70,6 +69,8 @@
     else $(element).removeClass("empty");
   }
 
+  // Sets the select boxes' class correctly and installs a handler that keeps it consistent. select boxes have the class
+  // empty if nothing is selected...
   function initPlaceholderForSelectElement() {
     $(".signup-form select").each(function () {
       setSelectClass($(this));
@@ -77,8 +78,21 @@
     });
   }
 
+  function enableOrDisableSubmit() {
+    if ($('.signup-form #conditions_accepted').is(':checked')) $('.signup-form [type=submit]').attr('disabled', null);
+    else $('.signup-form [type=submit]').attr('disabled', 'disabled');
+  }
+
+  // Sets the submit button's disabled state so that it corresponds to the conditions accepted checkbox and keeps it in sync.
+  function initAcceptCheckboxHandler() {
+    $('.signup-form #conditions_accepted').change(enableOrDisableSubmit);
+    enableOrDisableSubmit();
+  }
+
+
   $(document).ready(initCORSSignupFormHandler);
   $(document).ready(initMediumTypeFromAnchor);
   $(document).ready(initPlaceholderForSelectElement);
+  $(document).ready(initAcceptCheckboxHandler);
 
 })();
