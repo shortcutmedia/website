@@ -50,19 +50,19 @@ title: Free Trial - Shortcut
                 </p>
                 <p>
                   <%= label_tag :user_name, caption: 'Your Name*' %>
-                  <%= text_field_tag 'user[name]', id: :user_name, required: true, placeholder: 'Name' %>
+                  <%= text_field_tag 'user[name]', id: :user_name, required: true, placeholder: 'Your Name*' %>
                 </p>
                 <p>
                   <%= label_tag :user_email, caption: 'Your Email*' %>
-                  <%= email_field_tag 'user[email]', id: :user_email, required: true, placeholder: 'Email' %>
+                  <%= email_field_tag 'user[email]', id: :user_email, required: true, placeholder: 'Your Email*' %>
                 </p>
                 <p>
                   <%= label_tag :user_password, caption: 'Password*' %>
-                  <%= password_field_tag 'user[password]', id: :user_password, required: true, 'data-rule-minlength' => 6, autocomplete: 'off', placeholder: 'Password' %>
+                  <%= password_field_tag 'user[password]', id: :user_password, required: true, 'data-rule-minlength' => 6, autocomplete: 'off', placeholder: 'Password*' %>
                 </p>
                 <p>
                   <%= label_tag :user_password_confirmation, caption: 'Verify password*' %>
-                  <%= password_field_tag 'user[password_confirmation]', id: :user_password_confirmation, required: true, 'data-rule-equalto' => "#user_password", autocomplete: 'off', placeholder: 'Verify password' %>
+                  <%= password_field_tag 'user[password_confirmation]', id: :user_password_confirmation, required: true, 'data-rule-equalto' => "#user_password", autocomplete: 'off', placeholder: 'Verify password*' %>
                 </p>
                 <p>
                   <label></label>
