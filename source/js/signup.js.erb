@@ -51,7 +51,7 @@
   // rest of the setup process (handling validation errors etc.).
   function initCORSSignupFormHandler() {
     if ($.support.cors) {
-      $('form.signup').not('.signup-handler-registered').addClass('signup-handler-registered').submit(function(e) {
+      $('.signup-form').not('.signup-handler-registered').addClass('signup-handler-registered').submit(function(e) {
         e.preventDefault();
         if ($(this).valid()) submitSignupFormwithCORS($(this));
       });
