@@ -65,11 +65,15 @@
     $('select[name="user[favorite_medium_type]"]').val(mediumType);
   }
 
+  function setSelectClass(element) {
+    if($(element).val() == "") $(element).addClass("empty");
+    else $(element).removeClass("empty");
+  }
 
   function initPlaceholderForSelectElement() {
-    $(".signup-form select").change(function () {
-      if($(this).val() == "") $(this).addClass("empty");
-      else $(this).removeClass("empty")
+    $(".signup-form select").each(function () {
+      setSelectClass($(this));
+      $(this).change(function(e) { setSelectClass($(this)); });
     });
   }
 
