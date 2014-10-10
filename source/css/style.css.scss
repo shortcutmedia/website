@@ -179,7 +179,7 @@ figure {
 }
 
 .info-box{
-  article, aside { padding: 2% 3%; }
+  article, aside { padding: 4% 3%; }
 }
 
 .image-bullet {
@@ -649,28 +649,25 @@ Copyright 2013, Josh Cope
    Site Styles
    ========================================================================== */
 
-.page-wrap > header {
-  /*margin-bottom: 16px; margin-bottom: 1em;*/
-}
-
-
 .info-boxes {
   section {
-    @include margin-top(1.3rem);
-    @include margin-bottom(1.3rem);
+    @include margin-top(2rem);
+    @include margin-bottom(2rem);
   }
 
   section > header {
-    /*margin-left: ( 100% / 12 );*/
     margin-top: -16px;
     margin-top: -1em;
     h3{ margin-bottom: 16px; margin-bottom: 1em; }
   }
 
   .info-box-container {
-    /*@extend .grid-10, .offset-1, .s-grid-whole;*/
     @extend .grid-whole;
   }
+}
+
+.download-instruction-container {
+  @include margin-bottom(1rem);
 }
 
 .picture-box {
