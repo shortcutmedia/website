@@ -12,10 +12,6 @@
     @include font-size(18px);
     line-height: 1.6;
     white-space: nowrap;
-    @include media-widescreen {
-      @include font-size(20px);
-      line-height: 1.5;
-    }
   }
 
   a{ 
