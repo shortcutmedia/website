@@ -1,6 +1,6 @@
 .page-wrap > header {
   background-color: white;
-  margin-bottom: 36px;
+  margin-bottom: 3%;
   padding: 18px 12px;
   font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
   @include border-radius-pie(0px 0px $border-radius);
@@ -158,7 +158,6 @@
   }
 
   @include media-portrait-to-landscape-mobile-size {
-    margin-bottom: 16px; margin-bottom: 1rem;
     .sharing-links{ display: none; }
   }
 }
