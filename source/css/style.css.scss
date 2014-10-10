@@ -174,16 +174,8 @@ figure {
           float: right;
         }
       }
-
-      @media only screen and (min-width: 900px) {
-        &#shortcut_engage_graphic {
-          max-width: 393px;
-          padding-bottom: (356px); 
-        }
-      }
     }
   }
-
 }
 
 .info-box{
@@ -260,16 +252,26 @@ figure {
 }
 
 #teaser{
-  margin-top: 10%;
   h1 {
-    /*font-weight: $light-font;*/
-    /*color: $dark-font-color;*/
     text-align: right;
+    margin-top: 12%;
+    @include font-size(44px);
+
+    @media only screen and (max-width: 860px) {
+      @include font-size(38px);
+      margin-top: 14%;
+    }
+    @include media-mobile-size {
+      margin-top: 4%;
+    }
+
+    @include media-phablet-size {
+      margin-top: 2%;
+      @include font-size(30px);
+    }
+
+
   }
-  /*b {*/
-    /*font-weight: $light-font;*/
-    /*color: $shortcut-font-color;*/
-  /*}*/
 }
 
 $section-header-font-size: 19px;
@@ -350,7 +352,7 @@ small{ display: block; }
 ul{ padding-left: 20px; }
 
 .welcome-section {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 a.button{
@@ -749,14 +751,10 @@ footer{
 @media only screen and (min-width: 996px) { }
  
 /* Tablet Portrait size to Base 996px */
-@media only screen and (min-width: 768px) and (max-width: 995px) {}
+@media only screen and (min-width: 768px) and (max-width: 995px) { }
 
 /* All Mobile Sizes */
 @media only screen and (max-width: 767px) {
-  #teaser{
-    margin-top: 0%;
-  }
-
   #demo-button {
     $diameter: 142px;
     top: -($diameter / 2);
@@ -777,6 +775,7 @@ footer{
 @media only screen and (max-width: 479px) {
   #teaser {
     h1 {
+      margin-top: 0;
       text-align: center;
     }
   }
