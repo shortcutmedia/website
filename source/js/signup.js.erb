@@ -25,7 +25,7 @@
   }
 
   function signInUser(userData) {
-    window.location.href = managerHost+'/?user_email='+userData['email']+'&user_token='+userData['authentication_token'];
+    window.location.href = managerHost+'/?user_email='+encodeURIComponent(userData['email'])+'&user_token='+userData['authentication_token'];
   }
 
   function removeAllErrorsFromForm(form) {
