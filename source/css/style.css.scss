@@ -417,8 +417,15 @@ a.img-button {
 }
 
 .demo-pic-container {
-  max-width: 427px;
-  max-height: 604px;
+  /*max-width: 427px;*/
+  /*max-height: 604px;*/
+}
+
+.take-pic-instruct {
+  position: fixed;
+  top: 50%;
+  margin-top: -229px;
+  left: -190px;
 }
 
 
