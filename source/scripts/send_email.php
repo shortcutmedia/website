@@ -1,8 +1,8 @@
 <?php
 
 	// Replace this with your own email address
-	//$to="info@shortcutmedia.com";
-	$to="sebregondi@shortcutmedia.com";
+  $to="info@shortcutmedia.com";
+	//$to="sebregondi@shortcutmedia.com";
 
 	// Extract form contents
 	$name = $_POST['name'];
