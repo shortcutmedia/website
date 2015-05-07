@@ -7,6 +7,7 @@ body {
   padding-bottom: 20px;
   -webkit-font-smoothing: antialiased;
 }
+
 h1,
 h2,
 h3,
@@ -276,7 +277,7 @@ img.border {
   -o-background-size: cover;
   background-size: cover;
   padding: 200px 0 50px;
-  margin: 0 0 50px;
+  /* margin: 0 0 50px; */
   max-height: 930px;
   min-height: 580px;
   color: #fff;
@@ -419,11 +420,29 @@ a.dl.windows {
     background-size: 100px 31px;
   }
 }
+
+/* quotes */
+#quotes {
+  background-color: #FFFFFF;
+  background-image: url('../img/quote_sdk.jpg');
+  background-position: left center;
+  background-size: auto 250px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+  /*margin: 0 0 50px 0;*/
+}
+
+.quote_sdk {
+  padding: 15px 0 15px;
+}
+
+
 /* features */
 #features {
   background: #e5e5e3;
   padding: 50px 0 60px;
-  margin: 0 0 50px 0;
+  /* margin: 0 0 50px 0; */
 }
 #features .span4,
 #features .span12 {
