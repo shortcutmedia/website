@@ -502,6 +502,7 @@ a.dl.windows {
 
 .quote_sdk {
   padding: 29px 0 20px;
+  margin-left: 30px;
 }
 
 
@@ -1061,6 +1062,9 @@ footer .social.twitter {
   textarea[class*="span"],
   .uneditable-input {
     min-height: 40px;
+  }
+  #quotes {
+    background-image: none !important;
   }
 }
 @media (max-width: 979px) {
