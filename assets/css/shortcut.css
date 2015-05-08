@@ -248,6 +248,11 @@ img.border {
   margin-bottom: 10px;
   
 }
+
+.navbar button {
+  display: none;
+}
+
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .navbar a.navbar-brand {
     background-image: url('../img/shortcut@2x.png');
