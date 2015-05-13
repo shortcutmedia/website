@@ -1,3 +1,26 @@
+$(function() {
+    //this would do the same as button click as both submit the form
+    $(document).on("submit", "form[data-remote=true]", function (e) {
+
+      var form = $(this);
+      $.ajax( {
+        type: "POST",
+        url: form.attr( 'action' ),
+        data: form.serialize(),
+        success: function( response ) {
+          form.find(".success").show();
+          form.find("input[type=text], input[type=email], textarea").val("");
+          console.log( response );
+        },
+        fail: function( response ) {
+          form.find(".error").text(response).show();
+          console.log( response );
+        }
+      } );
+      return false;
+    });
+});
+
 $(document).ready(function() {  
 
 	/** Filter Lib **/

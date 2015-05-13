@@ -863,7 +863,6 @@ form input:-moz-placeholder {
 .success {
   display: none;
   position: relative;
-  top: -13px;
   font-style: italic;
 }
 .validation {
