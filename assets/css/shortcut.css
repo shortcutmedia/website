@@ -313,7 +313,7 @@ img.border {
   margin-top: 2px;
 }
 /* teaser */
-.teaser {
+.teaser#item1 {
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -327,17 +327,17 @@ img.border {
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
-.teaser h1 {
+.teaser#item1 h1 {
   font-size: 3.8em;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 1.5em;
   word-wrap: break-word;
 }
-.teaser h1 span {
+.teaser#item1 h1 span {
   font-weight: 500;
 }
-.teaser h1 span:after {
+.teaser#item1 h1 span:after {
   content: "\A";
   white-space: pre;
 }
@@ -351,7 +351,7 @@ img.border {
   padding:50px 0 50px;
 }
 
-.teaser .fa-check {
+.teaser#item1 .fa-check {
   font-size: 1.1em;
   color: #ff6600;
   /* color:#5cb85c;  */
@@ -379,6 +379,78 @@ img.border {
 .teaser#item1 p strong {
   color: #fff;
 }
+
+
+
+.teaser#sdk {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 80px 0 30px;
+  /* margin: 0 0 50px; */
+  max-height: 460px;
+  min-height: 230px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+.teaser#sdk h1 {
+  font-size: 3.8em;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  word-wrap: break-word;
+}
+.teaser#sdk h1 span {
+  font-weight: 500;
+}
+.teaser#sdk h1 span:after {
+  content: "\A";
+  white-space: pre;
+}
+.teaser#sdk p, li{
+  color: #bbb;
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
+.teaser#sdk p {
+  padding:50px 0 50px;
+}
+
+.teaser#sdk .fa-check {
+  font-size: 1.1em;
+  color: #ff6600;
+  /* color:#5cb85c;  */
+}
+
+.teaser#sdk h3 {
+  color: #ddd;
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
+.teaser#sdk {
+  background-image: url("../img/shortcut-keyvisual-blur.jpg");
+  background-position: center bottom;
+}
+.teaser#sdk li {
+  color: #bbb;
+}
+
+.teaser#sdk ul {
+  padding: 20px 0;
+  color: #bbb;
+}
+
+.teaser#sdk p strong {
+  color: #fff;
+}
+
+
+
 
 .sales-channel{
   margin-top: 90px;
@@ -863,6 +935,7 @@ form input:-moz-placeholder {
 .success {
   display: none;
   position: relative;
+  top: -13px;
   font-style: italic;
 }
 .validation {
