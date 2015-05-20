@@ -241,7 +241,7 @@ img.border {
 }
 .navbar a.navbar-brand {
   background-repeat: no-repeat;
-  background-image: url('../img/shortcut.png');
+  background-image: url('../img/shortcut@2x.png');
   height: 50px;
   width: 150px;
   text-indent: -999em;
@@ -267,7 +267,7 @@ img.border {
 
 .top-logo a {
   background-repeat: no-repeat;
-  background-image: url('../img/shortcut.png');
+  background-image: url('../img/shortcut@2x.png');
   height: 50px;
   width: 150px;
   text-indent: -999em;
