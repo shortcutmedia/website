@@ -122,8 +122,18 @@ $(document).ready(function() {
        var aTag = $("a[name='"+ aid +"']");
        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
    }
-   
-  
+      
+   $('a#get_started_button').click(function(e) {
+       window._gaq = window._gaq || [];
+       window._gaq.push(['_setAccount', 'UA-33611350-1']);
+       window._gaq.push(['_trackEvent', 'buttons', 'click', 'Get Started']);
+   });
+
+   $('a#get_started_button_nav').click(function(e) {
+       window._gaq = window._gaq || [];
+       window._gaq.push(['_setAccount', 'UA-33611350-1']);
+       window._gaq.push(['_trackEvent', 'buttons', 'click', 'Get Started Nav']);
+   });
      
 
 });
