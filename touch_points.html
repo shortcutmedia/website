@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shortcut - Touch Points</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Shortcut Media AG Zurich">
+  <meta name="description" content="Integrate Shortcut in your own app!">
+
+  <meta property="og:title" content="Shortcut - Different touch points to link to your content such as QR Codes, Image Recognition, and iBeacons" />
+  <meta property="og:url" content="http://shortcutmedia.com/request_demo_keys.html" />
+  <meta property="og:site_name" content="The fastest way from offline to online"/>
+  <meta property="og:description" content="With the Android and iOS SDK from Shortcut, you can create your own Image Recognition, QR Code Reader, and iBeacon App in less than one minute. Get access today for free." />
+  <meta property="fb:app_id" content="176995982338808" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://shortcutmedia.com/assets/img/Request_SDK.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
+
+  <!-- Le styles -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/shortcut.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+
+    <!-- Le javascript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/shortcut.js" type="text/javascript"></script>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- GOOGLE ANALYTICS -->
+    <meta name="google-site-verification" content="62367427" />
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33611350-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script><!-- We need this for debugging -->
+  </head>
+
+  <body>
+
+    <script>
+    (function(){
+      $(window).scroll(function() {
+    
+        // check if window scroll for more than 430px. May vary
+        // as per the height of your main banner.
+        
+        if($(this).scrollTop() > 80) { 
+          $('.navbar').addClass('opaque'); // adding the opaque class
+        } else {
+          $('.navbar').removeClass('opaque'); // removing the opaque class
+        }
+      });
+    })();
+    </script>
+        
+    <nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://shortcutmedia.com"><img src="assets/img/shortcut@2x.png" /></a>
+        </div>
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-right">            
+            <li><a href="http://shortcutmedia.com/sdk.html">SDK</a></li>
+            <li style="margin-right:20px;"><a href="http://shortcutmedia.com/about.html">About</a></li>
+            <li><a href="http://manager.shortcutmedia.com/users/sign_in">Log In</a></li>
+            <li><a id="get_started_button_nav" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get Started!</a></li>
+          </ul>        
+        </div>
+      </div>
+    </nav>
+
+    <!-- TEASER -->
+    <div id="home">
+      <div class="teaser" id="sdk">
+        <div class="container-fluid ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <h1>Reach your customers using various touch points</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END TEASER -->
+
+    <!-- CALL TO ACTION -->
+    <div id="features">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Choose the right mix of touch points for highest efficiency</h3>
+            <p>The best performance of your marketing efforts is achieved by reaching your customer using mutliple touch points and media. Use Short URLs for your online and social ads, drive app downloads with mobile deep links, boost ROI of your offline marketing using QR Codes and Image Recognition, and enable your stores to push your users the best deals on their Smartphones using iBeacons. Below, we present each touch point and technology in detail in order for you to make the right choice. Regardless which technology and touch points you choose, we provide you with all of them and consolidated analytics. If you're missing anything, <a href="mailto:info@shortcutmedia.com?subject=Touch%20points&body=Hi,%20please%20add%20the%20following%20touch%20point%20to%20your%20service.">please let us know</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END CALL TO ACTION -->
+    
+    <!-- ONLINE -->
+    <div id="short_urls">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Short URLs</h3>
+            <p>Every Shortcut you create, is automatically converted into a short URL. Why is that? Short URLs are HTML redirects, that make long messy links short and crisp. This makes your links easier to share in social media or in emails.</p>
+            <p>Short URLs are measurable and give you insight in all your marketing efforts. Analyze performance, learn from your successes and make more targetted campaigns.</p>
+            <p>In contrast to other short URL providers, your statistics are private and for your eyes only. Also, you can change location dynamically. If you want to add a differend argument to your link or redirect it to a newer version, you can edit it at any time.</p>
+            <p>Short URLs produce smaller and visually more appealing QR Codes. Therefore, you need less space in your printed material and you save money.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ONLINE -->
+
+    <!-- MOBILE DEEPLINK -->
+    <div id="mobile_deep_linking">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Mobile Deep Linking</h3>
+            <p>Linking directly to a specific location within a smartphone app is called mobile deep linking. It is actually more than that.</p>
+            <p>Our mobile deeplinks work in combination with our short URLs. We detect the device which is used to open the link and dynamically open it in in the app or on the web. This is necessary because you don't know what device your customers use. If they open the link on a desktop computer, it opens a regular webpage. If it is opened on a device for which you provided a mobile deep link, it opens the desired content in the app.</p>
+            <p>If the app is not installed on your customer's Smartphone, it will get to the download location on the app store or market. This drives app installs and engagement.</p>
+            <p>In combination with QR Codes or other touch points, you are now able to promote app content in print media.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MOBILE DEEPLINK -->
+
+    <!-- QR CODES -->
+    <div id="qrcodes">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>QR Codes</h3>
+            <p>Don't miss out the opportunity to reach your customers via your printed material using QR Codes. QR Codes are considered like buttons in print media. Therefore, place them at strategic locations where you want your customers to interact. Use a attractive call to action as if you would place a button on a web page e.g. "Get Started!", "Buy Now!", "Watch Video", etc.</p>
+            <p>As Shortcut automatically produces short URLs for your links and mobile deep links, the resulting QR Codes are smaller than with a long URL, this gives you more space for the call to action and the QR Code looks good in any layout.</p>
+            <p>We create dynamic QR Codes for you. This means, you can change the URL where they link to at any moment. This makes your campaign very flexible. For example, if you change the campaign, you can just adapt the URL without needing to print the QR Codes again.</p>
+            <p>You can scan our QR Codes with any reader. You can also use our Shortcut reader or make your own reader with your own branding using our <a href="http://shortcutmedia.com/sdk.html">SDK</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END QR CODES -->
+
+    <!-- IMAGE RECOGNITION -->
+    <div id="image_recognition">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Image Recognition</h3>
+            <p>If you want something magical for your customers, try Image Recognition. It allows you to specify a reference image e.g. your product package, to make it interactive.</p>
+            <p>Image recognition is best suited for high quality print material where a QR Code would be visually disturbing. Moreover, it makes sense to use Image Recognition where parts in the print material are discoverable. For example a team photo - by scanning a person, the user gets name and function of that particular person.</p>
+            <p>Here is how you make image regognition work. Upload a reference image, wait until the image is activated, and scan it with our <a href="http://shortcutmedia.com/app.html">Shortcut Reader App</a> or make your own image recognition app using our <a href="http://shortcutmedia.com/sdk.html">SDK</a>.</p>
+            <p>Make sure you place a call to action, which explains the user benefit and what the user has to do in order to interact with the image. For example, "Scan the product with our app to buy it!".</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END IMAGE RECOGNITION -->
+
+    <!-- IBEACONS -->
+    <div id="ibeacons">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>iBeacons</h3>
+            <p>If you have a store or a restaurant, iBeacons are the best way engage your customers. iBeacons send push notifications to your customers when they come close to your store location. You define the wording of this push notification and the Link and mobile deep link on our manager to make it work. That's it. No custom implementation needed.</p>
+            <p>Place iBeacons at strategic locations in your store or restaurant to get customer attention for special offers and discouts.</p>
+            <p>Similar with QR Codes and Image Recognition, your customers need to install an app in order to receive messages from iBeacons. You can use our <a href="http://shortcutmedia.com/app.html">Shortcut Reader App</a> or enable your own app using our <a href="http://shortcutmedia.com/sdk.html">SDK</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END IBEACONS -->
+
+    <!-- CREATE SHORTCUT -->
+    <div class="create_shortcut">
+      <div class="container-fluid">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h1>Start Using Shortcut For Free</h1>
+          <p>Reach your customers on their smartphones and analyze the impact</p>
+          <a id="get_started_button" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get started!</a>
+        </div>
+      </div>
+    </div>
+    <!-- END CREATE SHORTCUT -->
+ 
+
+    <footer> </footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+          <div class="pull-left"><strong>Shortcut Media AG</strong> © 2015. All
+            Rights Reserved.</div>
+            <div class="pull-right"> <a class="social" href="http://www.facebook.com/shortcutapp"><i class="fa fa-facebook-square fa-2x"></i></a> <a href="http://blog.shortcutmedia.com/" class="social"><i class="fa fa-rss-square fa-2x"></i></a> <a class="social" href="https://twitter.com/ShortcutMedia"><i class="fa fa-twitter-square fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
