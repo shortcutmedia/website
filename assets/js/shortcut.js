@@ -134,7 +134,12 @@ $(document).ready(function() {
        window._gaq.push(['_setAccount', 'UA-33611350-1']);
        window._gaq.push(['_trackEvent', 'buttons', 'click', 'Get Started Nav']);
    });
-     
+
+   $('a#video_button').click(function(e) {
+       window._gaq = window._gaq || [];
+       window._gaq.push(['_setAccount', 'UA-33611350-1']);
+       window._gaq.push(['_trackEvent', 'buttons', 'click', 'Play Video']);
+   });     
 
 });
 
