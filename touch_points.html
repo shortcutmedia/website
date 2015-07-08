@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="favicon.ico">
-    
+
     <!-- GOOGLE ANALYTICS -->
     <meta name="google-site-verification" content="62367427" />
     <script type="text/javascript">
@@ -63,11 +63,11 @@
     <script>
     (function(){
       $(window).scroll(function() {
-    
+
         // check if window scroll for more than 430px. May vary
         // as per the height of your main banner.
-        
-        if($(this).scrollTop() > 80) { 
+
+        if($(this).scrollTop() > 80) {
           $('.navbar').addClass('opaque'); // adding the opaque class
         } else {
           $('.navbar').removeClass('opaque'); // removing the opaque class
@@ -75,7 +75,7 @@
       });
     })();
     </script>
-        
+
     <nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -87,14 +87,14 @@
           </button>
           <a class="navbar-brand" href="http://shortcutmedia.com"><img src="assets/img/shortcut@2x.png" /></a>
         </div>
-    
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav pull-right">            
+          <ul class="nav navbar-nav pull-right">
             <li><a href="http://shortcutmedia.com/sdk.html">SDK</a></li>
             <li style="margin-right:20px;"><a href="http://shortcutmedia.com/about.html">About</a></li>
             <li><a href="http://manager.shortcutmedia.com/users/sign_in">Log In</a></li>
             <li><a id="get_started_button_nav" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get Started!</a></li>
-          </ul>        
+          </ul>
         </div>
       </div>
     </nav>
@@ -125,9 +125,10 @@
       </div>
     </div>
     <!-- END CALL TO ACTION -->
-    
+
     <!-- ONLINE -->
-    <div id="short_urls">
+    <div class="with_anchor">
+      <div class="anchor_target" id="short_urls"></div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -143,7 +144,8 @@
     <!-- ONLINE -->
 
     <!-- MOBILE DEEPLINK -->
-    <div id="mobile_deep_linking">
+    <div class="with_anchor">
+      <div class="anchor_target" id="mobile_deep_linking"></div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -159,7 +161,8 @@
     <!-- MOBILE DEEPLINK -->
 
     <!-- QR CODES -->
-    <div id="qrcodes">
+    <div class="with_anchor">
+      <div class="anchor_target" id="qrcodes"></div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -175,7 +178,8 @@
     <!-- END QR CODES -->
 
     <!-- IMAGE RECOGNITION -->
-    <div id="image_recognition">
+    <div class="with_anchor">
+      <div class="anchor_target" id="image_recognition"></div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -191,7 +195,8 @@
     <!-- END IMAGE RECOGNITION -->
 
     <!-- IBEACONS -->
-    <div id="ibeacons">
+    <div class="with_anchor">
+      <div class="anchor_target" id="ibeacons"></div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -216,7 +221,7 @@
       </div>
     </div>
     <!-- END CREATE SHORTCUT -->
- 
+
 
     <footer> </footer>
     <div class="container-fluid">

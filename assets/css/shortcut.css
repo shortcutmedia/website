@@ -68,7 +68,7 @@ body {
   transition: background-color 0.5s ease 0s; /* Transition effect to make it fade in (optional) */
 }
 
-.navbar li { color: #000 } 
+.navbar li { color: #000 }
 .navbar li a {
   padding-top: 22px;
 }
@@ -113,7 +113,7 @@ body {
   margin-top: 18px;
   font-size: 2rem;
   padding-top: 3px;
-  
+
 }
 
 .navbar-inverse .navbar-nav a.btn.btn-lg.btn-primary:hover {
@@ -124,7 +124,7 @@ body {
 
 .navbar-inverse .navbar-nav .btn-primary {
 	color: #F2F2F2;
-  border-color: #fff; 
+  border-color: #fff;
 }
 
 
@@ -148,8 +148,8 @@ body {
 
 .create_shortcut .btn-primary {
 	color: #F2F2F2;
-  border-color: #fff; 
-  
+  border-color: #fff;
+
 }
 
 
@@ -444,7 +444,7 @@ img.border {
 .teaser .call-to-action {
   text-align: center;
   margin: 2rem auto;
-  padding-bottom: 4rem;  
+  padding-bottom: 4rem;
 }
 
 .teaser a.btn.btn-lg.btn-primary {
@@ -467,8 +467,8 @@ img.border {
 
 .teaser .btn-primary {
 	color: #F2F2F2;
-  border-color: #fff; 
-  
+  border-color: #fff;
+
 }
 
 
@@ -1261,7 +1261,7 @@ footer .social.twitter {
   .pricing-table .contact-btn {
     margin-bottom: 30px;
   }
-  
+
   .team h4,
   .team p,
   .team {
@@ -1310,4 +1310,12 @@ footer .social.twitter {
 
 #preview.textonly{
   height: 0px;
+}
+
+.with_anchor {
+  position: relative;
+}
+.with_anchor .anchor_target {
+  position: absolute;
+  top: -80px;
 }
