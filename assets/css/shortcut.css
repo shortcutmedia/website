@@ -1319,3 +1319,15 @@ footer .social.twitter {
   position: absolute;
   top: -80px;
 }
+
+.iframe-prefix {
+  float: left;
+  margin-right: 10px;
+}
+
+iframe.one_field_input {
+  float: none;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+}

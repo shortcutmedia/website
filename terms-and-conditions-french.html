@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="favicon.ico">
-               
+
     <!-- GOOGLE ANALYTICS -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -61,11 +61,11 @@
     <script>
     (function(){
       $(window).scroll(function() {
-    
+
         // check if window scroll for more than 430px. May vary
         // as per the height of your main banner.
-        
-        if($(this).scrollTop() > 80) { 
+
+        if($(this).scrollTop() > 80) {
           $('.navbar').addClass('opaque'); // adding the opaque class
         } else {
           $('.navbar').removeClass('opaque'); // removing the opaque class
@@ -73,7 +73,7 @@
       });
     })();
     </script>
-        
+
     <nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -85,14 +85,14 @@
           </button>
           <a class="navbar-brand" href="http://shortcutmedia.com"><img src="assets/img/shortcut@2x.png" /></a>
         </div>
-    
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav pull-right">            
+          <ul class="nav navbar-nav pull-right">
             <li><a href="http://shortcutmedia.com/sdk.html">SDK</a></li>
             <li style="margin-right:20px;"><a href="http://shortcutmedia.com/about.html">About</a></li>
             <li><a href="http://manager.shortcutmedia.com/users/sign_in">Log In</a></li>
-            <li><a id="get_started_button_nav" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get Started!</a></li>
-          </ul>        
+            <li><a class="btn btn-lg btn-primary" href="#create_shortcut">Get Started!</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -146,7 +146,7 @@
 								<li>Réservation de droits
 									<ol>
 										<li>Tous droits, titres de propriété et participation (notamment tous droits à des bases de données, copyrights, marques de commerce et autres droits de propriété intellectuelle) aux Services et à notre site Web sont la propriété de Shortcut. Sauf provision contraire des présentes Modalités, rien dans celles-ci ne saura être interprété comme vous conférant une licence ou un droit.</li>
-									</ol>	
+									</ol>
 								</li>
 								<li>Condition d’utilisation des Services et de notre site Web
 									<ol>
@@ -208,18 +208,21 @@
 									</ol>
 								</li>
 							</ol>
-						</div>			
+						</div>
 			</div>
 		</div>
 	</div>
 
     <!-- CREATE SHORTCUT -->
-    <div class="create_shortcut">
+    <div class="create_shortcut with_anchor">
+      <div class="anchor_target" id="create_shortcut"></div>
       <div class="container-fluid">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <h1>Start Using Shortcut For Free</h1>
           <p>Reach your customers on their smartphones and analyze the impact</p>
-          <a id="get_started_button" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get started!</a>
+          <p>
+            <iframe src="http://manager.shortcutmedia.com/shortcut_generator/uri/new" class="one_field_input" width="650" height="90" align="left" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+          </p>
         </div>
       </div>
     </div>
@@ -240,6 +243,6 @@
       </div>
     </div>
     <!-- FOOTER -->
-		
+
   </body>
 </html>

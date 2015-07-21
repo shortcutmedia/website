@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="628" />
 
   <meta name="robots" content="NOODP">
-  
+
   <!-- Le styles -->
   <link href="assets/css/bootstrap.css" rel="stylesheet">
   <link href="assets/css/shortcut.css" rel="stylesheet">
@@ -42,7 +42,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="favicon.ico">
-    
+
     <!-- GOOGLE ANALYTICS -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -63,11 +63,11 @@
     <script>
     (function(){
       $(window).scroll(function() {
-    
+
         // check if window scroll for more than 430px. May vary
         // as per the height of your main banner.
-        
-        if($(this).scrollTop() > 80) { 
+
+        if($(this).scrollTop() > 80) {
           $('.navbar').addClass('opaque'); // adding the opaque class
         } else {
           $('.navbar').removeClass('opaque'); // removing the opaque class
@@ -75,7 +75,7 @@
       });
     })();
     </script>
-        
+
     <nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -87,14 +87,14 @@
           </button>
           <a class="navbar-brand" href="http://shortcutmedia.com"><img src="assets/img/shortcut@2x.png" /></a>
         </div>
-    
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav pull-right">            
+          <ul class="nav navbar-nav pull-right">
             <li><a href="http://shortcutmedia.com/sdk.html">SDK</a></li>
             <li style="margin-right:20px;"><a href="http://shortcutmedia.com/about.html">About</a></li>
             <li><a href="http://manager.shortcutmedia.com/users/sign_in">Log In</a></li>
-            <li><a id="get_started_button_nav" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get Started!</a></li>
-          </ul>        
+            <li><a class="btn btn-lg btn-primary" href="#create_shortcut">Get Started!</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -120,14 +120,14 @@
           <div class="col-md-12">
             <h3>Make your app interact with the world</h3>
 
-            <p>Use our SDK for 
+            <p>Use our SDK for
               <a href="https://github.com/shortcutmedia/shortcut-sdk-android" target="_blank">Android</a>
-              and 
+              and
               <a href="https://github.com/shortcutmedia/shortcut-sdk-ios" target="_blank">iOS</a>
               to engage customers within your own app.</p>
             <p>Check out the video below to see how fast it can be integrated. Can we do it in <strong>less than one minute</strong>?</p>
 <iframe src="//fast.wistia.net/embed/iframe/715055hm0p" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="830" height="468"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
-            
+
           </div>
         </div>
         <div class="row">
@@ -142,7 +142,7 @@
               <form action="/mcapi_requestDemoKeys.php" method="post">
 
                 <div id="mc_embed_signup_scroll" class="col-md-6 col-md-offset-3">
-                  <div class="mc-field-group input-group margin-bottom-sm">  
+                  <div class="mc-field-group input-group margin-bottom-sm">
                     <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
                     <input type="hidden" value="/request_demo_keys_success.html" name="REDIRECT_URL">
                     <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control required email" id="mce-EMAIL">
@@ -177,17 +177,20 @@
     <!-- END CALL TO ACTION -->
 
     <!-- CREATE SHORTCUT -->
-    <div class="create_shortcut">
+    <div class="create_shortcut with_anchor">
+      <div class="anchor_target" id="create_shortcut"></div>
       <div class="container-fluid">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <h1>Start Using Shortcut For Free</h1>
           <p>Reach your customers on their smartphones and analyze the impact</p>
-          <a id="get_started_button" class="btn btn-lg btn-primary" href="http://manager.shortcutmedia.com/shortcut_generator/url/new">Get started!</a>
+          <p>
+            <iframe src="http://manager.shortcutmedia.com/shortcut_generator/uri/new" class="one_field_input" width="650" height="90" align="left" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+          </p>
         </div>
       </div>
     </div>
     <!-- END CREATE SHORTCUT -->
- 
+
 
     <footer> </footer>
     <div class="container-fluid">
