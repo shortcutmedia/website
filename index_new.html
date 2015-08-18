@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics Content Experiment code -->
+  <script>function utmx_section(){}function utmx(){}(function(){var
+  k='62367427-5',d=document,l=d.location,c=d.cookie;
+  if(l.search.indexOf('utm_expid='+k)>0)return;
+  function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+  indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+  length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+  '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+  '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+  '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+  valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+  '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+  </script><script>utmx('url','A/B');</script>
+  <!-- End of Google Analytics Content Experiment code -->
+
   <meta charset="utf-8">
   <title>Shortcut to Mobile - The Smarter Link with Mobile Deep Links, Short URL, QR Codes, Image Recognition, and iBeacons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +28,7 @@
   <meta property="og:description" content="Link to any device on any platform via any touch point and track usage." />
   <meta property="fb:app_id" content="176995982338808" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://shortcutmedia.com/assets/img/the_smarter_link.png_on_customers_smartphone.png" />
+  <meta property="og:image" content="http://shortcutmedia.com/assets/img/the_smarter_link.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="628" />
@@ -57,17 +72,17 @@
     </script>
 
     <!-- GOOGLE ANALYTICS -->
-    // <script>
-    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    //
-    // ga('create', 'UA-33611350-1', 'auto');
-    // ga('require', 'displayfeatures');
-    // ga('send', 'pageview');
-    //
-    // </script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33611350-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+    </script>
     <meta name="google-site-verification" content="62367427" />
   </head>
 
@@ -131,10 +146,12 @@
           </div> <!-- row -->
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
+
               <p>
                 <span class="iframe-prefix">Get started:</span>
                 <script> window.insertCreateShortcutFrame(); </script>
               </p>
+
             </div>
           </div> <!-- row -->
         </div> <!-- container-fluid -->
