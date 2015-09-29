@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+
+<script>
+
+if (
+    strpos($_SERVER["HTTP_USER_AGENT"], "facebookexternalhit/") !== false ||          
+    strpos($_SERVER["HTTP_USER_AGENT"], "Facebot") !== false
+) {
+  b = document.getElementsByTagName('body')[0];
+  b.innerHTML = "<a>hello</a>";
+}
+else {
+    // that is not Facebook
+  window.onload = function() {
+    if(navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      window.location = "waypointli://waypoint.li/e94acf2c194221e50eefecd6731e30bf"; 
+      setTimeout(function(){
+          window.location = "https://itunes.apple.com/app/id712112211?mt=8";
+      }, 50);   
+    } else {
+      window.location = "http://waypoint.li/e94acf2c194221e50eefecd6731e30bf";
+    }
+  }
+    
+}
+</script>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,8 +52,8 @@
 <!-- Add the following three tags inside head. -->
 <meta property="og:type" content="place" />
 
-<meta name="twitter:title" content="Hand woven baskets" />
-<meta property="og:title" content="Hand woven baskets" />
+<meta name="twitter:title" content="Hand woolen baskets" />
+<meta property="og:title" content="Hand woolen baskets" />
 
 
 <!-- Twitter Card data -->
@@ -49,18 +76,7 @@
 <meta property="place:location:latitude" content="36.749111" />
 <meta property="place:location:longitude" content="-87.722065" />
 
-<script>
-window.onload = function() {
-  if(navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-    window.location = "waypointli://waypoint.li/e94acf2c194221e50eefecd6731e30bf"; 
-    setTimeout(function(){
-        window.location = "https://itunes.apple.com/app/id712112211?mt=8";
-    }, 50);   
-  } else {
-    window.location = "http://waypoint.li/e94acf2c194221e50eefecd6731e30bf";
-  }
-}
-</script>
+
 
 </head>
 <body>
