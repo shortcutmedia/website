@@ -592,6 +592,99 @@ img.border {
 }
 
 
+/* Documentation */
+#documentation {
+  background-color: #fff;
+  padding-bottom: 45px;
+}
+
+.sc-docs-sidebar {
+  
+}
+
+.sc-docs-sidenav {
+  padding-top: 30px;
+}
+
+.sc-docs-sidenav li {
+}
+
+.sc-docs-sidenav li a {
+  font-size: 22px;
+  color: #333;
+  padding-left: 0px;
+}
+
+.sc-docs-sidenav li p {
+  font-size: 22px;
+  color: #333;
+  padding-left: 0px;
+  margin-top: 14px;
+}
+
+.sc-sublist li a {
+  font-size: 16px;
+  color: #666;
+  line-height: 0px;
+  padding-left: 15px;
+}
+
+.sc-sublist li p {
+  font-size: 16px;
+  color: #666;
+  line-height: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  background-color:#ddd;
+}
+
+.sc-docs-section {
+  
+}
+
+.sc-docs-section h1 {
+  font-size: 26px;
+  color: #000;
+}
+
+.sc-docs-section h2 {
+  font-size: 24px;
+  color: #000;
+}
+
+.sc-docs-section p {
+  font-size: 16px;
+  color: #333;
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+.sc-docs-section ul li {
+  font-size: 16px;
+  color: #333;
+  line-height: 23px;
+  margin-bottom: 4px;
+}
+
+.sc-docs-section ol li {
+  font-size: 16px;
+  color: #333;
+  line-height: 23px;
+  margin-bottom: 4px;
+}
+
+
+/* End Documentation */
+
+
+
+
+
+
+
+
 .scrollof{
   pointer-events: none;
 }
