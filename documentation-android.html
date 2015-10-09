@@ -136,19 +136,93 @@
 
           <div class="col-md-9" role="main">
             <div class="sc-docs-section">
-              <h1 id="Deep-Linking-SDK" class="page-header">Shortcut Deep Linking SDK</h1>
-              <p>This SDK provides the following features.</p>
 
-              <ul>
-                <li>Support for deferred deep linking.</li>
-                <li>Collection of additional statistics to build a user acquisition funnel and evaluate user activity.</li>
-              </ul>
-              <p>The SDK is available for the following platforms.</p>
-              <ul>
-                <li>iOS</li>
-                <li>Android</li>
-              </ul>
-<p>Please refer to these repositories for more information about how to integrate the SDK into your mobile app.</p>              
+<h2>Prerequisites</h2>
+<p>To make use of this SDK you need an Android app that supports deep linking. The section below <a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android#add-deep-linking-support-to-your-app">Add deep linking support to your app</a> explains how to configure your app to support deep links. Please follow the instructions first.</p>
+
+<h2>Installation</h2>
+<p>Gradle support is coming soon! In the meantime, follow the instruction for manual installation as follows.</p>
+<ol>
+  <li><a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android/releases/download/v0.1.0/DeepLinkingSDK.aar">Download the latest SDK</a> as .AAR file.</li>
+  <li><p>In Android Studio import the .AAR file (File -> New Module -> Import .JAR/.AAR).</p></li>
+  <li>Then in your app module <code>build.gradle</code> add the following dependency.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">dependencies {</span>
+  <span style="color:#000000">compile project(':DeepLinkingSDK')</span>
+<span style="color:#000000">}</span></code></pre>
+</div>
+</li>
+</ol>
+
+<h2>Integration into your app</h2>
+<p><strong>Enabling the SDK</strong></p>
+<p>There are 4 methods to enable the SDK inside your app. The preferred method is <a href="#method1">Method 1: Register our Application class</a>. If your application needs to support <strong>pre-14 API</strong>, please use <a href="#method4">Method 4: Manual session management</a>.</p>
+
+<p id="method1"><strong>Method 1: Register our Application class</strong></p>
+<p>Simply register our application class in the <i>Manifest.xml</i> configuration file.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">&lt;application</span>
+  <span style="color:#000000">android:name="sc.shortcut.sdk.android.deeplinking.SCDeepLinkingApp"</span></code></pre>
+</div>
+<p>That's it! Your app supports now deferred deep linking and statistics are automatically gathered.</p>
+
+<p id="method2"><strong>Method 2: Extend from our Application class</strong></p>
+<p>If you already have an Application class then extend it with <code>SCDeepLinkingApp</code>.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">public class YourApplication extends SCDeepLinkingApp</span></code></pre>
+</div>
+  
+<p id="method3"><strong>Method 3: Initialize the SDK yourself</strong></p>
+<p><i>We do not support this yet!</i></p>
+
+<p id="method4"><strong>Method 4: Manual session management for pre-14 support</strong></p>
+<p>Unless you need to support <strong>pre-14 APT</strong>, we recommend using automatic session managment (methods 1 - 3).</p>
+<p>In your entry Activity add the following.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">@Override
+  protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+
+      SCDeepLinking deepLinking = SCDeepLinking.getInstance(this);
+      if (savedInstanceState == null) { // You wanna probably ignore device rotation
+        deepLinking.startSession(getIntent());
+      }
+  }</span></code></pre>
+</div>
+
+<h2>Retrieve the deep link</h2>
+<p>Usually your app should respond to a deep link with a corresponding view. You can retrieve the deep link either from the incoming intent or from the <code>SCDeepLinking</code> class.</p>
+
+<p>Note that you can retrieve the deep link at any time during the activity's lifecyle, but generally you want to do so in <code>onCreate()</code> or <code>onStart()</code>.</p>
+
+<p>The following example shows how to retrieve the deep link through the incoming intent. If the app was launched for the first time a possible deferred link is available through the intent.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">@Override
+protected void onCreate(Bundle savedInstanceState) {
+    ...
+
+    if (Intent.ACTION_VIEW.equals(getIntent.getAction()) {
+        Uri deepLink = getIntent().getData();
+        if (deepLink != null) {
+            Log.d(TAG, "opened with deep link: " + deepLink);
+            // TODO show content for deep link
+        }
+    }
+}</span></code></pre>
+</div>
+
+<p>And in the example below the deep link is retrieved from <code>SCDeepLinking</code>.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">@Override
+protected void onCreate(Bundle savedInstanceState) {
+    ...
+
+    Uri deepLink = SCDeepLinking.getInstance().getDeepLink()
+    if (deepLink != null) {
+        Log.d(TAG, "opened with deep link: " + deepLink);
+        // TODO show content for deep link
+    }
+}</span></code></pre>
+</div>
+
+
+
             </div>            
           </div>
           
