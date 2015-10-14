@@ -145,17 +145,22 @@
 <p>To make use of this SDK you need an Android app that supports deep linking. The section below <a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android#add-deep-linking-support-to-your-app">Add deep linking support to your app</a> explains how to configure your app to support deep links. Please follow the instructions first.</p>
 
 <h2>Installation</h2>
-<p>Gradle support is coming soon! In the meantime, follow the instruction for manual installation as follows.</p>
 <ol>
-  <li><a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android/releases/download/v0.1.0/DeepLinkingSDK.aar">Download the latest SDK</a> as .AAR file.</li>
-  <li><p>In Android Studio import the .AAR file (File -> New Module -> Import .JAR/.AAR).</p></li>
-  <li>Then in your app module <code>build.gradle</code> add the following dependency.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#000000">dependencies {</span>
-  <span style="color:#000000">compile project(':DeepLinkingSDK')</span>
+  <li><a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android/releases/download/v0.1.0/DeepLinkingSDK.aar">Download the latest SDK</a> as .AAR file and copy it to the project's libs directory (typically <code>app/libs</code>)</li>
+  <li><p>Add a directory repository in <code>build.gradle</code> and add <code>compile 'sc.shortcut.sdk.android.deeplinking:sc-deeplinking:0.1.0@aar'</code> to the dependencies section of your application's <code>build.gradle</code> file.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#0000CC">repositories</span> <span style="color:#000000">{
+  flatDir {
+    dirs <span style="color:#d14">'libs'</span>
+  <span style="color:#000000">}</span>
+}</span></code></pre>
+</div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#0000CC">dependencies</span> <span style="color:#000000">{
+  compile</span> <span style="color:#d14">'sc.shortcut.sdk.android.deeplinking:sc-deeplinking:0.1.0@aar'</span>
 <span style="color:#000000">}</span></code></pre>
 </div>
 </li>
 </ol>
+<p>If for some reason this installion method does not work for you, check out <a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android#alternative-installation-methods">alternative installation methods</a>.</p>
 
 <h2>Integration into your app</h2>
 <p><strong>Enabling the SDK</strong></p>
