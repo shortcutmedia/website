@@ -1,3 +1,5 @@
+require 'bootstrap-sass'
+
 ###
 # Page options, layouts, aliases and proxies
 ###

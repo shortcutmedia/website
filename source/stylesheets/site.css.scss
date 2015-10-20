@@ -1,5 +1,21 @@
 @charset "utf-8";
-@import "normalize";
+
+// Do not import normalize with bootstrap as bootstrap already comes with normalize
+// @import "normalize";
+
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass.
+// `@import "bootstrap"` imports all of bootstrap. That is ok for debugging but
+// do not do that in production. Instead import only what is neede in bootstrap-custom.
+// @import "bootstrap";
+@import "bootstrap-custom";
+
+
 
 body {
   background: #ECC561;
