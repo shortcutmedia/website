@@ -18,15 +18,10 @@
 
 
 body {
-  background: #ECC561;
+  background: #FFFFFF;
   text-align: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-}
-
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
 }
 
 h1 {
@@ -37,31 +32,51 @@ h1 {
   margin: 0;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
-  }
+//** TEASER **//
+#teaser {
+  background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
+  background-color: #78d298;
+  height: 712px;
 }
+//** END TEASER **//
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
+
+//** FEATURES **//
+#features {
+  background-color: #ffffff;
+  height: 848px;  
 }
+//** END FEATURES **//
+
+//** DASHBOARD PREVIEW **//
+#dashboard-preview {
+  background-color: #89b6cd;
+  height: 634px;
+}
+//** END DASHBOARD PREVIEW **//
+
+//** CUSTOMERS **//
+#customers {
+  background-color: #ffffff;
+  height: 334px;
+}
+//** END CUSTOMERS **//
+
+//** CALL TO ACTION **//
+#call-to-action {
+  background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
+  background-color: #78d298;
+  height: 250px;
+}
+//** END CALL TO ACTION **//
+
+//** FOOTER **//
+#footer {
+  background-color: #ffffff;
+  height: 268px;
+}
+//** END FOOTER **//
+
 
 @-webkit-keyframes welcome {
   from {
