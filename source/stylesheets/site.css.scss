@@ -15,35 +15,94 @@
 // @import "bootstrap";
 @import "bootstrap-custom";
 
+$navbar-font-size: 1.46rem;
 
 
 body {
-  background: #FFFFFF;
+  background: #fff;
   text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ars-maquette-web", sans-serif;
   font-size: 1em;
 }
 
 h1 {
   color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ars-maquette-web", sans-serif;
   font-size: 1.8em;
   font-weight: 400;
   margin: 0;
 }
+
+//** NAVBAR **//
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+  padding-top: 11px;
+  font-size: $navbar-font-size;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding-top: 22px;
+}
+
+.btn-default {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn {
+  font-size: $navbar-font-size;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.navbar-inverse {
+  .navbar-nav {
+    li {
+      a {
+        color: #fff;   
+      }
+    }
+  }
+}
+
+.nav {
+  li {
+    a {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+}
+
+.navbar-nav {
+  li {
+    a {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+}
+
+.navbar-brand {
+  padding: 4px 15px;
+}
+//** END NAVBAR **//
+
 
 //** TEASER **//
 #teaser {
   background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
   background-color: #78d298;
   height: 712px;
+  
 }
 //** END TEASER **//
 
 
 //** FEATURES **//
 #features {
-  background-color: #ffffff;
+  background-color: #fff;
   height: 848px;  
 }
 //** END FEATURES **//
@@ -57,7 +116,7 @@ h1 {
 
 //** CUSTOMERS **//
 #customers {
-  background-color: #ffffff;
+  background-color: #fff;
   height: 334px;
 }
 //** END CUSTOMERS **//
@@ -72,7 +131,7 @@ h1 {
 
 //** FOOTER **//
 #footer {
-  background-color: #ffffff;
+  background-color: #fff  ;
   height: 268px;
 }
 //** END FOOTER **//
