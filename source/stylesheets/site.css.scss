@@ -25,11 +25,8 @@ body {
   font-size: 1em;
 }
 
-h1 {
-  color: rgba(0,0,0,0.5);
+h1, h2 {
   font-family: "ars-maquette-web", sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
   margin: 0;
 }
 
@@ -43,17 +40,6 @@ h1 {
   font-weight: 300;
   letter-spacing: 1px;
   padding-top: 22px;
-}
-
-.btn-default {
-  background-color: transparent;
-  border-color: #fff;
-}
-
-.btn {
-  font-size: $navbar-font-size;
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 
 .navbar-inverse {
@@ -87,6 +73,21 @@ h1 {
 .navbar-brand {
   padding: 4px 15px;
 }
+
+.navbar-collapse {
+  padding: 0;
+}
+
+.btn-default {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn {
+  font-size: $navbar-font-size;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 //** END NAVBAR **//
 
 
@@ -96,6 +97,30 @@ h1 {
   background-color: #78d298;
   height: 712px;
   
+  .claim {
+    margin-top: 117px;  
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 4rem;
+    text-align: left;
+    font-weight: bold;
+  }  
+
+  h2 {
+    color: #fff;
+    font-size: 4rem;
+    text-align: left;
+    font-weight: lighter;
+  }  
+  
+  p {
+    color: #fff;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: lighter;
+  }
 }
 //** END TEASER **//
 
