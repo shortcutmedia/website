@@ -16,7 +16,8 @@
 @import "bootstrap-custom";
 
 $navbar-font-size: 1.46rem;
-
+$title-green: #78d298;
+$gray: #999999;
 
 body {
   background: #fff;
@@ -25,7 +26,7 @@ body {
   font-size: 1em;
 }
 
-h1, h2 {
+h1, h2, p {
   font-family: "ars-maquette-web", sans-serif;
   margin: 0;
 }
@@ -94,11 +95,17 @@ h1, h2 {
 //** TEASER **//
 #teaser {
   background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
-  background-color: #78d298;
+  background-color: $title-green;
   height: 712px;
   
   .claim {
-    margin-top: 117px;  
+    margin-top: 100px;  
+  }
+
+  .linkman {
+    position: absolute;
+    left: -30px;
+    top: -20px;
   }
   
   h1 {
@@ -106,20 +113,25 @@ h1, h2 {
     font-size: 4rem;
     text-align: left;
     font-weight: bold;
+    height: 52px;
+    letter-spacing: 1px;
   }  
 
   h2 {
     color: #fff;
-    font-size: 4rem;
+    font-size: 3.9375rem;
     text-align: left;
     font-weight: lighter;
+    line-height: 48px;
+    letter-spacing: 1px;
   }  
   
   p {
     color: #fff;
-    font-size: 2rem;
+    font-size: 18px;
     text-align: left;
     font-weight: lighter;
+    margin-top: 12px;
   }
 }
 //** END TEASER **//
@@ -128,7 +140,18 @@ h1, h2 {
 //** FEATURES **//
 #features {
   background-color: #fff;
-  height: 848px;  
+  height: 848px;
+  padding-top: 93px; 
+  
+  h1 {
+    color: #666666;
+    font-size: 3.9375rem;
+    text-align: center;
+    font-weight: normal;
+    .green {
+      color: $title-green;
+    }
+  }  
 }
 //** END FEATURES **//
 
@@ -136,6 +159,17 @@ h1, h2 {
 #dashboard-preview {
   background-color: #89b6cd;
   height: 634px;
+  padding-top: 93px; 
+  
+  h1 {
+    color: #fff;
+    font-size: 3.9375rem;
+    text-align: center;
+    font-weight: normal;
+  }  
+  
+  img {
+  }
 }
 //** END DASHBOARD PREVIEW **//
 
@@ -143,14 +177,44 @@ h1, h2 {
 #customers {
   background-color: #fff;
   height: 334px;
+  padding-top: 93px; 
+  
+  h1 {
+    color: #666666;
+    font-size: 3.9375rem;
+    text-align: center;
+    font-weight: normal;
+    .green {
+      color: $title-green;
+    }
+  }  
+  
+  .logos {
+    margin-top: 50px;
+  }
 }
 //** END CUSTOMERS **//
 
 //** CALL TO ACTION **//
 #call-to-action {
   background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
-  background-color: #78d298;
+  background-color: $title-green;
   height: 250px;
+  padding-top: 48px; 
+  
+  h1 {
+    color: #fff;
+    font-size: 2.7rem;
+    text-align: left;
+    font-weight: normal;
+  }  
+
+  h2 {
+    color: #fff;
+    font-size: 2.7rem;
+    text-align: left;
+    font-weight: lighter;
+  }  
 }
 //** END CALL TO ACTION **//
 
@@ -158,25 +222,26 @@ h1, h2 {
 #footer {
   background-color: #fff  ;
   height: 268px;
+  padding-top: 36px; 
+  ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0;
+    li {
+      margin-bottom: 15px;
+    }
+  }
+  a {
+    font-size: 1.25rem;
+    color: $gray;
+  }
+  li {
+    font-size: 1.25rem;
+    color: $gray;
+  }
+  .social {
+    margin-right: 10px;
+  }
 }
 //** END FOOTER **//
 
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}

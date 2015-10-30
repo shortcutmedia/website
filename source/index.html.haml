@@ -9,7 +9,7 @@
           %span{class: "icon-bar"}
           
         %a.navbar-brand{href: "http://shortcutmedia.com"}
-          %img{src: image_path('/images/shortcut-logo.png'), alt: "Shortcut Mobile"} 
+          %img{src: image_path('/images/shortcut-logo.png'), width: "154", height: "33", alt: "Shortcut Mobile"} 
         
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav.pull-right
@@ -19,25 +19,134 @@
             %a{href: "http://shortcutmedia.com/about.html"}DOCUMENTATION
           %li
             %a.btn.btn-default{href: "http://manager.shortcutmedia.com/users/sign_in"}LOGIN
-  .claim
-    .container
-      .row
-        .col-lg-7
-          %h1 Power up your app:
-          %h2 Get downloads, engagement & re-engagement for your app
-          %p Create a Shortcut and give it super powers. It's easy and it's free. Try ti yourself!
+  
+  .container
+    .row
+      .col-lg-7
+        .claim
+          %h1 Power up your links:
+          %h2 
+            Get downloads, engagement & 
+            %br re-engagement for your app
+          %p 
+            Create a Shortcut and give it super powers. It's easy and it's free.
+            %br
+            %strong Try it yourself!
 
-.features
-
-.dashboard-preview
-
-.customers
-
-.call-to-action
-
-.footer
-
+          :javascript
+            window.insertCreateShortcutFrame();
             
+            
+      .col-lg-5
+        .linkman
+          %img{src: image_path('/images/linkman@2x.png'), width: "596", height: "653"} 
+          
+#features
+  .container
+    .row
+      .col-lg-12
+        %h1 
+          %span.green Our benefits. 
+          Your marketing power.
+
+#dashboard-preview
+  .container
+    .row
+      .col-lg-12
+        %h1 
+          Take control. 
+          Manage your shortcuts.
+    .row
+      .col-lg-12
+        %img{src: image_path('/images/screen.png'), width: "1106", height: "441"} 
+        
+
+#customers
+  .container
+    .row
+      .col-lg-12
+        %h1 
+          %span.green Successful cases. 
+          Happy customers.
+    .row.logos
+      .col-lg-2
+        %img{src: image_path('/images/logo_apg.png'), width: "169", height: "42"} 
+      .col-lg-2
+        %img{src: image_path('/images/logo_audi.png'), width: "169", height: "42"} 
+      .col-lg-2
+        %img{src: image_path('/images/logo_betty_bossi.png'), width: "169", height: "42"} 
+      .col-lg-2
+        %img{src: image_path('/images/logo_carlsberg.png'), width: "169", height: "42"} 
+      .col-lg-2
+        %img{src: image_path('/images/logo_kurier.png'), width: "169", height: "42"} 
+      .col-lg-2
+        %img{src: image_path('/images/logo_teliasonera.png'), width: "169", height: "42"} 
+          
+#call-to-action
+  .container
+    .row
+      .col-lg-7
+        %h1 Add more power to your campaign links.
+        %h2 It's easy and it's free:
+        
+        :javascript
+          window.insertCreateShortcutFrame();
+        
+#footer
+  .container
+    .row
+      .col-lg-4
+        %ul
+          %li
+            %a{href: "#"}Benefits
+          %li          
+            %a{href: "#"}Documentation
+          %li
+            %a{href: "#"}About us
+          %li
+            %a{href: "#"}Blog
+          %li
+            %a{href: "#"}Cases
+          %li
+            %a{href: "#"}Shortcut app
+      .col-lg-3
+        %ul.footer
+          %li
+            %a{href: "#"}Touch points
+          %li          
+            %a{href: "#"}Mobile deep linking
+          %li
+            %a{href: "#"}App marketing
+          %li
+            %a{href: "#"}Analytics and tracking
+          %li
+            %a{href: "#"}Social media integration
+          %li
+            %a{href: "#"}Optimization tools
+      .col-lg-2
+        %ul.footer
+          %li
+            %a{href: "#"}Contact
+          %li          
+            %a{href: "#"}Terms
+          %li
+            %a{href: "#"}Privacy
+      .col-lg-3
+        %ul.footer
+          %li
+            Shortcut Media AG &copy; 2015
+          %li           
+            Crafted with love 
+            %strong for you!
+          %li
+            %br
+          %li
+            %a.social{href: "https://www.facebook.com/shortcutapp", target: "_blank"}
+              %img{src: image_path('/images/facebook.png'), width: "30", height: "30", alt: "Shortcut Mobile"}
+            %a.social{href: "#"}
+              %img{src: image_path('/images/twitter.png'), width: "30", height: "30", alt: "Shortcut Mobile"}            
+            %a.social{href: "#"}
+              %img{src: image_path('/images/linkedin.png'), width: "30", height: "30", alt: "Shortcut Mobile"}
           
           
       
