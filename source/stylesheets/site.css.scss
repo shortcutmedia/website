@@ -44,8 +44,11 @@ h1, h2, p {
 }
 
 .navbar-inverse {
+
   .navbar-nav {
+
     li {
+
       a {
         color: #fff;   
       }
@@ -54,7 +57,9 @@ h1, h2, p {
 }
 
 .nav {
+
   li {
+
     a {
       padding-left: 35px;
       padding-right: 35px;
@@ -63,7 +68,9 @@ h1, h2, p {
 }
 
 .navbar-nav {
+
   li {
+
     a {
       padding-top: 9px;
       padding-bottom: 9px;
@@ -96,18 +103,11 @@ h1, h2, p {
 #teaser {
   background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
   background-color: $title-green;
-  height: 712px;
   
   .claim {
     margin-top: 100px;  
   }
 
-  .linkman {
-    position: absolute;
-    left: -30px;
-    top: -20px;
-  }
-  
   h1 {
     color: #fff;
     font-size: 4rem;
@@ -148,6 +148,7 @@ h1, h2, p {
     font-size: 3.9375rem;
     text-align: center;
     font-weight: normal;
+
     .green {
       color: $title-green;
     }
@@ -158,7 +159,6 @@ h1, h2, p {
 //** DASHBOARD PREVIEW **//
 #dashboard-preview {
   background-color: #89b6cd;
-  height: 634px;
   padding-top: 93px; 
   
   h1 {
@@ -169,6 +169,7 @@ h1, h2, p {
   }  
   
   img {
+    margin-top: 60px;
   }
 }
 //** END DASHBOARD PREVIEW **//
@@ -176,7 +177,6 @@ h1, h2, p {
 //** CUSTOMERS **//
 #customers {
   background-color: #fff;
-  height: 334px;
   padding-top: 93px; 
   
   h1 {
@@ -184,13 +184,20 @@ h1, h2, p {
     font-size: 3.9375rem;
     text-align: center;
     font-weight: normal;
+
     .green {
       color: $title-green;
     }
   }  
   
   .logos {
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 83px; 
+  }
+  
+  img {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 //** END CUSTOMERS **//
@@ -221,24 +228,29 @@ h1, h2, p {
 //** FOOTER **//
 #footer {
   background-color: #fff  ;
-  height: 268px;
   padding-top: 36px; 
+  padding-bottom: 21px; 
+  
   ul {
     list-style-type: none;
     text-align: left;
     padding-left: 0;
+  
     li {
       margin-bottom: 15px;
     }
   }
+  
   a {
     font-size: 1.25rem;
     color: $gray;
   }
+  
   li {
     font-size: 1.25rem;
     color: $gray;
   }
+  
   .social {
     margin-right: 10px;
   }
