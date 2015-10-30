@@ -1,0 +1,29 @@
+#header
+  #nav.navbar.navbar-inverse{role: "navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle.collapsed{type: "button", 'data-toggle' => "collapse", 'data-target' => "#bs-example-navbar-collapse-1"}
+          %span{class: "sr-only"} Toggle navigation
+          %span{class: "icon-bar"}
+          %span{class: "icon-bar"}
+          %span{class: "icon-bar"}
+          
+        %a.navbar-brand{href: "http://shortcutmedia.com"}
+          %img{src: image_path('/images/shortcut-logo.png'), width: "154", height: "33", alt: "Shortcut Mobile"} 
+        
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.pull-right
+          %li
+            %a{href: "http://shortcutmedia.com/sdk.html"}BENEFITS
+          %li{style: "margin-right:20px;"}
+            %a{href: "http://shortcutmedia.com/about.html"}DOCUMENTATION
+          %li
+            %a.btn.btn-default{href: "http://manager.shortcutmedia.com/users/sign_in"}LOGIN
+
+.benefits-header
+  .container
+    .row
+      .col-lg-12
+        %h1 
+          Meet the 
+          %span.green shortcut benefits

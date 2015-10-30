@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
+<%= partial 'favicon' %>
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Shortcut" %></title>
 
@@ -19,5 +21,9 @@
 
   <body class="<%= page_classes %>">
     <%= yield %>
+    
+    <%= partial '_call-to-action' %>
+    
+    <%= partial 'footer' %>
   </body>
 </html>
