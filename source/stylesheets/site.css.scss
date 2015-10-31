@@ -59,21 +59,33 @@ hr {
   padding-top: 22px;
 }
 
+.navbar-inverse .navbar-nav li a:hover {
+  color: #eee;
+}
+
+.navbar-inverse .navbar-nav li a.btn.btn-default:hover {
+  color: $title-green;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .navbar-inverse {
-
   .navbar-nav {
-
     li {
-
       a {
-        color: #fff;   
+        color: #fff;
       }
     }
   }
 }
 
 .nav {
-
   li {
 
     a {
@@ -163,7 +175,7 @@ hr {
 //** FEATURES **//
 #features {
   background-color: #fff;
-  height: 848px;
+  //height: 848px;
   padding-top: 93px; 
   
   h1 {
@@ -175,6 +187,10 @@ hr {
     .green {
       color: $title-green;
     }
+  }
+  
+  .spacing-100 {
+    min-height: 100px;
   }  
 }
 //** END FEATURES **//
@@ -318,10 +334,16 @@ hr {
   }
   
   .selected {
+    border-width: 2px;
+    border-color: $title-green;
     border-top-style: solid;
     border-right-style: none;
     border-bottom-style: solid;
     border-left-style: none;
+    .benefit-icon {
+      fill: $title-green; 
+    }  
+    
   }
 }
 
@@ -415,7 +437,4 @@ hr {
   }
 }
 
-.benefit-icon {
-  fill: $title-green; 
-}  
 //** END BENEFITS **//

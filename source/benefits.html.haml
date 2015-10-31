@@ -1,24 +1,5 @@
 #header
-  #nav.navbar.navbar-inverse{role: "navigation"}
-    .container
-      .navbar-header
-        %button.navbar-toggle.collapsed{type: "button", 'data-toggle' => "collapse", 'data-target' => "#bs-example-navbar-collapse-1"}
-          %span{class: "sr-only"} Toggle navigation
-          %span{class: "icon-bar"}
-          %span{class: "icon-bar"}
-          %span{class: "icon-bar"}
-          
-        %a.navbar-brand{href: "http://shortcutmedia.com"}
-          %img{src: image_path('/images/shortcut-logo.png'), width: "154", height: "33", alt: "Shortcut Logo"} 
-        
-      #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.navbar-nav.pull-right
-          %li
-            %a{href: "http://shortcutmedia.com/sdk.html"}BENEFITS
-          %li{style: "margin-right:20px;"}
-            %a{href: "http://shortcutmedia.com/about.html"}DOCUMENTATION
-          %li
-            %a.btn.btn-default{href: "http://manager.shortcutmedia.com/users/sign_in"}LOGIN
+  =partial 'navbar'
 
 #benefits-header
   .container
@@ -39,31 +20,39 @@
       .col-lg-6
         .row
           .col-lg-3
-            %img{src: image_path('/images/benefit-short-url.svg'), width: "23", height: "23", alt: "Short URLs"}
-            %p Short URLs
+            %a{href: "#benefits-short-urls"}
+              %img{src: image_path('/images/benefit-short-url.svg'), width: "23", height: "23", alt: "Short URLs"}
+              %p Short URLs
+          .col-lg-3.selected
+            %a{href: "#benefits-mobile-deep-linking"}
+              %img{src: image_path('/images/benefit-mobile-deep-linking.svg'), width: "23", height: "23", alt: "Mobile Deep Linking"}
+              %p Mobile Deep Linking 
           .col-lg-3
-            %img{src: image_path('/images/benefit-mobile-deep-linking.svg'), width: "23", height: "23", alt: "Mobile Deep Linking"}
-            %p Mobile Deep Linking 
+            %a{href: "#benefits-offline-channels"}
+              %img{src: image_path('/images/benefit-qrcode.svg'), width: "23", height: "23", alt: "Offline Channels"}
+              %p Offline Channels 
           .col-lg-3
-            %img{src: image_path('/images/benefit-qrcode.svg'), width: "23", height: "23", alt: "Offline Channels"}
-            %p Offline Channels 
-          .col-lg-3
-            %img{src: image_path('/images/benefit-instore-reach.svg'), width: "23", height: "23", alt: "In-Store Reach"}
-            %p In-Store Reach 
+            %a{href: "#benefits-in-store-reach"}
+              %img{src: image_path('/images/benefit-instore-reach.svg'), width: "23", height: "23", alt: "In-Store Reach"}
+              %p In-Store Reach 
       .col-lg-6
         .row
           .col-lg-3
-            %img{src: image_path('/images/benefit-app-marketing.svg'), width: "23", height: "23", alt: "App Marketing Banners"}
-            %p App Marketing Banners 
+            %a{href: "#benefits-app-marketing-banner"}
+              %img{src: image_path('/images/benefit-app-marketing.svg'), width: "23", height: "23", alt: "App Marketing Banners"}
+              %p App Marketing Banners 
           .col-lg-3
-            %img{src: image_path('/images/benefit-analytics.svg'), width: "23", height: "23", alt: "Analytics"}
-            %p Analytics 
+            %a{href: "#benefits-analytics"}
+              %img{src: image_path('/images/benefit-analytics.svg'), width: "23", height: "23", alt: "Analytics"}
+              %p Analytics 
           .col-lg-3
-            %img{src: image_path('/images/benefit-ab-testing.svg'), width: "23", height: "23", alt: "A/B Testing"}
-            %p A/B Testing 
+            %a{href: "#benefits-ab-testing"}
+              %img{src: image_path('/images/benefit-ab-testing.svg'), width: "23", height: "23", alt: "A/B Testing"}
+              %p A/B Testing 
           .col-lg-3
-            %img{src: image_path('/images/benefit-share.svg'), width: "23", height: "23", alt: "Share"}
-            %p Share
+            %a{href: "#benefits-share"}
+              %img{src: image_path('/images/benefit-share.svg'), width: "23", height: "23", alt: "Share"}
+              %p Share
     %hr
     
 .benefits            
@@ -176,5 +165,5 @@
             %strong link in all your Social Media channels
             and secondly gives you the opportunity to schedule your posts and have them sent out automatically.
 
-//=partial 'call-to-action'
+=partial 'call-to-action'
 =partial 'footer'  

@@ -1,24 +1,5 @@
 #teaser
-  #nav.navbar.navbar-inverse{role: "navigation"}
-    .container
-      .navbar-header
-        %button.navbar-toggle.collapsed{type: "button", 'data-toggle' => "collapse", 'data-target' => "#bs-example-navbar-collapse-1"}
-          %span{class: "sr-only"} Toggle navigation
-          %span{class: "icon-bar"}
-          %span{class: "icon-bar"}
-          %span{class: "icon-bar"}
-          
-        %a.navbar-brand{href: "http://shortcutmedia.com"}
-          %img{src: image_path('/images/shortcut-logo.png'), width: "156", height: "32", alt: "Shortcut Logo"} 
-        
-      #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.navbar-nav.pull-right
-          %li
-            %a{href: "http://shortcutmedia.com/sdk.html"}BENEFITS
-          %li{style: "margin-right:20px;"}
-            %a{href: "http://shortcutmedia.com/about.html"}DOCUMENTATION
-          %li
-            %a.btn.btn-default{href: "http://manager.shortcutmedia.com/users/sign_in"}LOGIN
+  =partial 'navbar'
   
   .container
     .row
@@ -47,7 +28,54 @@
         %h1 
           %span.green Our benefits. 
           Your marketing power.
-
+  #benefits-nav
+    .container
+      .row
+        .col-lg-4
+          %a{href: "/benefits.html#benefits-short-urls"}
+            %img{src: image_path('/images/benefit-short-url-b.svg'), width: "50", height: "50", alt: "Short URLs"}
+            %p
+              %strong Short URLs
+              %br
+              To use in all your online advertising
+        .col-lg-4
+          %a{href: "/benefits.html#benefits-mobile-deep-linking"}
+            %img{src: image_path('/images/benefit-mobile-deep-linking-b.svg'), width: "50", height: "50", alt: "Mobile Deep Linking"}
+            %p
+              %strong Mobile Deep Linking 
+              %br
+              For better user experience
+        .col-lg-4
+          %a{href: "/benefits.html#benefits-offline-channels"}
+            %img{src: image_path('/images/benefit-qrcode-b.svg'), width: "50", height: "50", alt: "Offline Channels"}
+            %p
+              %strong Offline Channels
+              %br
+              Reach your customers offline
+      .row
+        .col-lg-4
+          %a{href: "/benefits.html#benefits-in-store-reach"}
+            %img{src: image_path('/images/benefit-instore-reach-b.svg'), width: "50", height: "50", alt: "In-Store Reach"}
+            %p
+              %strong In-Store Reach
+              %br
+              Interact with your customers
+        .col-lg-4
+          %a{href: "/benefits.html#benefits-app-marketing-banner"}
+            %img{src: image_path('/images/benefit-app-marketing-b.svg'), width: "50", height: "50", alt: "App Marketing Banners"}
+            %p
+              %strong App Marketing Banners
+              %br
+              Market your app effectively 
+        .col-lg-4
+          %a{href: "/benefits.html#benefits-analytics"}
+            %img{src: image_path('/images/benefit-analytics-b.svg'), width: "50", height: "50", alt: "Analytics"}
+            %p
+              %strong Analytics
+              %br
+              All the information you need
+      .spacing-100
+              
 #dashboard-preview
   .container
     .row
