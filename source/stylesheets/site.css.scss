@@ -18,19 +18,35 @@
 $navbar-font-size: 1.46rem;
 $title-green: #78d298;
 $gray: #999999;
+$grayer: #666666;
+$pattern-image: '/images/benefit-pattern.svg';
+$font: "ars-maquette-web";
 
 body {
   background: #fff;
   text-align: center;
-  font-family: "ars-maquette-web", sans-serif;
+  font-family: $font, sans-serif;
   font-size: 1em;
 }
 
 h1, h2, p {
-  font-family: "ars-maquette-web", sans-serif;
+  font-family: $font, sans-serif;
   margin: 0;
 }
 
+p {
+  color: $grayer;
+  font-size: 16px;
+  text-align: left;
+  font-weight: lighter;
+  line-height: 25px;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+  
 //** NAVBAR **//
 .navbar {
   background-color: transparent;
@@ -100,15 +116,15 @@ h1, h2, p {
 
 //** HEADER **//
 #header {
-  background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
+  background: url(image_path($pattern-image)) left top repeat;
   background-color: $title-green;
-  padding-bottom: 1px;
+  height: 88px;
 }
 //** END HEADER **//
 
 //** TEASER **//
 #teaser {
-  background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
+  background: url(image_path($pattern-image)) left top repeat;
   background-color: $title-green;
   
   .claim {
@@ -151,7 +167,7 @@ h1, h2, p {
   padding-top: 93px; 
   
   h1 {
-    color: #666666;
+    color: $grayer;
     font-size: 3.9375rem;
     text-align: center;
     font-weight: normal;
@@ -187,7 +203,7 @@ h1, h2, p {
   padding-top: 93px; 
   
   h1 {
-    color: #666666;
+    color: $grayer;
     font-size: 3.9375rem;
     text-align: center;
     font-weight: normal;
@@ -211,7 +227,7 @@ h1, h2, p {
 
 //** CALL TO ACTION **//
 #call-to-action {
-  background: url(image_path('/images/shortcut-teaser.png')) left top repeat;
+  background: url(image_path($pattern-image)) left top repeat;
   background-color: $title-green;
 
   h1 {
@@ -264,19 +280,142 @@ h1, h2, p {
 //** END FOOTER **//
 
 //** BENEFITS **//
-.benefits-header {
+#benefits-header {
   background-color: #fff;
   padding-top: 80px; 
   
   h1 {
-    color: #666666;
+    color: $grayer;
     font-size: 3.9375rem;
     text-align: center;
-    font-weight: normal;
+    font-weight: bold;
+    margin-bottom: 30px;
 
     .green {
       color: $title-green;
     }
-  }  
+  }
+  
+  p {
+    text-align: center;
+  }
 }
+
+#benefits-nav {
+  margin-top: 40px;
+  img {
+    margin: 40px auto 20px auto;
+    display: block;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    padding-bottom: 28px;
+  }
+  
+  .selected {
+    border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+  }
+}
+
+.benefits {
+  h1 {
+    color: $grayer;
+    font-size: 3.9375rem;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+}
+
+#benefits-short-urls {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .description_offset {
+    padding-top: 64px;
+  }
+}
+
+#benefits-mobile-deep-linking {
+  padding-top: 48px;
+  padding-bottom: 85px;
+  .description_offset {
+    padding-top: 60px;
+  }
+}
+
+#benefits-offline-channels {
+  background-color: #89b6cd;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .description_offset {
+    padding-top: 36px;
+  }
+  
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+#benefits-in-store-reach {
+  padding-top: 73px;
+  padding-bottom: 100px;
+  .description_offset {
+    padding-top: 40px;
+  }
+}
+#benefits-app-marketing-banner {
+  padding-top: 68px;
+  padding-bottom: 85px;
+  .description_offset {
+    padding-top: 85px;
+  }
+}
+
+#benefits-analytics {
+  background-color: #89b6cd;
+  padding-top: 100px;
+  .description_offset {
+    padding-top: 0px;
+  }
+  
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+#benefits-ab-testing {
+  padding-top: 94px;
+  padding-bottom: 100px;
+  .description_offset {
+    padding-top: 44px;
+  }
+}
+
+#benefits-share {
+  padding-top: 62px;
+  padding-bottom: 100px;
+  .description_offset {
+    padding-top: 20px;
+  }
+}
+
+.benefit-icon {
+  fill: $title-green; 
+}  
 //** END BENEFITS **//

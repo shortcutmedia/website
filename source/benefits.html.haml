@@ -9,7 +9,7 @@
           %span{class: "icon-bar"}
           
         %a.navbar-brand{href: "http://shortcutmedia.com"}
-          %img{src: image_path('/images/shortcut-logo.png'), width: "154", height: "33", alt: "Shortcut Mobile"} 
+          %img{src: image_path('/images/shortcut-logo.png'), width: "154", height: "33", alt: "Shortcut Logo"} 
         
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav.pull-right
@@ -20,10 +20,161 @@
           %li
             %a.btn.btn-default{href: "http://manager.shortcutmedia.com/users/sign_in"}LOGIN
 
-.benefits-header
+#benefits-header
   .container
     .row
       .col-lg-12
         %h1 
           Meet the 
           %span.green shortcut benefits
+    .row
+      .col-lg-offset-3.col-lg-6
+        %p
+          Market your app via multiple channels. Measure the success of your campaigns and the efficiency of your channels. Analyze the acquisition funnel and find out at what stages you are most successful. We provide you with the right tools.
+
+#benefits-nav
+  .container
+    %hr
+    .row
+      .col-lg-6
+        .row
+          .col-lg-3
+            %img{src: image_path('/images/benefit-short-url.svg'), width: "23", height: "23", alt: "Short URLs"}
+            %p Short URLs
+          .col-lg-3
+            %img{src: image_path('/images/benefit-mobile-deep-linking.svg'), width: "23", height: "23", alt: "Mobile Deep Linking"}
+            %p Mobile Deep Linking 
+          .col-lg-3
+            %img{src: image_path('/images/benefit-qrcode.svg'), width: "23", height: "23", alt: "Offline Channels"}
+            %p Offline Channels 
+          .col-lg-3
+            %img{src: image_path('/images/benefit-instore-reach.svg'), width: "23", height: "23", alt: "In-Store Reach"}
+            %p In-Store Reach 
+      .col-lg-6
+        .row
+          .col-lg-3
+            %img{src: image_path('/images/benefit-app-marketing.svg'), width: "23", height: "23", alt: "App Marketing Banners"}
+            %p App Marketing Banners 
+          .col-lg-3
+            %img{src: image_path('/images/benefit-analytics.svg'), width: "23", height: "23", alt: "Analytics"}
+            %p Analytics 
+          .col-lg-3
+            %img{src: image_path('/images/benefit-ab-testing.svg'), width: "23", height: "23", alt: "A/B Testing"}
+            %p A/B Testing 
+          .col-lg-3
+            %img{src: image_path('/images/benefit-share.svg'), width: "23", height: "23", alt: "Share"}
+            %p Share
+    %hr
+    
+.benefits            
+  #benefits-short-urls
+    .container
+      .row
+        .col-lg-5
+          %img{src: image_path('/images/temp-benefit-1.png'), width: "327", height: "405", alt: "Short URLs"}
+        .col-lg-6
+          %h1.description_offset
+            Short URLs
+          %p
+            For each Shortcut a Short URL is created, which you can use in all your online advertising. For more effective marketing you should power up your link by
+            %strong using our super powers.
+
+  .container
+    %hr
+      
+  #benefits-mobile-deep-linking
+    .container
+      .row
+        .col-lg-5
+          %h1.description_offset
+            Mobile Deep Linking
+          %p
+            Don’t waste great marketing by using ordinary links. Mobile deep links are 
+            %strong smarter links.
+            They detect if the user has your app installed or not and directs your customer to the right content.
+        .col-lg-7
+          %img{src: image_path('/images/temp-benefit-2.png'), width: "615", height: "470", alt: "Mobile Deep Linking"}
+
+  #benefits-offline-channels
+    .container
+      .row
+        .col-lg-6
+          %img{src: image_path('/images/temp-benefit-3.png'), width: "484", height: "360", alt: "Offline Channels"}
+        .col-lg-6
+          %h1.description_offset
+            Offline Channels
+          %p
+            For print advertising you have a QR-code and image recognition to choose from. 
+            %strong QR-codes and image recognition 
+            makes it possible for you to get on your offline customers’ mobile.
+          
+  #benefits-in-store-reach
+    .container
+      .row
+        .col-lg-6
+          %h1.description_offset
+            In-Store Reach
+          %p
+            If you have a brick-and-mortar shop or a restaurant iBeacons are a great way to interact with your customers 
+            %strong while they are shopping
+            at your or in close approximity of your store.
+        .col-lg-6
+          %img{src: image_path('/images/temp-benefit-4.png'), width: "540", height: "401", alt: "In-Store Reach"}
+  .container
+    %hr
+
+  #benefits-app-marketing-banner
+    .container
+      .row
+        .col-lg-6
+          %img{src: image_path('/images/temp-benefit-5.png'), width: "367", height: "483", alt: "App Marketing Banners"}
+        .col-lg-6
+          %h1.description_offset
+            App Marketing Banners
+          %p
+            Market your app on your mobile website or on your desktop website with our app banners. Use our banner editor and create banners that have the 
+            %strong look and feel of your brand.
+
+  #benefits-analytics
+    .container
+      .row
+        .col-lg-7
+          %img{src: image_path('/images/temp-benefit-6.png'), width: "649", height: "411", alt: "Analytics"}
+        .col-lg-5
+          %h1.description_offset
+            Analytics
+          %p
+            Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and 
+            %strong boost your app downloads.
+
+  #benefits-ab-testing
+    .container
+      .row
+        .col-lg-6
+          %h1.description_offset
+            A/B Testing
+          %p
+            The process of creating a good marketing campaign never stops. Only with continuous testing of different alternatives and 
+            %strong campaign optimization 
+            you can truly figure out what works best for your customer and for your brand.
+        .col-lg-6
+          %img{src: image_path('/images/temp-benefit-7.png'), width: "374", height: "406", alt: "A/B Testing"}
+
+  .container
+    %hr
+
+  #benefits-share
+    .container
+      .row
+        .col-lg-6
+          %img{src: image_path('/images/temp-benefit-8.png'), width: "388", height: "317", alt: "Share"}
+        .col-lg-6
+          %h1.description_offset
+            Social Media Integration
+          %p
+            Social Media Integration enables first of all easy distribution of your
+            %strong link in all your Social Media channels
+            and secondly gives you the opportunity to schedule your posts and have them sent out automatically.
+
+//=partial 'call-to-action'
+=partial 'footer'  
