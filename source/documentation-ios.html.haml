@@ -1,0 +1,124 @@
+#header
+  =partial 'navbar'
+
+#benefits-header
+  .container
+    .row
+      .col-lg-12
+        %h1 
+          Shortcut 
+          %span.green documentation
+    .row
+      .col-lg-offset-3.col-lg-6
+        %p
+          You get a lot of benefits and don't need much to get started.
+
+.docs
+  .container
+    .row
+      %hr
+      .col-lg-3
+        .row
+          .col-lg-10.grid-gutter{style: "background-color:#f4f4f4"}
+            %ul.nav-doc
+              %li
+                %p Basics
+                %ul
+                  %li
+                    %p.active Overview
+                .border-bottom
+              %li
+                %p Deep Linking SDK
+                %ul
+                  %li
+                    %a{href: "/documentation-ios.html"} iOS
+                  %li
+                    %a{href: "//documentation-android.html"} Android
+                .border-bottom
+              %li
+                %p Offline Interaction SDK
+                %ul
+                  %li
+                    %a{href: "/documentation-offline-interaction.html"} Implementation
+                
+      .col-lg-7.text-doc
+        %h1 Integrating your iOS Deep Linking SDK
+        %h2 Installation
+        %ol
+          %li
+            %a{href: "https://github.com/shortcutmedia/shortcut-deeplink-sdk-ios/releases/download/v0.0.1-beta/ShortcutDeepLinkingSDK-0.0.1-beta.zip"} Download the latest SDK
+            %p
+              as zip file and unzip.
+          %li
+            %p 
+              Add the
+              %i ShortcutDeepLinkingSDK.framework
+              file to your project, e.g. by dragging it into the Project Navigator of your project in Xcode. Make sure to check
+              %strong Copy items if needed
+              and 
+              %strong Create groups
+              in the import dialog.
+            %img{width: "50%", src: "/imgages/xcode-screenshot-import.png"}
+          %li
+            %p 
+              Within your project's 
+              %strong Build phases
+              make sure that the 
+              %i ShortcutDeepLinkingSDK.framework
+              is added in the 
+              %strong Link binary with libraries
+              section. If you don't find it there, drag it from the Project Navigator to the list.
+
+        %h2 Integration Into Your App
+        %p
+          %strong Enabling deferred deep linking
+        %p
+          %strong Step 1:
+          In your
+          %i AppDelegate.m
+          file you have to import the SDK.
+        .highlight
+          %pre
+            %code.language-objective-c{'data-lang' => "objective-c"}
+              %span{style: "color:#77492d"} #import
+              %span{style: "color:#cf3125"} &lt;ShortcutDeepLinkingSDK/ShortcutDeepLinkingSDK.h&gt;
+  
+        %p
+          %strong Step 2:
+          Then you have to tell the SDK about the app launch.
+        %p
+          Add the following to 
+          %code -application:didFinishLaunchingWithOptions
+
+        .highlight
+          %pre
+            %code.language-objective-c{'data-lang' => "objective-c"}
+              %span{style: "color:#000000"} [[
+              %span{style: "color:#508187"} SCDeepLinking
+              %span{style: "color:#33595d"} sharedInstance
+              %span{style: "color:#000000"} ]
+              %span{style: "color:#33595d"} launch
+              %span{style: "color:#000000"} ];
+
+<p><strong>Collecting deep link interaction statistics</strong></p>
+<p><strong>Step 1:</strong> You have to tell the SDK when a deep link is opened.</p>
+<p>Add the following to <code>-application:openURL:sourceApplication:annotation:</code> (you have added this method to your app delegate when you implemented your app's normal deep link handling).</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span style="color:#508187">SCSession</span> <span style="color:#000000">*deepLinkSession = [[</span><span style="color:#508187">SCDeepLinking</span> <span style="color:#33595d">sharedInstance</span><span style="color:#000000">]</span> <span style="color:#33595d">startSessionWithURL</span><span style="color:#000000">:url];</span>
+<span style="color:#000000">url =</span> <span style="color:#508187">deepLinkSession</span><span style="color:#000000">.</span><span style="color:#508187">url</span><span style="color:#000000">;</span></code></pre>
+</div>
+
+<p><strong>Step 2 (optional):</strong> You can tell the SDK when a user is done with looking at the deep link content; this allows to collect content session duration statistics.</p>
+<p>To do so you have to call <code>-finish</code> on the deep link session object that you obtained in the previous step when the user is done looking at the deep link content.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span style="color:#000000">[</span><span style="color:#508187">deepLinkSession</span> <span style="color:#33595d">finish</span><span style="color:#000000">];</span></code></pre>
+</div>
+
+<p>Typically you present a new view controller when a user opens a deep link. You now have to create a new property on this view controller holding the deep link session object. This way you can call -finish on it when the user is done looking at the content (e.g. when dismissing the view controller or navigating away from it).</p>
+                    
+      .col-lg-2.text-doc
+        %p
+          Here comes the tool tip
+    %hr
+
+=partial 'footer'  

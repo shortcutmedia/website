@@ -46,6 +46,10 @@ hr {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.grid-gutter {
+  padding-left: 30px;
+}
   
 //** NAVBAR **//
 .navbar {
@@ -438,3 +442,85 @@ hr {
 }
 
 //** END BENEFITS **//
+
+//** DOCUMENTATION **//
+.docs {
+  border-style-top: solid;
+  padding-top: 80px;
+}
+
+.nav-doc {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: left;
+  
+  .border-bottom {
+    border-bottom-style: solid;
+    border-width: 1px;
+    width: 20px;
+    color: #ddd;
+    padding-top: 20px;    
+    margin-bottom: 20px;   
+  }
+  
+  p{ 
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  a {
+    color: #666666;
+    font-size: 16px;
+    text-align: left;
+    font-weight: lighter;
+    line-height: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  ul {
+    list-style: none;
+    padding-left:0;
+    li {
+      border-style: none;
+    }
+    a {
+      font-size: 1.5rem;
+      font-weight: lighter;
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+.active {
+  color: $title-green;
+  font-weight: lighter;
+}
+
+.text-doc {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: left;
+  
+  h1 {
+    color: $grayer;
+    font-size: 2.8rem;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  ul{
+    li {
+      font-size: 1.5rem;
+      font-weight: lighter;
+      a {
+        color: $title-green;
+      }
+    }
+  }
+}
+//** FIN DOCUMANTATION **//
