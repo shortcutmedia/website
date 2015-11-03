@@ -1,0 +1,91 @@
+<h1 id="Deep-Linking-SDK" class="page-header">Integrating your Android Deep Linking SDK</h1>
+
+<h2>Prerequisites</h2>
+<p>To make use of this SDK you need an Android app that supports deep linking. The section below <a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android#add-deep-linking-support-to-your-app">Add deep linking support to your app</a> explains how to configure your app to support deep links. Please follow the instructions first.</p>
+
+<h2>Installation</h2>
+<ol>
+  <li><a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android/releases/download/v0.1.0/DeepLinkingSDK.aar">Download the latest SDK</a> as .AAR file and copy it to the project's libs directory (typically <code>app/libs</code>)</li>
+  <li><p>Add a directory repository in <code>build.gradle</code> and add <code>compile 'sc.shortcut.sdk.android.deeplinking:sc-deeplinking:0.1.0@aar'</code> to the dependencies section of your application's <code>build.gradle</code> file.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#0000CC">repositories</span> <span style="color:#000000">{
+  flatDir {
+    dirs <span style="color:#d14">'libs'</span>
+  <span style="color:#000000">}</span>
+}</span></code></pre>
+</div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color:#0000CC">dependencies</span> <span style="color:#000000">{
+  compile</span> <span style="color:#d14">'sc.shortcut.sdk.android.deeplinking:sc-deeplinking:0.1.0@aar'</span>
+<span style="color:#000000">}</span></code></pre>
+</div>
+</li>
+</ol>
+<p>If for some reason this installion method does not work for you, check out <a href="https://github.com/shortcutmedia/shortcut-deeplink-sdk-android#alternative-installation-methods">alternative installation methods</a>.</p>
+
+<h2>Integration into your app</h2>
+<p><strong>Enabling the SDK</strong></p>
+<p>There are 4 methods to enable the SDK inside your app. The preferred method is <a href="#method1">Method 1: Register our Application class</a>. If your application needs to support <strong>pre-14 API</strong>, please use <a href="#method4">Method 4: Manual session management</a>.</p>
+
+<p id="method1"><strong>Method 1: Register our Application class</strong></p>
+<p>Simply register our application class in the <i>Manifest.xml</i> configuration file.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color: #007700">&lt;application</span>
+  <span style="color: #0000CC">android:name=</span><span style="color: #d14">&quot;sc.shortcut.sdk.android.deeplinking.SCDeepLinkingApp&quot;</span></code></pre>
+</div>
+<p>That's it! Your app supports now deferred deep linking and statistics are automatically gathered.</p>
+
+<p id="method2"><strong>Method 2: Extend from our Application class</strong></p>
+<p>If you already have an Application class then extend it with <code>SCDeepLinkingApp</code>.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color: #008800;">public</span> <span style="color: #008800;">class</span> <span style="color: #BB0066;">YourApplication</span> <span style="color: #008800;">extends</span> SCDeepLinkingApp</code></pre>
+</div>
+  
+<p id="method3"><strong>Method 3: Initialize the SDK yourself</strong></p>
+<p><i>We do not support this yet!</i></p>
+
+<p id="method4"><strong>Method 4: Manual session management for pre-14 support</strong></p>
+<p>Unless you need to support <strong>pre-14 APT</strong>, we recommend using automatic session managment (methods 1 - 3).</p>
+<p>In your entry Activity add the following.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color: #555555;">@Override</span>
+  <span style="color: #008800;">protected</span> <span style="color: #333399;">void</span> <span style="color: #0066BB;">onCreate</span><span style="color: #333333">(</span>Bundle savedInstanceState<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+      <span style="color: #008800;">super</span><span style="color: #333333">.</span><span style="color: #0000CC">onCreate</span><span style="color: #333333">(</span>savedInstanceState<span style="color: #333333">);</span>
+      
+
+      SCDeepLinking deepLinking <span style="color: #333333">=</span> SCDeepLinking<span style="color: #333333">.</span><span style="color: #0000CC">getInstance</span><span style="color: #333333">(</span><span style="color: #008800;">this</span><span style="color: #333333">);</span>
+      <span style="color: #008800;">if</span> <span style="color: #333333">(</span>savedInstanceState <span style="color: #333333">==</span> <span style="color: #008800;">null</span><span style="color: #333333">)</span> <span style="color: #333333">{</span> <span style="color: #888888">// You wanna probably ignore device rotation</span>
+        deepLinking<span style="color: #333333">.</span><span style="color: #0000CC">startSession</span><span style="color: #333333">(</span>getIntent<span style="color: #333333">());</span>
+      <span style="color: #333333">}</span>
+  <span style="color: #333333">}</span></code></pre>
+</div>
+
+<h2>Retrieve the deep link</h2>
+<p>Usually your app should respond to a deep link with a corresponding view. You can retrieve the deep link either from the incoming intent or from the <code>SCDeepLinking</code> class.</p>
+
+<p>Note that you can retrieve the deep link at any time during the activity's lifecyle, but generally you want to do so in <code>onCreate()</code> or <code>onStart()</code>.</p>
+
+<p>The following example shows how to retrieve the deep link through the incoming intent. If the app was launched for the first time a possible deferred link is available through the intent.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color: #555555;">@Override</span>
+<span style="color: #008800;">protected</span> <span style="color: #333399;">void</span> <span style="color: #0066BB;">onCreate</span><span style="color: #333333">(</span>Bundle savedInstanceState<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+    <span style="color: #333333">...</span>
+
+    <span style="color: #008800;">if</span> <span style="color: #333333">(</span>Intent<span style="color: #333333">.</span><span style="color: #0000CC">ACTION_VIEW</span><span style="color: #333333">.</span><span style="color: #0000CC">equals</span><span style="color: #333333">(</span>getIntent<span style="color: #333333">.</span><span style="color: #0000CC">getAction</span><span style="color: #333333">())</span> <span style="color: #333333">{</span>
+        Uri deepLink <span style="color: #333333">=</span> getIntent<span style="color: #333333">().</span><span style="color: #0000CC">getData</span><span style="color: #333333">();</span>
+        <span style="color: #008800;">if</span> <span style="color: #333333">(</span>deepLink <span style="color: #333333">!=</span> <span style="color: #008800;">null</span><span style="color: #333333">)</span> <span style="color: #333333">{</span>
+            Log<span style="color: #333333">.</span><span style="color: #0000CC">d</span><span style="color: #333333">(</span>TAG<span style="color: #333333">,</span> <span style="background-color: #fff0f0">&quot;opened with deep link: &quot;</span> <span style="color: #333333">+</span> deepLink<span style="color: #333333">);</span>
+            <span style="color: #888888">// TODO show content for deep link</span>
+        <span style="color: #333333">}</span>
+    <span style="color: #333333">}</span>
+<span style="color: #333333">}</span></code></pre>
+</div>
+
+<p>And in the example below the deep link is retrieved from <code>SCDeepLinking</code>.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span style="color: #555555;">@Override</span>
+<span style="color: #008800;">protected</span> <span style="color: #333399;">void</span> <span style="color: #0066BB;">onCreate</span><span style="color: #333333">(</span>Bundle savedInstanceState<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+    <span style="color: #333333">...</span>
+
+    Uri deepLink <span style="color: #333333">=</span> SCDeepLinking<span style="color: #333333">.</span><span style="color: #0000CC">getInstance</span><span style="color: #333333">().</span><span style="color: #0000CC">getDeepLink</span><span style="color: #333333">()</span>
+    <span style="color: #008800;">if</span> <span style="color: #333333">(</span>deepLink <span style="color: #333333">!=</span> <span style="color: #008800;">null</span><span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        Log<span style="color: #333333">.</span><span style="color: #0000CC">d</span><span style="color: #333333">(</span>TAG<span style="color: #333333">,</span> <span style="background-color: #fff0f0">&quot;opened with deep link: &quot;</span> <span style="color: #333333">+</span> deepLink<span style="color: #333333">);</span>
+        <span style="color: #888888">// TODO show content for deep link</span>
+    <span style="color: #333333">}</span>
+<span style="color: #333333">}</span></code></pre>
+</div>

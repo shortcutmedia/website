@@ -25,7 +25,7 @@
                 %p Basics
                 %ul
                   %li
-                    %p.active Overview
+                    %a{href: "/documentation.html"} Overview
                 .border-bottom
               %li
                 %p Deep Linking SDK
@@ -33,7 +33,7 @@
                   %li
                     %a{href: "/documentation-ios.html"} iOS
                   %li
-                    %a{href: "//documentation-android.html"} Android
+                    %p.active Android
                 .border-bottom
               %li
                 %p Offline Interaction SDK
@@ -42,22 +42,7 @@
                     %a{href: "/documentation-offline-interaction.html"} Implementation
                 
       .col-lg-7.text-doc
-        %h1 Overview
-        %p This SDK provides the following features.
-        %ul
-          %li 
-            Support for 
-            %a{href: "https://en.wikipedia.org/wiki/Deferred_deep_linking", target: "_blank"} deferred deep linking.
-          %li 
-            Collection of additional statistics to build a user acquisition funnel and evaluate user activity.
-            
-        %p The SDK is available for the following platforms.</p>
-        %ul
-          %li
-            %a{href: "/documentation-ios.html"} iOS
-          %li
-            %a{href: "/documentation-android.html"} Android
-        %p Please refer to these repositories for more information about how to integrate the SDK into your mobile app.
+        =partial 'docu-android'
                             
       .col-lg-2.text-doc
         %p
