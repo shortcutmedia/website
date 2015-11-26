@@ -1,0 +1,84 @@
+// Certain styles regarding navigation are defined in bootstrap-variables
+
+.nav > li >a:hover:not(.btn) {
+  text-decoration: underline;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
+}
+
+.navbar-brand {
+  margin-left: 16px;
+  margin-top: 9px;
+  padding: 0;
+  width: 154px;
+  height: 32px;
+}
+
+.navbar-default {
+  font-weight: 300;
+  font-size: 1rem;
+
+  @include px_and_rem_directive(20px, 'margin-top'); 
+  @media (max-width: $grid-float-breakpoint-max) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar-nav {
+    >li {
+      a:hover {
+        background-color: darken($navbar-default-bg, 6.5%);
+      }
+     .btn-nav {
+        @include button-variant($navbar-default-link-color, transparent, $navbar-default-link-color);
+
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:hover {
+          color: $navbar-default-bg;
+          background-color: $navbar-default-link-color;
+        }
+      }
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+      text-transform: uppercase;
+
+      >li {
+        a:hover {
+          background-color: transparent;
+        }
+        &.active, &.active:hover {
+          a {
+            background-color: transparent;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .navbar-toggle {
+    &:focus{ background-color: transparent; }
+    &:hover{ 
+      color: $navbar-default-bg;
+      background-color: $navbar-default-toggle-hover-bg; /* must be set explicitly here because a bug with :focus selector */
+      .icon-bar {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+.shortcut-logo {
+  width: 154px;
+  height: 32px;
+}
+

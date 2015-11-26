@@ -1,0 +1,131 @@
+.benefits-nav-container {
+  @include px_and_rem_directive(10px, 'margin-top');
+  position: relative;
+
+  button {
+    font-size: 20px;
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 10px;
+    background: none;
+    padding: 6px 12px 0px 6px;
+    border: none;
+    .chevron { color: $gray-light; }
+
+    @media (min-width: $grid-float-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.benefits-nav {
+  @extend .ul-reset;
+
+  border: 1px solid $gray-light;
+  border-left: none;
+  border-right: none;
+
+
+  svg {
+    width: 16px;
+    height: 16px;
+    path, rect { fill: inherit; }
+  }
+
+  use {
+    fill: #010202;
+  }
+
+  a {
+    display: block;
+    color: $text-color;
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    border-width: 2px;
+    li {
+      display: none;
+      &.active, &.visible {
+        display: list-item;
+      }
+    }
+
+    &.expanded {
+      li{ display: list-item; }
+    }
+
+    a {
+      padding: 8px;
+      &:hover {
+        background: $gray-light;
+      }
+    }
+
+    p {
+      display: inline-block;
+      padding-left: 8px;
+      margin: 0 !important;
+    }
+
+    svg {
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    text-align: center;
+
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    li {
+      margin: 0;
+      padding-top: 1px; /* padding to make space for border of active element  */
+      padding-bottom: 1px;
+      display: table-cell;
+
+      &.active, &:hover {
+        padding-top: 0; /* remove padding as we have a border */
+        padding-bottom: 0; 
+        border-width: 1px;
+        border-style: solid;
+        border-color: $green;
+        border-left: none;
+        border-right: none;
+        @include box-shadow($green 0 -1px, $green 0 1px); /* heaving line overlap grey ul border */
+        p {
+          color: $green;
+        }
+        use {
+          fill: $green;
+        }
+      }
+
+      a {
+        display: block;
+        @include px_and_rem_directive(28px, 'padding-top');
+        @include px_and_rem_directive(18px, 'padding-bottom');
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+      p {
+        margin:0;
+        @include px_and_rem_directive(38px, 'min-height');
+        @include font-size(12px);
+      }
+    }
+
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}
+

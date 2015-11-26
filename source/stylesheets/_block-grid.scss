@@ -1,0 +1,107 @@
+// # Block Grid Mixin
+//
+// Technique adapted from Foundation 5 for Bootstrap 3
+//
+// # Example Usage
+//
+// To produce a grid of 2 items per row on an extra-small screen, 3 items
+// on a small screen, 4 items on a medium screen and 6 items per row on large screen:
+//
+// ul.gallery {
+//   @include make-block-grid-container();
+//   > li {
+//     @include make-xs-block-grid(2);
+//     @include make-sm-block-grid(3);
+//     @include make-md-block-grid(4);
+//     @include make-lg-block-grid(6);
+//   }
+// }
+
+// Or, in a quicker way with the shorthand syntax:
+//   ul.gallery {
+//     .make-block-grid(2,3,4,6)
+//   }
+
+//Mixins for Block Grids
+@mixin make-block-grid-container($spacing: $grid-gutter-width)
+{
+  list-style: none;
+  padding: 0;
+  margin-left: ($spacing / -2);
+  margin-right: ($spacing / -2);
+  @extend .clearfix;
+  > * {
+    margin-bottom: $spacing;
+  }
+  > li {
+    &:before {
+      content: none !important;
+    }
+  }
+}
+
+@mixin make-block-grid-item($spacing: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left: ($spacing / 2);
+  padding-right: ($spacing / 2);
+  float: left;
+}
+
+
+@mixin make-xs-block-grid-item($blocks) {
+  width: percentage(1 / $blocks);
+  &:nth-of-type(#{$blocks}n+1) { clear: both; }
+}
+@mixin make-xs-block-grid($blocks, $spacing: $grid-gutter-width) {
+  @include make-block-grid-item($spacing);
+  @include make-xs-block-grid-item($blocks);
+}
+@mixin make-sm-block-grid-item($blocks) {
+  @media (min-width: $screen-sm-min) {
+    width: percentage(1 / $blocks);
+    &:nth-of-type(1n) { clear: none; }
+    &:nth-of-type(#{$blocks}n+1) { clear: both; }
+  }
+}
+@mixin make-sm-block-grid($blocks, $spacing: $grid-gutter-width) {
+  @include make-block-grid-item($spacing);
+  @include make-sm-block-grid-item($blocks);
+}
+@mixin make-md-block-grid-item($blocks) {
+  @media (min-width: $screen-md-min) {
+    width: percentage(1 / $blocks);
+    &:nth-of-type(1n) { clear: none; }
+    &:nth-of-type(#{$blocks}n+1) { clear: both; }
+  }
+}
+@mixin make-md-block-grid($blocks, $spacing: $grid-gutter-width) {
+  @include make-block-grid-item($spacing);
+  @include make-md-block-grid-item($blocks);
+}
+@mixin make-lg-block-grid-item($blocks) {
+  @media (min-width: $screen-lg-min) {
+    width: percentage(1 / $blocks);
+    &:nth-of-type(1n) { clear: none; }
+    &:nth-of-type(#{$blocks}n+1) { clear: both; }
+  }
+}
+@mixin make-lg-block-grid($blocks, $spacing: $grid-gutter-width) {
+  @include make-block-grid-item($spacing);
+  @include make-lg-block-grid-item($blocks);
+}
+
+
+
+// Make one mixin for all sizes so we don't have to call 4 mixins every time we use block grids
+@mixin make-block-grid($cols-xs, $cols-sm, $cols-md, $cols-lg)
+{
+  @include make-block-grid-container();
+  >li {
+    @include make-block-grid-item($spacing: $grid-gutter-width);
+    @include make-xs-block-grid-item($cols-xs);
+    @include make-sm-block-grid-item($cols-sm);
+    @include make-md-block-grid-item($cols-md);
+    @include make-lg-block-grid-item($cols-lg);
+  }
+}

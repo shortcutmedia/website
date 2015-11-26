@@ -1,0 +1,18 @@
+ul.customers {
+  @include make-block-grid(2,3,4,4);
+
+  >li {
+    @extend .text-center;
+   @include px_and_rem_directive(20px, 'margin-botom');
+
+    div {
+      background-position-x: 50%;
+      height: 200px;
+      zoom: 0.2;
+      -moz-transform:scale(0.2);
+      -moz-transform-origin: 0 0;
+    }
+  }
+}
+
+

@@ -1,0 +1,56 @@
+---
+title: About us · Shortcut Media
+
+team:
+  - name: Herbert Bay
+    position: Executive Chairman
+    picture: team/herbert-bay.jpg
+  - name: Jukka Kiiskinen
+    position: CEO
+    picture: team/jukka-kiiskinen.jpg
+  - name: Franco Sebregondi
+    position: CTO
+    picture: team/franco-sebregondi.jpg
+  - name: Sabina Storsjö
+    position: Marketing Director
+    picture: team/sabina-storsjo.jpg
+  - name: Severin Schoepke
+    position: Senior Software Engineer
+    picture: team/severin-schoepke.jpg
+---
+
+
+%section.white.header
+  .container
+    .row
+      .col-sm-12.text-center
+        %h1
+          About
+          %span.green shortcut
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.text-center.col-lg-6.col-lg-offset-3
+        %p
+          We are working for you from around the world. Not because we are a multi-billion 
+          corporation, but because we are a distributed team.
+          %strong Our mission is to serve you the best we can.
+          And you want to be served from competent and happy staff.
+
+%section.white.team
+  .container
+    .row
+      .col-sm-12
+        %ul.small-block-grid-4
+          - current_page.data.team.each do |employee|
+            %li
+              %figure
+                = image_tag employee.picture
+              %b= employee.name
+              %p= employee.position
+          %li.placeholder
+            %figure
+              %b YOU?
+            %b We are hiring!
+            %p
+              = link_to 'View open positions', '#jobs'
+ 
+

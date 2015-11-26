@@ -1,10 +1,70 @@
 ---
-title: Welcome to Middleman
+title: Shortcut Media
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<section id="teaser" class="transparent">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-7">
+        <h1>Power up your links</h1>
+        <h3>Get downloads, engagement & <span class="text-nowrap">re-engagement for your app</span></h3>
+
+        <div class="hidden-xs">
+          <p>Create a shortcut and give it super powers. It's easy and it's free.</p>
+          <p><b>Try it yourself!</b></p>
+          <%= partial 'short_link_form' %>
+       </div>
+      </div>
+
+      <div class="col-sm-5 linkman-wrapper">
+        <div class="linkman-img">
+          <figure class="fixed-ratio">
+            <span class="small-short-link-form visible-xs">
+              <%= partial 'short_link_form' %>
+            </span>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center"><span class="green">Our benefits.</span> <span class="text-smart-wrap">Your marketing power.</span></h1>
+      </div>
+    </div>
+
+    <%= partial 'benefits_overview' %>
+  </div>
+</section>
+
+<section class="blue no-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center">Take control. <span class="text-smart-wrap">Manage your shortcuts.</span></h1>
+      </div>
+    </div>
+
+    <%= figure 'sprite.svg#analytics', fluid: [646, 469], alt: 'Analytics' %>
+  </div>
+</section>
+
+<section class="white">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center"><span class="green">Successful cases.</span> <span class="text-nowrap">Happy customers.</span></h1>
+      </div>
+    </div>
+
+    <%= partial 'customers' %>
+  </div>
+</section>
+
+<%= partial 'call_to_action' %>
+

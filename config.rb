@@ -36,9 +36,9 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -46,12 +46,22 @@
 #     "Helping"
 #   end
 # end
+require "lib/custom_helpers"
+helpers CustomHelpers
+
 
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+activate :middleman_scavenger do |config|
+  #config.path = "source/images/svg/"
+  #config.sprite_path = "source/images/sprite.svg"
+  config.path = "source/images/benefits_svg/"
+  config.sprite_path = "source/images/benefits_sprite.svg"
+end
 
 # Build-specific configuration
 configure :build do
@@ -69,4 +79,7 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  #
+  ignore "source/images/customers/*"
+
 end

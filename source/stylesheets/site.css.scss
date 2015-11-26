@@ -1,0 +1,701 @@
+@charset "utf-8";
+
+/*@import "compass/css3/images";*/
+
+/*@import "bootstrap/variables"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/vendor-prefixes"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/opacity"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/tab-focus"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/buttons"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/clearfix"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/grid"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/mixins/text-emphasis"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/buttons"; [> FIXME: only temporary... delete me again <]*/
+/*@import "bootstrap/type"; [> FIXME: only temporary... delete me again <]*/
+
+// Import bootstrap.
+@import "bootstrap-variables";
+@import "bootstrap-sprockets";
+@import "bootstrap-custom"; /* Import only selected elements; not entire bootstrap */
+@import "compass/css3/border-radius";
+@import "compass/css3/background-clip";
+
+$linkman-image: 'linkman.png';
+$pattern-image: 'benefit-pattern.svg';
+$white-background-color: #fff;
+$blue-background-color: #7EADC6;
+
+$container-lg-increase-gutter-by: 60px;
+
+
+@import "helper";
+@import "block-grid";
+@import "chevron";
+@import "navbar";
+@import "benefits-overview";
+@import "benefits_nav";
+@import "customers";
+@import "footer";
+
+
+// generating sprite images
+@import "customers/*.png";
+@include all-customers-sprites;
+
+// Reset browser margin, padding. Don't know why normalize doesn't handle that?
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Make the website narrower on large screens
+@media (min-width: $screen-lg-min) {
+  .container {
+    padding-left: ceil($container-lg-increase-gutter-by * 0.5);
+    padding-right: ceil($container-lg-increase-gutter-by * 0.5);
+  }
+}
+
+
+.one_field_input {
+  .shortcut_generator_uri_item_uri {
+    float: none;
+  }
+}
+
+
+
+html {
+  font-size: 14px; /* base font size for rem */
+}
+
+body {
+
+  @media (min-width: $screen-sm-min) {
+     /* FIXME: test this in different browsers. */
+     /*Alternative use compass background with gradient*/
+    /*background: image-url($pattern-image) left top repeat;*/
+    background-image: image-url($pattern-image);
+    /*background-color: $site-background-color;*/
+    /*@include background(image-url($pattern-image),*/
+                            /*linear-gradient(to bottom, $site-background-color, $site-background-color));*/
+  }
+
+  >svg {
+    /* Somehow IE manaages to give the sprite SVGs a hight which pushes the content down. */
+    /* Hiding them sovles the problem.                                                    */
+    display: none;
+  }
+}
+
+h3, h4, p {
+  font-weight: lighter;
+
+}
+
+
+@media (min-width: $grid-float-breakpoint) {
+  h3 {
+    font-size: 32px;
+  }
+}
+
+.btn {
+  font-weight: 300;
+}
+
+.linkman-wrapper {
+  @media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+    min-height: 334px;
+    position: relative;
+    .linkman-img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 950px) {
+    .linkman-img {
+      left: 20%;
+    }
+  }
+}
+
+
+.linkman-img {
+  max-width: 596px;
+
+  /*@media (min-width: $grid-float-breakpoint) {*/
+    /*margin-right: -40px; [> pushes the cape of the linkman outside the right redline <]*/
+  /*}*/
+  /*@media (min-width: $screen-sm-min) { */
+    /*margin-right: -16px; [> pushes the cape of the linkman outside the right redline <]*/
+  /*}*/
+  /*@media (min-width: $screen-md-min) { */
+    /*margin-right: -20px; [> pushes the cape of the linkman outside the right redline <]*/
+  /*}*/
+  /*@media (min-width: $screen-lg-min) { */
+    /*margin-right: -40px; [> pushes the cape of the linkman outside the right redline <]*/
+  /*}*/
+
+  figure {
+    padding-top: 91.271056661562%;  /* 596px/653px */
+    background: image-url($linkman-image);
+    background-size: cover;
+    -moz-background-size: cover; /* Firefox 3.6 */
+    background-position: center; /* Internet Explorer 7/8 */
+  }
+
+}
+
+
+
+
+
+body, footer {
+  > section {
+    background-color: transparent;
+
+    &:last-of-type{ height: 100%; }
+
+    &.white{
+      background-color: $white-background-color;
+    }
+
+    &.blue {
+      background-color: $blue-background-color;
+    }
+
+    &.blue, &.transparent {
+      h1, h2, h3, h4, p { color: #fff; }
+    }
+
+    @include px_and_rem_directive(20px, 'padding-top');
+    @include px_and_rem_directive(20px, 'padding-bottom');
+    &.no-bottom { padding-bottom: 0; }
+    @media (min-width: $grid-float-breakpoint) {
+      @include px_and_rem_directive(40px, 'padding-top');
+      @include px_and_rem_directive(40px, 'padding-bottom');
+      &.no-bottom-sm { padding-bottom: 0; }
+    }
+
+    h1 {
+      /*@include px_and_rem_directive(40px, 'padding-bottom');*/
+    }
+  }
+}
+
+
+@media (max-width: ($grid-float-breakpoint - 1px)) {
+  h1, h2, h3, h4 {
+    text-align: center;
+  }
+}
+
+figure {
+    background-size: cover;
+    -moz-background-size: cover; /* Firefox 3.6 */
+    background-position: center; /* Internet Explorer 7/8 */
+}
+
+.navbar-default {
+  .navbar-nav {
+    >li {
+      &:hover {
+        /*transform: scale(1.1);*/
+
+      }
+    }
+  }
+}
+
+/*.short-url-bold-img {*/
+  /*width: 50px;*/
+  /*height: 50px;*/
+  /*figure {*/
+    /*background-size: contain;*/
+    /*-moz-background-size: contain; [> Firefox 3.6 <]*/
+  /*}*/
+ 
+  /*[>@include figure('short-url-bold.png', 110px, 133px);<]*/
+  /*@include figure('short-url-bold.png', 110px, 133px);*/
+/*}*/
+
+
+/*svg.analytics {*/
+  /*background-color: #fff;*/
+  /*width:100%;*/
+  /*height: 400px;*/
+/*}*/
+
+#teaser {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+.small-short-link-form {
+  position: relative;
+  height: 0;
+  top: -140px;
+}
+
+.debug-grid {
+  position: absolute;
+  z-index: -100;
+  left:0;
+  right:0;
+
+  .row {
+    background-color: rgba(255, 0, 0, 0.1);
+
+    >div {
+      background-color: rgba(0,0,0,0.2);
+      background-clip: content-box;
+      height: 2000px;
+    }
+  }
+}
+
+
+.btn-shortcut {
+  @include button-variant($navbar-default-link-color, #C42B2B, #C42B2B);
+}
+
+.short-link-form {
+
+  /*input[type=url] {*/
+    /*@include px_and_rem_directive(6px, 'padding--botom');*/
+    /*@include px_and_rem_directive(6px, 'padding--botom');*/
+    /*padding-left: 5%;*/
+    /*padding-right: 5%;*/
+
+
+    /*width: 60%;*/
+
+  /*}*/
+
+  input, button {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .form-control {
+    @include px_and_rem_directive(8px, 'padding-top');
+    @include px_and_rem_directive(8px, 'padding-bottom');
+    @include px_and_rem_directive(8px, 'margin-bottom');
+    @media (min-width: $grid-float-breakpoint) {
+      width: 50%;
+      display: inline;
+    }
+
+  }
+
+  @media (max-width: $grid-float-breakpoint - 1) {
+    input {
+      &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, :-ms-input-placeholder {
+        text-align: center;
+      }
+    }
+    button {
+      width: 100%;
+
+    }
+  }
+
+
+  /*.form-group {*/
+    /*width: 50%;*/
+    /*.form-control {*/
+
+      /*@include px_and_rem_directive(8px, 'padding-top');*/
+      /*@include px_and_rem_directive(8px, 'padding-bottom');*/
+      /*padding-left: 5%;*/
+      /*padding-right: 5%;*/
+      /*width: 100%;*/
+    /*}*/
+  /*}*/
+
+
+  
+}
+
+
+
+.linkman-short {
+  margin-top: -40px;
+  /*clear: both;*/
+  float: right;
+
+  width: 350px;
+  overflow-x: hidden;
+  figure {
+    width: 380px;
+    padding-top: 243px;
+    background-position: top center;
+    /*float: right;*/
+
+  }
+
+}
+
+/*.customers-logo_apg {*/
+   /*[>800px / 200px<]*/
+  /*width: 200px;*/
+  /*height: 50px;*/
+
+  /*background-size: cover;*/
+  /*-moz-background-size: cover; [> Firefox 3.6 <]*/
+/*}*/
+
+/*.customers-logo_audi {*/
+   /*[>800px / 200px<]*/
+  /*width: 200px;*/
+  /*height: 50px;*/
+
+  /*background-size: cover;*/
+  /*-moz-background-size: cover; [> Firefox 3.6 <]*/
+/*}*/
+
+
+/*section.divider {*/
+
+// Draw a divider if two white sections follow each others
+section.white:not(.header) + section.white {
+  position: relative;
+
+  &:after {
+    @extend .container;
+    content:"";
+    background: $gray-light;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 1170px;
+    width: 94%;
+    height: 1px;
+
+    @media (min-width: $screen-sm-min) { width: ($container-sm - $grid-gutter-width) }
+    @media (min-width: $screen-md-min) { width: ($container-md - $grid-gutter-width) }
+    @media (min-width: $screen-lg-min) { width: ($container-lg - $container-lg-increase-gutter-by) }
+  }
+}
+
+section {
+  /*border: 1px dashed grey;*/
+
+  .row {
+    /*border: 1px dashed yellow;*/
+  }
+}
+
+// -------------------------------------------------------------------------
+// Site specific styles
+// -------------------------------------------------------------------------
+.index {
+  >section:first-of-type {
+    @media (min-width: $grid-float-breakpoint) {
+      @include px_and_rem_directive(60px, 'padding-top');
+      @include px_and_rem_directive(60px, 'padding-bottom');
+    }
+  }
+
+  .svg-analytics {
+    margin-bottom: -1px;
+  }
+}
+
+.benefits {
+  .benefits-svg-container {
+    padding: 0 10%;
+    @media (min-width: $grid-float-breakpoint) {
+      padding: 0 5%;
+    }
+  }
+
+  h2 { 
+    @include px_and_rem_directive(10px, 'margin-top'); 
+    @include px_and_rem_directive(20px, 'margin-bottom'); 
+  }
+  p { @include px_and_rem_directive(20px, 'margin-top'); }
+
+  .benefit {
+    @media (min-width: $screen-sm-min) {
+      h2 { @include px_and_rem_directive(50px, 'margin-top'); }
+    }
+    @media (min-width: $screen-md-min) {
+      h2 { @include px_and_rem_directive(75px, 'margin-top'); }
+    }
+    @media (min-width: $screen-lg-min) {
+      h2 { @include px_and_rem_directive(100px, 'margin-top'); }
+    }
+  }
+
+  .container-short_urls {
+    @media (min-width: $grid-float-breakpoint) {
+      padding: 0 15%;
+    }
+  }
+  .container-app_marketing_banner {
+    @media (min-width: $grid-float-breakpoint) {
+      padding: 0 15%;
+    }
+  }
+
+}
+
+.team {
+  ul{ 
+    border: 1px dashed green;
+    @include make-block-grid(2,3,4,4);
+    li {
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 165px; /* TODO make them responsive? */
+    height: 165px;
+    border: 1px solid $gray-light;
+    @include border-radius(100px);
+    @include background-clip(padding-box);
+  }
+
+  .placeholder {
+    figure {
+      b {
+        display: block;
+        height: 165px;
+        width: 165px;
+        border: 1px solid $gray-light;
+        @include border-radius(100px);
+        @include background-clip(padding-box);
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+       
+      }
+ 
+    }
+
+
+  }
+
+}
+
+
+/*[class*="block-grid-"] {*/
+    /*display: block;*/
+    /*padding: 0;*/
+    /*margin: 0 -0.55556rem;*/
+/*}*/
+
+/*[class*="block-grid-"] > li {*/
+    /*display: block;*/
+    /*height: auto;*/
+    /*float: left;*/
+    /*padding: 0 0.55556rem 1.11111rem;*/
+/*}*/
+
+/*.small-block-grid-3 > li {*/
+    /*width: 33.33333%;*/
+    /*list-style: none;*/
+/*}*/
+
+/*.small-block-grid-3 > li:nth-of-type(1n) {*/
+    /*clear: none;*/
+/*}*/
+
+/*.small-block-grid-3 > li:nth-of-type(3n+1) {*/
+    /*clear: both;*/
+/*}*/
+
+/*.small-block-grid-4 > li {*/
+    /*width: 25%;*/
+    /*list-style: none;*/
+/*}*/
+
+/*.small-block-grid-4 > li:nth-of-type(1n) {*/
+    /*clear: none;*/
+/*}*/
+
+/*.small-block-grid-4 > li:nth-of-type(4n+1) {*/
+    /*clear: both;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.svg-test {
+  .svgstyletest {
+    fill: skyblue;
+  }
+
+
+
+  svg {
+    width: 100px;
+    height: 125px;
+    border: 1px solid #ddd;
+  }
+  use.ic-1 {
+    fill: skyblue;
+  }
+  use.ic-2 {
+    fill: #FDC646;
+  }
+  use.ic-3 {
+    fill: #FF2D49;
+  }
+  use.ic-4 {
+    fill: #FF2D49;
+  }
+  use.ic-5 {
+    fill: #FF2D49;
+  }
+
+
+  svg:hover use.ic-4 { 
+    fill: blue;
+  }
+
+  svg path, svg rect {
+   fill: inherit !important;
+  }
+}
+
+.test_fluid {
+  width: 100%;
+
+}
+
+
+svg.egg-test{
+
+  width: 100%;
+  height: 100%;
+}
+
+/*svg use.use_benefits-short-url {*/
+  /*fill:yellow !important;*/
+
+/*}*/
+
+
+/*.svgstyle {*/
+  /*fill: yellow;*/
+/*}*/
+
+
+
+.li-alignment-test {
+
+  ul {
+    background: green;
+    border: 1px solid black;
+    display: table;
+    table-layout: fixed;
+    width:100%;
+
+
+    li {
+      display: table-cell;
+      /*width: 20%;*/
+
+    }
+
+
+  }
+
+}
+
+
+
+/*svg{*/
+  /*&.offline_advertising,*/
+  /*&.instore_reach,*/
+  /*&.app_marketing_banner,*/
+  /*&.analytics,*/
+  /*&.ab_testing,*/
+  /*&.social_media_integration*/
+  /*{*/
+    /*width:100%;*/
+    /*height: 400px;*/
+    /*use { width:100%; }*/
+    /*padding-left: 10%;*/
+    /*padding-right: 10%;*/
+  /*}*/
+/*}*/
+
+
+
+
+.svg-ultimate-container {
+  position: relative;
+  height: 0;
+  width: 80%;
+  padding-top: 24 / 20 * 80%;
+
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+
+.svg-test-wrapper2 {
+  padding: 20%;
+
+}
+
+figure.fluid {
+  position: relative;
+  height: 0;
+  width: 100%;
+  /*border: 1px dashed red;*/
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*border: 1px dashed blue;*/
+  }
+
+  &.svg-short_urls { padding-top: 402.6 / 318 * 100%; }
+  &.svg-mobile_deep_linking { padding-top: 502 / 640 * 100%; }
+  &.svg-offline_advertising { padding-top: 357.2 / 480.9 * 100%; }
+  &.svg-instore_reach { padding-top: 400.8 / 538.2 * 100%; }
+  &.svg-app_marketing_banner { padding-top: 466 / 364 * 100%; }
+  &.svg-analytics { padding-top: 469 / 646 * 100%; }
+  &.svg-ab_testing { padding-top: 392.4 / 371.4 * 100%; }
+  &.svg-social_media_integration { padding-top: 315.7 / 386.6 * 100%; }
+}
+
+
+
+
+

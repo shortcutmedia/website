@@ -1,0 +1,44 @@
+body > footer {
+  ul {
+    @extend .ul-reset;
+
+    li {
+      @include px_and_rem_directive(4px, 'margin-bottom');
+      &.social-buttons {
+        @include px_and_rem_directive(12px, 'margin-top');
+        a {
+          margin-right: 5%;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  a, a:hover {
+    color: $text-color;
+  }
+
+  a.social {
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    ul {
+      text-align: center;
+      @include px_and_rem_directive(12px, 'margin-bottom');
+
+      &.links {
+        li {
+          display: inline-block;
+          padding-left: 2%;
+          padding-right: 2%;
+        }
+      }
+    }
+  }
+}
+
+

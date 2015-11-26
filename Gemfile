@@ -12,3 +12,9 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
+
+gem 'bootstrap-sass', '~> 3.3.5', require: false
+gem 'jquery-middleman'
+
+gem "middleman-scavenger", git: 'https://github.com/franco/middleman-scavenger.git', ref: '6c092c0'
+
