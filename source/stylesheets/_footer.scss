@@ -7,8 +7,16 @@ body > footer {
       &.social-buttons {
         @include px_and_rem_directive(12px, 'margin-top');
         a {
-          margin-right: 5%;
           text-decoration: none;
+          margin: 0 2.5%;
+          &:first-child {
+            margin-left: 0;
+          }
+
+          svg {
+            height: 30px;
+            width: 30px;
+          }
         }
       }
     }
@@ -16,13 +24,6 @@ body > footer {
 
   a, a:hover {
     color: $text-color;
-  }
-
-  a.social {
-    svg {
-      height: 30px;
-      width: 30px;
-    }
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -37,8 +38,10 @@ body > footer {
           padding-right: 2%;
         }
       }
+      &.copyright {
+        padding-top: 10px;
+      }
     }
   }
 }
-
 
