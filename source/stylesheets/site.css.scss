@@ -235,12 +235,6 @@ figure {
   /*height: 400px;*/
 /*}*/
 
-#teaser {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-
 .small-short-link-form {
   position: relative;
   height: 0;
@@ -271,20 +265,14 @@ figure {
 
 .short-link-form {
 
-  /*input[type=url] {*/
-    /*@include px_and_rem_directive(6px, 'padding--botom');*/
-    /*@include px_and_rem_directive(6px, 'padding--botom');*/
-    /*padding-left: 5%;*/
-    /*padding-right: 5%;*/
-
-
-    /*width: 60%;*/
-
-  /*}*/
-
   input, button {
     padding-left: 3%;
     padding-right: 3%;
+  }
+
+  button {
+    margin-bottom: 1px;
+
   }
 
   .form-control {
@@ -292,13 +280,12 @@ figure {
     @include px_and_rem_directive(8px, 'padding-bottom');
     @include px_and_rem_directive(8px, 'margin-bottom');
     @media (min-width: $grid-float-breakpoint) {
-      width: 50%;
+      width: 60%;
       display: inline;
     }
-
   }
 
-  @media (max-width: $grid-float-breakpoint - 1) {
+  @media (max-width: $grid-float-breakpoint-max) {
     input {
       &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, :-ms-input-placeholder {
         text-align: center;
@@ -306,25 +293,8 @@ figure {
     }
     button {
       width: 100%;
-
     }
   }
-
-
-  /*.form-group {*/
-    /*width: 50%;*/
-    /*.form-control {*/
-
-      /*@include px_and_rem_directive(8px, 'padding-top');*/
-      /*@include px_and_rem_directive(8px, 'padding-bottom');*/
-      /*padding-left: 5%;*/
-      /*padding-right: 5%;*/
-      /*width: 100%;*/
-    /*}*/
-  /*}*/
-
-
-  
 }
 
 
@@ -401,15 +371,18 @@ section {
 // Site specific styles
 // -------------------------------------------------------------------------
 .index {
-  >section:first-of-type {
-    @media (min-width: $grid-float-breakpoint) {
-      @include px_and_rem_directive(60px, 'padding-top');
-      @include px_and_rem_directive(60px, 'padding-bottom');
+  >section {
+    &:first-of-type {
+      padding: 0 0;
     }
-  }
 
-  .svg-analytics {
-    margin-bottom: -1px;
+    &.analytics {
+      max-height: 500px;
+      overflow-y: hidden;
+      figure {
+        margin-bottom: -1px;
+      }
+    }
   }
 }
 
