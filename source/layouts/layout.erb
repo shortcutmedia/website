@@ -8,13 +8,14 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Shortcut Media" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <%#<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>%>
 
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
 
-    <script src="https://use.typekit.net/xru7wzr.js"></script>
-    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <%= stylesheet_link_tag 'ars-maquette-web-font' %>
+    <%#<script src="https://use.typekit.net/xru7wzr.js"></script>%>
+    <%#<script>try{Typekit.load({ async: false });}catch(e){}</script>%>
   </head>
 
   <body class="<%= page_classes %>">
