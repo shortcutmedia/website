@@ -173,6 +173,10 @@ body, footer {
       h1, h2, h3, h4, p { color: #fff; }
     }
 
+    &.blue a {
+      color: $gray-light;
+    }
+
     @include px_and_rem_directive(20px, 'padding-top');
     @include px_and_rem_directive(20px, 'padding-bottom');
     &.no-bottom { padding-bottom: 0; }
@@ -450,86 +454,109 @@ section {
 
 .team {
   ul{ 
-    border: 1px dashed green;
     @include make-block-grid(2,3,4,4);
     li {
       text-align: center;
     }
   }
 
-  img {
-    width: 165px; /* TODO make them responsive? */
-    height: 165px;
-    border: 1px solid $gray-light;
-    @include border-radius(100px);
-    @include background-clip(padding-box);
-  }
+  $vigniette-dim: 165px;
 
-  .placeholder {
+  .vignette {
+    max-width: 165px;
+    margin: 0 auto;
+
     figure {
-      b {
-        display: block;
-        height: 165px;
-        width: 165px;
-        border: 1px solid $gray-light;
-        @include border-radius(100px);
-        @include background-clip(padding-box);
-        margin-left: 0;
-        margin-right: 0;
-        position: relative;
-       
-      }
- 
+      position: relative;
+      padding-top: 100% /* image ratio */
     }
 
 
+
+    img, i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: 1px solid $gray-light;
+      @include border-radius(100px);
+      @include background-clip(padding-box);
+    }
   }
 
+  .placeholder {
+    a {
+      color: $text-color;
+      &:hover {
+        color: $green;
+        i { border-color: $green; }
+        text-decoration: none;
+      }
+    }
+
+    figure {
+      i {
+        display: block;
+        overflow: hidden;
+
+        b { 
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          font-weight: normal;
+          font-style: normal;
+          padding-top: 50%;
+          margin-top: (14px / (-2));
+        }
+      }
+    }
+  }
 }
 
 
-/*[class*="block-grid-"] {*/
-    /*display: block;*/
-    /*padding: 0;*/
-    /*margin: 0 -0.55556rem;*/
-/*}*/
+.google-maps {
+  position: relative;
+  margin: 5% 5% 1%;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
 
-/*[class*="block-grid-"] > li {*/
-    /*display: block;*/
-    /*height: auto;*/
-    /*float: left;*/
-    /*padding: 0 0.55556rem 1.11111rem;*/
-/*}*/
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
 
-/*.small-block-grid-3 > li {*/
-    /*width: 33.33333%;*/
-    /*list-style: none;*/
-/*}*/
-
-/*.small-block-grid-3 > li:nth-of-type(1n) {*/
-    /*clear: none;*/
-/*}*/
-
-/*.small-block-grid-3 > li:nth-of-type(3n+1) {*/
-    /*clear: both;*/
-/*}*/
-
-/*.small-block-grid-4 > li {*/
-    /*width: 25%;*/
-    /*list-style: none;*/
-/*}*/
-
-/*.small-block-grid-4 > li:nth-of-type(1n) {*/
-    /*clear: none;*/
-/*}*/
-
-/*.small-block-grid-4 > li:nth-of-type(4n+1) {*/
-    /*clear: both;*/
-/*}*/
+  @media (min-width: $grid-float-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 
+blockquote {
+  position: relative;
+  color: $green;
+  @include font-size(18px);
+  line-height: 1.3;
+  @include px_and_rem_directive(40px, 'margin-top');
+  &:before {
+    content:"“";
+    position: absolute;
+    top: -40px;
+    @include font-size(66px);
+    color: $text-color;
+  }
 
-
+  footer {
+    @include font-size(12px);
+  }
+}
 
 
 
