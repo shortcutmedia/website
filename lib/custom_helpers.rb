@@ -71,5 +71,27 @@ module CustomHelpers
       raise "unsupported yet"
     end
   end
+
+  #def table_of_contents(resource)
+    #content = File.read(resource.source_file)
+    #toc_renderer = Redcarpet::Render::HTML_TOC.new
+    #markdown = Redcarpet::Markdown.new(toc_renderer, nesting_level: 2) # nesting_level is optional
+    #markdown.render(content)
+  #end
+
+  def table_of_contents(source_file, toc_prefix=nil)
+    file = File.expand_path("../../source/#{source_file}", __FILE__)
+    content = File.read(file)
+    toc_renderer = Redcarpet::Render::HTML_TOC.new
+    markdown = Redcarpet::Markdown.new(toc_renderer, nesting_level: 2) # nesting_level is optional
+    toc = markdown.render(content)
+
+    if toc_prefix
+      toc = MarkdownIds.change_id toc, toc_prefix
+    end
+
+    toc
+  end
+
 end
 

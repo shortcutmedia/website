@@ -11,36 +11,138 @@ title: Documentation · Shortcut Media
           Shortcut
           %span.green documentation
 
-%section.white
+%section.white.doc
   .container
     .row
-      .col-xs-12.col-sm-3
+      .col-xs-12.col-md-3.side-bar
 
-      .col-xs-12.col-sm-7
-        %h3 Introduction
-        %p 
-          Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
-          %code nam eu
-          , ad mea quas iusto. Possit mentitum qui ne, 
-          %code duo at utroque 
-          dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
-          %br
-        %p
-          Mea eu dolore utamur, vituperata dissentiunt vix an, eam ad hinc elit. Pri aliquid partiendo et. Movet fabulas mei ea, quaerendum contentiones quo no, dolor postea usu et. Ei putent nonumes per, nostro partiendo hendrerit mea et, quaeque assentior vix te. Per ne labitur molestiae temporibus, ex est quot errem luptatum, qui eu utinam conclusionemque. Nullam deleniti adipiscing qui no, everti euripidis accommodare ne his, et tale purto sapientem nam.
+        %nav.hidden-print.hidden-xs.hidden-sm.affix
+          %ul.nav
+            %li
+              %a{href: '#Basics'} Basics
+              %ul.nav
+                %li
+                  %a{href: '#Introduction'} Introduction
+                %li
+                  %a{href: '#Getting_Started'} Getting Started
+            %li
+              %a{href: '#Android'} Android
+              = table_of_contents "_android_readme.html.md", 'android'
 
-        %p
-          A code block
-          %pre
-            hello = "my test"
-            puts hello
+            %li
+              %a{href: '#iOS'} iOS
+              = table_of_contents "_ios_readme.html.md", 'ios'
+
+
+              -#%ul.nav
+                -#%li
+                  -#%a{href: '#Integrate_Android'} Integrate Android
+                -#%li
+                  -#%a{href: '#Deep_Linking_Android'} Deep Linking
+
+
+      .col-xs-12.col-md-7.main
+
+
+        = partial 'android_readme', locals: { toc_prefix: 'android' }
+        = partial 'ios_readme', locals: { toc_prefix: 'ios' }
+
+
+        -#= partial 'ios_readme'
+
+        -#%h3 Introduction
+        -#%p 
+          -#Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
+          -#%code nam eu
+          -#, ad mea quas iusto. Possit mentitum qui ne, 
+          -#%code duo at utroque 
+          -#dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
+          -#%br
+        -#%p
+          -#Mea eu dolore utamur, vituperata dissentiunt vix an, eam ad hinc elit. Pri aliquid partiendo et. Movet fabulas mei ea, quaerendum contentiones quo no, dolor postea usu et. Ei putent nonumes per, nostro partiendo hendrerit mea et, quaeque assentior vix te. Per ne labitur molestiae temporibus, ex est quot errem luptatum, qui eu utinam conclusionemque. Nullam deleniti adipiscing qui no, everti euripidis accommodare ne his, et tale purto sapientem nam.
+
+        -#%p
+          -#= code 'ruby' do
+            -#puts "hello"
+
+          -#A code block
+          -#%pre
+            -#hello = "my test"
+            -#puts hello
+
+          -#Quem sadipscing nec cu, cu vim modus recusabo appellantur. Mundi quodsi sea id. Stet phaedrum disputationi mea et, case inermis iracundia per id, cum ut eius consequat reformidans. Eum nemore viderer eu. His sale aperiam iuvaret ut, vel in ullamcorper vituperatoribus, falli nominavi te qui. Ne mea quot eruditi.
+
+
+        -#%h1#Basics Basics
+        -#%p 
+          -#Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
+          -#%code nam eu
+          -#, ad mea quas iusto. Possit mentitum qui ne, 
+          -#%code duo at utroque 
+          -#dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
+
+        -#%h2#Introduction Introduction
+        -#%p 
+          -#Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
+          -#%code nam eu
+          -#, ad mea quas iusto. Possit mentitum qui ne, 
+          -#%code duo at utroque 
+          -#dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
+
+ 
+        -#%p
+          -#Mea eu dolore utamur, vituperata dissentiunt vix an, eam ad hinc elit. Pri aliquid partiendo et. Movet fabulas mei ea, quaerendum contentiones quo no, dolor postea usu et. Ei putent nonumes per, nostro partiendo hendrerit mea et, quaeque assentior vix te. Per ne labitur molestiae temporibus, ex est quot errem luptatum, qui eu utinam conclusionemque. Nullam deleniti adipiscing qui no, everti euripidis accommodare ne his, et tale purto sapientem nam.
+
+        -#%p
+          -#A code block
+          -#%pre
+            -#hello = "my test"
+            -#puts hello
         
-          Quem sadipscing nec cu, cu vim modus recusabo appellantur. Mundi quodsi sea id. Stet phaedrum disputationi mea et, case inermis iracundia per id, cum ut eius consequat reformidans. Eum nemore viderer eu. His sale aperiam iuvaret ut, vel in ullamcorper vituperatoribus, falli nominavi te qui. Ne mea quot eruditi.
+          -#Quem sadipscing nec cu, cu vim modus recusabo appellantur. Mundi quodsi sea id. Stet phaedrum disputationi mea et, case inermis iracundia per id, cum ut eius consequat reformidans. Eum nemore viderer eu. His sale aperiam iuvaret ut, vel in ullamcorper vituperatoribus, falli nominavi te qui. Ne mea quot eruditi.
 
 
+        -#%h2#Getting_Started Getting Started
+
+        -#%p 
+          -#Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
+          -#%code nam eu
+          -#, ad mea quas iusto. Possit mentitum qui ne, 
+          -#%code duo at utroque 
+          -#dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
+
+ 
+        -#%p
+          -#Mea eu dolore utamur, vituperata dissentiunt vix an, eam ad hinc elit. Pri aliquid partiendo et. Movet fabulas mei ea, quaerendum contentiones quo no, dolor postea usu et. Ei putent nonumes per, nostro partiendo hendrerit mea et, quaeque assentior vix te. Per ne labitur molestiae temporibus, ex est quot errem luptatum, qui eu utinam conclusionemque. Nullam deleniti adipiscing qui no, everti euripidis accommodare ne his, et tale purto sapientem nam.
+
+ 
+        -#%h1#Android Android
+        -#%p 
+          -#Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
+          -#%code nam eu
+          -#, ad mea quas iusto. Possit mentitum qui ne, 
+          -#%code duo at utroque 
+          -#dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
+ 
+        -#%p
+          -#Mea eu dolore utamur, vituperata dissentiunt vix an, eam ad hinc elit. Pri aliquid partiendo et. Movet fabulas mei ea, quaerendum contentiones quo no, dolor postea usu et. Ei putent nonumes per, nostro partiendo hendrerit mea et, quaeque assentior vix te. Per ne labitur molestiae temporibus, ex est quot errem luptatum, qui eu utinam conclusionemque. Nullam deleniti adipiscing qui no, everti euripidis accommodare ne his, et tale purto sapientem nam.
+
+ 
+        -#%h2#Integrate_Android Integrate Android
+        -#%p 
+          -#Lorem ipsum dolor sit amet, efficiendi instructior cu vim, falli percipit omittantur 
+          -#%code nam eu
+          -#, ad mea quas iusto. Possit mentitum qui ne, 
+          -#%code duo at utroque 
+          -#dissentiunt. Stet audire accusata id vix. Volumus corpora et quo.  Eu deserunt molestiae mel.
+        -#%p
+          -#Mea eu dolore utamur, vituperata dissentiunt vix an, eam ad hinc elit. Pri aliquid partiendo et. Movet fabulas mei ea, quaerendum contentiones quo no, dolor postea usu et. Ei putent nonumes per, nostro partiendo hendrerit mea et, quaeque assentior vix te. Per ne labitur molestiae temporibus, ex est quot errem luptatum, qui eu utinam conclusionemque. Nullam deleniti adipiscing qui no, everti euripidis accommodare ne his, et tale purto sapientem nam.
 
 
-        %h4 Installation
+ 
 
-      .col-xs-12.col-sm-2
+      .col-xs-12.col-md-2
+        .hidden-print.hidden-xs.hidden-sm
+          %h4 Quick tip
 
 

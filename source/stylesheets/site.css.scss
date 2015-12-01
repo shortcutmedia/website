@@ -422,8 +422,31 @@ section {
       padding: 0 15%;
     }
   }
+}
+
+.documentation {
+  .side-bar {
+
+    nav {
+      /*background-color: $gray-light;*/
+      /*padding-left: 5px;*/
+      /*padding-right: 5px;*/
+
+      a {
+        color: $text-color;
+        border-left: 1px solid transparent;
+
+        &:hover, &:focus {
+          text-decoration: none;
+          background-color: transparent;
+          border-left: 1px solid $text-color;
+        }
+      }
+    }
+  }
 
 }
+
 
 .team {
   ul{ 

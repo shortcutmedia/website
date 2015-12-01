@@ -63,6 +63,16 @@ activate :middleman_scavenger do |config|
   config.sprite_path = "source/images/benefits_sprite.svg"
 end
 
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
+
+
+require "lib/markdown_ids"
+::Middleman::Extensions.register(:markdown_ids, MarkdownIds)
+activate :markdown_ids
+
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
