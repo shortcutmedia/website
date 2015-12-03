@@ -6,7 +6,7 @@ benefits:
     desc_html:
      For each Shortcut there’s a short URL that you can power up with super powers. The short URL is a practical way to shorten long campaign URLs to save space in your social media posts but that's not all it is.
      <br><br>
-     This <strong>smart link</strong> lies as a base for all Shortcut’s app marketing features. When you’ve created a Shortcut, or a short URL, you are ready to start adding super powers to it that will boost your app downloads and your user engagement.  
+     This <strong>smart link</strong> is the base for all of Shortcut’s app marketing features. When you’ve created a Shortcut, or a short URL, you are ready to start adding super powers to it that will boost your app downloads and your user engagement.
      <br><br>
      Creating one of Shortcut's short URLs also gives you the opportunity to track and analyze the usage of that campaign link. See where the users were located and which traffic source they came form.
     image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
@@ -14,12 +14,12 @@ benefits:
 
   - url: /benefits.html#benefits-mobile-deep-linking
     title: Mobile Deep Linking
-    short: Deep Links for More Engagement   
+    short: Deep Links for More Engagement
     icon: sprite.svg#benefits-mobile-deep-linking
     desc_html:
-     Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.   
+     Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.
      <br><br>
-     Shortcut’s mobile deep links support iOS, Android as well as Windows. They detect if users have your app installed and direct the user to your in-app content or the app store accordingly. 
+     Shortcut’s mobile deep links support iOS, Android as well as Windows Phone. They detect if users have your app installed and direct the user to your in-app content or the app store accordingly.
      <br><br>
      With deferred deep linking mobile deep links become <strong>even more powerful</strong>. Deferred deep linking lets you direct your users to your in-app content from the app store post install.
     image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
@@ -32,9 +32,9 @@ benefits:
     desc_html:
      Be where your customers are! You can reach new app users offline and interact with them on their smartphones. Promote your app on billboards, in newspapers or on business cards by using <strong>QR codes and image recognition</strong>.
      <br><br>
-     QR codes and image recognition do not only enable the extention of valuable offline advertising space. In combination with mobile deep linking, Shortcut's tools for offline reach let you promote your app while the users are on the go.
-     <br><br> 
-     Interacting with your customers in your offline advertising also gives you the opportunity to track your offline users and the performance of your offline advertising.     
+     QR codes and image recognition do not only enable the extention of valuable offline advertising space. In combination with mobile deep linking Shortcut's tools for offline reach let you promote your app while the users are on the go.
+     <br><br>
+     Interacting with your customers in your offline advertising also gives you the opportunity to track your offline users and the performance of your offline advertising.
     image: {src: benefits_sprite.svg#offline_advertising, fluid: [480.9,357.2]}
     layout: {image_place: 'left', first_col: 6, second_col: 6}
 
@@ -53,7 +53,7 @@ benefits:
 
   - url: /benefits.html#benefits-app-marketing-banner
     title: App Banners
-    short: More Users with App Banners 
+    short: More Users with App Banners
     icon: sprite.svg#benefits-app-marketing
     desc_html:
       Our custom app banners are a great way to market your app and gain more app users. You can show the app banners on both the mobile and the desktop version of your website.
@@ -66,7 +66,7 @@ benefits:
 
   - url: /benefits.html#benefits-analytics
     title: App Analytics
-    short: Manage and Measure Success    
+    short: Manage and Measure Success
     icon: sprite.svg#benefits-analytics
     desc_html:
      Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and <strong>boost your app downloads</strong>.
@@ -79,17 +79,17 @@ benefits:
 
   - url: /benefits.html#benefits-ab-testing
     title: A/B Testing
-    short: 
+    short:
     icon: sprite.svg#benefits-ab-testing
     desc_html:
-      The process of creating a good marketing campaign never stops. Only with continuous testing of different alternatives and 
+      The process of creating a good marketing campaign never stops. Only with continuous testing of different alternatives and
       <strong>campaign optimization</strong> you can truly figure out what works best for your customer and for your brand.
     image: {src: benefits_sprite.svg#ab_testing, fluid: [371.4, 392.4]}
     layout: {image_place: 'right', first_col: 6, second_col: 6}
 
   - url: /benefits.html#benefits-share
     title: Share
-    short: 
+    short:
     icon: sprite.svg#benefits-share
     desc_html:
       Social Media Integration enables first of all easy distribution of your
