@@ -3,7 +3,7 @@ ul.customers {
 
   >li {
     @extend .text-center;
-   @include px_and_rem_directive(20px, 'margin-botom');
+   @include px_and_rem_directive(20px, 'margin-bottom');
 
     div {
       background-position-x: 50%;
