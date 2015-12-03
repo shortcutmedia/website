@@ -4,8 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 # git config --global core.excludesfile ~/.gitignore_global
 
-# Ignore bundler config
+# Ignore config files
+/.ruby-version
 /.bundle
+
 
 # Ignore the build directory
 /build
@@ -20,5 +22,4 @@
 # Ignore sprites
 source/images/sprite.svg
 source/images/benefits_sprite.svg
-
-
+source/images/customers-*.png
