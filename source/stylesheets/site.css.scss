@@ -223,7 +223,7 @@ figure {
     /*background-size: contain;*/
     /*-moz-background-size: contain; [> Firefox 3.6 <]*/
   /*}*/
- 
+
   /*[>@include figure('short-url-bold.png', 110px, 133px);<]*/
   /*@include figure('short-url-bold.png', 110px, 133px);*/
 /*}*/
@@ -239,6 +239,11 @@ figure {
   position: relative;
   height: 0;
   top: -140px;
+
+  .short-link-form .error {
+    display: block;
+    margin: -0.5em 0 1em 0;
+  }
 }
 
 .debug-grid {
@@ -265,14 +270,23 @@ figure {
 
 .short-link-form {
 
-  input, button {
+  margin: 1em 0;
+
+  input, button, .error {
     padding-left: 3%;
     padding-right: 3%;
   }
 
+  input[type="url"] {
+    color: $gray-base;
+  }
+
   button {
     margin-bottom: 1px;
+  }
 
+  .error {
+    color: #C42B2B;
   }
 
   .form-control {
@@ -394,9 +408,9 @@ section {
     }
   }
 
-  h2 { 
-    @include px_and_rem_directive(10px, 'margin-top'); 
-    @include px_and_rem_directive(20px, 'margin-bottom'); 
+  h2 {
+    @include px_and_rem_directive(10px, 'margin-top');
+    @include px_and_rem_directive(20px, 'margin-bottom');
   }
   p { @include px_and_rem_directive(20px, 'margin-top'); }
 
@@ -449,7 +463,7 @@ section {
 
 
 .team {
-  ul{ 
+  ul{
     @include make-block-grid(2,3,4,4);
     li {
       text-align: center;
@@ -496,7 +510,7 @@ section {
         display: block;
         overflow: hidden;
 
-        b { 
+        b {
           position: absolute;
           top: 0;
           bottom: 0;
@@ -598,7 +612,7 @@ blockquote {
   }
 
 
-  svg:hover use.ic-4 { 
+  svg:hover use.ic-4 {
     fill: blue;
   }
 
