@@ -1,63 +1,79 @@
 benefits:
   - url: /benefits.html#benefits-short-urls
-    title: Short URLs
-    short: To use in all your online advertising
+    title: Short URL
+    short: Smart Link for Powerful Marketing
     icon: sprite.svg#benefits-short-url
     desc_html:
-      For each Shortcut a Short URL is created, which you can use in all your online advertising. 
-      For more effective marketing you should power up your link by 
-      <strong>using our super powers</strong>.
+     For each Shortcut there’s a short URL that you can power up with super powers. The short URL is a practical way to shorten long campaign URLs to save space in your social media posts but that's not all it is.
+     <br><br>
+     This <strong>smart link</strong> lies as a base for all Shortcut’s app marketing features. When you’ve created a Shortcut, or a short URL, you are ready to start adding super powers to it that will boost your app downloads and your user engagement.  
+     <br><br>
+     Creating one of Shortcut's short URLs also gives you the opportunity to track and analyze the usage of that campaign link. See where the users were located and which traffic source they came form.
     image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
     layout: {image_place: 'left', first_col: 5, second_col: 6}
 
   - url: /benefits.html#benefits-mobile-deep-linking
     title: Mobile Deep Linking
-    short: For better user experience
+    short: Deep Links for More Engagement   
     icon: sprite.svg#benefits-mobile-deep-linking
     desc_html:
-      Don’t waste great marketing by using ordinary links. Mobile deep links are <strong> smarter links</strong>.
-      They detect if the user has your app installed or not and directs your customer to the right content.
+     Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.   
+     <br><br>
+     Shortcut’s mobile deep links support iOS, Android as well as Windows. They detect if users have your app installed and direct the user to your in-app content or the app store accordingly. 
+     <br><br>
+     With deferred deep linking mobile deep links become <strong>even more powerful</strong>. Deferred deep linking lets you direct your users to your in-app content from the app store post install.
     image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
     layout: {image_place: 'right', first_col: 7, second_col: 5}
 
   - url: /benefits.html#benefits-offline-channels
-    title: Offline Channels
-    short: Reach your customers offline
+    title: Offline Reach
+    short: Reach Offline for More Downloads
     icon: sprite.svg#benefits-qrcode
     desc_html:
-      For print advertising you have a QR-code and image recognition to choose from 
-      <strong>QR-codes and image recognition</strong>
-      makes it possible for you to get on your offline customers’ mobile.
+     Be where your customers are! You can reach new app users offline and interact with them on their smartphones. Promote your app on billboards, in newspapers or on business cards by using <strong>QR codes and image recognition</strong>.
+     <br><br>
+     QR codes and image recognition do not only enable the extention of valuable offline advertising space. In combination with mobile deep linking, Shortcut's tools for offline reach let you promote your app while the users are on the go.
+     <br><br> 
+     Interacting with your customers in your offline advertising also gives you the opportunity to track your offline users and the performance of your offline advertising.     
     image: {src: benefits_sprite.svg#offline_advertising, fluid: [480.9,357.2]}
     layout: {image_place: 'left', first_col: 6, second_col: 6}
 
   - url: /benefits.html#benefits-in-store-reach
-    title: In-Store Reach
-    short: Interact with your customers
+    title: In-Store Communication
+    short: Upselling and In-Store Interaction
     icon: sprite.svg#benefits-instore-reach
     desc_html:
-      If you have a brick-and-mortar shop or a restaurant iBeacons are a great way to interact with your customers 
-      <strong>while they are shopping</strong> at your or in close approximity of your store.
+      Upsell with iBeacons! If you have a brick-and-mortar shop or a restaurant iBeacons are a great way to interact with your customers <strong>while they are shopping</strong> at or in close proximity of your store.
+      <br><br>
+      Reach out to your in-store customers with a special offer through your app when they are walking through your store. Or send them a quick note that might help them with their purchasing decision.
+      <br><br>
+      iBeacons are a great way to upsell to your already existing customers or to remind them of your existence if they are close to your store. Why not, for example, make your restaurant guest's dinner unforgettable with a mouthwatering dessert offer?
     image: {src: benefits_sprite.svg#instore_reach, fluid: [538.2,400.8]}
     layout: {image_place: 'right', first_col: 6, second_col: 6}
 
   - url: /benefits.html#benefits-app-marketing-banner
-    title: App Marketing Banners
-    short: Market your app effectively 
+    title: App Banners
+    short: More Users with App Banners 
     icon: sprite.svg#benefits-app-marketing
     desc_html:
-      Market your app on your mobile website or on your desktop website with our app banners. Use our banner editor and create banners that have the 
-      <strong>look and feel of your brand</strong>.
+      Our custom app banners are a great way to market your app and gain more app users. You can show the app banners on both the mobile and the desktop version of your website.
+      <br><br>
+      Creating app banners doesn't have to be complicated. With the Shortcut app banner editor you can easily create banners that match the <strong>look and feel of your brand</strong>. Use your own ad text and choose the most suitable call to action and colour scheme.
+      <br><br>
+      By combining deferred deep linking with your app banners you can link your users to in-app content and specific features within your app after they have downloaded your app in the app store.
     image: {src: benefits_sprite.svg#app_marketing_banner, fluid: [364, 466]}
     layout: {image_place: 'left', first_col: 6, second_col: 6}
 
   - url: /benefits.html#benefits-analytics
-    title: Analytics
-    short: All the information you need
+    title: App Analytics
+    short: Manage and Measure Success    
     icon: sprite.svg#benefits-analytics
     desc_html:
-      Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and 
-      <strong>boost your app downloads</strong>.
+     Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and <strong>boost your app downloads</strong>.
+     <br><br>
+     In the intuitive reports you will find information about your app users like their location and where they clicked on your short URL.
+     <br><br>
+     Analyze your app marketing campaigns and make sure you make the right marketing decisions. See which channel brought most of the visitors and learn about where your users are located.
     image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
     layout: {image_place: 'left', first_col: 7, second_col: 5}
 

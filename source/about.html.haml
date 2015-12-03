@@ -19,7 +19,7 @@ team:
     picture: team/severin-schoepke.jpg
 
 jobs:
-  - title: Mobile Apps Engineer
+  - title: MOBILE APPS ENGINEER
     desc:
       <strong>Responsible for</strong> mobile engineering. Planning UI and UX together 
       with CTO and Marketing for the different platforms. Implementation on mobile 
@@ -43,14 +43,15 @@ jobs:
       .col-sm-12.text-center
         %h1
           About
-          %span.green shortcut
+          %span.green Shortcut
     .row
       .col-xs-12.col-sm-8.col-sm-offset-2.text-center.col-lg-6.col-lg-offset-3
         %p
-          We are working for you from around the world. Not because we are a multi-billion 
-          corporation, but because we are a distributed team.
-          %strong Our mission is to serve you the best we can.
-          And you want to be served from competent and happy staff.
+          At Shortcut we take the complex topic of app marketing to the next level by 
+          providing marketers, app developers and brands with the easiest and most 
+          user-friendly app marketing tool.
+        %p  
+          
 
 %section.white.team
   .container
@@ -78,13 +79,13 @@ jobs:
   .container
     .row
       .col-sm-12.text-center
-        %h2 We are hiring &mdash; join our team!
+        %h2 We Are Hiring &mdash; Join Our Team!
     .row
       .col-sm-4
         IMAGE_PLACEHOLDER
       - current_page.data.jobs.each do |job|
         .col-sm-8
-          %h3= job.title
+          %h4= job.title
           %p= job.desc
 
 %section.white
@@ -104,6 +105,12 @@ jobs:
     .row
       .col-sm-12
         %h2 Contact Us
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.text-center.col-lg-6.col-lg-offset-3
+        %p
+          At Shortcut we take the complex topic of app marketing to the next level by 
+          providing marketers, app developers and brands with the easiest and most 
+          user-friendly app marketing tool.
     .row
       .col-xs-12.col-sm-6
         .google-maps
@@ -131,12 +138,12 @@ jobs:
             frameborder: "0", 
             style: "border:0",  
             allowfullscreen: true, 
-            src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.5915633642!2d8.530655652069903!3d47.38088961143214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0e1f469895%3A0xcfbd033cbec1b2ba!2sZollstrasse+62%2C+8005+Z%C3%BCrich%2C+Switzerland!5e0!3m2!1sen!2sus!4v1448601204807' }
+            src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.4835083386055!2d8.543585008334286!3d47.379441449269514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a09d996fa9f%3A0x5e7b85ed242e9f7b!2sWeinbergstrasse+35%2C+8006+Z%C3%BCrich!5e0!3m2!1sen!2sch!4v1449080423511' }
 
         %p 
           %b Shortcut Media AG
-          %br Zollstrasse 62
-          8005 Zürich, Switzerland
+          %br Weinbergstrasse 35
+          8006 Zürich, Switzerland
 
 
 = partial 'call_to_action'
