@@ -354,17 +354,17 @@ section {
   }
   p { @include px_and_rem_directive(20px, 'margin-top'); }
 
-  .benefit {
-    @media (min-width: $screen-sm-min) {
-      h2 { @include px_and_rem_directive(50px, 'margin-top'); }
-    }
-    @media (min-width: $screen-md-min) {
-      h2 { @include px_and_rem_directive(75px, 'margin-top'); }
-    }
-    @media (min-width: $screen-lg-min) {
-      h2 { @include px_and_rem_directive(100px, 'margin-top'); }
-    }
-  }
+  /*.benefit {*/
+    /*@media (min-width: $screen-sm-min) {*/
+      /*h2 { @include px_and_rem_directive(50px, 'margin-top'); }*/
+    /*}*/
+    /*@media (min-width: $screen-md-min) {*/
+      /*h2 { @include px_and_rem_directive(75px, 'margin-top'); }*/
+    /*}*/
+    /*@media (min-width: $screen-lg-min) {*/
+      /*h2 { @include px_and_rem_directive(100px, 'margin-top'); }*/
+    /*}*/
+  /*}*/
 
   .container-short_urls {
     @media (min-width: $grid-float-breakpoint) {
