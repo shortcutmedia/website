@@ -204,22 +204,22 @@ figure {
   }
 }
 
-.debug-grid {
-  position: absolute;
-  z-index: -100;
-  left:0;
-  right:0;
+/*.debug-grid {*/
+  /*position: absolute;*/
+  /*z-index: -100;*/
+  /*left:0;*/
+  /*right:0;*/
 
-  .row {
-    background-color: rgba(255, 0, 0, 0.1);
+  /*.row {*/
+    /*background-color: rgba(255, 0, 0, 0.1);*/
 
-    >div {
-      background-color: rgba(0,0,0,0.2);
-      background-clip: content-box;
-      height: 2000px;
-    }
-  }
-}
+    /*>div {*/
+      /*background-color: rgba(0,0,0,0.2);*/
+      /*background-clip: content-box;*/
+      /*height: 2000px;*/
+    /*}*/
+  /*}*/
+/*}*/
 
 
 .btn-shortcut {
