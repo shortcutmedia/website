@@ -20,7 +20,6 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/background-clip";
 
-$linkman-image: 'linkman.png';
 $pattern-image: 'benefit-pattern.svg';
 $white-background-color: #fff;
 $blue-background-color: #7EADC6;
@@ -112,55 +111,6 @@ p {
 .btn {
   font-weight: 300;
 }
-
-.linkman-wrapper {
-  @media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
-    min-height: 334px;
-    position: relative;
-    .linkman-img {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-
-  @media (min-width: 950px) {
-    .linkman-img {
-      left: 20%;
-    }
-  }
-}
-
-
-.linkman-img {
-  max-width: 596px;
-
-  /*@media (min-width: $grid-float-breakpoint) {*/
-    /*margin-right: -40px; [> pushes the cape of the linkman outside the right redline <]*/
-  /*}*/
-  /*@media (min-width: $screen-sm-min) { */
-    /*margin-right: -16px; [> pushes the cape of the linkman outside the right redline <]*/
-  /*}*/
-  /*@media (min-width: $screen-md-min) { */
-    /*margin-right: -20px; [> pushes the cape of the linkman outside the right redline <]*/
-  /*}*/
-  /*@media (min-width: $screen-lg-min) { */
-    /*margin-right: -40px; [> pushes the cape of the linkman outside the right redline <]*/
-  /*}*/
-
-  figure {
-    padding-top: 91.271056661562%;  /* 596px/653px */
-    background: image-url($linkman-image);
-    background-size: cover;
-    -moz-background-size: cover; /* Firefox 3.6 */
-    background-position: center; /* Internet Explorer 7/8 */
-  }
-
-}
-
-
-
 
 
 body, footer {
@@ -319,24 +269,6 @@ figure {
   }
 }
 
-
-
-.linkman-short {
-  margin-top: -40px;
-  /*clear: both;*/
-  float: right;
-
-  width: 350px;
-  overflow-x: hidden;
-  figure {
-    width: 380px;
-    padding-top: 243px;
-    background-position: top center;
-    /*float: right;*/
-
-  }
-
-}
 
 /*.customers-logo_apg {*/
    /*[>800px / 200px<]*/
@@ -742,5 +674,75 @@ figure.fluid {
 
 
 
+#teaser {
+  position: relative;
+  min-height: 370px;
 
 
+  .linkman-wrapper {
+    background-image: url("/images/linkman.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 100%;
+    padding-top: 250px;
+    margin-top: -20px;
+    padding-bottom: 60px;
+
+    form {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+      display: none;
+    }
+  }
+
+  .linkman-container {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    bottom: 0;
+    left: 0;
+    right: -20px;
+    background-image: url("/images/linkman.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+    background-clip: border-box;
+
+    @media (min-width: $grid-float-breakpoint) { display: block; }
+    @media (min-width: $screen-sm-min) { right: -10px; }
+    @media (min-width: $screen-md-min) { right: -30px; }
+    @media (min-width: $screen-lg-min) { right: -40px; }
+  }
+}
+
+.linkman-container {
+  background-image: url("/images/linkman.png");
+  background-repeat: no-repeat;
+  background-position: 100% top;
+  background-size: auto 170%;
+  background-clip: border-box;
+
+}
+
+#call-to-action {
+  position: relative;
+  @media (min-width: $grid-float-breakpoint) {
+    .linkman-container {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: -30px;
+
+      background-image: url("/images/linkman.png");
+      background-repeat: no-repeat;
+      background-position: 100% top;
+      background-size: auto 170%;
+      background-clip: border-box;
+    }
+  }
+}
