@@ -52,8 +52,8 @@ $container-lg-increase-gutter-by: 60px;
 // Make the website narrower on large screens
 @media (min-width: $screen-lg-min) {
   .container {
-    padding-left: ceil($container-lg-increase-gutter-by * 0.5);
-    padding-right: ceil($container-lg-increase-gutter-by * 0.5);
+    padding-left: ceil($container-lg-increase-gutter-by * 0.25);
+    padding-right: ceil($container-lg-increase-gutter-by * 0.25);
   }
 }
 
@@ -67,7 +67,7 @@ $container-lg-increase-gutter-by: 60px;
 
 
 html {
-  font-size: 14px; /* base font size for rem */
+  font-size: 16px; /* base font size for rem */
 }
 
 body {
@@ -89,11 +89,15 @@ body {
   }
 }
 
-h3, h4, p {
+h3, h4 {
   font-weight: lighter;
-
+  letter-spacing: 1px;
 }
 
+p {
+  font-weight: lighter;
+  font-size: 1rem;
+}
 
 @media (min-width: $grid-float-breakpoint) {
   h3 {

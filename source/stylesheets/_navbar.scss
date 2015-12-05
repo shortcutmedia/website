@@ -1,4 +1,5 @@
 // Certain styles regarding navigation are defined in bootstrap-variables
+$navbar-font-size:  1rem;
 
 .nav > li >a:hover:not(.btn) {
   text-decoration: underline;
@@ -11,16 +12,18 @@
 }
 
 .navbar-brand {
-  margin-left: 16px;
+  margin-left: 0px;
   margin-top: 9px;
   padding: 0;
-  width: 154px;
+  width: 156px;
   height: 32px;
 }
 
 .navbar-default {
+  letter-spacing: 1px;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: $navbar-font-size;
+  
 
   @include px_and_rem_directive(20px, 'margin-top'); 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -30,18 +33,23 @@
 
   .navbar-nav {
     >li {
+      a {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
       a:hover {
         background-color: darken($navbar-default-bg, 6.5%);
       }
      .btn-nav {
         @include button-variant($navbar-default-link-color, transparent, $navbar-default-link-color);
-
+        font-size: $navbar-font-size;
+        letter-spacing: 1px;
         margin-top: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 9px 32px;
         &:hover {
-          color: $navbar-default-bg;
+          color: $green;
           background-color: $navbar-default-link-color;
+          border-color: $navbar-default-link-color;
         }
       }
     }
