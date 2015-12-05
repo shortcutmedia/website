@@ -1,5 +1,5 @@
 .benefits-nav-container {
-  @include px_and_rem_directive(10px, 'margin-top');
+  @include px_and_rem_directive(40px, 'margin-top');
   position: relative;
 
   button {
