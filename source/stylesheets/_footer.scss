@@ -1,7 +1,7 @@
 body > footer {
   ul {
     @extend .ul-reset;
-
+    color: $text-color-medium;
     li {
       @include px_and_rem_directive(4px, 'margin-bottom');
       &.social-buttons {
@@ -23,7 +23,7 @@ body > footer {
   }
 
   a, a:hover {
-    color: $text-color;
+    color: $text-color-medium;
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
