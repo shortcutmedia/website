@@ -99,6 +99,10 @@ p {
   font-size: 1rem;
 }
 
+.margin-b {
+  margin-bottom: 50px;  
+}
+
 @media (min-width: $grid-float-breakpoint) {
   h3 {
     font-size: 32px;
