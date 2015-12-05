@@ -1,6 +1,7 @@
 ul.customers {
   @include make-block-grid(2,3,4,4);
-
+  margin-top: 40px;
+  
   >li {
     @extend .text-center;
    @include px_and_rem_directive(20px, 'margin-bottom');

@@ -1,5 +1,6 @@
 ul.benefits-overview {
-  @include make-block-grid(2,3,4,4);
+  @include make-block-grid(2,3,3,3);
+  margin-top: 40px;
   /*@include px_and_rem_directive(30px, 'margin-top');*/
 
   >li {
