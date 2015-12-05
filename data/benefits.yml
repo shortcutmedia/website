@@ -77,24 +77,24 @@ benefits:
     image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
     layout: {image_place: 'left', first_col: 7, second_col: 5}
 
-  - url: /benefits.html#benefits-ab-testing
-    title: A/B Testing
-    short:
-    icon: sprite.svg#benefits-ab-testing
-    desc_html:
-      The process of creating a good marketing campaign never stops. Only with continuous testing of different alternatives and
-      <strong>campaign optimization</strong> you can truly figure out what works best for your customer and for your brand.
-    image: {src: benefits_sprite.svg#ab_testing, fluid: [371.4, 392.4]}
-    layout: {image_place: 'right', first_col: 6, second_col: 6}
-
-  - url: /benefits.html#benefits-share
-    title: Share
-    short:
-    icon: sprite.svg#benefits-share
-    desc_html:
-      Social Media Integration enables first of all easy distribution of your
-      <strong>link in all your Social Media channels</strong>
-      and secondly gives you the opportunity to schedule your posts and have them sent out automatically.
-    image: {src: benefits_sprite.svg#social_media_integration, fluid: [386.6, 315.7]}
-    layout: {image_place: 'left', first_col: 6, second_col: 6}
+  # - url: /benefits.html#benefits-ab-testing
+  #   title: A/B Testing
+  #   short:
+  #   icon: sprite.svg#benefits-ab-testing
+  #   desc_html:
+  #     The process of creating a good marketing campaign never stops. Only with continuous testing of different alternatives and
+  #     <strong>campaign optimization</strong> you can truly figure out what works best for your customer and for your brand.
+  #   image: {src: benefits_sprite.svg#ab_testing, fluid: [371.4, 392.4]}
+  #   layout: {image_place: 'right', first_col: 6, second_col: 6}
+  #
+  # - url: /benefits.html#benefits-share
+  #   title: Share
+  #   short:
+  #   icon: sprite.svg#benefits-share
+  #   desc_html:
+  #     Social Media Integration enables first of all easy distribution of your
+  #     <strong>link in all your Social Media channels</strong>
+  #     and secondly gives you the opportunity to schedule your posts and have them sent out automatically.
+  #   image: {src: benefits_sprite.svg#social_media_integration, fluid: [386.6, 315.7]}
+  #   layout: {image_place: 'left', first_col: 6, second_col: 6}
 
