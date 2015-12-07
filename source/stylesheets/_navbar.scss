@@ -5,18 +5,21 @@ $navbar-font-size:  1rem;
   text-decoration: underline;
 }
 
-@media (min-width: $grid-float-breakpoint) {
-  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-left: 0;
-  }
-}
 
 .navbar-brand {
-  margin-left: 0px;
+  margin-left: 16px;
   margin-top: 9px;
   padding: 0;
-  width: 156px;
+  width: 154px;
   height: 32px;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-brand, .navbar > .container .navbar-brand, .navbar >
+  section.white:not(.header) + section.white:after .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
 }
 
 .navbar-default {
@@ -33,10 +36,6 @@ $navbar-font-size:  1rem;
 
   .navbar-nav {
     >li {
-      a {
-        padding-left: 32px;
-        padding-right: 32px;
-      }
       a:hover {
         background-color: darken($navbar-default-bg, 6.5%);
       }
