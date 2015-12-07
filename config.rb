@@ -57,10 +57,10 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :middleman_scavenger do |config|
-  #config.path = "source/images/svg/"
-  #config.sprite_path = "source/images/sprite.svg"
-  config.path = "source/images/benefits_svg/"
-  config.sprite_path = "source/images/benefits_sprite.svg"
+  config.path = "source/images/svg/"
+  config.sprite_path = "source/images/sprite.svg"
+  #config.path = "source/images/benefits_svg/"
+  #config.sprite_path = "source/images/benefits_sprite.svg"
 end
 
 activate :syntax
