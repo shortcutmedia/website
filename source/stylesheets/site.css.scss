@@ -367,6 +367,13 @@ section {
   }
 }
 
+.row.vertical-center {
+  display: flex;
+  >div {
+    align-self: center;
+  }
+}
+
 .documentation {
   .side-bar {
 
@@ -659,6 +666,7 @@ figure.fluid {
   &.svg-analytics { padding-top: 469 / 646 * 100%; }
   &.svg-ab_testing { padding-top: 392.4 / 371.4 * 100%; }
   &.svg-social_media_integration { padding-top: 315.7 / 386.6 * 100%; }
+  &.svg-apply-now { padding-top: 154.0 / 267 * 100%; }
 }
 
 

@@ -80,9 +80,9 @@ jobs:
     .row
       .col-sm-12.text-center
         %h2 We Are Hiring &mdash; Join Our Team!
-    .row
+    .row.vertical-center
       .col-sm-4
-        IMAGE_PLACEHOLDER
+        = figure 'sprite.svg#apply-now', fluid: [267, 154]
       - current_page.data.jobs.each do |job|
         .col-sm-8
           %h4= job.title
