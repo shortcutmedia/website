@@ -24,7 +24,7 @@ $pattern-image: 'benefit-pattern.svg';
 $white-background-color: #fff;
 $blue-background-color: #7EADC6;
 
-$container-lg-increase-gutter-by: 60px;
+$container-lg-increase-gutter-by: 30px;
 
 
 @import "helper";
@@ -51,8 +51,8 @@ $container-lg-increase-gutter-by: 60px;
 // Make the website narrower on large screens
 @media (min-width: $screen-lg-min) {
   .container {
-    padding-left: ceil($container-lg-increase-gutter-by * 0.25);
-    padding-right: ceil($container-lg-increase-gutter-by * 0.25);
+    padding-left: ceil($container-lg-increase-gutter-by * 0.5);
+    padding-right: ceil($container-lg-increase-gutter-by * 0.5);
   }
 }
 
