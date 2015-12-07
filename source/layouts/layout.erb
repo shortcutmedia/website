@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
+    <% (current_page.data.meta || []).each do |key, val| %>
+      <meta property="<%=key %>" content="<%=val%>" />
+    <% end %>
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Shortcut Media" %></title>
 
@@ -16,17 +20,6 @@
     <%= stylesheet_link_tag 'ars-maquette-web-font' %>
     <%#<script src="https://use.typekit.net/xru7wzr.js"></script>%>
     <%#<script>try{Typekit.load({ async: false });}catch(e){}</script>%>
-    
-    <meta property="og:title" content="App Marketing With Superpowers" />
-    <meta property="og:url" content="http://shortcutmedia.com" />
-    <meta property="og:site_name" content="Shortcut - App Marketing With Superpowers"/>
-    <meta property="og:description" content="Power Up Your App Marketing. Get Users, boost Engagement, and maximize Referrals." />
-    <meta property="fb:app_id" content="176995982338808" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://shortcutmedia.com/images/shortcut_Facebook_Header_851x315px.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="851" />
-    <meta property="og:image:height" content="315" />
 
   </head>
 
