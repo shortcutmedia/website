@@ -9,6 +9,8 @@
       <meta property="<%=key %>" content="<%=val%>" />
     <% end %>
 
+    <%= partial 'favicon' %>
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Shortcut Media" %></title>
 
