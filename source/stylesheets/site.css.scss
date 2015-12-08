@@ -19,6 +19,7 @@
 @import "bootstrap-custom"; /* Import only selected elements; not entire bootstrap */
 @import "compass/css3/border-radius";
 @import "compass/css3/background-clip";
+@import "compass/css3/background-size";
 
 $pattern-image: 'benefit-pattern.svg';
 $white-background-color: #fff;
@@ -33,13 +34,14 @@ $container-lg-increase-gutter-by: 30px;
 @import "navbar";
 @import "benefits-overview";
 @import "benefits_nav";
-@import "customers";
 @import "footer";
 
 
 // generating sprite images
 @import "customers/*.png";
 @include all-customers-sprites;
+
+@import "customers";
 
 // Reset browser margin, padding. Don't know why normalize doesn't handle that?
 * {
@@ -269,27 +271,6 @@ figure {
   }
 }
 
-
-/*.customers-logo_apg {*/
-   /*[>800px / 200px<]*/
-  /*width: 200px;*/
-  /*height: 50px;*/
-
-  /*background-size: cover;*/
-  /*-moz-background-size: cover; [> Firefox 3.6 <]*/
-/*}*/
-
-/*.customers-logo_audi {*/
-   /*[>800px / 200px<]*/
-  /*width: 200px;*/
-  /*height: 50px;*/
-
-  /*background-size: cover;*/
-  /*-moz-background-size: cover; [> Firefox 3.6 <]*/
-/*}*/
-
-
-/*section.divider {*/
 
 // Draw a divider if two white sections follow each others
 section.white:not(.header) + section.white {
