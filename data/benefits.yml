@@ -1,17 +1,4 @@
 benefits:
-  - url: /benefits.html#benefits-short-urls
-    title: Short URL
-    short: Smart Link for Powerful Marketing
-    icon: sprite.svg#benefits-short-url
-    desc_html:
-     For each Shortcut there’s a short URL that you can power up with super powers. The short URL is a practical way to shorten long campaign URLs to save space in your social media posts but that's not all it is.
-     <br><br>
-     This <strong>smart link</strong> is the base for all of Shortcut’s app marketing features. When you’ve created a Shortcut, or a short URL, you are ready to start adding super powers to it that will boost your app downloads and your user engagement.
-     <br><br>
-     Creating one of Shortcut's short URLs also gives you the opportunity to track and analyze the usage of that campaign link. See where the users were located and which traffic source they came form.
-    image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
-    layout: {image_place: 'left', first_col: 5, second_col: 6}
-
   - url: /benefits.html#benefits-mobile-deep-linking
     title: Mobile Deep Linking
     short: Deep Links for More Engagement
@@ -24,32 +11,6 @@ benefits:
      With deferred deep linking mobile deep links become <strong>even more powerful</strong>. Deferred deep linking lets you direct your users to your in-app content from the app store post install.
     image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
     layout: {image_place: 'right', first_col: 7, second_col: 5}
-
-  - url: /benefits.html#benefits-offline-channels
-    title: Offline Reach
-    short: Reach Offline for More Downloads
-    icon: sprite.svg#benefits-qrcode
-    desc_html:
-     Be where your customers are! You can reach new app users offline and interact with them on their smartphones. Promote your app on billboards, in newspapers or on business cards by using <strong>QR codes and image recognition</strong>.
-     <br><br>
-     QR codes and image recognition do not only enable the extention of valuable offline advertising space. In combination with mobile deep linking Shortcut's tools for offline reach let you promote your app while the users are on the go.
-     <br><br>
-     Interacting with your customers in your offline advertising also gives you the opportunity to track your offline users and the performance of your offline advertising.
-    image: {src: benefits_sprite.svg#offline_advertising, fluid: [480.9,357.2]}
-    layout: {image_place: 'left', first_col: 6, second_col: 6}
-
-  - url: /benefits.html#benefits-in-store-reach
-    title: In-Store Communication
-    short: Upselling and In-Store Interaction
-    icon: sprite.svg#benefits-instore-reach
-    desc_html:
-      Upsell with iBeacons! If you have a brick-and-mortar shop or a restaurant iBeacons are a great way to interact with your customers <strong>while they are shopping</strong> at or in close proximity of your store.
-      <br><br>
-      Reach out to your in-store customers with a special offer through your app when they are walking through your store. Or send them a quick note that might help them with their purchasing decision.
-      <br><br>
-      iBeacons are a great way to upsell to your already existing customers or to remind them of your existence if they are close to your store. Why not, for example, make your restaurant guest's dinner unforgettable with a mouthwatering dessert offer?
-    image: {src: benefits_sprite.svg#instore_reach, fluid: [538.2,400.8]}
-    layout: {image_place: 'right', first_col: 6, second_col: 6}
 
   - url: /benefits.html#benefits-app-marketing-banner
     title: App Banners
@@ -76,6 +37,45 @@ benefits:
      Analyze your app marketing campaigns and make sure you make the right marketing decisions. See which channel brought most of the visitors and learn about where your users are located.
     image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
     layout: {image_place: 'left', first_col: 7, second_col: 5}
+
+  - url: /benefits.html#benefits-short-urls
+    title: Short URL
+    short: Smart Link for Powerful Marketing
+    icon: sprite.svg#benefits-short-url
+    desc_html:
+     For each Shortcut there’s a short URL that you can power up with super powers. The short URL is a practical way to shorten long campaign URLs to save space in your social media posts but that's not all it is.
+     <br><br>
+     This <strong>smart link</strong> is the base for all of Shortcut’s app marketing features. When you’ve created a Shortcut, or a short URL, you are ready to start adding super powers to it that will boost your app downloads and your user engagement.
+     <br><br>
+     Creating one of Shortcut's short URLs also gives you the opportunity to track and analyze the usage of that campaign link. See where the users were located and which traffic source they came form.
+    image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
+    layout: {image_place: 'left', first_col: 5, second_col: 6}
+
+  - url: /benefits.html#benefits-in-store-reach
+    title: In-Store Communication
+    short: Upselling and In-Store Interaction
+    icon: sprite.svg#benefits-instore-reach
+    desc_html:
+      Upsell with iBeacons! If you have a brick-and-mortar shop or a restaurant iBeacons are a great way to interact with your customers <strong>while they are shopping</strong> at or in close proximity of your store.
+      <br><br>
+      Reach out to your in-store customers with a special offer through your app when they are walking through your store. Or send them a quick note that might help them with their purchasing decision.
+      <br><br>
+      iBeacons are a great way to upsell to your already existing customers or to remind them of your existence if they are close to your store. Why not, for example, make your restaurant guest's dinner unforgettable with a mouthwatering dessert offer?
+    image: {src: benefits_sprite.svg#instore_reach, fluid: [538.2,400.8]}
+    layout: {image_place: 'right', first_col: 6, second_col: 6}
+
+  - url: /benefits.html#benefits-offline-channels
+    title: Offline Reach
+    short: Reach Offline for More Downloads
+    icon: sprite.svg#benefits-qrcode
+    desc_html:
+     Be where your customers are! You can reach new app users offline and interact with them on their smartphones. Promote your app on billboards, in newspapers or on business cards by using <strong>QR codes and image recognition</strong>.
+     <br><br>
+     QR codes and image recognition do not only enable the extention of valuable offline advertising space. In combination with mobile deep linking Shortcut's tools for offline reach let you promote your app while the users are on the go.
+     <br><br>
+     Interacting with your customers in your offline advertising also gives you the opportunity to track your offline users and the performance of your offline advertising.
+    image: {src: benefits_sprite.svg#offline_advertising, fluid: [480.9,357.2]}
+    layout: {image_place: 'left', first_col: 6, second_col: 6}
 
   # - url: /benefits.html#benefits-ab-testing
   #   title: A/B Testing
