@@ -42,6 +42,7 @@ $container-lg-increase-gutter-by: 30px;
 @include all-customers-sprites;
 
 @import "customers";
+@import "syntax-highlighting";
 
 // Reset browser margin, padding. Don't know why normalize doesn't handle that?
 * {
@@ -362,6 +363,11 @@ section {
       /*background-color: $gray-light;*/
       /*padding-left: 5px;*/
       /*padding-right: 5px;*/
+      max-width: 200px;
+
+      &.affix {
+        top: 20px;
+      }
 
       a {
         color: $text-color;
@@ -373,9 +379,68 @@ section {
           border-left: 1px solid $text-color;
         }
       }
+
+      .active > a {
+          border-left: 1px solid $text-color;
+      }
+
+      >.nav {
+        >li >.nav > li > a { display: none; }
+
+        a {
+          padding-bottom: 0;
+        }
+
+
+        .nav {
+           a {
+            padding-top: 0;
+            padding-bottom: 0;
+            font-weight: lighter;
+          }
+
+          .nav {
+            .nav {
+              a {
+                font-size: 12px;
+
+              }
+            }
+
+          }
+        }
+      }
+
+
+      .nav {
+        padding-left: 5px;
+
+        .nav {
+          .nav {
+            display: none;
+          }
+       }
+      }
+
+      .active {
+        >.nav >li >.nav { display: block; }
+        >.nav {
+          ul {
+            display: block;
+          }
+        }
+      }
     }
   }
 
+  pre.highlight {
+    overflow: auto;
+  }
+
+  ul, ol {
+    padding-left: 40px;
+
+  }
 }
 
 
