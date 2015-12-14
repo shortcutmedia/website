@@ -2,7 +2,7 @@ benefits:
   - url: /benefits.html#benefits-mobile-deep-linking
     title: Mobile Deep Linking
     short: Deep Links for More Engagement
-    icon: sprite.svg#benefits-mobile-deep-linking
+    icon: sprite.svg#benefits-mobile-deep-link
     desc_html:
      Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.
      <br><br>
@@ -28,7 +28,7 @@ benefits:
   - url: /benefits.html#benefits-analytics
     title: App Analytics
     short: Manage and Measure Success
-    icon: sprite.svg#benefits-analytics
+    icon: sprite.svg#benefits-analytic
     desc_html:
      Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and <strong>boost your app downloads</strong>.
      <br><br>
