@@ -63,6 +63,14 @@ activate :middleman_scavenger do |config|
   #config.sprite_path = "source/images/benefits_sprite.svg"
 end
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote = 'https://shortcut-web@shortcut-website.scm.azurewebsites.net:443/shortcut-website.git'
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
+
 activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
