@@ -76,6 +76,8 @@ set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
 
 
+activate :alias
+
 require "lib/markdown_ids"
 ::Middleman::Extensions.register(:markdown_ids, MarkdownIds)
 activate :markdown_ids

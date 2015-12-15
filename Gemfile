@@ -24,3 +24,6 @@ gem 'redcarpet'
 gem 'middleman-remote-code', git: 'https://github.com/keenlabs/middleman-remote-code.git', ref: '42e9641'
 
 gem 'middleman-deploy', '~> 1.0'
+
+gem 'middleman-alias'
+

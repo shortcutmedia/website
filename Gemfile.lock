@@ -103,6 +103,8 @@ GEM
     listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    middleman-alias (0.0.16)
+      middleman-core (~> 3.2)
     middleman-deploy (1.0.0)
       middleman-core (>= 3.2)
       net-sftp
@@ -178,6 +180,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
   jquery-middleman
   middleman!
+  middleman-alias
   middleman-deploy (~> 1.0)
   middleman-livereload (~> 3.1.0)
   middleman-remote-code!
