@@ -233,7 +233,7 @@ section.white:not(.header) + section.white {
 // -------------------------------------------------------------------------
 // Site specific styles
 // -------------------------------------------------------------------------
-.index {
+.index, .sem-more-app-downloads {
   >section {
     &:first-of-type {
       padding: 0 0;
@@ -244,7 +244,7 @@ section.white:not(.header) + section.white {
       @media (min-width: $screen-sm-min) { max-height: 436px; }
       @media (min-width: $screen-md-min) { max-height: 524px; }
       @media (min-width: $screen-lg-min) { max-height: 604px; }
-      
+
       overflow-y: hidden;
       figure {
         margin-bottom: -1px;
