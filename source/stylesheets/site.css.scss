@@ -83,6 +83,10 @@ h3, h4 {
 p {
   font-weight: lighter;
   font-size: 1rem;
+  a {
+    color: #666;
+    text-decoration: underline;
+  }
 }
 
 .margin-b {
@@ -115,7 +119,7 @@ body, footer {
     }
 
     &.blue, &.transparent {
-      h1, h2, h3, h4, p { color: #fff; }
+      h1, h2, h3, h4, p, a { color: #fff; }
     }
 
     &.blue a {
@@ -366,6 +370,26 @@ section.white:not(.header) + section.white {
   }
 }
 
+.vignette.circle {
+  max-width: 165px;
+  margin: 0 auto;
+
+  figure {
+    position: relative;
+    padding-top: 100% /* image ratio */
+  }
+
+  img, i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @include border-radius(100px);
+    @include background-clip(padding-box);
+  }
+
+}
 
 .team {
   ul{
@@ -375,26 +399,9 @@ section.white:not(.header) + section.white {
     }
   }
 
-  $vigniette-dim: 165px;
-
-  .vignette {
-    max-width: 165px;
-    margin: 0 auto;
-
-    figure {
-      position: relative;
-      padding-top: 100% /* image ratio */
-    }
-
+  .vignette.circle {
     img, i {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
       border: 1px solid $gray-light;
-      @include border-radius(100px);
-      @include background-clip(padding-box);
     }
   }
 
@@ -425,6 +432,14 @@ section.white:not(.header) + section.white {
           margin-top: (14px / (-2));
         }
       }
+    }
+  }
+}
+
+.x404 {
+  .vignette {
+    img {
+      background-color: white;
     }
   }
 }

@@ -82,9 +82,6 @@ require "lib/markdown_ids"
 ::Middleman::Extensions.register(:markdown_ids, MarkdownIds)
 activate :markdown_ids
 
-# Disable layout for 404 page
-page '/404.html', layout: false
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

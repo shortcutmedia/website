@@ -72,7 +72,7 @@ meta:
         %ul.small-block-grid-4
           - current_page.data.team.each do |employee|
             %li
-              .vignette
+              .vignette.circle
                 %figure
                   = image_tag employee.picture
               %b= employee.name
@@ -80,7 +80,7 @@ meta:
           - if current_page.data.jobs.any?
             %li.placeholder
               = link_to '#jobs' do
-                .vignette
+                .vignette.circle
                   %figure
                     %i
                       %b YOU?
