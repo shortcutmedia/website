@@ -53,10 +53,17 @@ $container-lg-increase-gutter-by: 30px;
 
 
 html {
-  font-size: 16px; /* base font size for rem */
+  /* html's font-size is the root font-size, which means it will be used as 
+   * a base for rem calculation, but that's it, nothing else. 
+   * body's font-size is the text's default font-size: all your text should 
+   * have this size, unless overriding definition */
+  font-size: $font-size-base; /* base font size for rem */
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 
   @media (min-width: $screen-sm-min) {
      /* FIXME: test this in different browsers. */
@@ -587,3 +594,6 @@ figure.fluid {
     }
   }
 }
+
+
+/*@import 'panda-overwrite'*/
