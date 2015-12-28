@@ -148,6 +148,10 @@ body, footer {
   }
 }
 
+body>section.header {
+  @include px_and_rem_directive(80px, 'padding-top');
+}
+
 
 @media (max-width: ($grid-float-breakpoint - 1px)) {
   h1, h2, h3, h4 {
