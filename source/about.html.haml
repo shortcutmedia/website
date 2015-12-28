@@ -19,21 +19,7 @@ team:
     picture: team/severin-schoepke.jpg
 
 jobs:
-  - title: MOBILE APPS ENGINEER
-    desc:
-      <strong>Responsible for</strong> mobile engineering. Planning UI and UX together 
-      with CTO and Marketing for the different platforms. Implementation on mobile 
-      operating systems iOS and Android. Testing and submitting to store.
-      <br><br>
-      <strong>You are</strong> an experienced mobile developer Objective C, SWIFT, 
-      and JAVA. Love for great user experiences and beautiful UI.
-      <br><br>
-      <strong>We offer you</strong> an exciting mission to work on together with an 
-      awesome team. Also, you can work in our offices in Zurich, or from anywhere in 
-      the world. We are quite flexible on this.
-      <br><br>
-      <strong>Interested?</strong> Email us at 
-      <a href="mailto:careers@shortcutmedia.com">careers@shortcutmedia.com</a>
+ - 'jobs/rails_web_dev_2015'
 
 meta: 
   og:title: App Marketing With Superpowers
@@ -95,11 +81,9 @@ meta:
     .row.vertical-center
       .col-sm-4
         = figure 'sprite.svg#apply-now', fluid: [267, 154]
-      - current_page.data.jobs.each do |job|
-        .col-sm-8
-          %h4= job.title
-          %p= job.desc
-
+      .col-sm-8
+        - current_page.data.jobs.each do |job_file|
+          = partial job_file
 %section.white
   .container
     .row

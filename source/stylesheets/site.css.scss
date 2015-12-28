@@ -134,7 +134,7 @@ body, footer {
     }
 
     &.blue, &.transparent {
-      h1, h2, h3, h4, p, a { color: #fff; }
+      h1, h2, h3, h4, p, a, ul { color: #fff; }
     }
 
     @include px_and_rem_directive(20px, 'padding-top');
@@ -474,6 +474,13 @@ section.white:not(.header) + section.white {
     @include font-size(20px);
     font-weight: 700;
     @include px_and_rem_directive(20px, 'margin-bottom');
+  }
+
+  ul {
+    padding-left: 20px;
+    
+    font-weight: lighter;
+    @include font-size(18px);
   }
 }
 
