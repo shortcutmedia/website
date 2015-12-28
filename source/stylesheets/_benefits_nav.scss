@@ -1,3 +1,4 @@
+$nav-color: #999999;
 .benefits-nav-container {
   @include px_and_rem_directive(40px, 'margin-top');
   position: relative;
@@ -34,12 +35,13 @@
   }
 
   use {
-    fill: #010202;
+    fill: $nav-color;
   }
 
   a {
     display: block;
     color: $text-color;
+    &:hover, &:focus { text-decoration: none; }
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -54,6 +56,7 @@
     &.expanded {
       li{ display: list-item; }
     }
+
 
     a {
       padding: 8px;
@@ -106,19 +109,20 @@
 
       a {
         display: block;
-        @include px_and_rem_directive(28px, 'padding-top');
-        @include px_and_rem_directive(18px, 'padding-bottom');
+        @include px_and_rem_directive(20px, 'padding-top');
+        @include px_and_rem_directive(10px, 'padding-bottom');
         padding-left: 10%;
         padding-right: 10%;
       }
 
-      a:hover {
-        text-decoration: none;
-      }
       p {
         margin:0;
         @include px_and_rem_directive(38px, 'min-height');
         @include font-size(12px);
+        font-weight: 500;
+        color: $nav-color;
+        @include px_and_rem_directive(10px, 'margin-top');
+        line-height: 1.25;
       }
     }
 

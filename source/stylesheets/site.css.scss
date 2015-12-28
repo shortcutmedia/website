@@ -285,6 +285,10 @@ section.white:not(.header) + section.white {
     }
   }
 
+  section.header {
+    padding-bottom: 0;
+  }
+
   h2 {
     @include px_and_rem_directive(10px, 'margin-top');
     @include px_and_rem_directive(20px, 'margin-bottom');
