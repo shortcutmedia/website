@@ -2,7 +2,7 @@
   -data.benefits.benefits.each do |benefit|
     %li
       = link_to benefit.url do
-        = svg_image_tag "#{benefit.icon}-b"
+        = svg_image_tag benefit.icon
         %p
           %strong= benefit.title
           %br

@@ -1,11 +1,6 @@
 // Certain styles regarding navigation are defined in bootstrap-variables
 $navbar-font-size:  1rem;
 
-.nav > li >a:hover:not(.btn) {
-  text-decoration: underline;
-}
-
-
 .navbar-brand {
   margin-left: 16px;
   margin-top: 9px;
@@ -26,8 +21,6 @@ $navbar-font-size:  1rem;
 }
 
 .navbar-default {
-  letter-spacing: 1px;
-  font-weight: 300;
 
   @include px_and_rem_directive(20px, 'margin-top'); 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -37,15 +30,18 @@ $navbar-font-size:  1rem;
 
   .navbar-nav {
     >li {
-      a:hover {
-        background-color: darken($navbar-default-bg, 6.5%);
+      >a {
+        font-weight: 500;
+        &:hover {
+          background-color: $navbar-default-link-active-bg;
+          text-decoration: none;
+        }
       }
      .btn-nav {
-        @include button-variant($navbar-default-link-color, transparent, $navbar-default-link-color);
-        letter-spacing: 1px;
         margin-top: 5px;
         padding: 9px 32px;
         margin-left: 15px;
+        @include button-variant($navbar-default-link-color, transparent, $navbar-default-link-color);
         &:hover {
           color: $green;
           background-color: $navbar-default-link-color;
@@ -56,21 +52,19 @@ $navbar-font-size:  1rem;
 
     @media (min-width: $grid-float-breakpoint) {
       text-transform: uppercase;
-
       >li {
-        a:hover {
+        >a:hover:not(.btn) {
           background-color: transparent;
+          text-decoration: underline;
         }
         &.active, &.active:hover {
-          a {
+          a { 
+            text-decoration: underline; 
             background-color: transparent;
-            text-decoration: underline;
           }
         }
       }
     }
-
-
   }
 
   .navbar-toggle {

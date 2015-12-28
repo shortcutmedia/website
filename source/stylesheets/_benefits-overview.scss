@@ -1,14 +1,11 @@
 ul.benefits-overview {
   @include make-block-grid(2,3,3,3);
   margin-top: 40px;
-  /*@include px_and_rem_directive(30px, 'margin-top');*/
 
   >li {
     @extend .text-center;
-
-    /*@include px_and_rem_directive(20px, 'padding-top');*/
     @include px_and_rem_directive(20px, 'margin-top');
-    margin-bottom: 0;
+    @include px_and_rem_directive(20px, 'margin-bottom');
 
     @media (min-width: $grid-float-breakpoint) {
       @include px_and_rem_directive(30px, 'margin-top');
@@ -16,8 +13,14 @@ ul.benefits-overview {
   } 
 
   svg {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    path, rect { fill: inherit; }
+  }
+
+  use {
+    fill: $text-color;
   }
 
   a {

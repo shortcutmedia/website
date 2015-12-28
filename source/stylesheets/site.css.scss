@@ -20,6 +20,7 @@ $container-lg-increase-gutter-by: 30px;
 @import "benefits-overview";
 @import "benefits_nav";
 @import "footer";
+@import "documentation";
 
 
 // generating sprite images
@@ -53,10 +54,17 @@ $container-lg-increase-gutter-by: 30px;
 
 
 html {
-  font-size: 16px; /* base font size for rem */
+  /* html's font-size is the root font-size, which means it will be used as 
+   * a base for rem calculation, but that's it, nothing else. 
+   * body's font-size is the text's default font-size: all your text should 
+   * have this size, unless overriding definition */
+  font-size: $font-size-base; /* base font size for rem */
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 
   @media (min-width: $screen-sm-min) {
      /* FIXME: test this in different browsers. */
@@ -75,6 +83,11 @@ body {
   }
 }
 
+h1, .h1 {
+  @include font-size(40px);
+  font-weight: 700;
+}
+
 h3, h4 {
   font-weight: lighter;
   letter-spacing: 1px;
@@ -82,11 +95,17 @@ h3, h4 {
 
 p {
   font-weight: lighter;
-  font-size: 1rem;
+  @include font-size(18px);
+  color: $text-color;
+
   a {
-    color: #666;
+    color: $text-color;
     text-decoration: underline;
   }
+}
+
+.btn {
+  font-weight: normal;
 }
 
 .margin-b {
@@ -97,10 +116,6 @@ p {
   h3 {
     font-size: 32px;
   }
-}
-
-.btn {
-  font-weight: 300;
 }
 
 
@@ -122,10 +137,6 @@ body, footer {
       h1, h2, h3, h4, p, a { color: #fff; }
     }
 
-    &.blue a {
-      color: $gray-light;
-    }
-
     @include px_and_rem_directive(20px, 'padding-top');
     @include px_and_rem_directive(20px, 'padding-bottom');
     &.no-bottom { padding-bottom: 0; }
@@ -135,6 +146,10 @@ body, footer {
       &.no-bottom-sm { padding-bottom: 0; }
     }
   }
+}
+
+body>section.header {
+  @include px_and_rem_directive(80px, 'padding-top');
 }
 
 
@@ -174,14 +189,19 @@ figure {
   input, button, .error {
     padding-left: 3%;
     padding-right: 3%;
+
+    @include font-size(18px);
   }
 
   input[type="url"] {
     color: $gray-base;
+    font-weight: 300;
+    min-height: 50px;
   }
 
   button {
-    margin-bottom: 1px;
+    margin-bottom: 2px;
+    min-height: 49px;
   }
 
   .error {
@@ -192,7 +212,8 @@ figure {
     @include px_and_rem_directive(8px, 'padding-top');
     @include px_and_rem_directive(8px, 'padding-bottom');
     @include px_and_rem_directive(8px, 'margin-bottom');
-    @media (min-width: $grid-float-breakpoint) {
+    /*@media (min-width: $grid-float-breakpoint) {*/
+    @media (min-width: $screen-md-min) {
       width: 60%;
       display: inline;
     }
@@ -218,7 +239,7 @@ section.white:not(.header) + section.white {
   &:after {
     @extend .container;
     content:"";
-    background: $gray-light;
+    background: #ebebeb;
     position: absolute;
     top: 0;
     left: 0;
@@ -263,6 +284,10 @@ section.white:not(.header) + section.white {
     @media (min-width: $grid-float-breakpoint) {
       padding: 0 5%;
     }
+  }
+
+  section.header {
+    padding-bottom: 0;
   }
 
   h2 {
@@ -399,9 +424,13 @@ section.white:not(.header) + section.white {
     }
   }
 
-  .vignette.circle {
-    img, i {
-      border: 1px solid $gray-light;
+  .vignette {
+    margin-bottom: 20px;
+
+    &.circle {
+      img, i {
+        border: 1px solid $gray-light;
+      }
     }
   }
 
@@ -430,9 +459,21 @@ section.white:not(.header) + section.white {
           font-style: normal;
           padding-top: 50%;
           margin-top: (14px / (-2));
+          color: $green;
         }
       }
     }
+  }
+}
+
+#jobs {
+  h2 {
+    @include px_and_rem_directive(40px, 'margin-bottom');
+  }
+  h4 {
+    @include font-size(20px);
+    font-weight: 700;
+    @include px_and_rem_directive(20px, 'margin-bottom');
   }
 }
 
@@ -451,6 +492,7 @@ section.white:not(.header) + section.white {
   padding-bottom: 75%;
   height: 0;
   overflow: hidden;
+  @include px_and_rem_directive(30px, 'margin-bottom');
 
   iframe {
     position: absolute;
@@ -473,16 +515,22 @@ blockquote {
   @include font-size(18px);
   line-height: 1.3;
   @include px_and_rem_directive(40px, 'margin-top');
+  p {
+    @include font-size(30px);
+    font-weight: normal;
+  }
   &:before {
     content:"“";
     position: absolute;
-    top: -40px;
-    @include font-size(66px);
+    top: -70px;
+    @include font-size(100px);
     color: $text-color;
   }
 
   footer {
-    @include font-size(12px);
+    @include font-size(16px);
+    font-weight: lighter;
+    color: $text-color;
   }
 }
 
@@ -545,17 +593,18 @@ figure.fluid {
     top: -40px;
     bottom: 0;
     left: 0;
-    right: -20px;
+    right: 0;
     background-image: url("/images/linkman.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: auto 100%;
     background-clip: border-box;
 
-    @media (min-width: $grid-float-breakpoint) { display: block; }
-    @media (min-width: $screen-sm-min) { right: -10px; }
-    @media (min-width: $screen-md-min) { right: -30px; }
-    @media (min-width: $screen-lg-min) { right: -40px; }
+    @media (min-width: $grid-float-breakpoint) { 
+      display: block; 
+      margin-right: 0;
+    }
+    @media (min-width: $screen-lg-min) { margin-right: auto; }
   }
 }
 
@@ -565,19 +614,32 @@ figure.fluid {
   background-position: 100% top;
   background-size: auto 170%;
   background-clip: border-box;
-
 }
 
 #call-to-action {
   position: relative;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  h2, h4 { @include font-size(28px); }
+
+  form { margin: 0; }
+
   @media (min-width: $grid-float-breakpoint) {
+
+    input { 
+      width: 60%; 
+      display: inline;
+    }
+
     .linkman-container {
       position: absolute;
       z-index: -1;
       top: 0;
       bottom: 0;
       left: 0;
-      right: -30px;
+      right: 0;
+      margin-right: 0;
 
       background-image: url("/images/linkman.png");
       background-repeat: no-repeat;
@@ -587,3 +649,6 @@ figure.fluid {
     }
   }
 }
+
+
+/*@import 'panda-overwrite'*/
