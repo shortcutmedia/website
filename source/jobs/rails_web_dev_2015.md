@@ -25,7 +25,7 @@ already have a remote-working culture in place.
 
 Apply for this position:
 Send resume with references 
-[careers@shortcutmedia.com](mailto:careers@shortcutmedia.com). If
+[careers@shortcutmedia.com](mailto:careers+rails@shortcutmedia.com). If
 available provide us also with:
 
 * your personal website, blog etc,
