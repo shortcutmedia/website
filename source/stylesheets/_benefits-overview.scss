@@ -24,7 +24,14 @@ ul.benefits-overview {
   }
 
   a {
+    display: block;
     color: $text-color;
+    &:hover {
+      use { fill: $green; }
+      p { color: $green; }
+    }
+
+    &:hover, &:focus { text-decoration: none; }
   }
 }
 
