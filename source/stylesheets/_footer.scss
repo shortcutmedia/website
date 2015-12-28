@@ -1,4 +1,6 @@
 body > footer {
+  @include font-size(13px);
+
   ul {
     @extend .ul-reset;
     color: $text-color-medium;

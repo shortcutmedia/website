@@ -2,12 +2,12 @@
   @return $number / ($number * 0 + 1);
 }
 
-@function px-to-rem($size, $base:14) {
-  @return (strip-units($size) / $base) + rem;
+@function px-to-rem($size, $base: $font-size-base) {
+  @return (strip-units($size) / strip-units($base)) + rem;
 }
 
-@function rem-to-px($size, $base:14) {
-  @return (strip-units($size) * $base) + px;
+@function rem-to-px($size, $base: $font-size-base) {
+  @return (strip-units($size) * strip-units($base)) + px;
 }
 
 @mixin px_and_rem_directive($size, $css-directive) {

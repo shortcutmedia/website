@@ -82,6 +82,11 @@ body {
   }
 }
 
+h1, .h1 {
+  @include font-size(40px);
+  font-weight: 700;
+}
+
 h3, h4 {
   font-weight: lighter;
   letter-spacing: 1px;
@@ -89,11 +94,17 @@ h3, h4 {
 
 p {
   font-weight: lighter;
-  font-size: 1rem;
+  @include font-size(18px);
+  color: #666;
+
   a {
     color: #666;
     text-decoration: underline;
   }
+}
+
+.btn {
+  font-weight: normal;
 }
 
 .margin-b {
@@ -104,10 +115,6 @@ p {
   h3 {
     font-size: 32px;
   }
-}
-
-.btn {
-  font-weight: 300;
 }
 
 
@@ -181,14 +188,19 @@ figure {
   input, button, .error {
     padding-left: 3%;
     padding-right: 3%;
+
+    @include font-size(18px);
   }
 
   input[type="url"] {
     color: $gray-base;
+    font-weight: 300;
+    min-height: 50px;
   }
 
   button {
-    margin-bottom: 1px;
+    margin-bottom: 2px;
+    min-height: 49px;
   }
 
   .error {
@@ -199,7 +211,8 @@ figure {
     @include px_and_rem_directive(8px, 'padding-top');
     @include px_and_rem_directive(8px, 'padding-bottom');
     @include px_and_rem_directive(8px, 'margin-bottom');
-    @media (min-width: $grid-float-breakpoint) {
+    /*@media (min-width: $grid-float-breakpoint) {*/
+    @media (min-width: $screen-md-min) {
       width: 60%;
       display: inline;
     }
@@ -552,17 +565,18 @@ figure.fluid {
     top: -40px;
     bottom: 0;
     left: 0;
-    right: -20px;
+    right: 0;
     background-image: url("/images/linkman.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: auto 100%;
     background-clip: border-box;
 
-    @media (min-width: $grid-float-breakpoint) { display: block; }
-    @media (min-width: $screen-sm-min) { right: -10px; }
-    @media (min-width: $screen-md-min) { right: -30px; }
-    @media (min-width: $screen-lg-min) { right: -40px; }
+    @media (min-width: $grid-float-breakpoint) { 
+      display: block; 
+      margin-right: 0;
+    }
+    @media (min-width: $screen-lg-min) { margin-right: auto; }
   }
 }
 
@@ -572,19 +586,32 @@ figure.fluid {
   background-position: 100% top;
   background-size: auto 170%;
   background-clip: border-box;
-
 }
 
 #call-to-action {
   position: relative;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  h2, h4 { @include font-size(28px); }
+
+  form { margin: 0; }
+
   @media (min-width: $grid-float-breakpoint) {
+
+    input { 
+      width: 60%; 
+      display: inline;
+    }
+
     .linkman-container {
       position: absolute;
       z-index: -1;
       top: 0;
       bottom: 0;
       left: 0;
-      right: -30px;
+      right: 0;
+      margin-right: 0;
 
       background-image: url("/images/linkman.png");
       background-repeat: no-repeat;
