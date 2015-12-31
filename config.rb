@@ -49,6 +49,7 @@
 require "lib/custom_helpers"
 helpers CustomHelpers
 
+@base_url = 'https://shortcut.sc/'
 
 set :css_dir, 'stylesheets'
 
