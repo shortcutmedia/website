@@ -102,6 +102,10 @@ p {
     color: $text-color;
     text-decoration: underline;
   }
+  
+  a.btn {
+    text-decoration: none;
+  }
 }
 
 .btn {
@@ -228,6 +232,12 @@ figure {
     button {
       width: 100%;
     }
+  }
+}
+
+.apply-btn {
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
   }
 }
 
