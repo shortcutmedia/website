@@ -1,20 +1,8 @@
 benefits:
-  - url: /benefits.html#benefits-mobile-deep-linking
-    title: Mobile Deep Linking
-    short: Deep Links for More Engagement
-    icon: sprite.svg#benefits-mobile-deep-link
-    desc_html:
-     Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.
-     <br><br>
-     Shortcut’s mobile deep links support iOS, Android as well as Windows Phone. They detect if users have your app installed and direct the user to your in-app content or the app store accordingly.
-     <br><br>
-     With deferred deep linking mobile deep links become <strong>even more powerful</strong>. Deferred deep linking lets you direct your users to your in-app content from the app store post install.
-    image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
-    layout: {image_place: 'right', first_col: 7, second_col: 5}
 
   - url: /benefits.html#benefits-app-marketing-banner
     title: App Banners
-    short: More Users with App Banners
+    short: Raise awareness and drive users to your app from your mobile and desktop websites.
     icon: sprite.svg#benefits-app-marketing
     desc_html:
       Our custom app banners are a great way to market your app and gain more app users. You can show the app banners on both the mobile and the desktop version of your website.
@@ -25,22 +13,22 @@ benefits:
     image: {src: benefits_sprite.svg#app_marketing_banner, fluid: [364, 466]}
     layout: {image_place: 'left', first_col: 6, second_col: 6}
 
-  - url: /benefits.html#benefits-analytics
-    title: App Analytics
-    short: Manage and Measure Success
-    icon: sprite.svg#benefits-analytic
+  - url: /benefits.html#app-banners
+    title: Newsletters
+    short: Promote your in-app content in your newsletters to drive both new and retained users to your app.
+    icon: sprite.svg#benefits-mobile-deep-link
     desc_html:
-     Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and <strong>boost your app downloads</strong>.
+     Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.
      <br><br>
-     In the intuitive reports you will find information about your app users like their location and where they clicked on your short URL.
+     Shortcut’s mobile deep links support iOS, Android as well as Windows Phone. They detect if users have your app installed and direct the user to your in-app content or the app store accordingly.
      <br><br>
-     Analyze your app marketing campaigns and make sure you make the right marketing decisions. See which channel brought most of the visitors and learn about where your users are located.
-    image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
-    layout: {image_place: 'left', first_col: 7, second_col: 5}
+     With deferred deep linking mobile deep links become <strong>even more powerful</strong>. Deferred deep linking lets you direct your users to your in-app content from the app store post install.
+    image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
+    layout: {image_place: 'right', first_col: 7, second_col: 5}
 
   - url: /benefits.html#benefits-short-urls
-    title: Short URL
-    short: Smart Link for Powerful Marketing
+    title: Mobile Word-of-Mouth
+    short: Enable your users to share content they are excited about or to recommend your app and invite new users.
     icon: sprite.svg#benefits-short-url
     desc_html:
      For each Shortcut there’s a short URL that you can power up with super powers. The short URL is a practical way to shorten long campaign URLs to save space in your social media posts but that's not all it is.
@@ -51,9 +39,35 @@ benefits:
     image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
     layout: {image_place: 'left', first_col: 5, second_col: 6}
 
+  - url: /benefits.html#benefits-short-urls
+    title: Users Get Users
+    short: Your users are your best salespeople so make sure they have the opportunity to invite their friends to use your app.
+    icon: sprite.svg#benefits-short-url
+    desc_html:
+     For each Shortcut there’s a short URL that you can power up with super powers. The short URL is a practical way to shorten long campaign URLs to save space in your social media posts but that's not all it is.
+     <br><br>
+     This <strong>smart link</strong> is the base for all of Shortcut’s app marketing features. When you’ve created a Shortcut, or a short URL, you are ready to start adding super powers to it that will boost your app downloads and your user engagement.
+     <br><br>
+     Creating one of Shortcut's short URLs also gives you the opportunity to track and analyze the usage of that campaign link. See where the users were located and which traffic source they came form.
+    image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
+    layout: {image_place: 'left', first_col: 5, second_col: 6}
+
+  - url: /benefits.html#benefits-analytics
+    title: App Analytics
+    short: Informative analytics to give you powerful insights into your app marketing success and to get to know your users.
+    icon: sprite.svg#benefits-analytic
+    desc_html:
+     Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and <strong>boost your app downloads</strong>.
+     <br><br>
+     In the intuitive reports you will find information about your app users like their location and where they clicked on your short URL.
+     <br><br>
+     Analyze your app marketing campaigns and make sure you make the right marketing decisions. See which channel brought most of the visitors and learn about where your users are located.
+    image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
+    layout: {image_place: 'left', first_col: 7, second_col: 5}
+
   - url: /benefits.html#benefits-in-store-reach
-    title: In-Store Communication
-    short: Upselling and In-Store Interaction
+    title: Social Media Sharing
+    short: Share your in-app content in any Social Media channel to gain more users and to retain existing users.
     icon: sprite.svg#benefits-instore-reach
     desc_html:
       Upsell with iBeacons! If you have a brick-and-mortar shop or a restaurant iBeacons are a great way to interact with your customers <strong>while they are shopping</strong> at or in close proximity of your store.
@@ -65,8 +79,8 @@ benefits:
     layout: {image_place: 'right', first_col: 6, second_col: 6}
 
   - url: /benefits.html#benefits-offline-channels
-    title: Offline Reach
-    short: Reach Offline for More Downloads
+    title: Offline Communication
+    short: Communicate with your offline customrs through QR-codes, image recognition and iBeacons.
     icon: sprite.svg#benefits-qrcode
     desc_html:
      Be where your customers are! You can reach new app users offline and interact with them on their smartphones. Promote your app on billboards, in newspapers or on business cards by using <strong>QR codes and image recognition</strong>.
@@ -76,6 +90,20 @@ benefits:
      Interacting with your customers in your offline advertising also gives you the opportunity to track your offline users and the performance of your offline advertising.
     image: {src: benefits_sprite.svg#offline_advertising, fluid: [480.9,357.2]}
     layout: {image_place: 'left', first_col: 6, second_col: 6}
+    
+  - url: /benefits.html#app-banners
+    title: App Deep Links
+    short: Direct your app marketing to your in-app content from any channel and even after download.
+    icon: sprite.svg#benefits-mobile-deep-link
+    desc_html:
+     Don’t waste great app marketing by using ordinary links. Mobile deep links let you direct your users to your in-app content or to specific features in your app.
+     <br><br>
+     Shortcut’s mobile deep links support iOS, Android as well as Windows Phone. They detect if users have your app installed and direct the user to your in-app content or the app store accordingly.
+     <br><br>
+     With deferred deep linking mobile deep links become <strong>even more powerful</strong>. Deferred deep linking lets you direct your users to your in-app content from the app store post install.
+    image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
+    layout: {image_place: 'right', first_col: 7, second_col: 5}
+
 
   # - url: /benefits.html#benefits-ab-testing
   #   title: A/B Testing
