@@ -37,7 +37,19 @@ meta:
   <div class="container linkman-container"></div>
 </section>
 
-<section class="white">
+<section class="white no-bottom analytics">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center margin-b">Your <span class="text-smart-wrap">Dashboard</span></h2>
+      </div>
+    </div>
+    <%= figure 'sprite.svg#analytics', fluid: [1106, 442], alt: 'Analytics' %>
+  </div>
+</section>
+
+
+<section class="grey">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -94,35 +106,16 @@ meta:
         <h4 style="text-align:center;"><strong>Transparency</strong></h4>
         <p style="text-align:center;padding-bottom:40px;">We provide you with the best of tools and we get paid for just that. Can you get the same service for free? Ask yourself how the company is making money.</p>
       </div>
-    </div>    
-  </div>
-</section>
-
-
-<section class="blue no-bottom analytics">
-  <div class="container">
+    </div>
     <div class="row">
       <div class="col-sm-12">
-        <h2 class="text-center margin-b">Curious? <span class="text-smart-wrap">Take a peek.</span></h2>
+        <h2 class="text-center"><strong>Trusted by</strong></h2>
       </div>
     </div>
-    <%= figure 'sprite.svg#analytics', fluid: [1106, 442], alt: 'Analytics' %>
-  </div>
-</section>
-
-
-<section class="white">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="text-center"><span class="green">Trusted by</span> <span class="text-nowrap">Happy Customers</span></h2>
-      </div>
-    </div>
-
     <%= partial 'customers' %>
+    
   </div>
 </section>
-
 
 
 <!-- BENEFITS -->

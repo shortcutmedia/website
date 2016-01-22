@@ -10,6 +10,7 @@
 
 $pattern-image: 'benefit-pattern.svg';
 $white-background-color: #fff;
+$grey-background-color: #f5f5f5;
 $blue-background-color: #7EADC6;
 $container-lg-increase-gutter-by: 30px;
 
@@ -133,6 +134,10 @@ body, footer {
       background-color: $white-background-color;
     }
 
+    &.grey{
+      background-color: $grey-background-color;
+    }
+    
     &.blue {
       background-color: $blue-background-color;
     }
