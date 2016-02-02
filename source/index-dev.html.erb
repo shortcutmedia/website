@@ -12,8 +12,7 @@ meta:
   og:image:type: image/png
   og:image:width: 851
   og:image:height: 315
----
-
+---    
 <section id="teaser" class="transparent">
   <div class="container">
 
@@ -41,10 +40,18 @@ meta:
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h2 class="text-center margin-b">Your <span class="text-smart-wrap">Dashboard</span></h2>
+        <h2 class="text-center margin-b">Double <span class="text-smart-wrap">Retention</span></h2>
+      </div>
+      
+      <div class="col-sm-6">
+      <p>Is losing 80% of DAU after 1 day normal? Not for us. We offer you tools that double user retention.</p>
+      </div>
+      
+      <div class="col-sm-6">
+        <%= figure 'sprite.svg#analytics', fluid: [1106, 442], alt: 'Analytics' %>
       </div>
     </div>
-    <%= figure 'sprite.svg#analytics', fluid: [1106, 442], alt: 'Analytics' %>
+    
   </div>
 </section>
 
@@ -113,12 +120,93 @@ meta:
       </div>
     </div>
     <%= partial 'customers' %>
-    
   </div>
 </section>
 
 
-<!-- BENEFITS -->
+<section class="white" style="padding-bottom:0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center"><span class="green">Our Goal.</span> <span class="text-smart-wrap">Your Success.</span></h2>
+      </div>
+      <div class="col-sm-12">
+ 
+        <div class="terminal" id="api_code">
+          <ul class="nav nav-pills">
+            <li class="active">
+                <a href="#code_curl" data-toggle="tab">Curl</a></li>
+            <li><a href="#code_php" data-toggle="tab">PHP</a></li>
+            <li><a href="#code_go"data-toggle="tab">Go</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="code_curl">
+              <div id="editor"># Try our API. Copy & run this in your terminal.
+curl -v -d "token=nqrNyKzSsD1sKzFxWyJZ" \
+  -d "short_link[website_url]=https://waypoint.li/60bfa91356d47dd7ad06b323ea06254b" \
+  https://shortcut-service.shortcutmedia.com/api/v1/short_link/create
+              </div>
+            </div>
+            <div class="tab-pane" id="code_php">
+              <div id="editor"># PHP.
+curl -v -d "token=nqrNyKzSsD1sKzFxWyJZ" \
+  -d "short_link[website_url]=https://waypoint.li/60bfa91356d47dd7ad06b323ea06254b" \
+  https://shortcut-service.shortcutmedia.com/api/v1/short_link/create
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><h1>Bootstrap  tab panel example (using nav-pills)  </h1></div>
+<div id="exTab1" class="container">	
+  <ul  class="nav nav-pills">
+    <li class="active">
+      <a  href="#1a" data-toggle="tab">Overview</a>
+    </li>
+    <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
+    </li>
+    <li><a href="#3a" data-toggle="tab">Applying clearfix</a>
+    </li>
+    <li><a href="#4a" data-toggle="tab">Background color</a>
+    </li>
+  </ul>
+
+  <div class="tab-content clearfix">
+    <div class="tab-pane active" id="1a">
+      <h3>Content's background color is the same for the tab</h3>
+    </div>
+    <div class="tab-pane" id="2a">
+      <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+    </div>
+    <div class="tab-pane" id="3a">
+      <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+    </div>
+    <div class="tab-pane" id="4a">
+      <h3>We use css to change the background color of the content to be equal to the tab</h3>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Java Scripts at the end for speed improvement -->
+<script>
+    var editor = ace.edit("editor");
+    editor.getSession().setMode("ace/mode/sh");
+    editor.setTheme("ace/theme/monokai");
+    editor.setOption("highlightActiveLine", false);
+    editor.setOption("showPrintMargin", false)
+    editor.renderer.setShowGutter(false);
+</script>
 
 <%= partial 'call_to_action_dev' %>
 

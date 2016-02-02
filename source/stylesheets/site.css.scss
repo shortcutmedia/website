@@ -46,6 +46,35 @@ $container-lg-increase-gutter-by: 30px;
   }
 }
 
+.terminal {
+  width:720px;
+  height:240px;
+  background-color: #272822;
+  margin: 0 auto; 
+  
+  .nav {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    background-color: #000;
+  }
+  .nav > li > a {
+    padding: 0px 15px;
+  }
+  .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #ddd;
+    background-color: #333;
+  }
+}
+
+#editor { 
+  margin: 20px;
+  padding: 20px;
+  width: 680px;
+  height: 150px;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
 
 .one_field_input {
   .shortcut_generator_uri_item_uri {
