@@ -141,18 +141,45 @@ meta:
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="code_curl">
-              <div id="editor"># Try our API. Copy & run this in your terminal.
+              <div id="curl_editor" class="editor"># Try our API. Copy & run this in your terminal.
 curl -v -d "token=nqrNyKzSsD1sKzFxWyJZ" \
   -d "short_link[website_url]=https://waypoint.li/60bfa91356d47dd7ad06b323ea06254b" \
   https://shortcut-service.shortcutmedia.com/api/v1/short_link/create
               </div>
+              <script>
+              var curl_editor = ace.edit("curl_editor");
+              curl_editor.getSession().setMode("ace/mode/sh");
+              curl_editor.setTheme("ace/theme/monokai");
+              curl_editor.setOption("highlightActiveLine", false);
+              curl_editor.setOption("showPrintMargin", false)
+              curl_editor.renderer.setShowGutter(false);
+              </script>
             </div>
             <div class="tab-pane" id="code_php">
-              <div id="editor"># PHP.
-curl -v -d "token=nqrNyKzSsD1sKzFxWyJZ" \
-  -d "short_link[website_url]=https://waypoint.li/60bfa91356d47dd7ad06b323ea06254b" \
-  https://shortcut-service.shortcutmedia.com/api/v1/short_link/create
+              <div id="php_editor" class="editor"># Try running this locally.
+# Include the Autoloader (see "Libraries" for install instructions)
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
+
+# Instantiate the client.
+$mgClient = new Mailgun('key-3ax6xnjp29jd6fds4gc373sgvjxteol0');
+$domain = "samples.mailgun.org";
+
+# Make the call to the client.
+$result = $mgClient->sendMessage("$domain",
+  array('from'    => 'Excited User <excited@samples.mailgun.org>',
+        'to'      => 'Mailgun Devs <devs@mailgun.net>',
+        'subject' => 'Hello',
+        'text'    => 'Testing some Mailgun awesomeness!'));
               </div>
+              <script>
+              var php_editor = ace.edit("php_editor");
+              php_editor.getSession().setMode("ace/mode/sh");
+              php_editor.setTheme("ace/theme/monokai");
+              php_editor.setOption("highlightActiveLine", false);
+              php_editor.setOption("showPrintMargin", false)
+              php_editor.renderer.setShowGutter(false);
+              </script>
             </div>
           </div>
         </div>
@@ -168,15 +195,6 @@ curl -v -d "token=nqrNyKzSsD1sKzFxWyJZ" \
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<!-- Java Scripts at the end for speed improvement -->
-<script>
-var editor = ace.edit("editor");
-editor.getSession().setMode("ace/mode/sh");
-editor.setTheme("ace/theme/monokai");
-editor.setOption("highlightActiveLine", false);
-editor.setOption("showPrintMargin", false)
-editor.renderer.setShowGutter(false);
-</script>
 
 <%= partial 'call_to_action_dev' %>
 
