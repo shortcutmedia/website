@@ -1,6 +1,14 @@
 // Certain styles regarding navigation are defined in bootstrap-variables
 $navbar-font-size:  1rem;
 
+#site_navbar {
+
+  &.is-fixed {
+    background-color: $green;
+    margin-top: 0;
+  }
+}
+
 .navbar-brand {
   margin-left: 16px;
   margin-top: 9px;
@@ -22,7 +30,7 @@ $navbar-font-size:  1rem;
 
 .navbar-default {
 
-  @include px_and_rem_directive(20px, 'margin-top'); 
+  @include px_and_rem_directive(20px, 'margin-top');
   @media (max-width: $grid-float-breakpoint-max) {
     margin-top: 0;
     margin-bottom: 0;
@@ -58,8 +66,8 @@ $navbar-font-size:  1rem;
           text-decoration: underline;
         }
         &.active, &.active:hover {
-          a { 
-            text-decoration: underline; 
+          a {
+            text-decoration: underline;
             background-color: transparent;
           }
         }
@@ -69,7 +77,7 @@ $navbar-font-size:  1rem;
 
   .navbar-toggle {
     &:focus{ background-color: transparent; }
-    &:hover{ 
+    &:hover{
       color: $navbar-default-bg;
       background-color: $navbar-default-toggle-hover-bg; /* must be set explicitly here because a bug with :focus selector */
       .icon-bar {
@@ -83,4 +91,3 @@ $navbar-font-size:  1rem;
   width: 154px;
   height: 32px;
 }
-
