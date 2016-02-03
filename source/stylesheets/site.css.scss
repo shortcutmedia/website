@@ -51,8 +51,8 @@ $container-lg-increase-gutter-by: 30px;
   width:720px;
   height:240px;
   background-color: #272822;
-  margin: 0 auto; 
-  
+  margin: 0 auto;
+
   .nav {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -68,7 +68,7 @@ $container-lg-increase-gutter-by: 30px;
   }
 }
 
-.editor { 
+.editor {
   margin: 20px;
   padding: 20px;
   width: 680px;
@@ -85,9 +85,9 @@ $container-lg-increase-gutter-by: 30px;
 
 
 html {
-  /* html's font-size is the root font-size, which means it will be used as 
-   * a base for rem calculation, but that's it, nothing else. 
-   * body's font-size is the text's default font-size: all your text should 
+  /* html's font-size is the root font-size, which means it will be used as
+   * a base for rem calculation, but that's it, nothing else.
+   * body's font-size is the text's default font-size: all your text should
    * have this size, unless overriding definition */
   font-size: $font-size-base; /* base font size for rem */
 }
@@ -133,7 +133,7 @@ p {
     color: $text-color;
     text-decoration: underline;
   }
-  
+
   a.btn {
     text-decoration: none;
   }
@@ -144,7 +144,7 @@ p {
 }
 
 .margin-b {
-  margin-bottom: 50px;  
+  margin-bottom: 50px;
 }
 
 @media (min-width: $grid-float-breakpoint) {
@@ -167,11 +167,11 @@ body, footer {
     &.grey{
       background-color: $grey-background-color;
     }
-    
+
     &.blue {
       background-color: $blue-background-color;
     }
-    
+
     &.green {
       background-color: $green-background-color;
     }
@@ -538,7 +538,7 @@ section.white:not(.header) + section.white {
 
   ul {
     padding-left: 20px;
-    
+
     font-weight: 300;
     @include font-size(18px);
   }
@@ -667,50 +667,37 @@ figure.fluid {
     background-size: auto 100%;
     background-clip: border-box;
 
-    @media (min-width: $grid-float-breakpoint) { 
-      display: block; 
-      margin-right: 0;
-    }
-    @media (min-width: $screen-lg-min) { margin-right: auto; }
-  }
-  
-  .wheel-wrapper {
-    background-image: url("/images/measure_analyze_improve_white.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: auto 100%;
-    padding-top: 250px;
-    margin-top: 20px;
-    padding-bottom: 60px;
-
-    form {
-      margin-bottom: 0;
-    }
-
     @media (min-width: $grid-float-breakpoint) {
-      display: none;
-    }
-  }
-  
-  .wheel-container {
-    display: none;
-    position: absolute;
-    z-index: -1;
-    top: 40px;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    background-image: url("/images/measure_analyze_improve_white.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: auto 100%;
-    background-clip: border-box;
-
-    @media (min-width: $grid-float-breakpoint) { 
-      display: block; 
+      display: block;
       margin-right: 0;
     }
     @media (min-width: $screen-lg-min) { margin-right: auto; }
+  }
+
+  .cta-box {
+    @media (max-width: $screen-sm) {
+      text-align: center;
+    }
+  }
+
+  & > .container {
+    @media (max-width: $screen-md) {
+      text-align: center;
+    }
+  }
+
+  .has-wheel-image {
+    @media (min-width: $screen-md-min) {
+      background-image: url("/images/measure_analyze_improve_white.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: auto 100%;
+      background-clip: border-box;
+    }
+    @media (min-width: $screen-lg-min) {
+      background-position: right 10% center;
+      // fills the space a bit better but we should consider expanding the text column to the left
+    }
   }
 }
 
@@ -733,8 +720,8 @@ figure.fluid {
 
   @media (min-width: $grid-float-breakpoint) {
 
-    input { 
-      width: 60%; 
+    input {
+      width: 60%;
       display: inline;
     }
 
