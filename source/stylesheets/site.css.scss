@@ -48,8 +48,8 @@ $container-lg-increase-gutter-by: 30px;
 }
 
 .terminal {
-  width:720px;
-  height:240px;
+  width: 100%;
+  height: 240px;
   background-color: #272822;
   margin: 0 auto;
 
@@ -65,6 +65,9 @@ $container-lg-increase-gutter-by: 30px;
   .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #ddd;
     background-color: #333;
+  }
+  .tab-content {
+    overflow: scroll;
   }
 }
 
@@ -743,5 +746,10 @@ figure.fluid {
   }
 }
 
+#measure_retention {
+  @media (max-width: $screen-md) {
+    text-align: center;
+  }
+}
 
 /*@import 'panda-overwrite'*/
