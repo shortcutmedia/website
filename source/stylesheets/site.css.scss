@@ -12,6 +12,7 @@ $pattern-image: 'benefit-pattern.svg';
 $white-background-color: #fff;
 $grey-background-color: #f5f5f5;
 $blue-background-color: #7EADC6;
+$green-background-color: #6DCC8D;
 $container-lg-increase-gutter-by: 30px;
 
 @import "helper";
@@ -170,8 +171,12 @@ body, footer {
     &.blue {
       background-color: $blue-background-color;
     }
+    
+    &.green {
+      background-color: $green-background-color;
+    }
 
-    &.blue, &.transparent {
+    &.blue, &.green, &.transparent {
       h1, h2, h3, h4, p, a, ul { color: #fff; }
     }
 
@@ -657,6 +662,45 @@ figure.fluid {
     left: 0;
     right: 0;
     background-image: url("/images/linkman.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+    background-clip: border-box;
+
+    @media (min-width: $grid-float-breakpoint) { 
+      display: block; 
+      margin-right: 0;
+    }
+    @media (min-width: $screen-lg-min) { margin-right: auto; }
+  }
+  
+  .wheel-wrapper {
+    background-image: url("/images/measure_analyze_improve_white.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 100%;
+    padding-top: 250px;
+    margin-top: 20px;
+    padding-bottom: 60px;
+
+    form {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+      display: none;
+    }
+  }
+  
+  .wheel-container {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 40px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-image: url("/images/measure_analyze_improve_white.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: auto 100%;
