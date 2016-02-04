@@ -39,6 +39,10 @@ $container-lg-increase-gutter-by: 30px;
   padding: 0;
 }
 
+// remove the scrollbar empty space to the right of the page body
+html, body {
+  overflow-x: hidden;
+}
 
 // Make the website narrower on large screens
 @media (min-width: $screen-lg-min) {
