@@ -752,4 +752,58 @@ figure.fluid {
   }
 }
 
+#pricing_plans {
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  .plan-card {
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1.2em 0;
+    margin-bottom: 4em;
+
+    &--title {
+      font-size: 20px;
+    }
+
+    &--summary {
+      font-size: 14px;
+      padding: 0 3em;
+    }
+
+    &--price, &--contact-us {
+      color: $green;
+      font-size: 44px;
+      font-weight: 700;
+      margin: 0.25em 0;
+
+      sup, sub {
+        font-size: 60%;
+      }
+
+      sub {
+        bottom: 0;
+      }
+    }
+
+    &--contact-us {
+      font-size: 28px;
+      margin: 0.8em 0;
+    }
+
+    &--features {
+      background-color: #E2E2E3;
+      padding: 1em;
+      margin-top: 1.5em;
+
+      & > div:first-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
 /*@import 'panda-overwrite'*/
