@@ -1,12 +1,18 @@
 FIX_THRESHOLD = 500 # px
-HEADER_HEIGHT = 93 # px
 THROTTLE_INTERVAL = 200 # ms
+ANIMATION_TIME = 233 # ms
 
 class FixedHeaderSensor
 
   constructor: ->
     @fixed = null
+    @body = $('body')
+    @navbar = $('#site_navbar')
+
     @setScrollPosition()
+
+  navbarHeight: ->
+    @navbar.outerHeight true
 
   setScrollPosition: =>
     pos = window.scrollY
@@ -19,18 +25,19 @@ class FixedHeaderSensor
   fixHeader: ->
     return if @fixed == true
 
-    navbar = $('#site_navbar')
-    navbar.addClass 'navbar-fixed-top is-fixed'
-    $('body').css 'padding-top', HEADER_HEIGHT
+    @body.css 'padding-top', @navbarHeight()
+    @navbar.addClass 'navbar-fixed-top is-fixed'
+    @navbar.animate 'margin-top': 0, ANIMATION_TIME
 
     @fixed = true
 
   unfixHeader: ->
-    return if @fixed == false
+    return if @fixed != true
 
-    navbar = $('#site_navbar')
-    navbar.removeClass 'navbar-fixed-top is-fixed'
-    $('body').css 'padding-top', 0
+    @navbar.animate 'margin-top': -100, ANIMATION_TIME, =>
+      @navbar.removeClass 'navbar-fixed-top is-fixed'
+      @body.css 'padding-top', ''
+      @navbar.css 'margin-top', ''
 
     @fixed = false
 
