@@ -4,6 +4,7 @@
 @import "bootstrap-variables";
 @import "bootstrap-sprockets";
 @import "bootstrap-custom"; /* Import only selected elements; not entire bootstrap */
+@import "bootstrap-extensions";
 @import "compass/css3/border-radius";
 @import "compass/css3/background-clip";
 @import "compass/css3/background-size";
@@ -772,6 +773,7 @@ figure.fluid {
     &--summary {
       font-size: 14px;
       padding: 0 3em;
+      min-height: 3em;
     }
 
     &--price, &--contact-us {
