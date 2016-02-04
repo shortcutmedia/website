@@ -808,4 +808,21 @@ figure.fluid {
   }
 }
 
+#customer_perks {
+
+  h2 {
+    margin-bottom: 2em;
+  }
+
+  .perk-card {
+    text-align: center;
+    margin-bottom: 4em;
+
+    h4 {
+      margin: 1em 0;
+    }
+  }
+
+}
+
 /*@import 'panda-overwrite'*/
