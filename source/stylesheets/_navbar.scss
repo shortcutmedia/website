@@ -1,12 +1,16 @@
 // Certain styles regarding navigation are defined in bootstrap-variables
 $navbar-font-size:  1rem;
 
-#site_navbar {
-  transition: top 2s;
+body {
+  padding-top: 93px;
+}
 
-  &.is-fixed {
+#site_navbar {
+  transition: margin-top 0.085s, background-color 0.1s;
+
+  &.is-solid {
+    margin-top: 0;
     background-color: $green;
-    margin-top: -100px; // revealed with js
   }
 }
 
