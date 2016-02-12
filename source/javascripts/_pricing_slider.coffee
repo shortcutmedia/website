@@ -38,7 +38,7 @@ $ ->
     scale: 'logarithmic'
     min: SLIDER_MIN
     max: SLIDER_MAX
-    step: 5
+    step: 1
     value: 0
 
   user_count_el = $ '#pricing_slider_user_count'
