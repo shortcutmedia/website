@@ -38,11 +38,12 @@ $ ->
     scale: 'logarithmic'
     min: SLIDER_MIN
     max: SLIDER_MAX
+    step: 5
     value: 0
 
   user_count_el = $ '#pricing_slider_user_count'
   cost_el = $ '#pricing_slider_cost'
 
   slider.on 'change', (counts) ->
-    user_count_el.text counts.newValue
-    cost_el.text calculate_cost counts.newValue
+    user_count_el.text counts.newValue.toLocaleString()
+    cost_el.text calculate_cost(counts.newValue).toLocaleString()
