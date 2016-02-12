@@ -25,6 +25,7 @@ $container-lg-increase-gutter-by: 30px;
 @import "footer";
 @import "documentation";
 
+@import "bootstrap-slider";
 
 // generating sprite images
 @import "customers/*.png";
@@ -778,6 +779,16 @@ figure.fluid {
       font-size: 14px;
       padding: 0 3em;
       min-height: 3em;
+    }
+
+    &--slider {
+      width: 80%;
+      margin: 2em auto 0;
+      font-weight: 100;
+
+      span {
+        font-weight: 400;
+      }
     }
 
     &--price, &--contact-us {
