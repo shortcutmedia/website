@@ -32,7 +32,7 @@ meta:
         = partial 'benefits_nav'
 
 - data.benefits.benefits.each_with_index do |benefit, index|
-  %section.benefit{id: URI.parse(benefit.url).fragment, class: (index % 3 < 2 ? 'white' : 'blue') }
+  %section.benefit{id: URI.parse(benefit.url).fragment, class: (index % 2 < 1 ? (index == 6 ? 'blue' : 'white') : 'grey') }
     .container
       .row
         %div{class: "col-sm-#{benefit.layout[:first_col]} #{'col-sm-push-' + benefit.layout[:second_col].to_s if benefit.layout[:image_place] == 'right' }"}
