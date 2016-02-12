@@ -5,7 +5,7 @@ benefits:
     short: Informative analytics to give you powerful insights into user acquisition path and app retention.
     icon: sprite.svg#benefits-analytic
     desc_html:
-     Knowledge is power! Our app analytics will give you all the information you need to help you manage your campaigns, optimize your customer journey and boost your app downloads. Analyze and see which marketing channel brought most of the users and optimize your campaigns for conversion.
+     Knowledge is power! Our app attribution and analytics will give you all the information you need to optimize your customer journey and boost your app retention. Analyze and see which channel brought most of the users and optimize your app for conversion and retention.
     image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
     layout: {image_place: 'left', first_col: 7, second_col: 5}
 
@@ -32,7 +32,7 @@ benefits:
     short: Promote your in-app content in your newsletters to drive both new and retained users to your app.
     icon: sprite.svg#benefits-mobile-deep-link
     desc_html:
-     It is said that most newsletter recipients will open your newsletter on a smartphone. Using Shortcuts in your newsletters will help you gain more app downloads through your newsletters as well as give your users a smoother user journey from when they click in your newsletter to when they land in your app.
+     It is said that most newsletter recipients will open your newsletter on a smartphone. Using Shortcuts in your newsletters will help you gain more app engagement through your newsletters as well as give your users a smoother user journey from when they click in your newsletter to when they land in your app.
     image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
     layout: {image_place: 'right', first_col: 7, second_col: 5}
 
