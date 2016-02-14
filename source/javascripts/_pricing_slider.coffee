@@ -1,5 +1,5 @@
 # tier limits, in returning users/month
-T1_LIMIT = 200
+T1_LIMIT = 1000
 T2_LIMIT = 10000    # 10K
 T3_LIMIT = 100000   # 100K
 T4_LIMIT = 1000000  # 1M
@@ -9,8 +9,8 @@ T5_LIMIT = 10000000 # 10M
 T1_PRICE = 0
 T2_PRICE = 500
 T3_PRICE = 1500
-T4_PRICE = 4000
-T5_PRICE = 10000
+T4_PRICE = 8000
+T5_PRICE = 50000
 
 # slider range
 SLIDER_MIN = 0

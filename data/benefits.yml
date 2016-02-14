@@ -1,6 +1,6 @@
 benefits:
 
-  - url: /benefits.html#benefits-analytics
+  - url: /features.html#features-attribution
     title: Attribution and Analytics
     short: Informative analytics to give you powerful insights into user acquisition path and app retention.
     icon: sprite.svg#benefits-analytic
@@ -9,7 +9,7 @@ benefits:
     image: {src: benefits_sprite.svg#analytics, fluid: [646, 469]}
     layout: {image_place: 'left', first_col: 7, second_col: 5}
 
-  - url: /benefits.html#app-banners
+  - url: /features.html#features-app-deep-links
     title: App Deep Links
     short: Direct your app marketing to your in-app content from any channel and even after download.
     icon: sprite.svg#benefits-mobile-deep-link
@@ -18,16 +18,16 @@ benefits:
     image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
     layout: {image_place: 'right', first_col: 7, second_col: 5}
 
-  - url: /benefits.html#benefits-app-marketing-banner
+  - url: /features.html#features-app-banners
     title: App Banners
     short: Raise awareness and drive users to your app from your mobile and desktop websites.
     icon: sprite.svg#benefits-app-marketing
     desc_html:
      Make the users of your mobile website and your desktop website aware of your app and drive both traffic and downloads to your app. Your app is the channel best optimized for smartphone use so make sure your smartphone users use and read your content in your app instead of on your mobile website.
     image: {src: benefits_sprite.svg#app_marketing_banner, fluid: [364, 466]}
-    layout: {image_place: 'left', first_col: 6, second_col: 6}
+    layout: {image_place: 'left', first_col: 4, second_col: 8}
 
-  - url: /benefits.html#app-banners
+  - url: /features.html#features-newsletters
     title: Newsletters
     short: Promote your in-app content in your newsletters to drive both new and retained users to your app.
     icon: sprite.svg#benefits-mobile-deep-link
@@ -36,26 +36,26 @@ benefits:
     image: {src: benefits_sprite.svg#mobile_deep_linking, fluid: [640, 502]}
     layout: {image_place: 'right', first_col: 7, second_col: 5}
 
-  - url: /benefits.html#benefits-in-store-reach
+  - url: /features.html#features-social-media-sharing
     title: Social Media Sharing
     short: Share your in-app content in any Social Media channel to gain more users and to retain existing users.
     icon: sprite.svg#benefits-instore-reach
     desc_html:
       Social Media can be a very effective way to market your app. You can either post content or pay for ads. However, just saying “Download our app” is not very engaging; you want to talk about your in-app content. This way you'll get more downloads from users that you know appreciate your content and will come back and revisit your app. 
     image: {src: benefits_sprite.svg#instore_reach, fluid: [538.2,400.8]}
-    layout: {image_place: 'right', first_col: 6, second_col: 6}
+    layout: {image_place: 'left', first_col: 6, second_col: 6}
 
-  - url: /benefits.html#benefits-short-urls
+  - url: /features.html#features-word-of-mouth
     title: Mobile Word-of-Mouth
     short: Your users are your best salespeople so make sure they have the opportunity to invite their friends to use your app.
     icon: sprite.svg#benefits-short-url
     desc_html:
      You know the feeling when you read something and you think of a friend. Maybe it’s a common joke you have or maybe you think your friend could be interested in what you are reading. Content sharing makes it simple and easy for your users to share pieces of content in your app with their friends and contacts.
     image: {src: benefits_sprite.svg#short_urls, fluid: [318, 402.6]}
-    layout: {image_place: 'left', first_col: 5, second_col: 6}
+    layout: {image_place: 'right', first_col: 4, second_col: 8}
 
-  - url: /benefits.html#benefits-offline-channels
-    title: Offline Communication
+  - url: /features.html#features-offline-channels
+    title: Offline Channels
     short: Communicate with your offline customrs through QR-codes, image recognition and iBeacons.
     icon: sprite.svg#benefits-qrcode
     desc_html:
