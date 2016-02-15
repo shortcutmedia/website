@@ -58,6 +58,10 @@ NDDDDD            DDDDD    DDDDDDD                      DDDDD            NDDDDD
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Shortcut Media" %></title>
+    <meta name="description" content="<%= current_page.data.description %>" />
+
     <% (current_page.data.meta || []).each do |key, val| %>
       <% if key.to_s == "og:image" %>
         <meta property="<%=key %>" content="<%= @base_url + image_path(val) %>" />
@@ -68,8 +72,6 @@ NDDDDD            DDDDD    DDDDDDD                      DDDDD            NDDDDD
 
     <%= partial 'favicon' %>
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Shortcut Media" %></title>
 
     <%#<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>%>
 
