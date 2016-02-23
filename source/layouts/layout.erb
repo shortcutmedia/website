@@ -54,6 +54,8 @@ NDDDDD            DDDDD    DDDDDDD                      DDDDD            NDDDDD
                                     DDDDDDN                                     
 -->
   <head>
+	<%= yield_content :end_of_head %>
+
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
@@ -84,7 +86,6 @@ NDDDDD            DDDDD    DDDDDDD                      DDDDD            NDDDDD
     <%#<script>try{Typekit.load({ async: false });}catch(e){}</script>%>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 	
-	<%= yield_content :end_of_head %>
   </head>
 
   <body class="<%= page_classes %>">
