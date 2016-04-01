@@ -156,6 +156,65 @@ p {
   margin-bottom: 50px;
 }
 
+.legal {
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;    
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-top: 1px solid #ebebeb;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  ol {
+    list-style-type: lower-alpha;
+    counter-reset: legal;
+    display: table;
+    font-size: 0.9rem;
+    list-style-position: inside;
+    li {
+      font-weight: 100;
+    }
+  }
+  
+  ol > li {
+      counter-increment: legal;
+      display: table-row;
+  }
+
+  ol > li::before {
+      content: counter(legal, lower-alpha) ".";
+      display: table-cell; /* aha! */
+      text-align: right;
+      padding-right:10px;
+  }
+}
+
+
+
 @media (min-width: $grid-float-breakpoint) {
   h3 {
     font-size: 32px;
