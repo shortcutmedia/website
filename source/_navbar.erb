@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-fixed-top" id="site_navbar">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <%= svg_image_tag 'sprite.svg#shortcut-logo' %>
+      </a>
+    </div>
+
+    <!-- Collect the nav links for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="visible-xs <%= current_page.path == 'index.html' ? 'active' : ''%>"><a href="/">Home</a></li>
+        <li class="<%= current_page.path == 'features.html' ? 'active' : ''%>"><a href="/features.html">Features</a></li>
+        <li class=""><a href="http://developer.shortcut.sc/documentation/">Documentation</a></li>
+		<%#<li role="separator" class="divider">&mdash;&mdash;</li>%>
+        <%#<li><a href="#">About Shortcut</a></li>%>
+        <%#<li><a href="#">Contact</a></li>%>
+        <%#<li><a href="#">Legal Notes</a></li>%>
+        <%#<li><a href="#">Imprint</a></li>%>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>

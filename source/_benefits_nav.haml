@@ -1,0 +1,13 @@
+.benefits-nav-container
+  %button{'data-toggle' => "collapse-benefits", 'data-target' => "#benefits-nav-collapse-1"}
+    %span{class: "chevron bottom"}
+
+  %ul.benefits-nav#benefits-nav-collapse-1
+    -data.benefits.benefits.each_with_index do |benefit, index|
+
+      %li{class: (index == 0 ? 'active' : '')}
+        = link_to benefit.url do
+          = svg_image_tag benefit.icon
+          %p
+            = benefit.title
+

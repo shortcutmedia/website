@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /terms-and-conditions.html
+Disallow: /terms-and-conditions-english.html
+Disallow: /terms-and-conditions-french.html
+Disallow: /terms-and-conditions-german.html
+Disallow: /terms-and-conditions-italian.html
+Disallow: /privacy.html
+Disallow: /terms.html

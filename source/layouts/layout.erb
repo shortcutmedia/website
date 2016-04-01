@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<!--                                        
+                            NDDDDDDDDDDDDDDDDDDDDDD                             
+                        NDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD                         
+                    NDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDN            DDD      
+                  DDDDDDDDDDDD                   DDDDDDDDDDD          DDDDD     
+                DDDDDDDDDN                           NDDDDDDD       NDDDDDD     
+              DDDDDDDD                                   DDN      NNDDDDDD      
+            NDDDDDDD                                             NDDDDDD        
+          DDDDDDDD                                             NDDDDDDN         
+         NDDDDDD                                              DDDDDDN           
+        DDDDDD                                              NDDDDDDN            
+       DDDDDD                     DDDDDDDDDND              DDDDDDD              
+     NDDDDDN                 NDDDDDDDDDDDDDDDDDDDD       DDDDDDD        N       
+     DDDDDN                DDDDDDDDDDDDDDDDDDDDDDDDD    DDDDDDD       DDDDN     
+    DDDDDN               DDDDDDDDDND       NNDDDDDDDDDDDDDDDD         DDDDD     
+   DDDDDD              DDDDDDDD                 NDDDDDDDDDDN          NDDDDD    
+  DDDDDD             NDDDDDDD                     DDDDDDDD             DDDDDD   
+  DDDDD             NDDDDDN                      DDDDDDDDDD             DDDDD   
+ DDDDDN            DDDDDD                       DDDDDDDDDDDD             DDDDN  
+ DDDDD            NDDDDD                      NDDDDDD  DDDDDD            DDDDD  
+NDDDDD            DDDDD                      DDDDDDD    DDDDD            NDDDDD 
+DDDDD            DDDDDD                    NDDDDDD       DDDDD            DDDDD 
+DDDDD            DDDDD                    DDDDDDN        DDDDD            NDDDD 
+DDDDD           NDDDDD                    NDDDD           DDDDD           DDDDD 
+DDDDD           DDDDD                                     DDDDD           NDDDDD
+DDDDN           DDDDD                                     DDDDD            DDDDD
+DDDDN           DDDDD                                     DDDDD            DDDDD
+DDDDD           DDDDD                                     DDDDD           NDDDDD
+DDDDD           NDDDDD          DDDDD                    NDDDDD           DDDDD 
+DDDDD            DDDDD        NNDDDDD                    DDDDD            DDDDD 
+DDDDD            DDDDDD      NDDDDDD                     DDDDD            DDDDD 
+NDDDDD            DDDDD    DDDDDDD                      DDDDD            NDDDDD 
+ DDDDD            NDDDDD  DDDDDDN                      DDDDDD            DDDDD  
+ NDDDDN            DDDDDDDDDDDD                       DDDDDD             DDDDN  
+  DDDDD             DDDDDDDDDD                      NDDDDDD             DDDDD   
+  DDDDDD             NDDDDDDD                     DDDDDDDN             NDDDDD   
+   DDDDDD          NDDDDDDDDDDDN                DDDDDDDD              NDDDDD    
+    DDDDD         NDDDDDDDDDDDDDDDDDN      DNDDDDDDDDDN               DDDDD     
+     DDDD       NDDDDDD    NDDDDDDDDDDDDDDDDDDDDDDDD                 DDDDDN     
+               DDDDDDD       NNDDDDDDDDDDDDDDDDDNN                 NDDDDDN      
+             DDDDDDD              DDDDDDDDDDN                     DDDDDDN       
+            DDDDDDD                                              DDDDDD         
+          NDDDDDD                                              NDDDDDN          
+        NDDDDDDD                                             DDDDDDDD           
+       DDDDDDD                                             DDDDDDDD             
+     NDDDDDDN      NDD                                   DDDDDDDDN              
+    DDDDDDN       NDDDDDDN                           NDDDDDDDDDN                
+    DDDDD          NDDDDDDDDDD                   NDDDDDDDDDDD                   
+     NNN            NDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDN                     
+                        NNDDDDDDDDDDDDDDDDDDDDDDDDDDDDN                         
+                            NDDNDDDDDDDDDDDDDDDDDND                             
+                                    DDDDDDN                                     
+-->
+  <head>
+	<%= yield_content :end_of_head %>
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="google-site-verification" content="SmaMwhl8aVJcMr9AgKc1eCi7ZTTl16owwUNOn6-dnvI" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Shortcut Media" %></title>
+    <meta name="description" content="<%= current_page.data.description %>" />
+
+    <% (current_page.data.meta || []).each do |key, val| %>
+      <% if key.to_s == "og:image" %>
+        <meta property="<%=key %>" content="<%= @base_url + image_path(val) %>" />
+      <% else %>
+        <meta property="<%=key %>" content="<%=val%>" />
+      <% end %>
+    <% end %>
+
+    <%= partial 'favicon' %>
+
+
+    <%#<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>%>
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+
+    <%= stylesheet_link_tag 'ars-maquette-web-font' %>
+    <%#<script src="https://use.typekit.net/xru7wzr.js"></script>%>
+    <%#<script>try{Typekit.load({ async: false });}catch(e){}</script>%>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial 'gtm' %>
+    
+    <%#= partial 'debug_grid' %>
+    <%= partial 'navbar' %>
+    <%= yield %>
+    <%= partial 'footer' %>
+  </body>
+</html>
+

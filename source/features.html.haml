@@ -1,0 +1,52 @@
+---
+title: Shortcut - Your tools for app user retention
+description: The tools that will help you actualize your app retention strategies. Try now!
+
+alias: touch_points.html
+
+meta: 
+  og:title: App Marketing With Superpowers
+  og:url: https://shortcut.sc/benefits.html 
+  og:site_name: Shortcut - App Marketing With Superpowers
+  og:description: Power Up Your App Marketing. Get Users, boost Engagement, and maximize Referrals.
+  fb:app_id: 176995982338808
+  og:type: website
+  og:image: shortcut_Facebook_Header_851x315px.png
+  og:image:type: image/png
+  og:image:width: 851
+  og:image:height: 315
+---
+
+
+%section.white.header
+  .container
+    .row
+      .col-sm-12.text-center
+        %h1
+          Meet the
+          %span.green Shortcut Features
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.text-center.col-lg-6.col-lg-offset-3
+        %p
+          Shortcut helps you get new users and keep them. Use our features in your retention strategies and your customer retention process. This will help you both get new customers and keep your existing ones.
+    .row
+      .col-sm-12
+        = partial 'benefits_nav'
+
+- data.benefits.benefits.each_with_index do |benefit, index|
+  %section.benefit{id: URI.parse(benefit.url).fragment, class: (index % 2 < 1 ? (index == 6 ? 'blue' : 'white') : 'grey') }
+    .container
+      .row
+        %div{class: "col-sm-#{benefit.layout[:first_col]} #{'col-sm-push-' + benefit.layout[:second_col].to_s if benefit.layout[:image_place] == 'right' }"}
+          %h2.visible-xs= benefit.title
+          -#= image_tag benefit.image[:src], width: benefit.image[:width], alt: benefit.title
+          -#= svg_image_tag benefit.image, alt: benefit.title
+          %div{class: "container-#{ URI.parse(benefit.image[:src]).fragment} benefits-svg-container"}
+            = figure benefit.image[:src], fluid: benefit.image[:fluid], alt: benefit.title
+        %div{class: "col-sm-#{benefit.layout[:second_col]} #{'col-sm-pull-' + benefit.layout[:first_col].to_s if benefit.layout[:image_place] == 'right' }"}
+          %h2.hidden-xs= benefit.title
+          %p= benefit.desc_html
+
+= partial 'call_to_action'
+
+
