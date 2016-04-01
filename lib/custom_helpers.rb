@@ -59,11 +59,21 @@ module CustomHelpers
         fluid_options = opts.delete :fluid
         opts.merge!(viewBox: "#{([0, 0] + fluid_options).join(' ')}")
 
-        #concat_content(
-          content_tag(:figure, class: klass) do
-            svg_image_tag src.to_s, opts
-          end
-        #)
+        content_tag(:figure, class: klass) do
+          svg_image_tag src.to_s, opts
+        end
+      else
+        raise "unsupported yet"
+      end
+    elsif src.path 
+      klass = opts[:class] || "non-svg-image"
+      if opts.has_key? :fluid
+        klass += ' fluid'
+        fluid_options = opts.delete :fluid
+        opts.merge!(width: "#{(fluid_options)[0]}")
+        opts.merge!(height: "#{(fluid_options)[1]}")
+        opts = opts.merge({class: klass.to_s})
+        image_tag("/images/#{src}", opts)
       else
         raise "unsupported yet"
       end

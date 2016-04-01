@@ -1,0 +1,17 @@
+- data.benefits2.benefits.each_with_index do |benefit, index|
+  %section.benefit{id: URI.parse(benefit.url).fragment, class: (index % 2 < 1 ? (index == 6 ? 'blue' : 'white') : 'grey') }
+    .container
+      .row
+        %div{class: "col-sm-#{benefit.layout[:first_col]} #{'col-sm-push-' + benefit.layout[:second_col].to_s if benefit.layout[:image_place] == 'right' }"}
+          %h2.visible-xs= benefit.title
+          -#= image_tag benefit.image[:src], width: benefit.image[:width], alt: benefit.title
+          -#= svg_image_tag benefit.image, alt: benefit.title
+          %div{class: "container-#{ URI.parse(benefit.image[:src]).fragment ? URI.parse(benefit.image[:src]).fragment : 'non-svg-image'} benefits-svg-container"}
+            = figure benefit.image[:src], fluid: benefit.image[:fluid], alt: benefit.title
+        %div{class: "col-sm-#{benefit.layout[:second_col]} #{'col-sm-pull-' + benefit.layout[:first_col].to_s if benefit.layout[:image_place] == 'right' }"}
+          %h2.hidden-xs= benefit.title
+          %p= benefit.desc_html
+
+= partial 'call_to_action'
+
+
