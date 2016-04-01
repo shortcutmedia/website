@@ -47,39 +47,33 @@ module CustomHelpers
     end
   end
 
-
-  def figure src, opts={}
-    src = URI.parse(src)
-
-    if src.fragment
-      klass = opts[:class] || "svg-#{src.fragment}"
-
-      if opts.has_key? :fluid
-        klass += ' fluid'
-        fluid_options = opts.delete :fluid
+  def display_figure(src, format, opts={})
+    if opts.has_key? :fluid
+      klass = opts[:class] || "#{format}-#{src.fragment ? src.fragment : 'no-fragment'}"
+      klass += ' fluid'
+      fluid_options = opts.delete :fluid
+      
+      if format == "svg"
         opts.merge!(viewBox: "#{([0, 0] + fluid_options).join(' ')}")
 
         content_tag(:figure, class: klass) do
           svg_image_tag src.to_s, opts
         end
       else
-        raise "unsupported yet"
-      end
-    elsif src.path 
-      klass = opts[:class] || "non-svg-image"
-      if opts.has_key? :fluid
-        klass += ' fluid'
-        fluid_options = opts.delete :fluid
         opts.merge!(width: "#{(fluid_options)[0]}")
         opts.merge!(height: "#{(fluid_options)[1]}")
         opts = opts.merge({class: klass.to_s})
         image_tag("/images/#{src}", opts)
-      else
-        raise "unsupported yet"
       end
     else
       raise "unsupported yet"
     end
+  end
+
+  def figure src, opts={}
+    src = URI.parse(src)
+    format = src.path.to_s.partition('.').last
+    display_figure(src, format, opts)
   end
 
   #def table_of_contents(resource)
