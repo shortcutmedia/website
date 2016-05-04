@@ -27,3 +27,4 @@ gem 'middleman-deploy', '~> 1.0'
 
 gem 'middleman-alias'
 
+gem 'slim'
