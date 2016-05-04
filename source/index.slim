@@ -38,7 +38,15 @@ meta:
   /! End of Google Analytics Content Experiment code
 
 
-- content_for :page_head
-  h1 hero
+- content_for :hero
+  .HomeHero
+    h1 Growth engine for apps
 
-p hello world
+    p
+      | Shortcut uses Artificial Intelligence to grow your app faster.
+      br
+      | To start, enter your app's website or <a href="#" class="sneaky underlined">sign up</a> — <b>It&apos;s 100% free</b>!
+
+    form action="/"
+      input type="text"
+      button.green Submit
