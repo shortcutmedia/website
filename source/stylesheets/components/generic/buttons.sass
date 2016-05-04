@@ -1,0 +1,29 @@
+@import 'variables'
+
+$generic-button-color: #bbb
+
+button, .button
+  background-color: $generic-button-color
+  border: 1px solid $generic-button-color
+  border-radius: $border-radius
+  padding: 0.625em 2em
+  color: $text-color
+  text-decoration: none
+  transition: background-color $snappy-transition
+
+  &.white.outlined
+    background-color: transparent
+    border-color: $white
+    color: $white
+
+    &:hover
+      background-color: rgba(255,255,255,0.15)
+
+  &.green
+    background-color: $green
+    border-color: $green
+    color: $white
+
+    &:hover
+      background-color: darken($green, 10%)
+      border-color: darken($green, 10%)
