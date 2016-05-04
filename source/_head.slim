@@ -1,0 +1,18 @@
+.PageStripe.lila
+  .PageContainer
+
+    header.SiteHeader
+      a.brand href='/'
+        = svg_image_tag 'sprite.svg#shortcut-logo'
+
+      nav.site-menu
+        ul.u-inline-list
+          li= link_to 'Features', '/features.html', class: 'sneaky'
+          li= link_to 'Documentation', 'http://developer.shortcut.sc/', class: 'sneaky'
+
+      .session-buttons
+        a.button.white.outlined href='#' Login
+        a.button.green href='#' Signup
+
+
+    = yield_content :page_head

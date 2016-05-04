@@ -16,7 +16,7 @@ meta:
 
 ---
 
-- content_for :end_of_head do
+- content_for :end_of_head
   /! Google Analytics Content Experiment code
 
   javascript:
@@ -38,4 +38,7 @@ meta:
   /! End of Google Analytics Content Experiment code
 
 
-p hello world!
+- content_for :page_head
+  h1 hero
+
+p hello world

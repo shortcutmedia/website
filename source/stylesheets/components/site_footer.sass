@@ -1,0 +1,28 @@
+.SiteFooter
+  text-align: center
+  color: $text-color-light
+  padding: 60px 0
+
+  nav.links
+    li + li
+      &:before
+        content: '∙'
+        margin-left: 1em
+        margin-right: 1em
+
+  nav.icons
+    li
+      transition: opacity $snappy-transition
+
+      svg
+        width: 32px
+        height: 32px
+
+      &:hover
+        opacity: 0.7
+
+    li + li
+      margin-left: 0.75em
+
+  nav.links + nav.icons
+    margin-top: 40px
