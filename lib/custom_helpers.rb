@@ -35,9 +35,12 @@ module CustomHelpers
     src = URI.parse("/images/#{src}") unless src.host # prepand /images/ if relative src
 
     if src.fragment
+      merge_attributes = -> key, old, new { "#{old} #{new}" }
+
       # use 'use'-tag to link to svg
-      opts = opts.merge({class: src.fragment}) # defaults for opts
+      opts = opts.merge({class: src.fragment}, &merge_attributes) # defaults for opts
       opts = opts.merge("xmlns:xlink" => 'http://www.w3.org/1999/xlink')
+
       #concat_content(
         content_tag(:svg, opts) do
           content_tag :use, nil, {"xlink:href" => src }
