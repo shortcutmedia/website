@@ -81,11 +81,13 @@ html
 
   body class=page_classes
     = partial 'gtm'
-    = partial 'head'
 
-    main
-      = yield
+    = partial 'slideout_menu'
 
-    = partial 'footer'
+    .slideout-panel data-slideout-panel=true
+      = partial 'head'
+      main
+        = yield
+      = partial 'footer'
 
 

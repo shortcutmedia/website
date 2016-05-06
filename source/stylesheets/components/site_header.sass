@@ -3,13 +3,14 @@
 .SiteHeader
   display: flex
   flex-direction: row
+  justify-content: space-between
+  align-items: center
   color: $white
   padding-top: 1em
   padding-bottom: 1em
 
   .brand
     flex: 0 0
-    align-self: center
 
     svg
       width: 160px
@@ -17,7 +18,6 @@
 
   .site-menu
     flex: 1 0
-    align-self: center
     text-align: right
 
     li
@@ -26,14 +26,27 @@
 
   .session-buttons
     flex: 0 0
-    align-self: center
 
     .button
       text-transform: uppercase
       margin-left: 1.5em
 
+  .hamburguer-button
+    display: none
+    fill: $white
+    flex: 0 0
+    margin-left: 1em
+    cursor: pointer
 
+    svg
+      width: 40px
+      height: 40px
 
-
-
+  // too much below 840px and the header content collapses on itself
+  // time to show mobile menu
+  @media(max-width: 840px)
+    .hamburguer-button
+      display: block
+    .site-menu, .session-buttons
+      display: none
 
