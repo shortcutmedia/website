@@ -1,0 +1,28 @@
+$slides: 2
+$time_per_slide: 10
+$total_animation_time: $time_per_slide * $slides
+
+.CustomerTestemonialShowcase
+  position: relative
+  height: 190px
+
+  .slide
+    position: absolute
+    width: 100%
+    animation: round #{$total_animation_time}s infinite
+    opacity: 0
+
+@keyframes round
+  0%
+    opacity: 0
+  2%
+    opacity: 1
+  48%
+    opacity: 1
+  50%
+    opacity: 0
+
+@for $index from 1 to $slides + 1
+  .CustomerTestemonialShowcase div:nth-of-type( #{$index} )
+    animation-delay: #{ $total_animation_time - $time_per_slide * $index }s
+

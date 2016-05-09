@@ -1,0 +1,34 @@
+.CustomerTestemonial
+  display: inline-block
+  max-width: 350px
+  padding: 1.5em
+  text-align: left
+  vertical-align: top
+
+  p
+    font-style: italic
+    line-height: 1.5
+    letter-spacing: 0.5px
+    position: relative
+
+    &:before, &:after
+      color: $green
+      font-size: 42px
+      line-height: 20px
+      height: 16px
+
+    &:before
+      content: '“'
+      position: absolute
+      top: 6px
+      left: -24px
+
+    &:after
+      display: inline-block
+      content: '”'
+      vertical-align: bottom
+
+  .who
+    text-transform: uppercase
+    font-size: 0.75em
+    color: $text-color-light
