@@ -186,3 +186,41 @@ meta:
           .who Heini Zachariassen, CEO Vivino
 
 
+  .PageStripe.gray
+    .PageContainer.centered-content.sdk-integration-segment
+
+      h2 SDK integration made easy
+
+      .Tabs
+        .tab
+          input  id="sdk-ios" type="radio" name="sdk-integration-tabs" checked="true"
+          label for="sdk-ios" iOS
+          .content
+            pre: code
+              | #import &lt;Shortcut/Shortcut.h&gt;
+
+                // ...
+
+                - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+                    [Shortcut launchWithAuthToken:@"YOUR_AUTH_TOKEN_HERE"];
+
+                    // ...
+
+                    return YES;
+                }
+
+        .tab
+          input  id="sdk-android" type="radio" name="sdk-integration-tabs"
+          label for="sdk-android" Android
+          .content
+            pre: code
+              | &lt;application
+                  android:name="sc.shortcut.sdk.SCApplication"
+                  ...
+                &gt;
+                    &lt;meta-data android:name="sc.shortcut.sdk.authToken" android:value="&lt;your auth token&gt;" /&gt;
+                    ...
+
+                &lt;/application&gt;
+

@@ -1,0 +1,41 @@
+.Tabs
+  text-align: left
+  min-height: 330px
+  position: relative
+  clear: both
+
+  .tab
+    float: left
+
+    & > [type=radio]
+      display: none
+
+    & > label
+      padding: 1em
+      font-weight: bolder
+      color: $text-color-light
+      cursor: pointer
+
+      &:hover
+        color: $green
+
+    .content
+      position: absolute
+      top: 38px
+      left: 0
+      right: 0
+      bottom: 0
+      overflow: scroll
+      padding: 1.5em 2em
+      background-color: $white
+
+      pre
+        margin: 0
+
+    & > [type=radio]:checked ~ label
+      color: $green
+      border-bottom: 3px solid $green
+      z-index: 2
+
+    & > [type=radio]:checked ~ label ~ .content
+      z-index: 1
