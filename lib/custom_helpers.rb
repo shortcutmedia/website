@@ -101,5 +101,12 @@ module CustomHelpers
     toc
   end
 
+  def deferred_image_tag path, options = {}
+    data = options[:data] || options['data'] || {}
+    options[:data] = data.merge 'deferred-image' => image_path(path)
+
+    image_tag 'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=', options
+  end
+
 end
 

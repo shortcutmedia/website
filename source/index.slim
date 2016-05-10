@@ -91,6 +91,61 @@ meta:
     .PromoVideo
 
 
+.PageStripe.white
+  .PageContainer.centered-content.app-growth-segment
+
+    h2 App growth for big and small companies
+
+    p.u-not-too-wide
+      | We follow the three engines of growth as proposed by <u>Erik Ries in “The Lean Startup”</u> as it applies for both big and small companies.
+
+    .FeatureShowcase
+      .feature
+        input  id="fs-sticky-engine" type="radio" name="feature-showcase" checked="true"
+        label for="fs-sticky-engine" Sticky Engine of Growth
+        .details
+          p
+            | Increase app retention efficiently. We offer numerous efficient tools for app retention such as app banners and iBeacons.
+              We also provide you with the right metrics to measure and analyze your app retention.
+          a.pill.button href="#" App Banners
+          a.pill.button href="#" Newsletters
+          .phone-demo
+            = deferred_image_tag 'home/feature-demo-sticky-engine.gif', class: 'xxx', data: { zzz: 123 }
+
+      .feature
+        input  id="fs-viral-engine" type="radio" name="feature-showcase"
+        label for="fs-viral-engine" Viral Engine of Growth
+        .details
+          p
+            | Make your app viral with our SDK. You can build customized on-boarding experiences for when your existing users refer your app
+              to their friends and when they share your app content. Track how your virality increases in real-time.
+          a.pill.button href="#" App Referals
+          a.pill.button href="#" Organic Growth
+          .phone-demo
+
+      .feature
+        input  id="fs-paid-engine" type="radio" name="feature-showcase"
+        label for="fs-paid-engine" Paid Engine of Growth
+        .details
+          p
+            | Lorem ipsum dolor sit amet bacon.
+              Lorem ipsum dolor sit amet bacon.
+          a.pill.button href="#" Bacon
+          a.pill.button href="#" Chunky Bacon
+          .phone-demo
+
+      .feature
+        input  id="fs-analytics" type="radio" name="feature-showcase"
+        label for="fs-analytics" Analytics
+        .details
+          p
+            | Lorem ipsum dolor sit amet bacon.
+              Lorem ipsum dolor sit amet bacon.
+          a.pill.button href="#" Bacon
+          a.pill.button href="#" Chunky Bacon
+          .phone-demo
+
+
 .PageStripe.lila
   .PageContainer.centered-content.pricing-segment
 

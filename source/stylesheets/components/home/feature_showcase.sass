@@ -1,0 +1,124 @@
+.FeatureShowcase
+  $rail-column-width: 80px
+  $iphone-width: 265px
+  $iphone-height: 566px
+
+  width: 100%
+  max-width: 980px
+  min-height: $iphone-height
+  margin-left: auto
+  margin-right: auto
+  text-align: left
+  padding-left: $rail-column-width
+  position: relative
+
+  &:before
+    content: '\A'
+    position: absolute
+    left: 0
+    top: 0
+    width: $rail-column-width / 2
+    height: 100%
+    border-right: 2px solid #e5e5e5
+
+  .feature
+    & + .feature
+      padding-top: 2em
+
+    & > [type=radio]
+      $line-height: 40px
+
+      width: 30px
+      height: $line-height
+      text-align: center
+      line-height: $line-height
+      vertical-align: middle
+      position: relative
+      left: -55px
+
+      &:after
+        content: 'O'
+        display: inline-block
+        width: 30px
+        height: $line-height
+        background-color: $white
+        font-size: 29px
+        font-weight: bold
+        color: $text-color-lighter
+        cursor: pointer
+        transition: color $snappy-transition
+
+      &:checked:after
+        color: $lila
+
+    & > label
+      margin-left: -31px
+      font-size: 1.625em
+      font-weight: bold
+      color: $text-color-lighter
+      vertical-align: middle
+      cursor: pointer
+      transition: color $snappy-transition
+
+      &:hover
+        color: $lila
+
+    .details
+      opacity: 0
+      max-height: 0
+      overflow: hidden
+      transition: max-height $slide-transition, opacity $slide-transition
+
+      p
+        line-height: 1.5
+        margin-top: 1em
+        margin-bottom: 2em
+
+      .pill.button
+        margin-bottom: 0.5em
+        margin-right: 1em
+
+      .phone-demo
+        margin-top: 2em
+        width: $iphone-width
+        height: $iphone-height
+        background-image: image-url('iphone_long.png')
+        background-size: 263px 566px
+        background-position: center
+        background-repeat: no-repeat
+        position: relative
+
+        img
+          position: absolute
+          left: 16px
+          top: 80px
+          width: 228px
+          height: 406px
+
+
+    & > [type=radio]:checked ~ label
+      z-index: 2
+      color: $lila
+
+    & > [type=radio]:checked ~ label ~ .details
+      z-index: 1
+      opacity: 1
+      max-height: $iphone-height * 2 // should be enough; adjust if clipping occurs
+
+
+  @media(min-width: #{$bp-tablet})
+    $extra-iphone-margin: 30px
+
+    padding-left: $rail-column-width + $iphone-width + $extra-iphone-margin
+
+    &:before
+      width: $rail-column-width / 2 + $iphone-width + $extra-iphone-margin
+
+    .feature .details .phone-demo
+      position: absolute
+      top: 0
+      left: 0
+      margin: 0
+
+    .feature > [type=radio]:checked ~ label ~ .details
+      max-height: 400px // removes perceived animation delay; increase this if some contents get clipped
