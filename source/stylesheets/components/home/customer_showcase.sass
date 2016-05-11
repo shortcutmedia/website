@@ -1,6 +1,5 @@
 .CustomerShowcase
   display: flex
-  flex-wrap: wrap
   justify-content: space-between
 
   .logo
@@ -11,3 +10,6 @@
     background-repeat: no-repeat
     background-position: center
 
+
+  @media(max-width: #{$bp-tablet})
+    flex-wrap: wrap
