@@ -1,0 +1,24 @@
+.FeaturesReferenceList
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  text-align: left
+  color: $text-color-light
+  font-weight: bolder
+
+  li
+    flex: 0 1 30%
+    min-width: 235px
+    max-width: 100%
+    line-height: 60px
+    border-top: 0.5px solid #ddd
+    border-bottom: 0.5px solid #ddd
+    padding: 0 1.5em
+
+    a
+      display: block
+      height: 100%
+
+  @media(max-width: #{$bp-phone})
+    justify-content: center
+    text-align: center
