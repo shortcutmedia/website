@@ -1,8 +1,7 @@
 .CustomerLoveReason
   display: inline-block
-  width: 300px
-  margin-left: 60px
-  margin-bottom: 30px
+  max-width: 300px
+  margin: 15px 30px
   vertical-align: top
   text-align: left
 
@@ -12,6 +11,7 @@
     fill: $green
 
   .special-crown
+    display: inline-block
     width: 36px
     height: 32px
     background-image: image-url('home/icon-crown.png')
@@ -26,3 +26,7 @@
 
   p
     line-height: 1.5
+
+
+  @media(max-width: #{$bp-phone})
+    text-align: center

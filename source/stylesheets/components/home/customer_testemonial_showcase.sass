@@ -27,3 +27,17 @@
       opacity: 0
 
 
+  @media(max-width: #{$bp-phone})
+    .slide
+      > div
+        display: none
+
+        &:first-child
+          display: inline-block
+
+
+  @media(max-width: #{$bp-tablet})
+    .slide
+      > div
+        &:nth-of-type(3)
+          display: none

@@ -122,3 +122,28 @@
 
     .feature > [type=radio]:checked ~ label ~ .details
       max-height: 400px // removes perceived animation delay; increase this if some contents get clipped
+
+
+  @media(max-width: #{$bp-phone})
+    padding-left: 0
+    text-align: center
+
+    &:before
+      display: none
+
+    .feature > [type=radio]
+      display: none
+
+    .feature > label
+      margin-left: 0
+      text-decoration: underline
+
+    .feature > [type=radio]:checked ~ label
+      text-decoration: none
+
+    .feature .phone-demo
+      margin-left: auto
+      margin-right: auto
+
+
+

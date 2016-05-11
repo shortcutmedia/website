@@ -25,3 +25,12 @@
 
   nav.links + nav.icons
     margin-top: 40px
+
+
+  @media(max-width: #{$bp-phone})
+    nav.links
+      li
+        margin: 1em
+
+        &:before
+          display: none
