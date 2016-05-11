@@ -8,11 +8,11 @@
       nav.site-menu
         ul.u-inline-list
           li= link_to 'Features', '/features.html', class: 'sneaky'
-          li= link_to 'Documentation', 'http://developer.shortcut.sc/', class: 'sneaky'
+          li= link_to 'Documentation', documentation_url, class: 'sneaky'
 
       .session-buttons
-        a.button.white.outlined href='#' Login
-        a.button.green href='#' Signup
+        = link_to 'Login',  manager_url('/users/sign_in'), class: 'white outlined button'
+        = link_to 'Signup', manager_url('/users/sign_up'), class: 'green button'
 
       .hamburguer-button data-slideout-toggle=true
         = svg_image_tag 'sprite.svg#icon-menu'

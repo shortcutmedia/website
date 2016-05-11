@@ -108,5 +108,17 @@ module CustomHelpers
     image_tag 'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=', options
   end
 
+  def documentation_url path = ''
+    @docs_base_url + path.sub(/^\//, '')
+  end
+
+  def manager_url path = ''
+    @manager_base_url + path.sub(/^\//, '')
+  end
+
+  def blog_url path = ''
+    @blog_base_url + path.sub(/^\//, '')
+  end
+
 end
 

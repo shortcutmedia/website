@@ -47,8 +47,8 @@ meta:
       br
       | To start, enter your app's website or <a href="#" class="sneaky underlined">sign up</a> — <b>It&apos;s 100% free</b>!
 
-    form.GetStartedInput action="/"
-      input type="text" placeholder="https://your.app.com"
+    form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
+      input type="text" placeholder="https://your.app.com" name="app_website"
       button.green Submit
 
     .chevron-lip
@@ -89,6 +89,8 @@ meta:
     h4 Turn your app into a smart engine of growth for free
 
     .PromoVideo
+      .wrapper
+        iframe width="928px" height="522px" src="https://www.youtube.com/embed/XgU0C8lOtQo?rel=0" frameborder="0" allowfullscreen=true
 
 
 .PageStripe.white
@@ -155,7 +157,7 @@ meta:
       | Our success is your success. We are here to help you grow your app and we want to grow with you. <br>
         This is why we are offering all our features and our analytics for free to <br> all apps that haven't reached 100'000 MAU yet.
 
-    a.button.green href="#" Take a closer look at the prices
+    = link_to 'Take a closer look at the prices', '/pricing.html', class: 'green button'
 
 
 .PageStripe.white
@@ -287,6 +289,6 @@ meta:
 
       h2 Start building your own growth engine
 
-      form.GetStartedInput action="/"
-        input type="text" placeholder="https://your.app.com"
+      form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
+        input type="text" placeholder="https://your.app.com" name="app_website"
         button.green Submit
