@@ -1,0 +1,61 @@
+.PricingCard
+  flex: 0 1 330px
+  max-width: 100%
+  margin: 1em
+  background-color: $white
+  font-weight: bolder
+  color: $text-color-light
+
+  .title
+    background-color: $lila
+    padding: 35px 0
+    font-size: 1.125em
+    font-weight: bold
+    color: $white
+    text-transform: uppercase
+    letter-spacing: 0.5px
+
+  .price
+    padding: 20px 0
+    font-size: 2.5em
+    color: $lila
+    font-weight: bold
+
+    sup:first-child
+      font-size: 0.5em
+      margin-right: 0.25em
+      position: relative
+      top: -0.75em
+
+    sup:last-child
+      font-size: 0.375em
+      font-weight: normal
+      margin-left: 0.5em
+      position: relative
+      top: -1em
+      left: -2px
+
+  hr
+    border: 1px solid #f7f7f7
+    margin: 0
+
+  .features
+    padding: 1em 0
+
+    li
+      padding: 1em 0
+
+      &.check:before
+        content: '✓'
+        margin-right: 1em
+        color: $green
+
+      &.plus:before
+        content: '╋'
+        margin-right: 1em
+        color: $green
+
+  .button
+    margin: 2em 0
+
+

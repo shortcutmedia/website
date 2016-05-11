@@ -10,13 +10,6 @@ button, .button
   text-decoration: none
   transition: background-color $snappy-transition
 
-  &.white.outlined
-    background-color: transparent
-    border-color: $white
-    color: $white
-
-    &:hover
-      background-color: rgba(255,255,255,0.15)
 
   &.green
     background-color: $green
@@ -24,8 +17,36 @@ button, .button
     color: $white
 
     &:hover
-      background-color: darken($green, 10%)
-      border-color: darken($green, 10%)
+      background-color: darken($green, 15%)
+      border-color: darken($green, 15%)
+
+  &.lila
+    background-color: $lila
+    border-color: $lila
+    color: $white
+
+    &:hover
+      background-color: lighten($lila, 15%)
+      border-color: lighten($lila, 15%)
+
+
+  &.outlined
+    background-color: transparent
+
+    &.white
+      border-color: $white
+      color: $white
+
+      &:hover
+        background-color: rgba(255,255,255,0.15)
+
+    &.lila
+      border-color: $lila
+      color: $lila
+
+      &:hover
+        background-color: rgba($lila, 0.1)
+
 
   &.pill
     border-radius: 100px
