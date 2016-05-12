@@ -45,7 +45,7 @@ meta:
     p
       | Shortcut uses Artificial Intelligence to grow your app faster.
       br
-      | To start, submit your app's website or <a href="#" class="sneaky underlined">sign up</a>!
+      | To start, submit your app's website or <a href="#{manager_url '/users/sign_up'}" class="sneaky underlined">sign up</a>!
 
     form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
       input type="text" placeholder="https://your.app.com" name="app_website"
@@ -116,9 +116,9 @@ meta:
           a.pill.button href="#" Offline Advertising
           a.pill.button href="#" Custom Domain
           a.pill.button href="#" Marketing Links
-		  
+
           .phone-demo
-            = deferred_image_tag 'home/feature-demo-sticky-engine.gif', class: 'xxx', data: { zzz: 123 }
+            = deferred_image_tag 'home/feature-demo-sticky-engine.gif'
 
       .feature
         input  id="fs-viral-engine" type="radio" name="feature-showcase"
@@ -126,13 +126,14 @@ meta:
         .details
           p
             | Reach viral growth with our SDK. Make sharing your app content easier for your app users that want to share your app and your app content with their friends. Enabling sharing in your app will help you with viral and organic growth.
-			  
+
           a.pill.button href="#" App Deep Linking
           a.pill.button href="#" App Referrals
           a.pill.button href="#" Social Media
           a.pill.button href="#" Custom Domain
           a.pill.button href="#" Marketing Links
           .phone-demo
+            = deferred_image_tag 'home/feature-demo-viral-engine.gif'
 
       .feature
         input  id="fs-paid-engine" type="radio" name="feature-showcase"
@@ -155,7 +156,6 @@ meta:
         .details
           p
             | Track and analyze your success. With Shortcut's powerful analytics you will always be measuring the right metrics that will help you make the right desicions to grow your app. Track campaign effectiveness to optimize your advertising or run a cohort analysis to improve retention.
-          .phone-demo
 
 
 .PageStripe.lila
@@ -165,6 +165,8 @@ meta:
 
     p.u-not-too-wide
       | At Shortcut we are Artificial Intelligence (AI) experts and amazed by the enormous and unexplored possibilities of AI for app growth. We are currently working on new features and functionalities based on AI that will grow your app faster and smarter. Stay tuned!<br><br>
+
+    hr
 
     h3 Pricing
 
@@ -222,26 +224,26 @@ meta:
     h6 Trusted by some of your favorite apps
 
     .CustomerShowcase
-      .logo style="background-image: url(#{image_path 'home/customers/cust-zen.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-vivino.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-cardu.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-zen.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-bet.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-cin.png'})"
 
     .CustomerTestemonialShowcase
-        .CustomerTestemonial
-          p
-            | Shortcut has become an essential partner for our mobile-app marketing.
-              The service is easy to set up and provides great tracking data. I highly recommend to all marketers.
-          .who Karen Wiesner, Director Marketing Cincinnati Bell
-        .CustomerTestemonial
-          p
-            | With Shortcut deep links we have been able to improve our user engagement and retention significantly.
-          .who Jukka Kilponen, CTO Cardu
-        .CustomerTestemonial
-          p
-            | Shortcut’s innovative API has allowed us to add mobile deep links to our automated newsletters and the results have been amazing.
-          .who Heini Zachariassen, CEO Vivino
+      .CustomerTestemonial
+        p
+          | Shortcut has become an essential partner for our mobile-app marketing.
+            The service is easy to set up and provides great tracking data. I highly recommend to all marketers.
+        .who Karen Wiesner, Director Marketing Cincinnati Bell
+      .CustomerTestemonial
+        p
+          | With Shortcut deep links we have been able to improve our user engagement and retention significantly.
+        .who Jukka Kilponen, CTO Cardu
+      .CustomerTestemonial
+        p
+          | Shortcut’s innovative API has allowed us to add mobile deep links to our automated newsletters and the results have been amazing.
+        .who Heini Zachariassen, CEO Vivino
 
 
   .PageStripe.gray

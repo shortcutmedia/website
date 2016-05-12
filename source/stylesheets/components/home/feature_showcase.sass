@@ -77,6 +77,7 @@
       .pill.button
         margin-bottom: 0.5em
         margin-right: 1em
+        min-width: 280px
 
       .phone-demo
         margin-top: 2em
@@ -103,7 +104,7 @@
     & > [type=radio]:checked ~ label ~ .details
       z-index: 1
       opacity: 1
-      max-height: $iphone-height * 2 // should be enough; adjust if clipping occurs
+      max-height: $iphone-height * 2.5 // should be enough; adjust if clipping occurs
 
 
   @media(min-width: #{$bp-tablet})
@@ -120,6 +121,8 @@
       left: 0
       margin: 0
 
+
+  @media(min-width: 1000px)
     .feature > [type=radio]:checked ~ label ~ .details
       max-height: 400px // removes perceived animation delay; increase this if some contents get clipped
 

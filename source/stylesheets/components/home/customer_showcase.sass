@@ -4,8 +4,7 @@
 
   .logo
     flex-basis: 300px
-    width: 300px
-    height: 75px
+    height: 100px
     background-size: 150px
     background-repeat: no-repeat
     background-position: center
@@ -13,3 +12,7 @@
 
   @media(max-width: #{$bp-tablet})
     flex-wrap: wrap
+    justify-content: center
+
+    div:nth-of-type(3)
+      order: 5
