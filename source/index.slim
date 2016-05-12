@@ -5,8 +5,8 @@ description: The ultimate tools for app user retention and improved app performa
 meta:
   og:title: Get app users who stay.
   og:url: https://shortcut.sc
-  og:site_name: Shortcut - App User Generation and Retention
-  og:description: Grow your app for real. Get Users, boost Engagement, and maximize Referrals.
+  og:site_name: Shortcut - The groth machine for your app
+  og:description: Turn your app into powerful growth machine with high user retention and organic growth.
   fb:app_id: 176995982338808
   og:type: website
   og:image: shortcut-growth-engine-for-app-meta.png
@@ -45,7 +45,7 @@ meta:
     p
       | Shortcut uses Artificial Intelligence to grow your app faster.
       br
-      | To start, enter your app's website or <a href="#" class="sneaky underlined">sign up</a> — <b>It&apos;s 100% free</b>!
+      | To start, submit your app's website or <a href="#" class="sneaky underlined">sign up</a>!
 
     form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
       input type="text" placeholder="https://your.app.com" name="app_website"
@@ -86,7 +86,7 @@ meta:
 .PageStripe.gray
   .PageContainer.centered-content
 
-    h4 Turn your app into a smart engine of growth for free
+    h4 Turn your app into a smart engine of growth
 
     .PromoVideo
       .wrapper
@@ -96,10 +96,10 @@ meta:
 .PageStripe.white
   .PageContainer.centered-content.app-growth-segment
 
-    h2 App growth for big and small companies
+    h2 App growth for companies of all sizes
 
     p.u-not-too-wide
-      | We follow the three engines of growth as proposed by <u>Erik Ries in “The Lean Startup”</u> as it applies for both big and small companies.
+      | We follow the three engines of growth as proposed by <u>Eric Ries in “The Lean Startup”</u>. The Shortcut platform is built on the three growth engines; stickiness, viral growth and paid growth. It can be used by every company from startups to large enterprises.
 
     .FeatureShowcase
       .feature
@@ -107,10 +107,16 @@ meta:
         label for="fs-sticky-engine" Sticky Engine of Growth
         .details
           p
-            | Increase app retention efficiently. We offer numerous efficient tools for app retention such as app banners and iBeacons.
-              We also provide you with the right metrics to measure and analyze your app retention.
+            | Increase app retention efficiently. We offer tools for engagement such as app banners, individually customized newsletters and beacons. With these tools you will be able to increase engagement and thereby your app retention will improve.
+          a.pill.button href="#" App Deep Linking
           a.pill.button href="#" App Banners
           a.pill.button href="#" Newsletters
+          a.pill.button href="#" Social Media
+          a.pill.button href="#" Beacons
+          a.pill.button href="#" Offline Advertising
+          a.pill.button href="#" Custom Domain
+          a.pill.button href="#" Marketing Links
+		  
           .phone-demo
             = deferred_image_tag 'home/feature-demo-sticky-engine.gif', class: 'xxx', data: { zzz: 123 }
 
@@ -119,10 +125,13 @@ meta:
         label for="fs-viral-engine" Viral Engine of Growth
         .details
           p
-            | Make your app viral with our SDK. You can build customized on-boarding experiences for when your existing users refer your app
-              to their friends and when they share your app content. Track how your virality increases in real-time.
-          a.pill.button href="#" App Referals
-          a.pill.button href="#" Organic Growth
+            | Reach viral growth with our SDK. Make sharing your app content easier for your app users that want to share your app and your app content with their friends. Enabling sharing in your app will help you with viral and organic growth.
+			  
+          a.pill.button href="#" App Deep Linking
+          a.pill.button href="#" App Referrals
+          a.pill.button href="#" Social Media
+          a.pill.button href="#" Custom Domain
+          a.pill.button href="#" Marketing Links
           .phone-demo
 
       .feature
@@ -130,10 +139,14 @@ meta:
         label for="fs-paid-engine" Paid Engine of Growth
         .details
           p
-            | Lorem ipsum dolor sit amet bacon.
-              Lorem ipsum dolor sit amet bacon.
-          a.pill.button href="#" Bacon
-          a.pill.button href="#" Chunky Bacon
+            | Get more downloads and firsttime users. When your app is sticky and can grow virally you can start scaling app users. We offer tools for app marketing capabilities such as marketing links and customized campaign landing pages.
+          a.pill.button href="#" App Deep Linking
+          a.pill.button href="#" Newsletters
+          a.pill.button href="#" Beacons
+          a.pill.button href="#" Offline Advertising
+          a.pill.button href="#" Custom Domain
+          a.pill.button href="#" Marketing Links
+          a.pill.button href="#" Custom Landers
           .phone-demo
 
       .feature
@@ -141,21 +154,22 @@ meta:
         label for="fs-analytics" Analytics
         .details
           p
-            | Lorem ipsum dolor sit amet bacon.
-              Lorem ipsum dolor sit amet bacon.
-          a.pill.button href="#" Bacon
-          a.pill.button href="#" Chunky Bacon
+            | Track and analyze your success. With Shortcut's powerful analytics you will always be measuring the right metrics that will help you make the right desicions to grow your app. Track campaign effectiveness to optimize your advertising or run a cohort analysis to improve retention.
           .phone-demo
 
 
 .PageStripe.lila
   .PageContainer.centered-content.pricing-segment
 
-    h3 Pricing — It's free!
+    h3 Faster app growth with Artificial Intelligence
 
     p.u-not-too-wide
-      | Our success is your success. We are here to help you grow your app and we want to grow with you. <br>
-        This is why we are offering all our features and our analytics for free to <br> all apps that haven't reached 100'000 MAU yet.
+      | At Shortcut we are Artificial Intelligence (AI) experts and amazed by the enormous and unexplored possibilities of AI for app growth. We are currently working on new features and functionalities based on AI that will grow your app faster and smarter. Stay tuned!<br><br>
+
+    h3 Pricing
+
+    p.u-not-too-wide
+      | Our success is your success and we are here to help you grow your app and we want to grow with you. <br>This is why we offer all our features and our analytics <strong>for free</strong> to all apps that are just starting out and have not reached 100'000 MAU yet.
 
     = link_to 'Take a closer look at the prices', '/pricing.html', class: 'green button'
 
@@ -189,14 +203,13 @@ meta:
       = svg_image_tag 'sprite.svg#icon-wrench'
       .title Reliable Service
       p
-        | With Shortcut you get a set of tools that will help you increase your app retention.
-          We made them super reliable and bullet-proof so that you don’t have to worry.
+        | We made all our tools super reliable and bullet-proof so that you can concentrate on your business and not worry about the machinery in the background..
 
     .CustomerLoveReason
       .special-crown
       .title You matter
       p
-        | Your returning users are the measurement of our success and therefore your success becomes our success.
+        | Your growth and your returning users are the measurement of our success and therefore your success becomes our success.
 
     .CustomerLoveReason
       = svg_image_tag 'sprite.svg#icon-lock'
@@ -209,25 +222,13 @@ meta:
     h6 Trusted by some of your favorite apps
 
     .CustomerShowcase
-      .logo style="background-image: url(#{image_path 'home/customers/cust-apg.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-zen.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-vivino.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-cardu.png'})"
       .logo style="background-image: url(#{image_path 'home/customers/cust-bet.png'})"
-      .logo style="background-image: url(#{image_path 'home/customers/cust-teli.png'})"
-      .logo style="background-image: url(#{image_path 'home/customers/cust-audi.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-cin.png'})"
 
     .CustomerTestemonialShowcase
-      .slide
-        .CustomerTestemonial
-          p
-            | With Shortcut deep links we have been able to improve our user engagement and retention significantly.
-          .who Cardu
-        .CustomerTestemonial
-          p
-            | Shortcut’s customer service is on point. Always ready to try to find as tailored solutions as possible.
-          .who Cincinnati Bell
-
-      .slide
         .CustomerTestemonial
           p
             | Shortcut has become an essential partner for our mobile-app marketing.
