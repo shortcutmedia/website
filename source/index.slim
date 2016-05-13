@@ -47,9 +47,7 @@ meta:
       br
       | To start, submit your app's website or <a href="#{manager_url '/users/sign_up'}" class="sneaky underlined">sign up</a>!
 
-    form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
-      input type="text" placeholder="https://your.app.com" name="app_website"
-      button.green Submit
+    = partial 'components/home/get_started_input'
 
     .chevron-lip
       = svg_image_tag 'sprite.svg#icon-chevron-down', class: 'chevron'
@@ -292,6 +290,6 @@ meta:
 
       h2 Start building your own growth engine
 
-      form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
-        input type="text" placeholder="https://your.app.com" name="app_website"
-        button.green Submit
+      = partial 'components/home/get_started_input'
+
+
