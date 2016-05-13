@@ -2,11 +2,16 @@
 
 .FeatureExposition
   text-align: left
-  min-height: 500px
+  overflow: hidden
 
   img
-    width: 600px
-    height: 500px
+    float: left
+    margin-right: 50px
+
+  &.reversed
+    img
+      float: right
+      margin-left: 50px
 
   .description
     h2
@@ -26,7 +31,25 @@
       li + li
         margin-top: 1.25em
 
+      svg
+        width: 20px
+        height: 22px
+        vertical-align: middle
+        margin-right: 1em
+
     .button
       margin-top: 2.5em
       font-weight: bolder
+
+  &.has-no-image
+    max-width: $max-readable-width
+    margin: 0 auto
+    text-align: center
+
+    ul
+      max-width: 215px
+      margin-left: auto
+      margin-right: auto
+      text-align: left
+
 

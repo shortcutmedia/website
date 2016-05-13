@@ -17,6 +17,23 @@ meta:
 ---
 
 
+- sticky_item = content_tag :li
+  = svg_image_tag 'sprite.svg#icon-be-sticky-02'
+  | Be Sticky
+
+- viral_item = content_tag :li
+  = svg_image_tag 'sprite.svg#icon-grow-virally-02'
+  | Grow Virally
+
+- invest_item = content_tag :li
+  = svg_image_tag 'sprite.svg#icon-invest-02'
+  | Invest in Downloads
+
+- track_item = content_tag :li
+  = svg_image_tag 'sprite.svg#icon-track-analyze-02'
+  | Track & Analyze
+
+
 .PageStripe.white
   .PageContainer.centered-content.intro-segment
 
@@ -27,24 +44,49 @@ meta:
         This will help you both get new customers and keep your existing ones.
 
     div.feature-buttons
-      = link_to 'Deep Linking',    '/features.html', class: 'pill button'
-      = link_to 'App Banners',     '/features.html', class: 'pill button'
-      = link_to 'iBeacons',        '/features.html', class: 'pill button'
-      = link_to 'Newsletters',     '/features.html', class: 'pill button'
-      = link_to 'Auto Messages',   '/features.html', class: 'pill button'
-      = link_to 'Social Media',    '/features.html', class: 'pill button'
-      = link_to 'App Referals',    '/features.html', class: 'pill button'
-      = link_to 'Print',           '/features.html', class: 'pill button'
-      = link_to 'Analytics',       '/features.html', class: 'pill button'
-      = link_to 'Custom Landers',  '/features.html', class: 'pill button'
-      = link_to 'Marketing Links', '/features.html', class: 'pill button'
-      = link_to 'Custom Domains',  '/features.html', class: 'pill button'
+      = link_to '/features.html#deep_linking', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-deeplinking'
+        | Deep Linking
+      = link_to '/features.html#app_banners', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-appmarketing'
+        | App Banners
+      = link_to '/features.html#beacons', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-ibeacons'
+        | iBeacons
+      = link_to '/features.html#newsletters', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-newsletter'
+        | Newsletters
+      / = link_to '/features.html#auto_messages', class: 'pill button'
+      /   = svg_image_tag 'sprite.svg#icon-f-automessages'
+      /   | Auto Messages
+      = link_to '/features.html#social_media', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-socialmedia'
+        | Social Media
+      = link_to '/features.html#app_referrals', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-appreferals'
+        | App Referals
+      = link_to '/features.html#print', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-print'
+        | Print
+      = link_to '/features.html#analytics', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-analyze'
+        | Analytics
+      = link_to '/features.html#custom_landers', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-customlanders'
+        | Custom Landers
+      = link_to '/features.html#marketing_links', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-marketinglinks'
+        | Marketing Links
+      = link_to '/features.html#custom_domains', class: 'pill button'
+        = svg_image_tag 'sprite.svg#icon-f-customdomain'
+        | Custom Domains
 
 
-.PageStripe.gray
+.PageStripe.gray#deep_linking
   .PageContainer.centered-content
     .FeatureExposition
-      img src="" style="margin-right:50px;float:left;"
+      = image_tag 'features/01-mobile-deep-linking.png', style: "width: 572px; height: 468px;"
+
 
       .description
         h2 Mobile deep linking
@@ -55,16 +97,16 @@ meta:
             download your app in order to see your content are directed to your in-app content after download.
 
         ul
-          li.sticky Be Sticky
-          li.viral  Grow Virally
-          li.invest Invest in Downloads
+          = sticky_item
+          = viral_item
+          = invest_item
 
         = link_to 'Try deep links for free', '#', class: 'lila button'
 
-.PageStripe.white
+.PageStripe.white#app_banners
   .PageContainer.centered-content
-    .FeatureExposition
-      img src="" style="margin-left:50px;float:right;"
+    .FeatureExposition.reversed
+      = image_tag 'features/02-app-banner-marketing.png', style: "width: 727px; height: 424px;"
 
       .description
         h2 App Marketing Banner
@@ -72,15 +114,15 @@ meta:
         p Instead of sending your user to the front- page of your app you are able to promote a feature and direct the user directly into that feature.
 
         ul
-          li.sticky Be Sticky
-          li.invest Invest in Downloads
+          = sticky_item
+          = invest_item
 
         = link_to 'Try app banners for free', '#', class: 'lila button'
 
-.PageStripe.gray
+.PageStripe.gray#app_referrals
   .PageContainer.centered-content
     .FeatureExposition
-      img src="" style="margin-right:50px;float:left;"
+      = image_tag 'features/03-app-referals.png', style: "width: 550px; height: 442px;"
 
       .description
         h2 Word of Mouth and App Referrals
@@ -90,15 +132,16 @@ meta:
             pieces of content in your app with their friends and contacts.
 
         ul
-          li.viral  Grow Virally
-          li.invest Invest in Downloads
+          = viral_item
+          = invest_item
 
         = link_to 'Try app referrals for free', '#', class: 'lila button'
+        div style="clear:both"
 
-.PageStripe.white
+.PageStripe.white#analytics
   .PageContainer.centered-content
-    .FeatureExposition
-      img src="" style="margin-left:50px;float:right;"
+    .FeatureExposition.reversed
+      = image_tag 'features/04-analytics.png', style: "width: 594px; height: 333px;"
 
       .description
         h2 Analytics
@@ -107,14 +150,14 @@ meta:
             and boost your app retention. Analyze and see which channel brought most of the users and optimize your app for conversion and retention.
 
         ul
-          li.track  Track & Analyze
+          = track_item
 
         = link_to 'Try our analytics for free', '#', class: 'lila button'
 
-.PageStripe.gray
+.PageStripe.gray#newsletters
   .PageContainer.centered-content
     .FeatureExposition
-      img src="" style="margin-right:50px;float:left;"
+      = image_tag 'features/05-newsletters.png', style: "width: 727px; height: 424px;"
 
       .description
         h2 Emails & Newsletters
@@ -124,15 +167,15 @@ meta:
             smoother user journey from when they click in your newsletter to when they land in your app.
 
         ul
-          li.sticky Be Sticky
-          li.invest Invest in Downloads
+          = sticky_item
+          = invest_item
 
         = link_to 'Try Shortcut for emails for free', '#', class: 'lila button'
 
-.PageStripe.white
+.PageStripe.white#social_media
   .PageContainer.centered-content
-    .FeatureExposition
-      img src="" style="margin-left:50px;float:right;"
+    .FeatureExposition.reversed
+      = image_tag 'features/06-social-media.png', style: "width: 530px; height: 472px;"
 
       .description
         h2 Social Media
@@ -142,16 +185,16 @@ meta:
             Content sharing makes it simple and easy for your users to share pieces of content in your app with their friends and contacts.
 
         ul
-          li.sticky Be Sticky
-          li.viral  Grow Virally
-          li.invest Invest in Downloads
+          = sticky_item
+          = viral_item
+          = invest_item
 
         = link_to 'Try Shortcut for Social Media for free', '#', class: 'lila button'
 
-.PageStripe.gray
+.PageStripe.gray#beacons
   .PageContainer.centered-content
     .FeatureExposition
-      img src="" style="margin-right:50px;float:left;"
+      = image_tag 'features/07-ibeacons.png', style: "width: 537px; height: 406px;"
 
       .description
         h2 Beacons
@@ -161,14 +204,14 @@ meta:
             Why not set up a surprise offer only for your app users to surprise them!
 
         ul
-          li.sticky Be Sticky
+          = sticky_item
 
         = link_to 'Try beacons for free', '#', class: 'lila button'
 
-.PageStripe.white
+.PageStripe.white#print
   .PageContainer.centered-content
-    .FeatureExposition
-      img src="" style="margin-left:50px;float:right;"
+    .FeatureExposition.reversed
+      = image_tag 'features/08-print.png', style: "width: 655px; height: 397px;"
 
       .description
         h2 Offline advertising
@@ -178,15 +221,15 @@ meta:
             space in print ads with QR codes and image recognition.
 
         ul
-          li.sticky Be Sticky
-          li.invest Invest in Downloads
+          = sticky_item
+          = invest_item
 
         = link_to 'Try Shortcut for Print for free', '#', class: 'lila button'
 
-.PageStripe.gray
+.PageStripe.gray#custom_domains
   .PageContainer.centered-content
     .FeatureExposition
-      img src="" style="margin-right:50px;float:left;"
+      = image_tag 'features/09-custom-domain.png', style: "width: 459px; height: 452px;"
 
       .description
         h2 Custom Domain
@@ -196,16 +239,16 @@ meta:
             The custom domain also makes increases your brand awareness amongst the people that click your link.
 
         ul
-          li.sticky Be Sticky
-          li.invest Invest in Downloads
-          li.viral  Grow Virally
+          = sticky_item
+          = invest_item
+          = viral_item
 
         = link_to 'Try Shortcut with your domain for free', '#', class: 'lila button'
 
-.PageStripe.white
+.PageStripe.white#marketing_links
   .PageContainer.centered-content
-    .FeatureExposition
-      img src="" style="margin-left:50px;float:right;"
+    .FeatureExposition.reversed
+      = image_tag 'features/10-marketing.png', style: "width: 606px; height: 373px;"
 
       .description
         h2 Marketing Links
@@ -216,16 +259,14 @@ meta:
             content if they have your app installed already.
 
         ul
-          li.sticky Be Sticky
-          li.invest Invest in Downloads
+          = sticky_item
+          = invest_item
 
         = link_to 'Try Shortcut\'s Marketing Links for free', '#', class: 'lila button'
 
-.PageStripe.gray
+.PageStripe.gray#custom_landers
   .PageContainer.centered-content
-    .FeatureExposition
-      img src="" style="margin-right:50px;float:left;"
-
+    .FeatureExposition.has-no-image
       .description
         h2 Custom landing pages
         p
@@ -234,13 +275,11 @@ meta:
             Make the most of the expensive space in print ads with QR codes and image recognition.
 
         ul
-          li.sticky Be Sticky
-          li.invest Invest in Downloads
-          li.viral  Grow Virally
+          = sticky_item
+          = invest_item
+          = viral_item
 
         = link_to 'Try custom landing pages for free', '#', class: 'lila button'
-
-
 
 
 
