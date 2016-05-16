@@ -13,6 +13,7 @@
   margin-right: auto
   text-align: left
   padding-left: $rail-column-width
+  transition: padding-left $quick-slide-transition
   position: relative
 
   &:before
@@ -99,6 +100,14 @@
           width: 228px
           height: 406px
 
+      .not-a-phone-demo
+        margin: 2em auto 0 auto
+        max-width: 480px
+
+        img
+          width: 100%
+          height: auto
+
 
     & > [type=radio]:checked ~ label
       z-index: 2
@@ -111,18 +120,19 @@
 
 
   @media(min-width: #{$bp-tablet})
-    $extra-iphone-margin: 30px
+    &:not(.collapse-demo-column)
+      $extra-iphone-margin: 30px
 
-    padding-left: $rail-column-width + $iphone-width + $extra-iphone-margin
+      padding-left: $rail-column-width + $iphone-width + $extra-iphone-margin
 
-    &:before
-      width: $rail-column-width / 2 + $iphone-width + $extra-iphone-margin
+      &:before
+        width: $rail-column-width / 2 + $iphone-width + $extra-iphone-margin
 
-    .feature .details .phone-demo
-      position: absolute
-      top: 0
-      left: 0
-      margin: 0
+      .feature .details .phone-demo
+        position: absolute
+        top: 0
+        left: 0
+        margin: 0
 
 
   @media(min-width: 1000px)
