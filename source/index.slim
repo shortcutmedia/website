@@ -106,14 +106,10 @@ meta:
         .details
           p
             | Increase app retention efficiently. We offer tools for engagement such as app banners, individually customized newsletters and beacons. With these tools you will be able to increase engagement and thereby your app retention will improve.
-          a.pill.button href="#" App Deep Linking
-          a.pill.button href="#" App Banners
-          a.pill.button href="#" Newsletters
-          a.pill.button href="#" Social Media
-          a.pill.button href="#" Beacons
-          a.pill.button href="#" Offline Advertising
-          a.pill.button href="#" Custom Domain
-          a.pill.button href="#" Marketing Links
+
+          - require 'lib/feature_buttons'
+          - buttons = %w(deep_linking app_banners newsletters social_media beacons print custom_domains marketing_links)
+          = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
 
           .phone-demo
             = deferred_image_tag 'home/feature-demo-sticky-engine.gif'
@@ -125,11 +121,10 @@ meta:
           p
             | Reach viral growth with our SDK. Make sharing your app content easier for your app users that want to share your app and your app content with their friends. Enabling sharing in your app will help you with viral and organic growth.
 
-          a.pill.button href="#" App Deep Linking
-          a.pill.button href="#" App Referrals
-          a.pill.button href="#" Social Media
-          a.pill.button href="#" Custom Domain
-          a.pill.button href="#" Marketing Links
+          - require 'lib/feature_buttons'
+          - buttons = %w(deep_linking app_referrals social_media custom_domains marketing_links)
+          = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
+
           .phone-demo
             = deferred_image_tag 'home/feature-demo-viral-engine.gif'
 
@@ -139,13 +134,11 @@ meta:
         .details
           p
             | Get more downloads and firsttime users. When your app is sticky and can grow virally you can start scaling app users. We offer tools for app marketing capabilities such as marketing links and customized campaign landing pages.
-          a.pill.button href="#" App Deep Linking
-          a.pill.button href="#" Newsletters
-          a.pill.button href="#" Beacons
-          a.pill.button href="#" Offline Advertising
-          a.pill.button href="#" Custom Domain
-          a.pill.button href="#" Marketing Links
-          a.pill.button href="#" Custom Landers
+
+          - require 'lib/feature_buttons'
+          - buttons = %w(deep_linking newsletters beacons print custom_domains marketing_links custom_landers)
+          = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
+
           .phone-demo
 
       .feature

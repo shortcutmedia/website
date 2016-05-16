@@ -13,13 +13,28 @@
     min-width: 235px
     max-width: 100%
     line-height: 60px
-    border-top: 1px solid #ddd
+    border-bottom: 1px solid #ddd
     padding: 0 1.5em
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3),
+      border-top: 1px solid #ddd
 
     a
       display: block
       height: 100%
 
+      svg
+        width: 24px
+        height: 24px
+        vertical-align: middle
+        margin-right: 1em
+        position: relative
+        top: -2px
+
   @media(max-width: #{$bp-phone})
     justify-content: center
     text-align: center
+
+    li
+      &:nth-child(2), &:nth-child(3),
+        border-top: none !important

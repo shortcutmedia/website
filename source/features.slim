@@ -43,49 +43,14 @@ meta:
       | Among the Shortcut features you will find the growth hacks that will turn your app in to a growth machine. If you need your app to become more sticky to grow user retention or you nees a solution to be able to grow virally and organically, we have you covered. Even if you are looking to invest in downloads we give you the capabilities to get the most out of your investment.
 
     div.feature-buttons
-      = link_to '/features.html#deep_linking', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-deeplinking'
-        | Deep Linking
-      = link_to '/features.html#app_banners', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-appmarketing'
-        | App Banners
-      = link_to '/features.html#beacons', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-ibeacons'
-        | iBeacons
-      = link_to '/features.html#newsletters', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-newsletter'
-        | Newsletters
-      / = link_to '/features.html#auto_messages', class: 'pill button'
-      /   = svg_image_tag 'sprite.svg#icon-f-automessages'
-      /   | Auto Messages
-      = link_to '/features.html#social_media', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-socialmedia'
-        | Social Media
-      = link_to '/features.html#app_referrals', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-appreferals'
-        | App Referals
-      = link_to '/features.html#print', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-print'
-        | Print
-      = link_to '/features.html#analytics', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-analyze'
-        | Analytics
-      = link_to '/features.html#custom_landers', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-customlanders'
-        | Custom Landers
-      = link_to '/features.html#marketing_links', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-marketinglinks'
-        | Marketing Links
-      = link_to '/features.html#custom_domains', class: 'pill button'
-        = svg_image_tag 'sprite.svg#icon-f-customdomain'
-        | Custom Domains
+      - require 'lib/feature_buttons'
+      = FeatureButtons.all.map{ |button| button.html self }.reduce :+
 
 
 .PageStripe.gray#deep_linking
   .PageContainer.centered-content
     .FeatureExposition
       = image_tag 'features/01-mobile-deep-linking.png', style: "width: 572px; height: 468px;"
-
 
       .description
         h2 Mobile app deep linking and deferred deep linking

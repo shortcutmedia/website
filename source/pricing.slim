@@ -70,20 +70,9 @@ meta:
     h4 Features for your growth
 
     ul.FeaturesReferenceList
-      li = link_to 'Deep Linking',    '/features.html', class: 'sneaky'
-      li = link_to 'Auto Messages',   '/features.html', class: 'sneaky'
-      li = link_to 'Analytics',       '/features.html', class: 'sneaky'
-
-      li = link_to 'App Banners',     '/features.html', class: 'sneaky'
-      li = link_to 'Social Media',    '/features.html', class: 'sneaky'
-      li = link_to 'Custom Landers',  '/features.html', class: 'sneaky'
-
-      li = link_to 'iBeacons',        '/features.html', class: 'sneaky'
-      li = link_to 'App Referals',    '/features.html', class: 'sneaky'
-      li = link_to 'Marketing Links', '/features.html', class: 'sneaky'
-
-      li = link_to 'Newsletters',     '/features.html', class: 'sneaky'
-      li = link_to 'Print',           '/features.html', class: 'sneaky'
-      li = link_to 'Custom Domains',  '/features.html', class: 'sneaky'
-
+      - require 'lib/feature_buttons'
+      - buttons = %w(deep_linking analytics app_banners social_media custom_landers beacons app_referrals marketing_links newsletters print custom_domains)
+      - FeatureButtons.pick(buttons).map{ |button| button.html self, 'sneaky' }.each do |html|
+        li
+          == html
 
