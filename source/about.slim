@@ -1,0 +1,89 @@
+---
+title: Shortcut - Your shortcut to app user retention
+description: The ultimate tools for app user retention and improved app performance. Try now!
+
+meta:
+  og:title: Get app users who stay.
+  og:url: https://shortcut.sc
+  og:site_name: Shortcut - The growth machine for your app
+  og:description: Turn your app into a powerful growth machine with high user retention and organic growth.
+  fb:app_id: 176995982338808
+  og:type: website
+  og:image: shortcut-growth-engine-for-app-meta.png
+  og:image:type: image/png
+  og:image:width: 1600
+  og:image:height: 630
+
+team:
+  - name: Herbert Bay
+    position: Executive Chairman
+    picture: about/herbert-bay-new.png
+  - name: Jukka Kiiskinen
+    position: CEO
+    picture: about/jukka-kiiskinen.jpg
+  - name: Franco Sebregondi
+    position: CTO
+    picture: about/franco-sebregondi.jpg
+  - name: Sabina Storsjö
+    position: Marketing Director
+    picture: about/team-sabina-white-shadow.png
+  - name: Bruno Santos
+    position: Senior Software Engineer
+    picture: about/team-bruno-white-shadow.png
+
+---
+
+
+.PageStripe.white
+  .PageContainer.centered-content.head-segment
+    h1 About Shortcut
+
+    p.u-not-too-wide
+      | At Shortcut we take the complex topic of app marketing to the next level by
+        providing marketers, app developers and brands with the easiest and most
+        user-friendly app marketing tool.
+
+    ul
+      - current_page.data.team.each do |employee|
+        li.Headshot
+          = image_tag employee.picture
+          .name = employee.name
+          .position = employee.position
+
+
+.PageStripe.gray
+  .PageContainer.centered-content#contact_us
+    h2 Contact Us
+
+    .ContactLocation
+      iframe{ width="450" height="450" frameborder="0" style="border:0" allowfullscreen=true
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.5810911475853!2d24.957024352256706!3d60.17111355019638\
+            !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bd008a258d7%3A0x5e1518a6a8254e2b!2sKirkkokatu+1%2C+00170+\
+            Helsinki%2C+Finland!5e0!3m2!1sen!2sus!4v1448599588968" }
+      p
+        b Shortcut Media AG
+        br
+        | Kirkkokatu 1A
+        br
+        | Helsinki, Finland
+      p
+        b> E-mail:
+        = link_to 'info@shortcutmedia.com', 'mailto:info@shortcutmedia.com'
+        br
+        b> Phone:
+        = link_to '+358 50 571 7551', 'tel:+358 50 571 7551'
+
+    .ContactLocation
+      iframe{ width="450" height="450" frameborder="0" style="border:0" allowfullscreen=true
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.4835083386055!2d8.543585008334286!3d47.379441449269514\
+            !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a09d996fa9f%3A0x5e7b85ed242e9f7b!2sWeinbergstrasse+35%2C+\
+            8006+Z%C3%BCrich!5e0!3m2!1sen!2sch!4v1449080423511" }
+      p
+        b Shortcut Media AG
+        br
+        | Weinbergstrasse 35
+        br
+        | 8006 Zürich, Switzerland
+
+
+= partial 'call_to_action'
