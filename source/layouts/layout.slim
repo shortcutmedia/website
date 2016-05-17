@@ -82,12 +82,12 @@ html
   body class=page_classes
     = ga_snippet 'gtm'
 
-    = partial 'slideout_menu'
+    = partial 'components/slideout_menu'
 
     .slideout-panel data-slideout-panel=true
-      = partial 'head'
+      = partial 'components/head'
       main
         = yield
-      = partial 'footer'
+      = partial 'components/footer'
 
 
