@@ -123,6 +123,7 @@ meta:
           = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
 
           .phone-demo
+            = deferred_image_tag 'home/feature-demo-paid-engine.gif'
 
       .feature
         input  id="fs-analytics" type="radio" name="feature-showcase"
