@@ -129,12 +129,15 @@ meta:
       .feature
         input  id="fs-analytics" type="radio" name="feature-showcase"
         label for="fs-analytics" Analytics
-        .details
+        .details.extended
           p
             | Track and analyze your success. With Shortcut's powerful analytics you will always be measuring the right metrics that will help you make the right decisions to grow your app. Track campaign effectiveness to optimize your advertising or run a cohort analysis to improve retention.
 
           .not-a-phone-demo
-            = deferred_image_tag 'home/feature-demo-track-analyze.gif'
+            .BrowserFrame
+              .title = @manager_base_url.match(/https?:\/\/([^\/]*)\/?/).to_a.last
+              .body
+                = deferred_image_tag 'home/feature-demo-track-analyze.gif'
 
 
 .PageStripe.lila

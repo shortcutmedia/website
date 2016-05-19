@@ -137,7 +137,9 @@
 
   @media(min-width: 1000px)
     .feature > [type=radio]:checked ~ label ~ .details
-      max-height: 480px // removes perceived animation delay; increase this if some contents get clipped
+      max-height: 400px // removes perceived animation delay; increase this if some contents get clipped
+      &.extended
+        max-height: 550px
 
 
   @media(max-width: #{$bp-phone})
