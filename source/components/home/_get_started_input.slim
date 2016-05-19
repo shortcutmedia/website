@@ -1,3 +1,4 @@
-form.GetStartedInput action="#{manager_url '/welcome/app_website'}"
+form.GetStartedInput action="#{manager_url '/welcome/app_website'}" method="POST"
   input type="text" placeholder="https://your.app.com" name="app_website"
+  input type="hidden" name="_method" value="put"
   button.green Submit
