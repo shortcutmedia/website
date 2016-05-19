@@ -33,7 +33,7 @@ meta:
     = partial 'components/home/get_started_input'
 
     .chevron-lip
-      = svg_image_tag 'sprite.svg#icon-chevron-down', class: 'chevron'
+      = svg_image_tag 'sprite.svg#icon-chevron-down', class: 'chevron', data: { scroll_to: '#chevron-anchor' }
 
 
 .PageStripe.white
@@ -67,7 +67,7 @@ meta:
 .PageStripe.gray
   .PageContainer.centered-content
 
-    h4 Turn your app into a smart engine of growth
+    h4#chevron-anchor Turn your app into a smart engine of growth
 
     .PromoVideo
       .wrapper
