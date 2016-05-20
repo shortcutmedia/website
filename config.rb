@@ -106,3 +106,7 @@ configure :build do
   # ignore "source/images/customers/*"
 
 end
+
+activate :autoprefixer do |config|
+  config.browsers = [ 'last 2 versions', 'Explorer >= 10' ]
+end

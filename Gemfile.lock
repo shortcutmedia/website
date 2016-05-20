@@ -106,6 +106,9 @@ GEM
     method_source (0.8.2)
     middleman-alias (0.0.16)
       middleman-core (~> 3.2)
+    middleman-autoprefixer (2.7.0)
+      autoprefixer-rails (>= 6.3.1, < 7.0.0)
+      middleman-core (>= 3.3.3)
     middleman-deploy (1.0.0)
       middleman-core (>= 3.2)
       net-sftp
@@ -191,6 +194,7 @@ DEPENDENCIES
   jquery-middleman
   middleman!
   middleman-alias
+  middleman-autoprefixer
   middleman-deploy (~> 1.0)
   middleman-livereload (~> 3.1.0)
   middleman-remote-code!

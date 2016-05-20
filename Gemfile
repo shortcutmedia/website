@@ -29,3 +29,5 @@ gem 'middleman-alias'
 
 gem 'slim'
 gem 'pry'
+
+gem 'middleman-autoprefixer'
