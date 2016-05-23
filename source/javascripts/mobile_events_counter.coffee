@@ -2,7 +2,7 @@ counter_is_present = ->
   $('[data-mobile-events-counter]').length > 0
 
 fetch_event_count = ->
-  fetch 'http://manager.shortcutmedia.com/statistics/total.json'
+  fetch 'http://manager.shortcut.sc/statistics/total.json'
     .then window.SC.lib_ajax.check_status
     .then (response) -> response.json()
     .then (json) -> json.count
