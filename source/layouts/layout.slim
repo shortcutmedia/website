@@ -80,7 +80,7 @@ html
 
 
   body class=page_classes
-    = ga_snippet 'gtm'
+    = snippet 'gtm'
 
     = partial 'components/slideout_menu'
 
@@ -90,4 +90,5 @@ html
         = yield
       = partial 'components/footer'
 
+    = snippet 'twitter_tag_code'
 

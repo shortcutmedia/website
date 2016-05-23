@@ -120,8 +120,8 @@ module CustomHelpers
     @blog_base_url + path.sub(/^\//, '')
   end
 
-  def ga_snippet path
-    partial "ga/#{path}" if build?
+  def snippet path
+    partial "snippets/#{path}" unless ENV['NO_SNIPPETS']
   end
 
 end
