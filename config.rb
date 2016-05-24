@@ -52,7 +52,7 @@ helpers CustomHelpers
 @base_url         = 'https://shortcut.sc/'
 @blog_base_url    = 'http://blog.shortcut.sc/'
 @docs_base_url    = 'http://developer.shortcut.sc/'
-@manager_base_url = 'http://manager.shortcut.sc/'
+@manager_base_url = 'https://manager.shortcut.sc/'
 
 set :css_dir, 'stylesheets'
 
