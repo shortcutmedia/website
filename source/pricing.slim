@@ -22,43 +22,43 @@ meta:
     h1 Pricing
 
     p.u-not-too-wide
-      | You are our key to growth and we are yours. We want to grow with you. <br>This is why we want to give you unlimited access to all our features and analytics <br>for free until you've reached 5'000 monthly active users (MAU).
+      | You are our key to growth and we are yours. We want to grow with you. <br>This is why we want to give you unlimited access to all our features and analytics. <br>You will have free access until you've reached 5'000 daily active users (DAU).
 
 .PageStripe.gray
   .PageContainer.centered-content.flex
 
     .PricingCard
-      .title Shortcut Basic
+      .title Shortcut Free
       .price
         sup $
         | 0.00
         sup &#47; mo
       hr
       ul.features
-        li.check up to 5'000 MAU
-        li.check all features included
-      hr
-      = link_to 'Sign up for free', manager_url('/users/sign_up'), class: 'lila outlined button'
-
-    .PricingCard
-      .title Shortcut Pro
-      .price
-        sup $
-        | 289.00
-        sup &#47; mo
-      hr
-      ul.features
-        li.check up to 100'000 MAU
+        li.check up to 5'000 DAU
         li.check all features included
       hr
       = link_to 'Sign up for free', manager_url('/users/sign_up'), class: 'lila outlined button'
 
     .PricingCard
       .title Shortcut Basic
+      .price
+        sup $
+        | 249.00
+        sup &#47; mo
+      hr
+      ul.features
+        li.check up to 100'000 DAU
+        li.check all features included
+      hr
+      = link_to 'Sign up for free', manager_url('/users/sign_up'), class: 'lila outlined button'
+
+    .PricingCard
+      .title Shortcut Pro
       = link_to 'Get in touch with us!', '/about.html#contact_us', class: 'lila button'
       hr
       ul.features
-        li.check from 100'001 MAU
+        li.check from 100'001 DAU
         li.check all features included
         li.plus  SLA
         li.plus  invoicing
