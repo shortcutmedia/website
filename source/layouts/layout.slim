@@ -65,7 +65,7 @@ html
 
     - (current_page.data.meta || []).each do |key, val|
       - if key.to_s == "og:image"
-        meta property=key content=(@base_url.sub(/\/$/, '') + image_path(val))
+        meta property=key content=(@base_url + image_path(val))
       - else
         meta property=key content=val
 
