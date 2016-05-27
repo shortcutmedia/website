@@ -1,7 +1,10 @@
 .PageStripe.lila
   .PageContainer.centered-content
-    = yield if block_given?
+    .GetStartedCTA
+      = yield if block_given?
 
-    h2 Start building your own growth engine
+      h2 Start building your own growth engine
 
-    = partial 'components/home/get_started_input'
+      = partial 'components/home/get_started_input'
+
+      p.tour-cue Still not convinced? Watch our detailed product video <a href="http://eepurl.com/b2S4uX" target="_blank" class="sneaky underlined">here</a>.
