@@ -6,3 +6,4 @@ Disallow: /terms-and-conditions-german.html
 Disallow: /terms-and-conditions-italian.html
 Disallow: /privacy.html
 Disallow: /terms.html
+Disallow: /resources/*
