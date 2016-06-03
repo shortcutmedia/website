@@ -1,0 +1,241 @@
+---
+title: Shortcut - Your shortcut to app-user retention
+description: The ultimate tools for app-user retention and improved app-performance. Try now!
+
+meta:
+  og:title: Shortcut - Double user retention
+  og:url: https://shortcut.sc
+  og:site_name: Your users matter
+  og:description: Turn your app into a retention machine. Get sticky and keep your users.
+  fb:app_id: 176995982338808
+  og:type: website
+  og:image: shortcut-growth-engine-for-app-meta.png
+  og:image:type: image/png
+  og:image:width: 1200
+  og:image:height: 630
+
+---
+
+
+- content_for :end_of_head
+  = snippet 'content_experiment_code'
+
+
+- content_for :hero
+  .HomeHero
+    h1 Your users matter
+
+    p
+      | Shortcut uses Artificial Intelligence to increase user retention.
+      br
+      | To start, submit your app's website or <a href="#{manager_url '/users/sign_up'}" class="sneaky underlined">sign up</a>!
+
+    = partial 'components/home/get_started_input'
+
+    .chevron-lip
+      = svg_image_tag 'sprite.svg#icon-chevron-down', class: 'chevron', data: { scroll_to: '#chevron-anchor' }
+
+
+.PageStripe.white
+  .PageContainer.centered-content
+
+    .Keypoint
+      .phone
+        = svg_image_tag 'sprite.svg#home--phone-be-sticky'
+      .text
+        | Be <br> Sticky
+
+    .Keypoint.grow
+      .phone
+        = svg_image_tag 'sprite.svg#home--phone-grow-virally'
+      .text
+        | Grow <br> Virally
+
+    .Keypoint.track
+      .phone
+        = svg_image_tag 'sprite.svg#home--phone-track'
+      .text
+        | Track & <br> Analyze
+
+
+.PageStripe.gray
+  .PageContainer.centered-content
+
+    h4#chevron-anchor Turn your app into a sticky engine of growth
+
+    .PromoVideo
+      .wrapper
+        script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async=true
+        .embed.wistia_embed.wistia_async_w6m6v7gipx
+
+
+.PageStripe.white
+  .PageContainer.centered-content.app-growth-segment
+
+    h2 App user retention for m-commerce apps
+
+    p.u-not-too-wide
+      | We follow the sticky engine of growth as proposed by Eric Ries in “The Lean Startup”. The Shortcut platform is built on increasing user retention. It can be used by every company from startups to large enterprises who want to become champions in m-commerce.
+
+    .FeatureShowcase
+      .feature
+        input  id="fs-sticky-engine" type="radio" name="feature-showcase" checked="true"
+        label for="fs-sticky-engine" Sticky Engine of Growth
+        .details
+          p
+            | Increase app retention efficiently. We offer tools for engagement such as app banners, individually customized newsletters and beacons. With these tools you will be able to increase engagement and thereby your app retention will improve.
+
+          - require 'lib/feature_buttons'
+          - buttons = %w(deep_linking app_banners newsletters social_media beacons print custom_domains marketing_links)
+          = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
+
+          .phone-demo
+            = deferred_image_tag 'home/feature-demo-sticky-engine.gif'
+
+      .feature
+        input  id="fs-analytics" type="radio" name="feature-showcase"
+        label for="fs-analytics" Analytics
+        .details.extended
+          p
+            | Track and analyze your success. With Shortcut's powerful analytics you will always be measuring the right metrics that will help you make the right decisions to grow your app. Track campaign effectiveness to optimize your advertising or run a cohort analysis to improve retention.
+
+          .not-a-phone-demo
+            .BrowserFrame
+              .title = @manager_base_url.match(/https?:\/\/([^\/]*)\/?/).to_a.last
+              .body
+                = deferred_image_tag 'home/feature-demo-track-analyze.gif'
+
+
+.PageStripe.lila
+  .PageContainer.centered-content.pricing-segment
+
+    h3 Faster app growth with Artificial Intelligence
+
+    p.u-not-too-wide
+      | At Shortcut we are Artificial Intelligence (AI) experts and amazed by the enormous and unexplored possibilities of AI for increasing app retention. We are currently working on new features and functionalities based on AI that will multiply your retention. Stay tuned!<br><br>
+
+    hr
+
+    h3 Pricing
+
+    p.u-not-too-wide
+      | Our success is your success and we are here to help you grow your app and we want to grow with you. <br>This is why we offer all our features and our analytics <strong>for free</strong> to all apps that are just starting out and have not reached 5'000 DAU yet.
+
+    = link_to 'Take a closer look at the prices', '/pricing.html', class: 'green button'
+
+
+.PageStripe.white
+  .PageContainer.centered-content.customers-segment
+
+    h2 Why our customers love us?
+
+    .CustomerLoveReason
+      = svg_image_tag 'sprite.svg#icon-code-fork'
+      .title Easy Implementation
+      p
+        | Our SDKs and APIs are easy to implement and don't need additional frameworks. They are built to last for many versions.
+
+    .CustomerLoveReason
+      = svg_image_tag 'sprite.svg#icon-phone'
+      .title Dedicated Support
+      p
+        | Our team is here for you 24/7. We help you with both implementation and know-how.
+          If you don't get support within 24 hours, you can call our CEO on his mobile.
+
+    .CustomerLoveReason
+      = svg_image_tag 'sprite.svg#icon-cogs'
+      .title Built to Last
+      p
+        | We are committed to our customers since 2012, and we are planning to be here for the next 100 years.
+
+    .CustomerLoveReason
+      = svg_image_tag 'sprite.svg#icon-wrench'
+      .title Reliable Service
+      p
+        | We made all our tools super reliable and bullet-proof so that you can concentrate on your business and not worry about the machinery in the background.
+
+    .CustomerLoveReason
+      .special-crown
+      .title You matter
+      p
+        | Your growth and your returning users are the measurement of our success and therefore your success becomes our success.
+
+    .CustomerLoveReason
+      = svg_image_tag 'sprite.svg#icon-lock'
+      .title Secure Data
+      p
+        | Your data security is extremely important to us. We will not sell nor make your data available to 3rd parties.
+          Let us know if you would like to host your data on your own server.
+
+
+    h6 Trusted by some of your favorite apps
+
+    .CustomerShowcase
+      .logo style="background-image: url(#{image_path 'home/customers/cust-vivino.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-cardu.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-zen.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-bet.png'})"
+      .logo style="background-image: url(#{image_path 'home/customers/cust-cin.png'})"
+
+    .CustomerTestemonialShowcase
+      .CustomerTestemonial
+        p
+          | Shortcut has become an essential partner for our mobile-app marketing.
+            The service is easy to set up and provides great tracking data. I highly recommend to all marketers.
+        .who Karen Wiesner, Director Marketing Cincinnati Bell
+      .CustomerTestemonial
+        p
+          | With Shortcut deep links we have been able to improve our user engagement and retention significantly.
+        .who Jukka Kilponen, CTO Cardu
+      .CustomerTestemonial
+        p
+          | Shortcut's innovative API has allowed us to add mobile deep links to our automated newsletters and the results have been amazing.
+        .who Heini Zachariassen, CEO Vivino
+
+
+  .PageStripe.gray
+    .PageContainer.centered-content.sdk-integration-segment
+
+      h2 SDK integration made easy
+
+      .Tabs
+        .tab
+          input  id="sdk-ios" type="radio" name="sdk-integration-tabs" checked="true"
+          label for="sdk-ios" iOS
+          .content
+            pre.u-remove-prism-bg: code.language-swift
+              | #import &lt;Shortcut/Shortcut.h&gt;
+
+                // ...
+
+                - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+                    [Shortcut launchWithAuthToken:@"YOUR_AUTH_TOKEN_HERE"];
+
+                    // ...
+
+                    return YES;
+                }
+
+        .tab
+          input  id="sdk-android" type="radio" name="sdk-integration-tabs"
+          label for="sdk-android" Android
+          .content
+            pre.u-remove-prism-bg: code.language-markup
+              | &lt;application
+                  android:name="sc.shortcut.sdk.SCApplication"
+                  ...
+                &gt;
+                    &lt;meta-data android:name="sc.shortcut.sdk.authToken" android:value="&lt;your auth token&gt;" /&gt;
+                    ...
+
+                &lt;/application&gt;
+
+
+  = partial 'components/call_to_action'
+    .counter-segment
+      h6.u-hidden Mobile events so far
+      .Counter.u-hidden data-mobile-events-counter=true
+
+
+
