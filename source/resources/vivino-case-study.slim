@@ -1,0 +1,22 @@
+.PageStripe.white
+  .PageContainer.centered-content
+
+    h4 Vivino Case Study
+	p
+        = image_tag 'case-thumbnails/vivino-thumbnail.png', style: "width: 560px; height: 315px;", a: 'https://shortcut.sc/images/cases/vivino-case-study.pdf'
+		
+	p Learn how Vivino automated personalized emails to improve <br>stickiness, engage with users and increase their retention rate.
+	
+	p
+        = link_to 'Download the case study', 'https://shortcut.sc/images/cases/vivino-case-study.pdf', class: 'lila button'
+		
+.PageStripe.lila
+  .PageContainer.centered-content
+    .GetStartedCTA
+      = yield if block_given?
+
+      h2 Start building your own growth engine
+
+      = partial 'components/home/get_started_input'
+
+      p.tour-cue Still not convinced? Watch our detailed product video <a href="http://eepurl.com/b2S4uX" target="_blank" class="sneaky underlined">here</a>.

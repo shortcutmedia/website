@@ -167,8 +167,22 @@ meta:
         | Your data security is extremely important to us. We will not sell nor make your data available to 3rd parties.
           Let us know if you would like to host your data on your own server.
 
+.PageStripe.gray
+  .PageContainer.centered-content
+    .FeatureExposition
+      = image_tag 'case-thumbnails/vivino-thumbnail.png', style: "width: 560px; height: 327px;"
 
-    h6 Trusted by some of your favorite apps
+      .description
+        h2 Case Study - How Vivino automated personalized emails to improve stickiness
+        p
+          | App retention is the key to your app's success. If you could build a sticky app that users want to revisit on a daily basis it would be the solution to all your growth problems, right? Just like most apps, Vivino is constantly working on improving their stickiness and trying to engage with their customers.	
+		  calc
+        = link_to 'Read the case study', '/resources/vivino-case-study.html', class: 'lila button'
+
+.PageStripe.white
+  .PageContainer.centered-content.customers-segment
+
+    h2 Trusted by some of your favorite apps
 
     .CustomerShowcase
       .logo style="background-image: url(#{image_path 'home/customers/cust-vivino.png'})"
