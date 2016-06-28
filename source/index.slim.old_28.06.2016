@@ -1,12 +1,12 @@
 ---
-title: Shortcut - Your shortcut to app-user retention
-description: The ultimate tools for app-user retention and improved app-performance. Try now!
+title: Shortcut - Your shortcut to app user retention
+description: The ultimate tools for app user retention and improved app performance. Try now!
 
 meta:
-  og:title: Shortcut - Double user retention
+  og:title: Shortcut - The growth engine for apps
   og:url: https://shortcut.sc
-  og:site_name: Your users matter
-  og:description: Turn your app into a retention machine. Get sticky and keep your users.
+  og:site_name: Shortcut - The growth engine for apps
+  og:description: Turn your app into a smart engine of growth. Get sticky, grow virally and invest in downloads.
   fb:app_id: 176995982338808
   og:type: website
   og:image: shortcut-growth-engine-for-app-meta.png
@@ -23,10 +23,10 @@ meta:
 
 - content_for :hero
   .HomeHero
-    h1 Your users matter
+    h1 Growth engine for apps
 
     p
-      | Shortcut uses Artificial Intelligence to increase user retention.
+      | Shortcut uses Artificial Intelligence to grow your app faster.
       br
       | To start, submit your app's website or <a href="#{manager_url '/users/sign_up'}" class="sneaky underlined">sign up</a>!
 
@@ -51,6 +51,12 @@ meta:
       .text
         | Grow <br> Virally
 
+    .Keypoint.invest
+      .phone
+        = svg_image_tag 'sprite.svg#home--phone-invest'
+      .text
+        | Invest in <br> Downloads
+
     .Keypoint.track
       .phone
         = svg_image_tag 'sprite.svg#home--phone-track'
@@ -61,7 +67,7 @@ meta:
 .PageStripe.gray
   .PageContainer.centered-content
 
-    h4#chevron-anchor Boost your app retention with Shortcut
+    h4#chevron-anchor Turn your app into a smart engine of growth
 
     .PromoVideo
       .wrapper
@@ -72,15 +78,15 @@ meta:
 .PageStripe.white
   .PageContainer.centered-content.app-growth-segment
 
-    h2 Your app's retention is key
+    h2 App growth for companies of all sizes
 
     p.u-not-too-wide
-      | To make your app addictive and sticky to make your users return more often is the key to your app's success. Getting app downloads can be expensive at times. With Shortcut you make sure you retain your users that you have worked so hard for. We follow the sticky engine of growth as proposed by Eric Ries in “The Lean Startup”. The Shortcut platform is built on increasing user retention. It can be used by every company from startups to large enterprises who want to become champions.
+      | We follow the three engines of growth as proposed by Eric Ries in “The Lean Startup”. The Shortcut platform is built on the three growth engines; stickiness, viral growth and paid growth. It can be used by every company from startups to large enterprises.
 
     .FeatureShowcase
       .feature
         input  id="fs-sticky-engine" type="radio" name="feature-showcase" checked="true"
-        label for="fs-sticky-engine" Improve app retention
+        label for="fs-sticky-engine" Sticky Engine of Growth
         .details
           p
             | Increase app retention efficiently. We offer tools for engagement such as app banners, individually customized newsletters and beacons. With these tools you will be able to increase engagement and thereby your app retention will improve.
@@ -91,6 +97,34 @@ meta:
 
           .phone-demo
             = deferred_image_tag 'home/feature-demo-sticky-engine.gif'
+
+      .feature
+        input  id="fs-viral-engine" type="radio" name="feature-showcase"
+        label for="fs-viral-engine" Viral Engine of Growth
+        .details
+          p
+            | Reach viral growth with our SDK. Make sharing your app content easier for your app users that want to share your app and your app content with their friends. Enabling sharing in your app will help you with viral and organic growth.
+
+          - require 'lib/feature_buttons'
+          - buttons = %w(deep_linking app_referrals social_media custom_domains marketing_links)
+          = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
+
+          .phone-demo
+            = deferred_image_tag 'home/feature-demo-viral-engine.gif'
+
+      .feature
+        input  id="fs-paid-engine" type="radio" name="feature-showcase"
+        label for="fs-paid-engine" Paid Engine of Growth
+        .details
+          p
+            | Get more downloads and first time users. When your app is sticky and can grow virally you can start scaling app users. We offer tools for app marketing capabilities such as marketing links and customized campaign landing pages.
+
+          - require 'lib/feature_buttons'
+          - buttons = %w(deep_linking newsletters beacons print custom_domains marketing_links custom_landers)
+          = FeatureButtons.pick(buttons).map{ |button| button.html self }.reduce :+
+
+          .phone-demo
+            = deferred_image_tag 'home/feature-demo-paid-engine.gif'
 
       .feature
         input  id="fs-analytics" type="radio" name="feature-showcase"
@@ -112,7 +146,7 @@ meta:
     h3 Faster app growth with Artificial Intelligence
 
     p.u-not-too-wide
-      | At Shortcut we are Artificial Intelligence (AI) experts and amazed by the enormous and unexplored possibilities of AI for increasing app retention. We are currently working on new features and functionalities based on AI that will multiply your retention. Stay tuned!<br><br>
+      | At Shortcut we are Artificial Intelligence (AI) experts and amazed by the enormous and unexplored possibilities of AI for app growth. We are currently working on new features and functionalities based on AI that will grow your app faster and smarter. Stay tuned!<br><br>
 
     hr
 
