@@ -26,6 +26,7 @@ gem 'middleman-remote-code', git: 'https://github.com/keenlabs/middleman-remote-
 gem 'middleman-deploy', '~> 1.0'
 
 gem 'middleman-alias'
+gem 'middleman-s3_sync', '~> 3.3.10' 
 
 gem 'slim'
 gem 'pry'
