@@ -10,10 +10,6 @@
           li= link_to 'Features', '/features.html', class: 'sneaky'
           li= link_to 'Documentation', documentation_url, class: 'sneaky'
 
-      .session-buttons
-        = link_to 'Log in',  manager_url('/users/sign_in'), class: 'white outlined button'
-        = link_to 'Sign up', manager_url('/users/sign_up'), class: 'green button'
-
       .hamburguer-button data-slideout-toggle=true
         = svg_image_tag 'sprite.svg#icon-menu'
 

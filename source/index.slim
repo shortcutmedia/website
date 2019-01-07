@@ -27,10 +27,6 @@ meta:
 
     p
       | Shortcut uses Artificial Intelligence to increase user retention.
-      br
-      | To start, submit your app's website or <a href="#{manager_url '/users/sign_up'}" class="sneaky underlined signuplink">sign up</a>!
-
-    = partial 'components/home/get_started_input'
 
     .chevron-lip
       = svg_image_tag 'sprite.svg#icon-chevron-down', class: 'chevron', data: { scroll_to: '#chevron-anchor' }
@@ -113,15 +109,6 @@ meta:
 
     p.u-not-too-wide
       | At Shortcut we are Artificial Intelligence (AI) experts and amazed by the enormous and unexplored possibilities of AI for increasing app retention. We are currently working on new features and functionalities based on AI that will multiply your retention. Stay tuned!<br><br>
-
-    hr
-
-    h3 Pricing
-
-    p.u-not-too-wide
-      | Our success is your success and we are here to help you grow your app and we want to grow with you. <br>This is why we offer all our features and our analytics <strong>for free</strong> to all apps that are just starting out and have not reached 5'000 DAU yet.
-
-    = link_to 'Take a closer look at the prices', '/pricing.html', class: 'green button'
 
 
 .PageStripe.white
